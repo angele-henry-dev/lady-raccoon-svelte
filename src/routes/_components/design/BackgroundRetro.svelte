@@ -1,15 +1,27 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { writable } from "svelte/store";
   
     export let play: boolean = false;
+  
+    const isVisible = writable(false);
   
     let mouseX: number = 0;
     let scrollY: number = 0;
     let width: number = 0;
   
     let retroLinesRef: HTMLDivElement | null = null;
-
+  
     onMount(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => isVisible.set(entry.isIntersecting),
+            { threshold: 0.1 }
+        );
+  
+        if (retroLinesRef) {
+            observer.observe(retroLinesRef);
+        }
+  
         const handleScroll = () => (scrollY = window.scrollY);
         const handleMouseMove = (event: MouseEvent) => {
             const rect = retroLinesRef?.getBoundingClientRect();
@@ -28,6 +40,7 @@
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("mousemove", handleMouseMove);
             window.removeEventListener("resize", handleResize);
+            if (retroLinesRef) observer.unobserve(retroLinesRef);
         };
     });
 </script>
@@ -48,15 +61,15 @@
       <div class="retroLinesWrap">
         <div
           class="retroLines {play ? 'retroLinesAnim' : ''}"
-          style={!play ? `transform: rotateX(84deg) translateY(${scrollY % 100}px);` : ""}
+          style={!play ? `transform: rotateX(84deg) translateY(${$isVisible ? scrollY % 100 : 0}px);` : ""}
         >
           <div class="retroVlines">
-            {#each Array.from({ length: 53 }) as _, index}
+            {#each Array.from({ length: 53 }) as _}
               <div class="retroVline"></div>
             {/each}
           </div>
           <div class="retroHlines">
-            {#each Array.from({ length: 8 }) as _, index}
+            {#each Array.from({ length: 8 }) as _}
               <div class="retroHline"></div>
             {/each}
           </div>
