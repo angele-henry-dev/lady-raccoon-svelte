@@ -1,3 +1,178 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+    --background: #030303;
+    --foreground: #f8f8f8;
+  
+    --vt-c-pink: #ed1271;
+    --vt-c-yellow: #ffff00;
+    --vt-c-cyan: #00ffff;
+  /*   --vt-c-lime: #00ff33;
+    --vt-c-orange: #F57D1F; */
+  
+    --color-border-card: #545454;
+    --color-border-pin: var(--vt-c-pink);
+}
+  
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 16pt;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+    border-top: 1px solid var(--color-border-card);
+    font-size: 0.8em;
+}
+header {
+    width: 100%;
+    display: flex;
+    place-items: center;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid var(--color-border-card);
+    background-color: hsla(0, 0%, 9%, 0.9);
+    font-family: 'OpenDyslexic', 'Roboto', sans-serif;
+    z-index: 100;
+}
+
+h1 {
+    font-family: 'OpenDyslexic', 'Roboto', sans-serif;
+    font-size: 2em;
+    margin: 20px 0;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--foreground);
+    transition: 0.4s;
+}
+a:hover {
+    color: var(--vt-c-pink);
+}
+
+ul {
+    list-style: square;
+    margin: 10px 40px;
+    padding: 0;
+}
+ul li::marker {
+    color: var(--vt-c-pink);
+}
+  
+.highlight {
+    color: var(--vt-c-yellow);
+}
+  
+.button {
+    padding: 8px 16px;
+    border: 1px solid var(--vt-c-yellow);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.button.active,
+.button:hover {
+    border: 1px solid var(--vt-c-pink);
+}
+  
+/* Custom scrollbar */
+  
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-moz-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-track {
+    background: #303030;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--vt-c-pink);
+}
+  
+/* Animation main title */
+  
+.main-title {
+    font-size: 3em;
+}
+  
+.main-title-container {
+    height: 1em;
+}
+.main-title-container .main-title-container__ {
+    overflow: hidden;
+}
+.main-title-container__list {
+    animation-name: swipe;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .main-title-container__list {
+      animation: none;
+    }
+}
+@keyframes swipe {
+    0%,
+    12%,
+    100% {
+      transform: translate3d(0, -3%, 0);
+    }
+    16%,
+    29% {
+      transform: translate3d(0, -23%, 0);
+    }
+    33%,
+    46% {
+      transform: translate3d(0, -43%, 0);
+    }
+    50%,
+    62% {
+      transform: translate3d(0, -63%, 0);
+    }
+    66%,
+    79% {
+      transform: translate3d(0, -83%, 0);
+    }
+}
+  
+/* Responsiveness */
+  
+@media (max-width: 900px) {
+    body {
+      font-size: 12pt;
+    }
+    .main-title {
+      font-size: 2em;
+    }
+}
+@media (max-width: 430px) {
+    body {
+      font-size: 12pt;
+    }
+    h1, .main-title {
+      font-size: 1.5em;
+    }
+}

@@ -4,45 +4,40 @@
 	let { children } = $props();
 </script>
 
-<div>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">Documentation</a>
-	</nav>
-
-	{@render children()}
-
-	<footer class="py-4 text-center">
-		<p class='flex flex-row justify-center mb-2'>
-		  <a
-			class="mr-2"
+<header class="p-4">
+	<nav class="container flex w-full mx-auto">
+		<a href="/" class="text-xl flex items-center gap-2">
+			<img src="/images/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
+			<span class="truncate">Lady Raccoon</span>
+		</a>
+		<ul class="list-none">
+			<li><a href="/about">Documentation</a></li>
+		</ul>
+		<a
 			href="https://github.com/angele-henry-dev"
 			target="_blank"
-			title="Ouvre Github dans un nouvel onglet ou une nouvelle fenêtre"
-		  >
+			title="Opens Github in a new tab or window"
+		>
 			<Github />
-		  </a>
-		  <a
-			href="https://www.linkedin.com/in/angele-henry/"
-			target="_blank"
-			title="Ouvre LinkedIn dans un nouvel onglet ou une nouvelle fenêtre"
-		  >
-			LinkedIn
-		  </a>
-		</p>
-		<p class='mb-2'>
-		  <a href="/legal-notice">Mentions légales</a>
-		  <span class="mx-2">&#8226;</span>
-		  <a href="/privacy-policy">Politique de confidentialité</a>
-		  <span class="mx-2">&#8226;</span>
-		  <a href="/sitemap">Plan du site</a>
-		</p>
-		<p class='mb-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
-		<p>
-		  Développé avec 
-		  <span class="ml-2 highlight">♥</span>
-		  <span class="mx-2">&#8226;</span>
-		  © {new Date().getFullYear()} Lady Raccoon
-		</p>
-	  </footer>
-</div>
+		</a>
+	</nav>
+</header>
+
+<main class="flex-grow">{@render children()}</main>
+
+<footer class="py-4 text-center">
+	<p class='mb-2'>
+		<a href="/legal-notice">Mentions légales</a>
+		<span class="mx-2">&#8226;</span>
+		<a href="/privacy-policy">Politique de confidentialité</a>
+		<span class="mx-2">&#8226;</span>
+		<a href="/sitemap">Plan du site</a>
+	</p>
+	<p class='mb-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
+	<p>
+		Développé avec 
+		<span class="ml-2 highlight">♥</span>
+		<span class="mx-2">&#8226;</span>
+		© {new Date().getFullYear()} Lady Raccoon
+	</p>
+</footer>
