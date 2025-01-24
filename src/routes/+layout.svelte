@@ -5,14 +5,14 @@
 </script>
 
 <header class="p-4">
-	<nav class="container flex w-full mx-auto">
-		<a href="/" class="text-xl flex items-center gap-2">
-			<img src="/images/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
-			<span class="truncate">Lady Raccoon</span>
-		</a>
-		<ul class="list-none">
-			<li><a href="/about">Documentation</a></li>
-		</ul>
+	<nav class="container flex justify-between items-center w-full mx-auto">
+		<div class="flex-grow flex items-center gap-10">
+			<a href="/" class="text-xl flex items-center gap-2">
+				<img src="/images/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
+				<span class="truncate">Lady Raccoon</span>
+			</a>
+			<a href="/about">Documentation</a>
+		</div>
 		<a
 			href="https://github.com/angele-henry-dev"
 			target="_blank"
