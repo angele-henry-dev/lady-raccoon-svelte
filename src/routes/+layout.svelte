@@ -1,13 +1,13 @@
 <script lang="ts">
 	import '../app.css';
+	import Github from './_components/svg/Github.svelte';
 	let { children } = $props();
 </script>
 
 <div>
 	<nav>
 		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/settings">Settings</a>
+		<a href="/about">Documentation</a>
 	</nav>
 
 	{@render children()}
@@ -18,28 +18,28 @@
 			class="mr-2"
 			href="https://github.com/angele-henry-dev"
 			target="_blank"
-			title="Opens Github in a new tab or window"
+			title="Ouvre Github dans un nouvel onglet ou une nouvelle fenêtre"
 		  >
-			Github
+			<Github />
 		  </a>
 		  <a
 			href="https://www.linkedin.com/in/angele-henry/"
 			target="_blank"
-			title="Opens LinkedIn in a new tab or window"
+			title="Ouvre LinkedIn dans un nouvel onglet ou une nouvelle fenêtre"
 		  >
 			LinkedIn
 		  </a>
 		</p>
 		<p class='mb-2'>
-		  <a href="/legal-notice">Legal notice</a>
+		  <a href="/legal-notice">Mentions légales</a>
 		  <span class="mx-2">&#8226;</span>
-		  <a href="/privacy-policy">Privacy policy</a>
+		  <a href="/privacy-policy">Politique de confidentialité</a>
 		  <span class="mx-2">&#8226;</span>
-		  <a href="/sitemap">Sitemap</a>
+		  <a href="/sitemap">Plan du site</a>
 		</p>
-		<p class='mb-2'>Font &apos;OpenDyslexic&apos; by Abelardo Gonzalez</p>
+		<p class='mb-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 		<p>
-		  Handcrafted with
+		  Développé avec 
 		  <span class="ml-2 highlight">♥</span>
 		  <span class="mx-2">&#8226;</span>
 		  © {new Date().getFullYear()} Lady Raccoon
