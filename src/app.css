@@ -112,52 +112,6 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--vt-c-pink);
 }
   
-/* Animation main title */
-  
-.main-title {
-    font-size: 3em;
-}
-  
-.main-title-container {
-    height: 1em;
-}
-.main-title-container .main-title-container__ {
-    overflow: hidden;
-}
-.main-title-container__list {
-    animation-name: swipe;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-    .main-title-container__list {
-      animation: none;
-    }
-}
-@keyframes swipe {
-    0%,
-    12%,
-    100% {
-      transform: translate3d(0, -3%, 0);
-    }
-    16%,
-    29% {
-      transform: translate3d(0, -23%, 0);
-    }
-    33%,
-    46% {
-      transform: translate3d(0, -43%, 0);
-    }
-    50%,
-    62% {
-      transform: translate3d(0, -63%, 0);
-    }
-    66%,
-    79% {
-      transform: translate3d(0, -83%, 0);
-    }
-}
-  
 /* Responsiveness */
   
 @media (max-width: 900px) {
