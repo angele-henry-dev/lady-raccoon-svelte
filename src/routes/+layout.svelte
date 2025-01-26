@@ -7,8 +7,8 @@
 <header class="p-4">
 	<nav class="container flex justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
-			<a href="/" class="flex items-center gap-2">
-				<img src="/images/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
+			<a href="/" class="flex items-center gap-5">
+				<img src="/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
 				<span class="truncate">Lady Raccoon</span>
 			</a>
 			<a href="/about">Documentation</a>
