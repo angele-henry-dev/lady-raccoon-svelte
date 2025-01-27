@@ -5,15 +5,13 @@
 :root {
     --background: #030303;
     --foreground: #f8f8f8;
+    --grey: #545454;
   
     --vt-c-pink: #ed1271;
     --vt-c-yellow: #ffff00;
     --vt-c-cyan: #00ffff;
-  /*   --vt-c-lime: #00ff33;
+    /* --vt-c-lime: #00ff33;
     --vt-c-orange: #F57D1F; */
-  
-    --color-border-card: #545454;
-    --color-border-pin: var(--vt-c-pink);
 }
   
 @font-face {
@@ -22,6 +20,10 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+* {
+    border-color: var(--grey);
 }
 
 body {
@@ -37,7 +39,7 @@ body {
 }
 
 footer {
-    border-top: 1px solid var(--color-border-card);
+    border-top-width: var(--grey);
     font-size: 0.8em;
 }
 header {
@@ -46,7 +48,7 @@ header {
     place-items: center;
     position: sticky;
     top: 0px;
-    border-bottom: 1px solid var(--color-border-card);
+    border-bottom-width: var(--grey);
     background-color: hsla(0, 0%, 9%, 0.9);
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;
     z-index: 100;
@@ -84,17 +86,32 @@ ul li::marker {
     color: var(--vt-c-yellow);
 }
   
-.button {
+button {
     padding: 8px 16px;
-    border: 1px solid var(--vt-c-yellow);
-    background-color: transparent;
+    border: 3px solid var(--vt-c-yellow);
+    color: var(--vt-c-yellow);
+    background-color: var(--background);
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s;
 }
-.button.active,
-.button:hover {
-    border: 1px solid var(--vt-c-pink);
+button.icon {
+    border-radius: 50%;
+    margin-left: 15px;
+    font-size: 20pt;
+    font-weight: 900;
+}
+button.alone {
+    color: var(--foreground);
+    border-width: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+button.active,
+button:hover {
+    border-color: var(--vt-c-pink);
+    color: var(--vt-c-pink);
 }
   
 /* Custom scrollbar */
