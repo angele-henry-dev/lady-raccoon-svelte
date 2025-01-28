@@ -6,7 +6,7 @@
 	let { children } = $props();
 </script>
 
-<header class="p-4">
+<header class="sticky top-0 z-50 p-4 border-b">
 	<nav class="container flex justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
 			<Logo />
@@ -22,10 +22,7 @@
 
 <main class="flex-grow">{@render children()}</main>
 
-<footer class="p-4 grid grid-cols-4 gap-4">
-	<div>
-		Image de raton-laveur
-	</div>
+<footer class="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm border-t">
 	<div>
 		<p class="mb-3">
 			Développeuse frontend spécialisée dans <b>l’accessibilité web</b>, j’aide les entreprises à rendre leurs sites <b>conformes aux normes WCAG 2.1</b>. 
@@ -35,21 +32,20 @@
 		</p>
 	</div>
 	<div>
-		Plop
+		Image de raton-laveur
 	</div>
 	<div>
-		<p class='mb-2'>
-			<a href="/legal-notice">Mentions légales</a>
-			<span class="mx-2">&#8226;</span>
-			<a href="/privacy-policy">Politique de confidentialité</a>
-			<span class="mx-2">&#8226;</span>
-			<a href="/sitemap">Plan du site</a>
-		</p>
-		<p class='mb-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 		<p>
-			Développé avec 
-			<span class="ml-2 highlight">♥</span>
-			<span class="mx-2">&#8226;</span>
+			<a href="/legal-notice">&#8226; Mentions légales</a>
+		</p>
+		<p>
+			<a href="/privacy-policy">&#8226; Politique de confidentialité</a>
+		</p>
+		<p>
+			<a href="/sitemap">&#8226; Plan du site</a>
+		</p>
+		<p class='my-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
+		<p>
 			© {new Date().getFullYear()} Lady Raccoon
 		</p>
 	</div>

@@ -27,41 +27,25 @@
 }
 
 body {
+    font-size: 16pt;
     color: var(--foreground);
     background: var(--background);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
-    font-size: 16pt;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-footer {
-    border-top-width: var(--grey);
-    font-size: 0.8em;
-}
 header {
-    width: 100%;
-    display: flex;
-    place-items: center;
-    position: sticky;
-    top: 0px;
-    border-bottom-width: var(--grey);
     background-color: hsla(0, 0%, 9%, 0.9);
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;
-    z-index: 100;
 }
 
 h1 {
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;
-    font-size: 2em;
-    margin: 20px 0;
-}
-h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
+    font-size: 1.5rem;
 }
 
 a {
@@ -74,7 +58,7 @@ a:hover {
 }
 
 ul {
-    list-style: square;
+    list-style: disc;
     margin: 10px 40px;
     padding: 0;
 }
@@ -98,7 +82,6 @@ button {
 button.icon {
     border-radius: 50%;
     margin-left: 15px;
-    font-size: 20pt;
     font-weight: 900;
 }
 button.alone {
@@ -134,16 +117,5 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 900px) {
     body {
       font-size: 12pt;
-    }
-    .main-title {
-      font-size: 2em;
-    }
-}
-@media (max-width: 430px) {
-    body {
-      font-size: 12pt;
-    }
-    h1, .main-title {
-      font-size: 1.5em;
     }
 }
