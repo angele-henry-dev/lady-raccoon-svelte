@@ -23,24 +23,48 @@
 
 <BackgroundRetro />
 
-<div class='my-20 container mx-auto'>
-    <h1>Saviez-vous que...</h1>
-    <ul>
-      <li>70 % des utilisateurs quittent un site s’il est lent ou inaccessible</li>
-      <li>15 % de la population mondiale rencontre des difficultés à naviguer sur des sites web non accessibles</li>
-      <li>En France, l’accessibilité est une obligation légale pour de nombreuses organisations publiques</li>
-      <li>Le manquement aux obligations peut entraîner une sanction financière d’un montant de 20 000 euros par service en ligne</li>
-    </ul>
+<div class='my-20 p-6 text-center mx-auto'>
+  <h1>Saviez-vous que...</h1>
+  <div class="my-5 flex flex-row flex-wrap gap-5 justify-center">
+    <div class="card w-64">
+      <p class="text-5xl mb-3">❌</p>
+      <p>70 % des utilisateurs <span class="highlight">quittent un site internet rapidement</span> s’il est lent ou inaccessible.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">❌</p>
+      <p>15 % de la population mondiale rencontre des <span class="highlight">difficultés à naviguer</span> sur des sites web non accessibles.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">❌</p>
+      <p>En France, l’accessibilité est une <span class="highlight">obligation légale</span> pour de nombreuses organisations publiques.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">❌</p>
+      <p>Le manquement aux obligations peut entraîner <span class="highlight">une sanction de 20.000€</span> par service.</p>
+    </div>
+  </div>
 </div>
 
-<div class='my-20 container mx-auto'>
-  <h1>La solution</h1>
-  <ul>
-    <li>Un site conforme aux normes WCAG 2.1, niveaux AA et AAA</li>
-    <li>Une meilleure expérience utilisateur pour tous vos visiteurs</li>
-    <li>Une image de marque renforcée et inclusive</li>
-    <li>Une équipe sensibilisée et formée à l’accessibilité</li>
-  </ul>
+<div class='my-20 p-6 text-center mx-auto'>
+  <h1>→ La solution</h1>
+  <div class="my-5 flex flex-row flex-wrap gap-5 justify-center">
+    <div class="card w-64">
+      <p class="text-5xl mb-3">✔️</p>
+      <p>Un site conforme aux <span class="highlight">normes WCAG 2.1</span>, niveaux AA et AAA.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">✔️</p>
+      <p>Une meilleure <span class="highlight">expérience utilisateur</span> pour tous vos visiteurs.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">✔️</p>
+      <p>Une <span class="highlight">image de marque</span> renforcée et inclusive.</p>
+    </div>
+    <div class="card w-64">
+      <p class="text-5xl mb-3">✔️</p>
+      <p>Une équipe sensibilisée et <span class="highlight">formée</span> à l’accessibilité.</p>
+    </div>
+  </div>
 </div>
 
 <div class='my-20 container mx-auto rounded-3xl border-4 p-5'>

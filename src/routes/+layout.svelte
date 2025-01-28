@@ -25,7 +25,7 @@
 <footer class="px-4 text-base">
 	<div class="p-5 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
 		<div>
-			<h1 class='mb-3'>Qui suis-je ?</h1>
+			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
 			<p>
 				J’aide les entreprises à rendre leurs sites 
 				conformes aux normes WCAG 2.1 pour <span class="highlight">contribuer à un web accessible à tous</span>.
@@ -33,13 +33,13 @@
 			<p class="py-5 flex flex-row gap-5"><LinkedIn /><Github /></p>
 		</div>
 		<div class="mb-3 md:text-right">
-			<h1 class='mb-3'>Contactez-moi</h1>
+			<h1 class='mb-3 text-lg'>Contactez-moi</h1>
 			<p class="mb-2">2 allée Anita Conti, A51
 				<br>31520 Ramonville-Saint-Agne</p>
 			<p>angele.henry[at]ladyraccoon.com</p>
 		</div>
 		<div class="mb-3 md:text-right">
-			<h1 class='mb-3'>Mentions légales</h1>
+			<h1 class='mb-3 text-lg'>Mentions légales</h1>
 			<p><a href="/legal-notice">Mentions légales</a></p>
 			<p><a href="/privacy-policy">Politique de confidentialité</a></p>
 		</div>
