@@ -39,13 +39,13 @@ let { size = "50px" } = $props();
   overflow: hidden;
 }
 .cls-2 {
-  fill: var(--vt-c-pink);
+  fill: var(--secondary);
 }
 .cls-3 {
-  fill: var(--vt-c-yellow);
+  fill: var(--primary);
 }
 .cls-4 {
-  fill: #00ff33;
+  fill: var(--primary);
 }
 
 .cls-2::before,
@@ -57,7 +57,7 @@ let { size = "50px" } = $props();
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, var(--vt-c-pink), transparent);
+  background: linear-gradient(to left, var(--secondary), transparent);
   transform: translateX(100%);
   transition: transform 1s ease-out;
   z-index: 1;
@@ -72,6 +72,6 @@ a:hover .cls-4::before {
 a:hover .cls-2,
 a:hover .cls-3,
 a:hover .cls-4 {
-  fill: var(--vt-c-pink);
+  fill: var(--secondary);
 }
 </style>

@@ -1,4 +1,5 @@
 <script>
+	import Audit from "./_components/Audit.svelte";
 	import BackgroundRetro from "./_components/design/BackgroundRetro.svelte";
 	import BackgroundStars from "./_components/design/BackgroundStars.svelte";
 	import Arrow from "./_components/svg/Arrow.svelte";
@@ -9,65 +10,68 @@
 	<meta name="Description" content="Boostez votre impact avec un site rapide, accessible et optimisé" />
 </svelte:head>
 
-<BackgroundStars />
+<div class="dark hero w-full flex flex-col justify-around">
+  <div class="container mx-auto">
+    <p class="text-4xl md:text-6xl mb-10">Boostez votre impact avec un site <span class="highlight">rapide, accessible et optimisé.</span></p>
+    <Audit />
+    <Arrow />
+  </div>
+</div>
 
 <div class="my-20 container mx-auto">
-    <div>
-      <p class="text-4xl md:text-6xl mb-10">Boostez votre impact avec un site <span class="highlight">rapide, accessible et optimisé.</span></p>
-      <p class="text-xl md:text-3xl">
-        Demandez un audit <span class="highlight">gratuit</span>
-        <button class="icon align-middle" type="button">→</button>
-    </p>
-    </div>
-</div>
-
-<BackgroundRetro />
-
-<div class='my-20 p-6 text-center mx-auto'>
   <h1>Saviez-vous que...</h1>
-  <div class="my-5 flex flex-row flex-wrap gap-5 justify-center">
+  <div class="my-12 flex flex-row flex-wrap gap-10 justify-center">
     <div class="card w-64">
-      <p class="text-5xl mb-3">❌</p>
-      <p>70 % des utilisateurs <span class="highlight">quittent un site internet rapidement</span> s’il est lent ou inaccessible.</p>
+      <div class="card-info">
+        <p>70% des utilisateurs <span class="highlight">quittent un site internet rapidement</span> s’il est lent ou inaccessible.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">❌</p>
-      <p>15 % de la population mondiale rencontre des <span class="highlight">difficultés à naviguer</span> sur des sites web non accessibles.</p>
+      <div class="card-info">
+        <p>15% de la population mondiale rencontre des <span class="highlight">difficultés à naviguer</span> sur des sites web non accessibles.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">❌</p>
-      <p>En France, l’accessibilité est une <span class="highlight">obligation légale</span> pour de nombreuses organisations publiques.</p>
+      <div class="card-info">
+        <p>En France, l’accessibilité est une <span class="highlight">obligation légale</span> pour de nombreuses organisations publiques.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">❌</p>
-      <p>Le manquement aux obligations peut entraîner <span class="highlight">une sanction de 20.000€</span> par service.</p>
+      <div class="card-info">
+        <p>Le non-respect aux obligations peut entraîner <span class="highlight">une sanction de 20.000€</span> par service.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class='my-20 p-6 text-center mx-auto'>
+<div class='my-20 container mx-auto'>
   <h1>→ La solution</h1>
-  <div class="my-5 flex flex-row flex-wrap gap-5 justify-center">
+  <div class="my-12 flex flex-row flex-wrap gap-10 justify-center">
     <div class="card w-64">
-      <p class="text-5xl mb-3">✔️</p>
-      <p>Un site conforme aux <span class="highlight">normes WCAG 2.1</span>, niveaux AA et AAA.</p>
+      <div class="card-info">
+        <p>Un site conforme aux <span class="highlight">normes WCAG 2.1</span>, niveaux AA et AAA.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">✔️</p>
-      <p>Une meilleure <span class="highlight">expérience utilisateur</span> pour tous vos visiteurs.</p>
+      <div class="card-info">
+        <p>Une meilleure <span class="highlight">expérience utilisateur</span> pour tous vos visiteurs.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">✔️</p>
-      <p>Une <span class="highlight">image de marque</span> renforcée et inclusive.</p>
+      <div class="card-info">
+        <p>Une <span class="highlight">image de marque</span> renforcée et inclusive.</p>
+      </div>
     </div>
     <div class="card w-64">
-      <p class="text-5xl mb-3">✔️</p>
-      <p>Une équipe sensibilisée et <span class="highlight">formée</span> à l’accessibilité.</p>
+      <div class="card-info">
+        <p>Une équipe sensibilisée et <span class="highlight">formée</span> à l’accessibilité.</p>
+      </div>
     </div>
   </div>
 </div>
+<Audit classes="m-10" />
 
-<div class='my-20 container mx-auto rounded-3xl border-4 p-5'>
+<div class='my-20 container mx-auto rounded-3xl border p-5'>
   <h1>Pourquoi travailler avec moi ?</h1>
 
   <h2>1. Expertise technique</h2>
@@ -88,6 +92,7 @@
     <li>Support continu pour garantir une accessibilité optimale</li>
   </ul>
 </div>
+<Audit classes="m-10" />
 
 <div class='my-20 container mx-auto'>
   <h1>Mon offre en détail</h1>
@@ -141,3 +146,4 @@
     </li>
   </ul>
 </div>
+<Audit classes="m-10" />

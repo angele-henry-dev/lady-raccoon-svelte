@@ -6,7 +6,7 @@
 	let { children } = $props();
 </script>
 
-<header class="sticky top-0 z-50 p-4 border-b">
+<header class="p-4 border-b">
 	<nav class="container flex justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
 			<Logo />
@@ -15,7 +15,6 @@
 		<div class="flex gap-5 items-center">
 			<LinkedIn />
 			<Github />
-			<button class="alone" type="button">☀☪</button>
 		</div>
 	</nav>
 </header>

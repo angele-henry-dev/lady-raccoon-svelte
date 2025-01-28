@@ -116,7 +116,7 @@
 }
 .retroSun,
 .retroSunShadow {
-  --glow-color: #F57D1F;
+  --glow-color: var(--vt-c-orange);
   border-radius: 50%;
 }
 .retroSun {
