@@ -22,31 +22,35 @@
 
 <main class="flex-grow">{@render children()}</main>
 
-<footer class="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm border-t">
-	<div>
-		<p class="mb-3">
-			Développeuse frontend spécialisée dans <b>l’accessibilité web</b>, j’aide les entreprises à rendre leurs sites <b>conformes aux normes WCAG 2.1</b>. 
-		</p>
-		<p>
-			<b>Mon objectif :</b> améliorer leur impact et leur audience tout en contribuant à un web accessible à tous.
-		</p>
+<footer class="px-4 text-base">
+	<div class="p-4 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
+		<div>
+			<h1 class='mb-3'>Qui suis-je ?</h1>
+			<ul>
+				<li>Développeuse frontend spécialisée dans <b>l’accessibilité web</b>, j’aide les entreprises à rendre leurs sites <b>conformes aux normes WCAG 2.1</b>.</li>
+				<li><b>Mon objectif :</b> améliorer leur impact et leur audience tout en contribuant à un web accessible à tous.</li>
+			</ul>
+		</div>
+		<div>
+			<h1 class='mb-3'>Contactez-moi</h1>
+			<ul>
+				<li>2 allée Anita Conti, A51
+					<br>31520 Ramonville-Saint-Agne</li>
+				<li>angele.henry[at]ladyraccoon.com</li>
+			</ul>
+		</div>
+		<div>
+			<h1 class='mb-3'>Mentions légales</h1>
+			<ul>
+				<li><a href="/legal-notice">Mentions légales</a></li>
+				<li><a href="/privacy-policy">Politique de confidentialité</a></li>
+			</ul>
+		</div>
 	</div>
-	<div>
-		Image de raton-laveur
-	</div>
-	<div>
+	<div class="p-4 flex flex-row justify-between border-t">
 		<p>
-			<a href="/legal-notice">&#8226; Mentions légales</a>
+			© {new Date().getFullYear()} Lady Raccoon. Tous droits réservés.
 		</p>
-		<p>
-			<a href="/privacy-policy">&#8226; Politique de confidentialité</a>
-		</p>
-		<p>
-			<a href="/sitemap">&#8226; Plan du site</a>
-		</p>
-		<p class='my-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
-		<p>
-			© {new Date().getFullYear()} Lady Raccoon
-		</p>
+		<p class='mb-2'>Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 	</div>
 </footer>
