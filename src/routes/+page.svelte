@@ -18,9 +18,9 @@
   </div>
 </div>
 
-<div class="my-20 container mx-auto">
+<div class="mb-20 container mx-auto">
   <h1>Saviez-vous que...</h1>
-  <div class="my-12 flex flex-row flex-wrap gap-10 justify-center">
+  <div class="mt-10 mb-20 flex flex-row flex-wrap gap-10 justify-center">
     <div class="card w-64">
       <div class="card-info">
         <p>70% des utilisateurs <span class="highlight">quittent un site internet rapidement</span> s’il est lent ou inaccessible.</p>
@@ -42,11 +42,9 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class='my-20 container mx-auto'>
   <h1>→ La solution</h1>
-  <div class="my-12 flex flex-row flex-wrap gap-10 justify-center">
+  <div class="mt-10 flex flex-row flex-wrap gap-10 justify-center">
     <div class="card w-64">
       <div class="card-info">
         <p>Un site conforme aux <span class="highlight">normes WCAG 2.1</span>, niveaux AA et AAA.</p>
@@ -69,7 +67,7 @@
     </div>
   </div>
 </div>
-<Audit classes="m-10" />
+<Audit classes="mx-10 pt-10" />
 
 <div class='my-20 container mx-auto rounded-3xl border p-5'>
   <h1>Pourquoi travailler avec moi ?</h1>
@@ -92,7 +90,7 @@
     <li>Support continu pour garantir une accessibilité optimale</li>
   </ul>
 </div>
-<Audit classes="m-10" />
+<Audit classes="mx-10 pt-10" />
 
 <div class='my-20 container mx-auto'>
   <h1>Mon offre en détail</h1>
@@ -146,4 +144,4 @@
     </li>
   </ul>
 </div>
-<Audit classes="m-10" />
+<Audit classes="mx-10 mb-20" />
