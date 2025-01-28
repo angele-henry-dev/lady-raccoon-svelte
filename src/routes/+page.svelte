@@ -101,9 +101,9 @@
 <div class='my-20 container mx-auto'>
   <h1>Mon offre en détail</h1>
 
-  <div class="mt-10 flex flex-row gap-5 justify-around">
-    <div class="card-offer">
-      <div class="content">
+  <div class="mt-10 flex flex-row gap-10 justify-around">
+    <div class="card">
+      <div class="card-info">
         <div class="title">Audit détaillé d’accessibilité</div>
         <div class="description">
           <p><b>Objectif:</b> Identifier les problèmes d’accessibilité et proposer des solutions concrètes.</p>
@@ -117,14 +117,14 @@
           </div>
           <p><b>Livrable :</b> Un rapport détaillé avec un plan d’action priorisé.</p>
         </div>
-      </div>
-        <button>
+        <button class="my-3">
           Buy now
         </button>
+      </div>
     </div>
 
-    <div class="card-offer">
-      <div class="content">
+    <div class="card">
+      <div class="card-info">
         <div class="title">Corrections et mise en conformité</div>
         <div class="description">
           <p><b>Objectif:</b> Appliquer les changements nécessaires pour rendre votre site conforme.</p>
@@ -138,14 +138,14 @@
           </div>
           <p><b>Livrable :</b> Un site conforme aux normes WCAG 2.1, accessible à tous.</p>
         </div>
-      </div>
-        <button>
+        <button class="my-3">
           Buy now
         </button>
+      </div>
     </div>
 
-    <div class="card-offer">
-      <div class="content">
+    <div class="card">
+      <div class="card-info">
         <div class="title">Formation des équipes techniques</div>
         <div class="description">
           <p><b>Objectif:</b> Sensibiliser vos développeurs au développement accessible.</p>
@@ -158,10 +158,10 @@
           </div>
           <p><b>Livrable :</b> Supports de formation PDF et accès à des ressources pratiques pour aller plus loin.</p>
         </div>
-      </div>
-        <button>
+        <button class="my-3">
           Buy now
         </button>
+      </div>
     </div>
   </div>
 </div>
