@@ -54,6 +54,9 @@ h1 {
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;
     font-size: 2rem;
 }
+h2 {
+    font-weight: 900;
+}
 
 a {
     text-decoration: none;
@@ -80,7 +83,7 @@ ul {
     padding: 0;
 }
 ul li::marker {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .highlight {
@@ -117,6 +120,69 @@ ul li::marker {
 }
 .card:hover::after {
     opacity: 0;
+}
+
+/* Cards offers */
+
+.card-offer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 360px;
+    padding: 1px;
+    margin: 10px 0;
+    box-shadow: 0 10px 15px -3px rgba(243, 215, 33, 0.4),0 4px 6px -4px rgba(243, 201, 33, 0.4);
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: var(--background);
+
+    .content {
+        padding: 20px;
+    }
+    .content .description {
+        margin-top: 10px;
+        font-size: 14px;
+        ul {
+            margin: 0;
+            padding: 15px;
+        }
+    }
+    .content .title {
+        text-align: center;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    button {
+        margin-bottom: 20px;
+        border: none;
+        outline: none;
+        color: rgb(255 255 255);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: .75rem;
+        padding: 0.75rem 1.5rem;
+        background-color: rgb(33 150 243);
+        border-radius: 0.5rem;
+        width: 90%;
+        text-shadow: 0px 4px 18px #2c3442;
+    }
+}
+
+/* Inverted */
+
+.inverted {
+    background: var(--foreground);
+    color: var(--background);
+    clip-path: polygon(100px 0%, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0% 100px);
+    ul li::marker {
+        color: var(--background);
+    }
+}
+.inverted .container .content {
+    border-color: var(--secondary);
 }
   
 /* Custom scrollbar */
