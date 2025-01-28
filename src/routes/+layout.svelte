@@ -2,16 +2,14 @@
 	import '../app.css';
 	import Github from './_components/svg/Github.svelte';
 	import LinkedIn from './_components/svg/LinkedIn.svelte';
+	import Logo from './_components/svg/Logo.svelte';
 	let { children } = $props();
 </script>
 
 <header class="p-4">
 	<nav class="container flex justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
-			<a href="/" class="flex items-center gap-5">
-				<img src="/logo.webp" alt="Logo of Lady Raccoon" width={50} height={50} />
-				<span class="truncate">Lady Raccoon</span>
-			</a>
+			<Logo />
 			<a href="/about">Documentation</a>
 		</div>
 		<div class="flex gap-5 items-center">

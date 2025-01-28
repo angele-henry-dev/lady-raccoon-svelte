@@ -10,7 +10,7 @@
     </g>
 </svg>
 
-<style scoped>
+<style>
 .path {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;

@@ -12,14 +12,13 @@
 <BackgroundStars />
 
 <div class="my-20 container mx-auto">
-    <div class="main-title mb-10">
-      Boostez votre impact avec un site <span class="highlight">rapide, accessible et optimisé.</span>
+    <div class="main-title">
+      <p class="mb-10">Boostez votre impact avec un site <span class="highlight">rapide, accessible et optimisé.</span></p>
+      <p>
+        Demandez un audit <span class="highlight">gratuit</span> !
+        <button class="icon align-middle" type="button">→</button>
+    </p>
     </div>
-    <div>
-      <span>Demandez un audit gratuit !</span>
-      <button class="icon" type="button">→</button>
-    </div>
-    <Arrow />
 </div>
 
 <BackgroundRetro />
