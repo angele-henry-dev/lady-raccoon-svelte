@@ -18,33 +18,41 @@
 
 <div class="dark hero text-center w-full flex flex-col justify-around">
   <div class="container mx-auto">
-    <p class="text-4xl md:text-6xl mb-10">Boostez votre impact avec un site <span class="highlight">rapide, accessible et optimisé.</span></p>
+    <p class="text-4xl md:text-6xl mb-20">Boostez votre impact avec un site <br><span class="highlight">rapide, accessible et optimisé.</span></p>
     <Audit />
   </div>
 </div>
 
 <BackgroundRetro />
 
-<div class="my-20 container mx-auto">
-  <h1>Savez-vous que...</h1>
-  <div class="mb-10">
-    <ul>
-      <li>70% des utilisateurs <span class="highlight">quittent un site internet rapidement</span> s’il est lent ou inaccessible.</li>
-      <li>15% de la population mondiale rencontre des <span class="highlight">difficultés à naviguer</span> sur des sites web non accessibles.</li>
-      <li>En France, l’accessibilité est une <span class="highlight">obligation légale</span> pour de nombreuses organisations publiques.</li>
-      <li>Le non-respect aux obligations peut entraîner <span class="highlight">une sanction de 20.000€</span> par service.</li>
-    </ul>
+<div class="my-20 w-full container mx-auto">
+  <h1 class="text-center">Ne laissez plus votre site freiner votre succès.</h1>
+  <p class="mx-auto text-center w-full max-w-[50%] mb-20">
+    Proposez une meilleure expérience utilisateur à tous vos visiteurs, 
+      une image de marque renforcée, inclusive, responsable et un site conforme aux normes WCAG 2.1.
+  </p>
+
+  <div class="text-center grid grid-cols-1 lg:grid-cols-3">
+    <div class="lg:border-r p-5">
+      <h2 class="text-center"><span class="highlight">Évitez les sanctions, restez en conformité</span></h2>
+        <p class="border-b p-5">Jusqu’à 20 000 € d’amende pour non-conformité ? Ne prenez pas de risques !</p>
+        <p class="border-b p-5">Un site 100% conforme aux normes pour une accessibilité sans faille.</p>
+        <p class="p-5">Une équipe formée et sensibilisée à l’accessibilité.</p>
+    </div>
+    <div class="lg:border-r p-5">
+      <h2 class="text-center"><span class="highlight">Dites adieu aux lenteurs</span></h2>
+        <p class="border-b p-5">Un site rapide et performant, c'est plus d'engagement et moins d'abandons !</p>
+        <p class="border-b p-5">Optimisation technique et bonnes pratiques pour accélérer le chargement.</p>
+        <p class="p-5">Adieu l’attente, bonjour l’expérience utilisateur !</p>
+    </div>
+    <div class="p-5">
+      <h2 class="text-center"><span class="highlight">Boostez votre visibilité</span></h2>
+        <p class="border-b p-5">Un site qualitatif, mieux classé sur les moteurs de recherche.</p>
+        <p class="border-b p-5">Un positionnement optimisé grâce à une stratégie sur-mesure, définie avec vous.</p>
+        <p class="p-5">Plus de trafic, plus d’impact et plus de clients !</p>
+    </div>
   </div>
 
-  <h1>→ Ce que je propose pour y remédier</h1>
-  <div>
-    <ul>
-      <li>Une meilleure <span class="highlight">expérience utilisateur</span> pour tous vos visiteurs.</li>
-      <li>Un site conforme aux <span class="highlight">normes WCAG 2.1</span>, niveaux AA et AAA.</li>
-      <li>Une <span class="highlight">image de marque</span> renforcée et inclusive.</li>
-      <li>Une équipe sensibilisée et <span class="highlight">formée</span> à l’accessibilité.</li>
-    </ul>
-  </div>
 </div>
 <Audit classes="mx-10 pt-10" />
 

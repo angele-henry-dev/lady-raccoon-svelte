@@ -10,7 +10,6 @@
 	<nav class="container flex justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
 			<Logo />
-			<a href="/about">Documentation</a>
 		</div>
 		<div class="flex gap-5 items-center">
 			<LinkedIn />
@@ -21,7 +20,7 @@
 
 <main class="flex-grow">{@render children()}</main>
 
-<footer class="px-4 text-base">
+<footer class="mt-20 px-4">
 	<div class="p-5 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
 		<div>
 			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
