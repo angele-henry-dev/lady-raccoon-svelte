@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	import Github from './_components/svg/Github.svelte';
-	import LinkedIn from './_components/svg/LinkedIn.svelte';
-	import Logo from './_components/svg/Logo.svelte';
+	import Github from '../components/svg/Github.svelte';
+	import LinkedIn from '../components/svg/LinkedIn.svelte';
+	import Logo from '../components/svg/Logo.svelte';
 	let { children } = $props();
 </script>
 

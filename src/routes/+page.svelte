@@ -1,9 +1,9 @@
 <script>
-	import BackgroundRetro from "./_components/design/BackgroundRetro.svelte";
-	import BackgroundStars from "./_components/design/BackgroundStars.svelte";
-	import Arrow from "./_components/svg/Arrow.svelte";
-	import Audit from "./_components/Audit.svelte";
-	import Card from "./_components/Card.svelte";
+	import BackgroundRetro from "../components/design/BackgroundRetro.svelte";
+	import BackgroundStars from "../components/design/BackgroundStars.svelte";
+	import Arrow from "../components/svg/Arrow.svelte";
+	import Audit from "../components/Audit.svelte";
+	import Card from "../components/Card.svelte";
   import offers from "$data/offers.json";
   import aboutme from "$data/aboutme.json";
 </script>

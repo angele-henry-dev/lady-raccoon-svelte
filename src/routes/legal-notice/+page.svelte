@@ -15,7 +15,7 @@
 		<ul>
 			<li>Nom : Angele Henry</li>
 			<li>Email : angele.henry[at]ladyraccoon.com</li>
-			<li>Localisation : Ramonville-Saint-Agne, France</li>
+			<li>Localisation : 2 allée Anita Conti, A51, Ramonville-Saint-Agne, France</li>
 			<li>SIRET : 937817823 00019</li>
 		</ul>
 	</div>
