@@ -25,9 +25,9 @@
 
 <BackgroundRetro />
 
-<div class="my-20 w-full container mx-auto">
+<div class="my-20 w-full container mx-auto p-5 md:p-10">
   <h1 class="text-center">Ne laissez plus votre site freiner votre succès.</h1>
-  <p class="mx-auto text-center w-full max-w-[50%] mb-20">
+  <p class="mx-auto text-center w-full md:max-w-[50%] mb-20">
     Proposez une meilleure expérience utilisateur à tous vos visiteurs, 
       une image de marque renforcée, inclusive, responsable et un site conforme aux normes WCAG 2.1.
   </p>
@@ -54,10 +54,12 @@
   </div>
 
 </div>
-<Audit classes="mx-10 pt-10" />
+<div class="text-center">
+  <Audit />
+</div>
 
-<div class='inverted my-20 py-10'>
-  <div class="container mx-auto py-10">
+<div class='inverted my-20 p-5 md:p-10'>
+  <div class="container mx-auto mt-20">
     <h1>Pourquoi travailler avec moi ?</h1>
     <div class="content border-l-4 pl-5 my-20">
       {#each aboutme as item}
@@ -73,10 +75,10 @@
   </div>
 </div>
 
-<div class='my-20 container mx-auto'>
+<div class='my-20 container mx-auto p-5 md:p-10'>
   <h1>Mon offre en détail</h1>
 
-  <div class="mt-10 flex flex-row gap-10 justify-around">
+  <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 justify-around">
     {#each offers as offer}
       {#snippet description()}
         <p><b>Objectif:</b> {offer.goal}</p>

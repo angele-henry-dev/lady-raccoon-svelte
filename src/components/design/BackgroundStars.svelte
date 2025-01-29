@@ -9,9 +9,9 @@
       animationDelay: string;
     }
   
-    export let smallCount: number = 200;
-    export let mediumCount: number = 100;
-    export let largeCount: number = 50;
+    export let smallCount: number = 100;
+    export let mediumCount: number = 50;
+    export let largeCount: number = 25;
   
     let stars: Star[] = [];
   

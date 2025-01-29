@@ -135,15 +135,7 @@
   background-color: var(--glow-color);
   opacity: 0.5;
   clip-path: inset(-50% -50% 50% -50%);
-  animation: 2s ease infinite alternate retro-sun-glow-anim;
-}
-@keyframes retro-sun-glow-anim {
-  from {
-    box-shadow: 0 0 80px 40px var(--glow-color);
-  }
-  to {
-    box-shadow: 0 0 160px 40px var(--glow-color);
-  }
+  box-shadow: 0 0 160px 40px var(--glow-color);
 }
 
 .retroMountains {
