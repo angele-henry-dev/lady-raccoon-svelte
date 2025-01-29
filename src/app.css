@@ -97,8 +97,9 @@ a.button {
     width: 80%;
 }
 a:hover {
-    border-color: var(--secondary);
+    border: 1px solid var(--secondary);
     color: var(--secondary);
+    background: none;
 }
 
 .highlight {
