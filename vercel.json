@@ -1,6 +1,7 @@
 {
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 500, "dest": "/+error.svelte" },
     { "src": "/(.*)", "status": 404, "dest": "/+error.svelte" }
   ]
 }
