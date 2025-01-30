@@ -4,6 +4,7 @@
 	import Arrow from "../components/svg/Arrow.svelte";
 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
+  import issues from "$data/issues.json";
   import offers from "$data/offers.json";
   import aboutme from "$data/aboutme.json";
 </script>
@@ -26,31 +27,20 @@
 <BackgroundRetro />
 
 <div class="my-20 w-full container mx-auto p-5 md:p-10">
-  <h1 class="text-center">Ne laissez plus votre site freiner votre succès.</h1>
+  <h1 class="text-center">{issues.title}</h1>
   <p class="mx-auto text-center w-full md:max-w-[50%] mb-20">
-    Proposez une meilleure expérience utilisateur à tous vos visiteurs, 
-      une image de marque renforcée, inclusive, responsable et un site conforme aux normes WCAG 2.1.
+    {issues.subtitle}
   </p>
 
   <div class="text-center grid grid-cols-1 lg:grid-cols-3">
-    <div class="lg:border-r p-5">
-      <h2 class="text-center"><span class="highlight">Évitez les sanctions, restez en conformité</span></h2>
-        <p class="border-b p-5">Jusqu’à 20 000 € d’amende pour non-conformité ? Ne prenez pas de risques !</p>
-        <p class="border-b p-5">Un site 100% conforme aux normes pour une accessibilité sans faille.</p>
-        <p class="p-5">Une équipe formée et sensibilisée à l’accessibilité.</p>
-    </div>
-    <div class="lg:border-r p-5">
-      <h2 class="text-center"><span class="highlight">Dites adieu aux lenteurs</span></h2>
-        <p class="border-b p-5">Un site rapide et performant, c'est plus d'engagement et moins d'abandons !</p>
-        <p class="border-b p-5">Optimisation technique et bonnes pratiques pour accélérer le chargement.</p>
-        <p class="p-5">Adieu l’attente, bonjour l’expérience utilisateur !</p>
-    </div>
-    <div class="p-5">
-      <h2 class="text-center"><span class="highlight">Boostez votre visibilité</span></h2>
-        <p class="border-b p-5">Un site qualitatif, mieux classé sur les moteurs de recherche.</p>
-        <p class="border-b p-5">Un positionnement optimisé grâce à une stratégie sur-mesure, définie avec vous.</p>
-        <p class="p-5">Plus de trafic, plus d’impact et plus de clients !</p>
-    </div>
+    {#each issues.items as item}
+      <div class="lg:border-r p-5">
+        <h2 class="text-center"><span class="highlight">{item.title}</span></h2>
+          {#each item.items as line}
+            <p class="border-b p-5">{line}</p>
+          {/each}
+      </div>
+    {/each}
   </div>
 
 </div>
@@ -60,9 +50,9 @@
 
 <div class='inverted my-20 p-5 md:p-10'>
   <div class="container mx-auto mt-20">
-    <h1>Pourquoi travailler avec moi ?</h1>
+    <h1>{aboutme.title}</h1>
     <div class="content border-l-4 pl-5 my-20">
-      {#each aboutme as item}
+      {#each aboutme.items as item}
         <h2>{item.title}</h2>
         <ul>
           {#each item.why as why}
@@ -76,12 +66,12 @@
 </div>
 
 <div class='my-20 container mx-auto p-5 md:p-10'>
-  <h1>Mon offre en détail</h1>
+  <h1>{offers.title}</h1>
 
   <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 justify-around">
-    {#each offers as offer}
+    {#each offers.items as offer}
       {#snippet description()}
-        <p><b>Objectif:</b> {offer.goal}</p>
+        <p><b>{offer.goal_title} :</b> {offer.goal}</p>
         <div class="mt-3"><b>{offer.what} :</b>
           <ul>
             {#each offer.how as item}
@@ -89,7 +79,7 @@
             {/each}
           </ul>
         </div>
-        <p><b>Livrable :</b> {offer.deliverable}</p>
+        <p><b>{offer.deliverable_title} :</b> {offer.deliverable}</p>
       {/snippet}
       {#snippet cta()}
         <a class="button bg-primary align-middle" target="_blank" href="{offer.link}">Prendre RDV</a>

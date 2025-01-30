@@ -1,6 +1,9 @@
-[
+{
+  "title": "Mon offre en détail",
+  "items": [
     {
       "title": "Audit gratuit d’accessibilité",
+      "goal_title": "Objectif",
       "goal": "Identifier les problèmes d’accessibilité et proposer des solutions concrètes.",
       "what": "Ce que j'analyse",
       "how": [
@@ -9,6 +12,7 @@
         "Navigation clavier et interactions",
         "Conformité avec les normes WCAG 2.1 (AA et AAA)"
       ],
+      "deliverable_title": "Livrable",
       "deliverable": "Un rapport avec un plan d’action priorisé.",
       "link": "https://app.lemcal.com/@angelehenry/audit-accessibilite"
     },
@@ -38,3 +42,4 @@
       "link": "https://app.lemcal.com/@angelehenry/strategie-web"
     }
   ]
+}
