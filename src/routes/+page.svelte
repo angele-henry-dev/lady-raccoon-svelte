@@ -42,9 +42,6 @@
   </div>
 
 </div>
-<div class="text-center">
-  <Audit />
-</div>
 
 <div class='inverted my-20 p-5 md:p-10'>
   <div class="container mx-auto mt-20">

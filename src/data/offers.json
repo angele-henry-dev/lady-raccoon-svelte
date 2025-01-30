@@ -18,6 +18,7 @@
     },
     {
       "title": "Corrections et mise en conformité",
+      "goal_title": "Objectif",
       "goal": "Appliquer les changements nécessaires pour rendre votre site conforme.",
       "what": "Ce que je fais",
       "how": [
@@ -26,11 +27,13 @@
         "Ajout d’éléments ARIA pour les lecteurs d’écran",
         "Tests après modifications pour valider la conformité"
       ],
+      "deliverable_title": "Livrable",
       "deliverable": "Un site conforme aux normes WCAG 2.1, accessible à tous.",
       "link": "https://app.lemcal.com/@angelehenry/strategie-web"
     },
     {
       "title": "Formation des équipes techniques",
+      "goal_title": "Objectif",
       "goal": "Sensibiliser vos développeurs au développement accessible.",
       "what": "Programme",
       "how": [
@@ -38,8 +41,9 @@
         "Démonstration d’outils et tests pratiques",
         "Cas concrets appliqués à vos projets"
       ],
+      "deliverable_title": "Livrable",
       "deliverable": "Supports de formation PDF et accès à des ressources pratiques pour aller plus loin.",
-      "link": "https://app.lemcal.com/@angelehenry/strategie-web"
+      "link": "https://app.lemcal.com/@angelehenry/formation"
     }
   ]
 }
