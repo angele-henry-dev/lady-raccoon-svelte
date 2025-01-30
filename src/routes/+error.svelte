@@ -28,7 +28,7 @@
 			</p>
 		{/if}
 	{:else}
-		<h1>Il semblerait que vous êtes hors ligne.</h1>
+		<h1>Il semble que vous êtes hors ligne.</h1>
 		<p>Rechargez la page quand vous aurez retrouver internet.</p>
 	{/if}
 </div>
