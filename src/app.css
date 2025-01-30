@@ -61,6 +61,9 @@ header {
 .hero {
     height: calc(100vh - 83px);
 }
+.hero p {
+    line-height: 1.2;
+}
 
 h1 {
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;

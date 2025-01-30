@@ -1,7 +1,6 @@
 <script>
 	import BackgroundRetro from "../components/design/BackgroundRetro.svelte";
 	import BackgroundStars from "../components/design/BackgroundStars.svelte";
-	import Arrow from "../components/svg/Arrow.svelte";
 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
   import issues from "$data/issues.json";
@@ -12,7 +11,6 @@
 <svelte:head>
 	<title>Lady Raccoon • Un site rapide, accessible et optimisé</title>
 	<meta name="Description" content="Boostez votre impact avec un site rapide, accessible et optimisé" />
-  <script src="https://widget.senja.io/widget/25c22f7b-9820-49bf-bd48-304df439fb3b/platform.js" type="text/javascript" async></script>
 </svelte:head>
 
 <BackgroundStars />
@@ -61,7 +59,6 @@
         </ul>
       {/each}
     </div>
-    <div class="senja-embed" data-id="25c22f7b-9820-49bf-bd48-304df439fb3b" data-mode="shadow" data-lazyload="false"></div>
   </div>
 </div>
 
