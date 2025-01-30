@@ -6,7 +6,7 @@ Un site web moderne, rapide et accessible développé avec **Svelte**.
 
 Lien en ligne : https://ladyraccoon.com
 
-[Capture d’écran du site]
+<img width="1511" alt="Capture d’écran 2025-01-29 à 18 56 15" src="https://github.com/user-attachments/assets/be42c840-3ea2-4d83-a1aa-0cb616adeb03" />
 
 ## Caractéristiques principales
 * Développé avec SvelteKit pour une performance optimale.
