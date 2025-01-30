@@ -16,6 +16,13 @@
     --primary: var(--vt-c-yellow);
     --secondary: var(--vt-c-pink);
 }
+
+.bg-primary {
+    background-color: var(--primary);
+}
+.bg-secondary {
+    background-color: var(--secondary);
+}
   
 @font-face {
     font-family: 'OpenDyslexic';
@@ -93,7 +100,6 @@ a.button {
     font-weight: 700;
     font-size: 1rem;
     padding: 0.7rem 1.5rem;
-    background-color: var(--primary);
     border-width: 1px;
     border-radius: 0.5rem;
     width: 80%;
@@ -105,11 +111,6 @@ a:hover {
 }
 
 .highlight {
-    /* color: var(--primary); */
-    /* text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-color: var(--primary); */
-
     padding: 0 0 1rem 0;
     background-size: 110% 10%;
     background-repeat: repeat-x;

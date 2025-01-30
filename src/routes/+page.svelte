@@ -92,7 +92,7 @@
         <p><b>Livrable :</b> {offer.deliverable}</p>
       {/snippet}
       {#snippet cta()}
-        <a class="button align-middle" target="_blank" href="{offer.link}">Prendre RDV</a>
+        <a class="button bg-primary align-middle" target="_blank" href="{offer.link}">Prendre RDV</a>
       {/snippet}
       <Card title="{offer.title}" {description} {cta} />
     {/each}

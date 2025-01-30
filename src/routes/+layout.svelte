@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import GoTop from '../components/GoTop.svelte';
 	import Github from '../components/svg/Github.svelte';
 	import LinkedIn from '../components/svg/LinkedIn.svelte';
 	import Logo from '../components/svg/Logo.svelte';
@@ -20,7 +21,9 @@
 
 <main class="flex-grow">{@render children()}</main>
 
-<footer class="mt-20 px-4">
+<GoTop />
+
+<footer class="my-10 px-4">
 	<div class="p-5 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
 		<div>
 			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
