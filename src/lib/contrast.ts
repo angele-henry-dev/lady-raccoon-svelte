@@ -2,6 +2,10 @@ export const CONTRAST_RATIO_AAA   = 7;
 export const CONTRAST_RATIO_AA    = 4.5;
 export const CONTRAST_RATIO_AA_L  = 3;
 
+export function isCorrect(hex: string): boolean {
+    return /^#[0-9A-Fa-f]{6}$/.test(hex);
+}
+
 // Converts a hexadecimal color to an object { r, g, b }
 export function hexToRgb(hex: string) {
     let r = 0, g = 0, b = 0;
@@ -30,6 +34,8 @@ export function luminance(r: number, g: number, b: number) {
 
 // Calculates the contrast ratio between two colors
 export function contrastRatio(color1: string, color2: string) {
+    if (!isCorrect(color1) || !isCorrect(color2)) return 0;
+
     const rgb1 = hexToRgb(color1);
     const rgb2 = hexToRgb(color2);
     const lum1 = luminance(rgb1.r, rgb1.g, rgb1.b);
@@ -37,7 +43,21 @@ export function contrastRatio(color1: string, color2: string) {
     return (Math.max(lum1, lum2) + 0.05) / (Math.min(lum1, lum2) + 0.05);
 }
 
-export function adjustTextColor(bgColor: string, textColor: string) {
+export function adjustBgColorAuto(bgColor: string, textColor: string): string {
+    let newBgColor = bgColor;
+    let tries = 0;
+
+    while (contrastRatio(newBgColor, textColor) < CONTRAST_RATIO_AAA && tries < 50) {
+        newBgColor = adjustTextColorAuto(textColor, newBgColor);
+        tries++;
+    }
+
+    return newBgColor;
+}
+
+export function adjustTextColorAuto(bgColor: string, textColor: string) {
+    if (!isCorrect(bgColor) || !isCorrect(textColor)) return textColor;
+
     const textRgb = hexToRgb(textColor);
     let ratio = contrastRatio(bgColor, textColor);
     let iterations = 0;

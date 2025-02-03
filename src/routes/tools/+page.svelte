@@ -1,31 +1,21 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustTextColor } from '$lib/contrast';
+    import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustBgColorAuto, adjustTextColorAuto } from '$lib/contrast';
 
     let bgColor = "#ffffff";
     let textColor = "#000000";
     let contrast = 0;
-	let autoAdjust = false;
 
-	function isCorrect(): boolean {
-		if (!/^#[0-9A-Fa-f]{6}$/.test(bgColor)) return false;
-        if (!/^#[0-9A-Fa-f]{6}$/.test(textColor)) return false;
-		return true;
-	}
-
-	function setContrast() {
-		if (autoAdjust) adjustContrast();
-		else updateContrast();
-	}
-
-    function adjustContrast() {
-		if (!isCorrect) return;
-		textColor = adjustTextColor(bgColor, textColor);
+    function adjustTextColor() {
+		textColor = adjustTextColorAuto(bgColor, textColor);
+		updateContrast();
+    }
+    function adjustBgColor() {
+		bgColor = adjustBgColorAuto(bgColor, textColor);
 		updateContrast();
     }
 
 	function updateContrast() {
-		if (!isCorrect) return;
 		contrast = contrastRatio(bgColor, textColor);
 	}
 
@@ -37,7 +27,16 @@
         return "100%";                        				// AAA
     }
 
-    onMount(setContrast);
+	function handleHexInput(event: Event, colorType: "bg" | "text") {
+        const input = event.target as HTMLInputElement;
+        let value = input.value.trim();
+
+		if (colorType === "bg") bgColor = value;
+		else textColor = value;
+		updateContrast();
+    }
+
+    onMount(updateContrast);
 </script>
 
 <svelte:head>
@@ -48,30 +47,35 @@
 <section class="w-5/6 flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
+    <h2>Contraste</h2>
     <div class="controls">
-		<div class="switch-container">
-			<label class="switch">
-				<input type="checkbox" bind:checked={autoAdjust} on:change={setContrast} />
-				<span class="slider"></span>
-			</label>
-			<span>Ajustement automatique du contraste</span>
-		</div>
-
-		<label>
-			🎨 Couleur de fond :
-			<input type="color" bind:value={bgColor} on:input={setContrast} />
-			<span>{bgColor}</span>
-		</label>
-		<label>
-			🖋 Couleur du texte :
-			<input type="color" bind:value={textColor} on:input={setContrast} />
-			<span>{textColor}</span>
-		</label>
+        <label>
+            🎨 Couleur de fond :
+            <input type="color" bind:value={bgColor} on:input={updateContrast} />
+			<input
+				type="text"
+				bind:value={bgColor}
+				on:input={(e) => handleHexInput(e, "bg")}
+				pattern="#[0-9A-Fa-f]{6}"
+				aria-label="code hexadecimal"
+				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+			/>
+			<button class="adjust-button" on:click={adjustBgColor}>🎨 Ajuster Fond</button>
+        </label>
+        <label>
+            🖋 Couleur du texte :
+            <input type="color" bind:value={textColor} on:input={updateContrast} />
+			<input
+				type="text"
+				bind:value={textColor}
+				on:input={(e) => handleHexInput(e, "text")}
+				pattern="#[0-9A-Fa-f]{6}"
+				aria-label="code hexadecimal"
+				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+			/>
+			<button class="adjust-button" on:click={adjustTextColor}>🖋 Ajuster Texte</button>
+        </label>
     </div>
-
-	<div>
-		<button on:click={adjustContrast}>Ajuster le contraste</button>
-	</div>
 
 	<div class="contrast-scale">
         <div class="scale-bar">
@@ -92,6 +96,49 @@
     <div class="preview" style="background-color: {bgColor}; color: {textColor};">
         <p>Exemple de texte ajusté automatiquement.</p>
     </div>
+
+    <h2>Simulation de handicap visuel</h2>
+    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
+        <p>Ce texte simule un handicap visuel : Protanopie (Manque de rouge).</p>
+    </div>
+    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
+        <p>Ce texte simule un handicap visuel : Deutéranopie (Manque de vert).</p>
+    </div>
+    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
+        <p>Ce texte simule un handicap visuel : Tritanopie (Manque de bleu).</p>
+    </div>
+    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
+        <p>Ce texte simule un handicap visuel : Achromatopsie (Noir & Blanc).</p>
+    </div>
+
+	<svg height="0" width="0">
+		<defs>
+			<filter id="protanopia">
+				<feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0
+													 0.558, 0.442, 0, 0, 0
+													 0, 0.242, 0.758, 0, 0
+													 0, 0, 0, 1, 0"/>
+			</filter>
+			<filter id="deuteranopia">
+				<feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
+													 0.7, 0.3, 0, 0, 0
+													 0, 0.3, 0.7, 0, 0
+													 0, 0, 0, 1, 0"/>
+			</filter>
+			<filter id="tritanopia">
+				<feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0
+													 0, 0.433, 0.567, 0, 0
+													 0, 0.475, 0.525, 0, 0
+													 0, 0, 0, 1, 0"/>
+			</filter>
+			<filter id="achromatopsia">
+				<feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0
+													 0.299, 0.587, 0.114, 0, 0
+													 0.299, 0.587, 0.114, 0, 0
+													 0, 0, 0, 1, 0"/>
+			</filter>
+		</defs>
+	</svg>
 </section>
 
 <style>
@@ -106,12 +153,6 @@
         align-items: center;
         gap: 10px;
     }
-    .switch-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
     .preview {
         padding: 1rem;
         border: 1px solid #ccc;
@@ -119,6 +160,10 @@
     }
     .results {
         font-size: 1.2rem;
+    }
+	.simulation {
+        margin-top: 20px;
+        border: 2px dashed #888;
     }
 
     /* Style de l'échelle de contraste */
@@ -148,4 +193,12 @@
         font-size: 0.9rem;
         margin-top: 5px;
     }
+
+	input {
+		color: var(--background);
+		border: none;
+	}
+	input:invalid {
+		border: red solid 3px;
+	}
 </style>
