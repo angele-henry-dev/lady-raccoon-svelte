@@ -5,7 +5,6 @@
     let bgColor = "#ffffff";
     let textColor = "#aaaaaa";
     let contrast = 0;
-    let accessibility = "";
 	let autoAdjust = false;
 
 	function setContrast() {
@@ -20,14 +19,14 @@
 
 	function updateContrast() {
 		contrast = contrastRatio(bgColor, textColor);
-		accessibility = getAccessibilityLevel(contrast);
 	}
 
-    function getAccessibilityLevel(ratio: number) {
-        if (ratio >= CONTRAST_RATIO_AAA) return "✅ Niveau AAA (Excellent)";
-        if (ratio >= CONTRAST_RATIO_AA) return "✅ Niveau AA (Bon)";
-        if (ratio >= CONTRAST_RATIO_AA_L) return "⚠️ Niveau AA (Texte Large uniquement)";
-        return "❌ Insuffisant";
+    // Calculates the marker position on the scale (0% = Insufficient, 100% = AAA)
+    function getMarkerPosition() {
+        if (contrast < CONTRAST_RATIO_AA_L) return "0%";    // Insufficient
+        if (contrast < CONTRAST_RATIO_AA) return "25%";     // AA (Large text)
+        if (contrast < CONTRAST_RATIO_AAA) return "75%";    // AA
+        return "100%";                        				// AAA
     }
 
     onMount(setContrast);
@@ -70,9 +69,20 @@
 		<button on:click={adjustContrast}>🔧 Ajuster le contraste</button>
 	</div>
 
+	<div class="contrast-scale">
+        <div class="scale-bar">
+            <div class="marker" style="left: {getMarkerPosition()};"></div>
+        </div>
+        <div class="scale-labels">
+            <span>❌ Insuffisant</span>
+            <span>⚠️ AA (Texte Large)</span>
+            <span>✅ AA</span>
+            <span>🏆 AAA</span>
+        </div>
+    </div>
+
     <div class="results">
         <p>Ratio de contraste : <strong>{contrast.toFixed(2)}</strong></p>
-        <p>{accessibility}</p>
     </div>
 </section>
 
@@ -103,45 +113,32 @@
     .results {
         font-size: 1.2rem;
     }
-    
-    /* Style du switch */
-    .switch {
+
+    /* Style de l'échelle de contraste */
+    .contrast-scale {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .scale-bar {
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to right, #ff4d4d, #ffcc00, #4caf50, #0088ff);
+        border-radius: 5px;
         position: relative;
-        display: inline-block;
-        width: 34px;
-        height: 20px;
     }
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .slider {
+    .marker {
         position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: .4s;
-        border-radius: 20px;
-    }
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 14px;
+        top: -5px;
         width: 14px;
-        left: 3px;
-        bottom: 3px;
-        background-color: white;
-        transition: .4s;
+        height: 14px;
+        background-color: #fff;
         border-radius: 50%;
+        transition: left 0.3s ease-in-out;
     }
-    input:checked + .slider {
-        background-color: #4caf50;
-    }
-    input:checked + .slider:before {
-        transform: translateX(14px);
+    .scale-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin-top: 5px;
     }
 </style>
