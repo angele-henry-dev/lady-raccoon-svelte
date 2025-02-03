@@ -42,14 +42,6 @@
 		);
 	}
 
-    // Calculates the marker position on the scale (0% = Insufficient, 100% = AAA)
-    function getMarkerPosition(): string {
-        if (visualContrasts.contrast < CONTRAST_RATIO_AA_L) return "0%";    // Insufficient
-        if (visualContrasts.contrast < CONTRAST_RATIO_AA) return "25%";     // AA (Large text)
-        if (visualContrasts.contrast < CONTRAST_RATIO_AAA) return "75%";    // AA
-        return "100%";                        								// AAA
-    }
-
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
         const input = event.target as HTMLInputElement;
         let value = input.value.trim();
@@ -57,6 +49,13 @@
 		if (colorType === "bg") bgColor = value;
 		else textColor = value;
 		updateContrast();
+    }
+
+	function getAccessibilityLevel(ratio: number) {
+        if (ratio >= CONTRAST_RATIO_AAA) return "✅ Niveau AAA (Excellent)";
+        if (ratio >= CONTRAST_RATIO_AA) return "✅ Niveau AA (Bon)";
+        if (ratio >= CONTRAST_RATIO_AA_L) return "⚠️ Niveau AA (Texte Large uniquement)";
+        return "❌ Insuffisant";
     }
 
     onMount(updateContrast);
@@ -100,20 +99,8 @@
         </label>
     </div>
 
-	<div class="contrast-scale">
-        <div class="scale-bar">
-            <div class="marker" style="left: {getMarkerPosition()};"></div>
-        </div>
-        <div class="scale-labels">
-            <span>❌ Insuffisant</span>
-            <span>⚠️ AA (Texte Large)</span>
-            <span>✅ AA</span>
-            <span>🏆 AAA</span>
-        </div>
-    </div>
-
     <div class="results">
-        <p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)}</strong></p>
+        <p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
     </div>
 
     <div class="preview" style="background-color: {bgColor}; color: {textColor};">
@@ -124,20 +111,23 @@
     <div class="simulation">
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
             <p>Protanopie (Manque de rouge)</p>
-            <p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)}</strong></p>
         </div>
+		<p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.protanopia)}</strong></p>
+
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
             <p>Deutéranopie (Manque de vert)</p>
-            <p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)}</strong></p>
         </div>
+		<p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.deuteranopia)}</strong></p>
+
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
             <p>Tritanopie (Manque de bleu)</p>
-            <p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)}</strong></p>
         </div>
+		<p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.tritanopia)}</strong></p>
+
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
             <p>Achromatopsie (Noir & Blanc)</p>
-            <p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)}</strong></p>
         </div>
+		<p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)} {getAccessibilityLevel(visualContrasts.achromatopsia)}</strong></p>
     </div>
 
 	<svg height="0" width="0">
@@ -219,39 +209,8 @@
         margin-top: 20px;
     }
 
-    /* Style de l'échelle de contraste */
-    .contrast-scale {
-        margin: 20px 0;
-        text-align: center;
-    }
-    .scale-bar {
-        width: 100%;
-        height: 10px;
-        background: linear-gradient(to right, #ff4d4d, #ffcc00, #4caf50, #0088ff);
-        border-radius: 5px;
-        position: relative;
-    }
-    .marker {
-        position: absolute;
-        top: -5px;
-        width: 14px;
-        height: 14px;
-        background-color: #fff;
-        border-radius: 50%;
-        transition: left 0.3s ease-in-out;
-    }
-    .scale-labels {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        margin-top: 5px;
-    }
-
 	input {
 		color: var(--background);
 		border: none;
-	}
-	input:invalid {
-		border: red solid 3px;
 	}
 </style>
