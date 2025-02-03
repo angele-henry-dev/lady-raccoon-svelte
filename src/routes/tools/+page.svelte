@@ -1,10 +1,16 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustBgColorAuto, adjustTextColorAuto } from '$lib/contrast';
+    import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustBgColorAuto, adjustTextColorAuto, simulateColorBlindness } from '$lib/contrast';
 
     let bgColor = "#ffffff";
     let textColor = "#000000";
-    let contrast = 0;
+    let visualContrasts = {
+        contrast: 0,
+        protanopia: 0,
+        deuteranopia: 0,
+        tritanopia: 0,
+        achromatopsia: 0
+    };
 
     function adjustTextColor() {
 		textColor = adjustTextColorAuto(bgColor, textColor);
@@ -16,15 +22,32 @@
     }
 
 	function updateContrast() {
-		contrast = contrastRatio(bgColor, textColor);
+		visualContrasts.contrast = contrastRatio(bgColor, textColor);
+
+		visualContrasts.protanopia = contrastRatio(
+			simulateColorBlindness(bgColor, "protanopia"),
+			simulateColorBlindness(textColor, "protanopia")
+		);
+		visualContrasts.deuteranopia = contrastRatio(
+			simulateColorBlindness(bgColor, "deuteranopia"),
+			simulateColorBlindness(textColor, "deuteranopia")
+		);
+		visualContrasts.tritanopia = contrastRatio(
+			simulateColorBlindness(bgColor, "tritanopia"),
+			simulateColorBlindness(textColor, "tritanopia")
+		);
+		visualContrasts.achromatopsia = contrastRatio(
+			simulateColorBlindness(bgColor, "achromatopsia"),
+			simulateColorBlindness(textColor, "achromatopsia")
+		);
 	}
 
     // Calculates the marker position on the scale (0% = Insufficient, 100% = AAA)
     function getMarkerPosition(): string {
-        if (contrast < CONTRAST_RATIO_AA_L) return "0%";    // Insufficient
-        if (contrast < CONTRAST_RATIO_AA) return "25%";     // AA (Large text)
-        if (contrast < CONTRAST_RATIO_AAA) return "75%";    // AA
-        return "100%";                        				// AAA
+        if (visualContrasts.contrast < CONTRAST_RATIO_AA_L) return "0%";    // Insufficient
+        if (visualContrasts.contrast < CONTRAST_RATIO_AA) return "25%";     // AA (Large text)
+        if (visualContrasts.contrast < CONTRAST_RATIO_AAA) return "75%";    // AA
+        return "100%";                        								// AAA
     }
 
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
@@ -90,7 +113,7 @@
     </div>
 
     <div class="results">
-        <p>Ratio de contraste : <strong>{contrast.toFixed(2)}</strong></p>
+        <p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)}</strong></p>
     </div>
 
     <div class="preview" style="background-color: {bgColor}; color: {textColor};">
@@ -98,17 +121,23 @@
     </div>
 
     <h2>Simulation de handicap visuel</h2>
-    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
-        <p>Ce texte simule un handicap visuel : Protanopie (Manque de rouge).</p>
-    </div>
-    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
-        <p>Ce texte simule un handicap visuel : Deutéranopie (Manque de vert).</p>
-    </div>
-    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
-        <p>Ce texte simule un handicap visuel : Tritanopie (Manque de bleu).</p>
-    </div>
-    <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
-        <p>Ce texte simule un handicap visuel : Achromatopsie (Noir & Blanc).</p>
+    <div class="simulation">
+        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
+            <p>Protanopie (Manque de rouge)</p>
+            <p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)}</strong></p>
+        </div>
+        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
+            <p>Deutéranopie (Manque de vert)</p>
+            <p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)}</strong></p>
+        </div>
+        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
+            <p>Tritanopie (Manque de bleu)</p>
+            <p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)}</strong></p>
+        </div>
+        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
+            <p>Achromatopsie (Noir & Blanc)</p>
+            <p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)}</strong></p>
+        </div>
     </div>
 
 	<svg height="0" width="0">
@@ -153,17 +182,41 @@
         align-items: center;
         gap: 10px;
     }
+	.controls input[type="text"] {
+        width: 90px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .adjust-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .adjust-button:hover {
+        background-color: #45a049;
+    }
     .preview {
         padding: 1rem;
         border: 1px solid #ccc;
         margin-bottom: 20px;
+        text-align: center;
     }
     .results {
         font-size: 1.2rem;
     }
 	.simulation {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
         margin-top: 20px;
-        border: 2px dashed #888;
     }
 
     /* Style de l'échelle de contraste */

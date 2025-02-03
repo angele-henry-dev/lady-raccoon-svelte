@@ -85,3 +85,36 @@ export function adjustTextColorAuto(bgColor: string, textColor: string) {
     return textColor;
 }
 
+export function simulateColorBlindness(color: string, type: "protanopia" | "deuteranopia" | "tritanopia" | "achromatopsia"): string {
+    const { r, g, b } = hexToRgb(color);
+
+    const matrices = {
+        protanopia: [
+            [0.567, 0.433, 0.000],
+            [0.558, 0.442, 0.000],
+            [0.000, 0.242, 0.758]
+        ],
+        deuteranopia: [
+            [0.625, 0.375, 0.000],
+            [0.700, 0.300, 0.000],
+            [0.000, 0.300, 0.700]
+        ],
+        tritanopia: [
+            [0.950, 0.050, 0.000],
+            [0.000, 0.433, 0.567],
+            [0.000, 0.475, 0.525]
+        ],
+        achromatopsia: [
+            [0.299, 0.587, 0.114],
+            [0.299, 0.587, 0.114],
+            [0.299, 0.587, 0.114]
+        ]
+    };
+
+    const matrix = matrices[type];
+    const newR = Math.max(0, Math.min(255, Math.round(r * matrix[0][0] + g * matrix[0][1] + b * matrix[0][2])));
+    const newG = Math.max(0, Math.min(255, Math.round(r * matrix[1][0] + g * matrix[1][1] + b * matrix[1][2])));
+    const newB = Math.max(0, Math.min(255, Math.round(r * matrix[2][0] + g * matrix[2][1] + b * matrix[2][2])));
+
+    return rgbToHex(newR, newG, newB);
+}
