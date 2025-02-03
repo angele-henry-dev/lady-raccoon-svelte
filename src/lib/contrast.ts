@@ -40,14 +40,28 @@ export function contrastRatio(color1: string, color2: string) {
 export function adjustTextColor(bgColor: string, textColor: string) {
     const textRgb = hexToRgb(textColor);
     let ratio = contrastRatio(bgColor, textColor);
+    let iterations = 0;
 
-    while (ratio < CONTRAST_RATIO_AAA) {
-        textRgb.r = Math.max(0, textRgb.r - 5);
-        textRgb.g = Math.max(0, textRgb.g - 5);
-        textRgb.b = Math.max(0, textRgb.b - 5);
+    const shouldDarken = contrastRatio(bgColor, "#000000") > contrastRatio(bgColor, "#ffffff");
+
+    while (ratio < CONTRAST_RATIO_AAA && iterations < 50) {
+        if (shouldDarken) {
+            // To black (#000000)
+            textRgb.r = Math.max(0, textRgb.r - 5);
+            textRgb.g = Math.max(0, textRgb.g - 5);
+            textRgb.b = Math.max(0, textRgb.b - 5);
+        } else {
+            // To white (#ffffff)
+            textRgb.r = Math.min(255, textRgb.r + 5);
+            textRgb.g = Math.min(255, textRgb.g + 5);
+            textRgb.b = Math.min(255, textRgb.b + 5);
+        }
+
         textColor = rgbToHex(textRgb.r, textRgb.g, textRgb.b);
         ratio = contrastRatio(bgColor, textColor);
+        iterations++;
     }
-    
+
     return textColor;
 }
+

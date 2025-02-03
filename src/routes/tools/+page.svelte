@@ -3,9 +3,15 @@
     import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustTextColor } from '$lib/contrast';
 
     let bgColor = "#ffffff";
-    let textColor = "#aaaaaa";
+    let textColor = "#000000";
     let contrast = 0;
 	let autoAdjust = false;
+
+	function isCorrect(): boolean {
+		if (!/^#[0-9A-Fa-f]{6}$/.test(bgColor)) return false;
+        if (!/^#[0-9A-Fa-f]{6}$/.test(textColor)) return false;
+		return true;
+	}
 
 	function setContrast() {
 		if (autoAdjust) adjustContrast();
@@ -13,16 +19,18 @@
 	}
 
     function adjustContrast() {
+		if (!isCorrect) return;
 		textColor = adjustTextColor(bgColor, textColor);
 		updateContrast();
     }
 
 	function updateContrast() {
+		if (!isCorrect) return;
 		contrast = contrastRatio(bgColor, textColor);
 	}
 
     // Calculates the marker position on the scale (0% = Insufficient, 100% = AAA)
-    function getMarkerPosition() {
+    function getMarkerPosition(): string {
         if (contrast < CONTRAST_RATIO_AA_L) return "0%";    // Insufficient
         if (contrast < CONTRAST_RATIO_AA) return "25%";     // AA (Large text)
         if (contrast < CONTRAST_RATIO_AAA) return "75%";    // AA
@@ -41,32 +49,28 @@
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
     <div class="controls">
-        <label>
-            🎨 Couleur de fond :
-            <input type="color" bind:value={bgColor} on:input={setContrast} />
-            <span>{bgColor}</span>
-        </label>
-        <label>
-            🖋 Couleur du texte :
-            <input type="color" bind:value={textColor} on:input={setContrast} />
-            <span>{textColor}</span>
-        </label>
-    </div>
+		<div class="switch-container">
+			<label class="switch">
+				<input type="checkbox" bind:checked={autoAdjust} on:change={setContrast} />
+				<span class="slider"></span>
+			</label>
+			<span>Ajustement automatique du contraste</span>
+		</div>
 
-    <div class="switch-container">
-        <label class="switch">
-            <input type="checkbox" bind:checked={autoAdjust} on:change={setContrast} />
-            <span class="slider"></span>
-        </label>
-        <span>⚡ Ajustement automatique du contraste</span>
-    </div>
-
-    <div class="preview" style="background-color: {bgColor}; color: {textColor};">
-        <p>Exemple de texte ajusté automatiquement.</p>
+		<label>
+			🎨 Couleur de fond :
+			<input type="color" bind:value={bgColor} on:input={setContrast} />
+			<span>{bgColor}</span>
+		</label>
+		<label>
+			🖋 Couleur du texte :
+			<input type="color" bind:value={textColor} on:input={setContrast} />
+			<span>{textColor}</span>
+		</label>
     </div>
 
 	<div>
-		<button on:click={adjustContrast}>🔧 Ajuster le contraste</button>
+		<button on:click={adjustContrast}>Ajuster le contraste</button>
 	</div>
 
 	<div class="contrast-scale">
@@ -83,6 +87,10 @@
 
     <div class="results">
         <p>Ratio de contraste : <strong>{contrast.toFixed(2)}</strong></p>
+    </div>
+
+    <div class="preview" style="background-color: {bgColor}; color: {textColor};">
+        <p>Exemple de texte ajusté automatiquement.</p>
     </div>
 </section>
 
@@ -101,7 +109,6 @@
     .switch-container {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 10px;
         margin-bottom: 20px;
     }
