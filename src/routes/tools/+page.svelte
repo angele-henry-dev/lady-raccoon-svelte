@@ -69,8 +69,8 @@
 <section class="w-5/6 flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
-    <div class="pickers">
-        <label>
+    <div class="pickers grid grid-cols-2 gap-4">
+        <div class="flex flex-col">
             Couleur de fond :
             <input type="color" bind:value={bgColor} on:input={updateContrast} />
 			<input
@@ -82,8 +82,8 @@
 				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 			/>
 			<button on:click={adjustBgColor}>Ajuster Fond</button>
-        </label>
-        <label>
+        </div>
+        <div class="flex flex-col">
             Couleur du texte :
             <input type="color" bind:value={textColor} on:input={updateContrast} />
 			<input
@@ -95,7 +95,7 @@
 				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 			/>
 			<button on:click={adjustTextColor}>Ajuster Texte</button>
-        </label>
+        </div>
     </div>
 
     <div>
@@ -103,34 +103,34 @@
     </div>
 
     <div style="background-color: {bgColor}; color: {textColor};">
-        <p style="font-size: 12px;">Exemple 12px : I see dead pixels… but not with this contrast!</p>
-        <p style="font-size: 18px;">Exemple 18px : Mission: Increase contrast. Status: In Progress...</p>
+        <p style="font-size: 12px;">Normal text - 12px : I see dead pixels… but not with this contrast!</p>
+        <p style="font-size: 18px;">Large text - 18px : Mission: Increase contrast. Status: In Progress...</p>
     </div>
 
 	<div>--------------------------</div>
 
     <div>
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
-            <p style="font-size: 12px;">Exemple protanopie (manque de rouge) 12px : It's dangerous to go alone! Take this contrast boost!</p>
-            <p style="font-size: 18px;">Exemple protanopie (manque de rouge) 18px : Ce texte est super efficace !</p>
+            <p style="font-size: 12px;">Normal text protanopie - 12px : It's dangerous to go alone! Take this contrast boost!</p>
+            <p style="font-size: 18px;">Large text protanopie - 18px : Ce texte est super efficace !</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.protanopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
-            <p style="font-size: 12px;">Exemple deutéranopie (manque de vert) 12px : May the contrast be with you...</p>
-            <p style="font-size: 18px;">Exemple deutéranopie (manque de vert) 18px : Le futur est accessible. Enfin… presque.</p>
+            <p style="font-size: 12px;">Normal text deutéranopie - 12px : May the contrast be with you...</p>
+            <p style="font-size: 18px;">Large text deutéranopie - 18px : Le futur est accessible. Enfin… presque.</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.deuteranopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
-            <p style="font-size: 12px;">Exemple tritanopie (manque de bleu) 12px : Neo, vois-tu enfin les contrastes de la Matrice ?</p>
-            <p style="font-size: 18px;">Exemple tritanopie (manque de bleu) 18px : Error 404: Low contrast not found.</p>
+            <p style="font-size: 12px;">Normal text tritanopie - 12px : Neo, vois-tu enfin les contrastes de la Matrice ?</p>
+            <p style="font-size: 18px;">Large text tritanopie - 18px : Error 404: Low contrast not found.</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.tritanopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
-            <p style="font-size: 12px;">Exemple achromatopsie (noir & blanc) 12px : </p>
-            <p style="font-size: 18px;">Exemple achromatopsie (noir & blanc) 18px : </p>
+            <p style="font-size: 12px;">Normal text achromatopsie - 12px : </p>
+            <p style="font-size: 18px;">Large text achromatopsie - 18px : </p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)} {getAccessibilityLevel(visualContrasts.achromatopsia)}</strong></p>
     </div>
