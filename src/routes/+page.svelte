@@ -142,6 +142,7 @@
 }
 .tab input:checked + .tab__label {
   font-weight: 700;
+  transition: all 0.35s;
 }
 .tab input:checked + .tab__label::after {
   transform: rotate(270deg);
