@@ -69,10 +69,9 @@
 <section class="w-5/6 flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
-    <h2>Contraste</h2>
-    <div class="controls">
+    <div class="pickers">
         <label>
-            🎨 Couleur de fond :
+            Couleur de fond :
             <input type="color" bind:value={bgColor} on:input={updateContrast} />
 			<input
 				type="text"
@@ -82,10 +81,10 @@
 				aria-label="code hexadecimal"
 				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 			/>
-			<button class="adjust-button" on:click={adjustBgColor}>🎨 Ajuster Fond</button>
+			<button on:click={adjustBgColor}>Ajuster Fond</button>
         </label>
         <label>
-            🖋 Couleur du texte :
+            Couleur du texte :
             <input type="color" bind:value={textColor} on:input={updateContrast} />
 			<input
 				type="text"
@@ -95,37 +94,43 @@
 				aria-label="code hexadecimal"
 				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 			/>
-			<button class="adjust-button" on:click={adjustTextColor}>🖋 Ajuster Texte</button>
+			<button on:click={adjustTextColor}>Ajuster Texte</button>
         </label>
     </div>
 
-    <div class="results">
+    <div>
         <p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
     </div>
 
-    <div class="preview" style="background-color: {bgColor}; color: {textColor};">
-        <p>Exemple de texte ajusté automatiquement.</p>
+    <div style="background-color: {bgColor}; color: {textColor};">
+        <p style="font-size: 12px;">Exemple 12px : I see dead pixels… but not with this contrast!</p>
+        <p style="font-size: 18px;">Exemple 18px : Mission: Increase contrast. Status: In Progress...</p>
     </div>
 
-    <h2>Simulation de handicap visuel</h2>
-    <div class="simulation">
+	<div>--------------------------</div>
+
+    <div>
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
-            <p>Protanopie (Manque de rouge)</p>
+            <p style="font-size: 12px;">Exemple protanopie (manque de rouge) 12px : It's dangerous to go alone! Take this contrast boost!</p>
+            <p style="font-size: 18px;">Exemple protanopie (manque de rouge) 18px : Ce texte est super efficace !</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.protanopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
-            <p>Deutéranopie (Manque de vert)</p>
+            <p style="font-size: 12px;">Exemple deutéranopie (manque de vert) 12px : May the contrast be with you...</p>
+            <p style="font-size: 18px;">Exemple deutéranopie (manque de vert) 18px : Le futur est accessible. Enfin… presque.</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.deuteranopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
-            <p>Tritanopie (Manque de bleu)</p>
+            <p style="font-size: 12px;">Exemple tritanopie (manque de bleu) 12px : Neo, vois-tu enfin les contrastes de la Matrice ?</p>
+            <p style="font-size: 18px;">Exemple tritanopie (manque de bleu) 18px : Error 404: Low contrast not found.</p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.tritanopia)}</strong></p>
 
         <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
-            <p>Achromatopsie (Noir & Blanc)</p>
+            <p style="font-size: 12px;">Exemple achromatopsie (noir & blanc) 12px : </p>
+            <p style="font-size: 18px;">Exemple achromatopsie (noir & blanc) 18px : </p>
         </div>
 		<p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)} {getAccessibilityLevel(visualContrasts.achromatopsia)}</strong></p>
     </div>
@@ -161,56 +166,7 @@
 </section>
 
 <style>
-    .controls {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
+    .pickers input {
+        color: var(--background);
     }
-    .controls label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-	.controls input[type="text"] {
-        width: 90px;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 14px;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    .adjust-button {
-        background-color: #4caf50;
-        color: white;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .adjust-button:hover {
-        background-color: #45a049;
-    }
-    .preview {
-        padding: 1rem;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .results {
-        font-size: 1.2rem;
-    }
-	.simulation {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-	input {
-		color: var(--background);
-		border: none;
-	}
 </style>
