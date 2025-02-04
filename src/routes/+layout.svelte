@@ -23,7 +23,7 @@
 
 <GoTop />
 
-<footer class="my-10 px-4">
+<footer class="mb-10 px-4">
 	<div class="p-5 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
 		<div>
 			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>

@@ -137,6 +137,7 @@
   height: 1em;
   text-align: center;
   transform: rotate(90deg);
+  transform-origin: 50% 50%;
   transition: all 0.35s;
 }
 .tab input:checked + .tab__label {
@@ -144,6 +145,7 @@
 }
 .tab input:checked + .tab__label::after {
   transform: rotate(270deg);
+  transform-origin: 9px 18px;
 }
 .tab__content p {
   margin: 0;
