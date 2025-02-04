@@ -6,6 +6,7 @@
   import issues from "$data/issues.json";
   import offers from "$data/offers.json";
   import aboutme from "$data/aboutme.json";
+  import faq from "$data/faq.json";
 </script>
 
 <svelte:head>
@@ -82,3 +83,83 @@
     {/each}
   </div>
 </div>
+
+<section class='inverted my-20 p-5 md:p-10'>
+  <div class="accordion container mx-auto my-20">
+    <h1 class="mb-10">{faq.title}</h1>
+    {#each faq.items as item, index}
+      <div class="tab">
+        <input type="checkbox" name="accordion-1" id="{'cb' + index}">
+        <label for="{'cb' + index}" class="tab__label">{item.question}</label>
+        <div class="tab__content">
+          <p>{item.answer}</p>
+        </div>
+      </div>
+    {/each}
+  </div>
+</section>
+
+<style>
+.tab {
+  position: relative;
+  border: 2px solid var(--secondary);
+  border-bottom-width: 0;
+}
+.tab:last-child {
+  border-bottom-width: 2px;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+.accordion {
+  overflow: hidden;
+}
+.tab__label {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label {
+  font-weight: 700;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
+}
+</style>

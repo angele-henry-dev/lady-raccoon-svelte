@@ -1,0 +1,25 @@
+{
+    "title": "Questions fréquentes",
+    "items": [
+        {
+            "question": "Notre site fonctionne bien, pourquoi changer ?",
+            "answer": "Un site peut sembler fonctionnel, mais si une partie de votre audience ne peut pas l'utiliser, vous perdez des opportunités. L'accessibilité améliore la portée et l'impact de votre site."
+        },
+        {
+            "question": "Cela va nous coûter trop cher.",
+            "answer": "Ne pas rendre votre site accessible peut coûter encore plus cher en termes d’image, de perte de clients et de risques juridiques. L'accessibilité est un investissement rentable."
+        },
+        {
+            "question": "Nous avons déjà une équipe technique, pourquoi faire appel à vous ?",
+            "answer": "L'accessibilité est un domaine spécialisé qui demande des connaissances approfondies. Mon expertise complète le travail de vos développeurs et les forme à intégrer ces bonnes pratiques durablement."
+        },
+        {
+            "question": "C'est compliqué à mettre en place ?",
+            "answer": "Rendre un site accessible ne signifie pas tout refaire de zéro. Il suffit souvent d’ajuster quelques éléments : meilleure structuration HTML, ajout d’attributs ARIA, amélioration des contrastes… Des actions simples peuvent déjà avoir un impact majeur. L'accessibilité est un processus, et je vous accompagne pour le rendre simple et efficace, sans perturber votre site ou vos outils existants."
+        },
+        {
+            "question": "C’est vraiment obligatoire ?",
+            "answer": "Oui et non. En France, l’accessibilité numérique est une obligation légale pour les sites des services publics (RGAA). Ne pas respecter ces normes peut entraîner des sanctions financières et des recours juridiques. Aux États-Unis, la loi ADA impose également l’accessibilité numérique, et de nombreuses entreprises ont été poursuivies pour non-conformité."
+        }
+    ]
+}

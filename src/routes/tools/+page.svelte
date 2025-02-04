@@ -66,7 +66,7 @@
 	<meta name="Description" content="Outils d'accessibilité" />
 </svelte:head>
 
-<section class="w-5/6 flex flex-col my-5 mx-auto">
+<section class="container flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
     <div class="pickers grid grid-cols-2 gap-4">
@@ -97,73 +97,74 @@
 			<button on:click={adjustTextColor}>Ajuster Texte</button>
         </div>
     </div>
-
-    <div>
-        <p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
-    </div>
-
-    <div style="background-color: {bgColor}; color: {textColor};">
-        <p style="font-size: 12px;">Normal text - 12px : I see dead pixels… but not with this contrast!</p>
-        <p style="font-size: 18px;">Large text - 18px : Mission: Increase contrast. Status: In Progress...</p>
-    </div>
-
-	<div>--------------------------</div>
-
-    <div>
-        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
-            <p style="font-size: 12px;">Normal text protanopie - 12px : It's dangerous to go alone! Take this contrast boost!</p>
-            <p style="font-size: 18px;">Large text protanopie - 18px : Ce texte est super efficace !</p>
-        </div>
-		<p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.protanopia)}</strong></p>
-
-        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
-            <p style="font-size: 12px;">Normal text deutéranopie - 12px : May the contrast be with you...</p>
-            <p style="font-size: 18px;">Large text deutéranopie - 18px : Le futur est accessible. Enfin… presque.</p>
-        </div>
-		<p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.deuteranopia)}</strong></p>
-
-        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
-            <p style="font-size: 12px;">Normal text tritanopie - 12px : Neo, vois-tu enfin les contrastes de la Matrice ?</p>
-            <p style="font-size: 18px;">Large text tritanopie - 18px : Error 404: Low contrast not found.</p>
-        </div>
-		<p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.tritanopia)}</strong></p>
-
-        <div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
-            <p style="font-size: 12px;">Normal text achromatopsie - 12px : </p>
-            <p style="font-size: 18px;">Large text achromatopsie - 18px : </p>
-        </div>
-		<p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)} {getAccessibilityLevel(visualContrasts.achromatopsia)}</strong></p>
-    </div>
-
-	<svg height="0" width="0">
-		<defs>
-			<filter id="protanopia">
-				<feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0
-													 0.558, 0.442, 0, 0, 0
-													 0, 0.242, 0.758, 0, 0
-													 0, 0, 0, 1, 0"/>
-			</filter>
-			<filter id="deuteranopia">
-				<feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
-													 0.7, 0.3, 0, 0, 0
-													 0, 0.3, 0.7, 0, 0
-													 0, 0, 0, 1, 0"/>
-			</filter>
-			<filter id="tritanopia">
-				<feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0
-													 0, 0.433, 0.567, 0, 0
-													 0, 0.475, 0.525, 0, 0
-													 0, 0, 0, 1, 0"/>
-			</filter>
-			<filter id="achromatopsia">
-				<feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0
-													 0.299, 0.587, 0.114, 0, 0
-													 0.299, 0.587, 0.114, 0, 0
-													 0, 0, 0, 1, 0"/>
-			</filter>
-		</defs>
-	</svg>
 </section>
+
+<section class="inverted">
+	<div class="container flex flex-col my-5 mx-auto">
+		<p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
+		<div style="background-color: {bgColor}; color: {textColor};">
+			<p style="font-size: 12px;">Normal text - 12px : I see dead pixels… but not with this contrast!</p>
+			<p style="font-size: 18px;">Large text - 18px : Mission: Increase contrast. Status: In Progress...</p>
+		</div>
+	
+		<div>--------------------------</div>
+	
+		<div>
+			<div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
+				<p style="font-size: 12px;">Normal text protanopie - 12px : It's dangerous to go alone! Take this contrast boost!</p>
+				<p style="font-size: 18px;">Large text protanopie - 18px : Ce texte est super efficace !</p>
+			</div>
+			<p>Ratio de contraste simulé : <strong>{visualContrasts.protanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.protanopia)}</strong></p>
+	
+			<div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
+				<p style="font-size: 12px;">Normal text deutéranopie - 12px : May the contrast be with you...</p>
+				<p style="font-size: 18px;">Large text deutéranopie - 18px : Le futur est accessible. Enfin… presque.</p>
+			</div>
+			<p>Ratio de contraste simulé : <strong>{visualContrasts.deuteranopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.deuteranopia)}</strong></p>
+	
+			<div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
+				<p style="font-size: 12px;">Normal text tritanopie - 12px : Neo, vois-tu enfin les contrastes de la Matrice ?</p>
+				<p style="font-size: 18px;">Large text tritanopie - 18px : Error 404: Low contrast not found.</p>
+			</div>
+			<p>Ratio de contraste simulé : <strong>{visualContrasts.tritanopia.toFixed(2)} {getAccessibilityLevel(visualContrasts.tritanopia)}</strong></p>
+	
+			<div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
+				<p style="font-size: 12px;">Normal text achromatopsie - 12px : </p>
+				<p style="font-size: 18px;">Large text achromatopsie - 18px : </p>
+			</div>
+			<p>Ratio de contraste simulé : <strong>{visualContrasts.achromatopsia.toFixed(2)} {getAccessibilityLevel(visualContrasts.achromatopsia)}</strong></p>
+		</div>
+	</div>
+</section>
+
+<svg height="0" width="0">
+	<defs>
+		<filter id="protanopia">
+			<feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0
+													0.558, 0.442, 0, 0, 0
+													0, 0.242, 0.758, 0, 0
+													0, 0, 0, 1, 0"/>
+		</filter>
+		<filter id="deuteranopia">
+			<feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
+													0.7, 0.3, 0, 0, 0
+													0, 0.3, 0.7, 0, 0
+													0, 0, 0, 1, 0"/>
+		</filter>
+		<filter id="tritanopia">
+			<feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0
+													0, 0.433, 0.567, 0, 0
+													0, 0.475, 0.525, 0, 0
+													0, 0, 0, 1, 0"/>
+		</filter>
+		<filter id="achromatopsia">
+			<feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0
+													0.299, 0.587, 0.114, 0, 0
+													0.299, 0.587, 0.114, 0, 0
+													0, 0, 0, 1, 0"/>
+		</filter>
+	</defs>
+</svg>
 
 <style>
     .pickers input {
