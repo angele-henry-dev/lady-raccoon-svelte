@@ -75,32 +75,32 @@
 		<div class="flex flex-row gap-5 flex-wrap">
 			<div class="flex flex-row gap-5 flex-wrap p-5 pt-0">
 				<div class="flex flex-col">
-					<h2>Couleur de fond :</h2>
+					<label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
 					<div class="input-container">
 						<input
 							type="text"
 							bind:value={bgColor}
 							on:input={(e) => handleHexInput(e, "bg")}
 							pattern="#[0-9A-Fa-f]{6}"
-							aria-label="code hexadecimal"
+							aria-label="code hexadecimal fond"
 							title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 						/>
-						<input type="color" bind:value={bgColor} on:input={updateContrast} />
+						<input type="color" bind:value={bgColor} on:input={updateContrast} id="hexaBg" />
 					</div>
 					<button on:click={adjustBgColor} class="px-2 py-1 mt-4" title="Ajuster le fond">Ajuster le fond</button>
 				</div>
 				<div class="flex flex-col">
-					<h2>Couleur du texte :</h2>
+					<label for="hexaText" class="font-black my-5">Couleur du texte :</label>
 					<div class="input-container">
 						<input
 							type="text"
 							bind:value={textColor}
 							on:input={(e) => handleHexInput(e, "text")}
 							pattern="#[0-9A-Fa-f]{6}"
-							aria-label="code hexadecimal"
+							aria-label="code hexadecimal texte"
 							title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
 						/>
-						<input type="color" bind:value={textColor} on:input={updateContrast} />
+						<input type="color" bind:value={textColor} on:input={updateContrast} id="hexaText" />
 					</div>
 					<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
 				</div>
