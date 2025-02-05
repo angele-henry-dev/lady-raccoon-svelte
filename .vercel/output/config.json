@@ -35,6 +35,17 @@
 			}
 		},
 		{
+			"src": "/tools/contrast-checker",
+			"dest": "/tools/contrast-checker/"
+		},
+		{
+			"src": "/tools/contrast-checker/",
+			"status": 308,
+			"headers": {
+				"Location": "/tools/contrast-checker"
+			}
+		},
+		{
 			"src": "/_app/immutable/.+",
 			"headers": {
 				"cache-control": "public, immutable, max-age=31536000"
@@ -60,6 +71,9 @@
 		},
 		"sitemap.html": {
 			"path": "sitemap"
+		},
+		"tools/contrast-checker.html": {
+			"path": "tools/contrast-checker"
 		}
 	},
 	"images": {
