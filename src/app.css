@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --background: #111111;
+    --background: #111110;
     --foreground: #f8f8f8;
     --grey: #545454;
   
@@ -15,13 +15,6 @@
 
     --primary: var(--vt-c-yellow);
     --secondary: var(--vt-c-pink);
-}
-
-.bg-primary {
-    background-color: var(--primary);
-}
-.bg-secondary {
-    background-color: var(--secondary);
 }
   
 @font-face {
@@ -88,29 +81,26 @@ a {
     color: var(--foreground);
     transition: 0.4s;
 }
-a.icon {
-    margin-left: 15px;
-    font-weight: 900;
-    font-size: 2rem;
+a:hover {
     color: var(--primary);
-    border: 1px solid var(--primary);
-    border-radius: 50px;
-    padding: 0px 16px;
 }
+
+button, 
 a.button {
+    background-color: var(--primary);
+    border-color: var(--background);
     color: var(--background);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1rem;
     padding: 0.7rem 1.5rem;
     border-width: 1px;
-    border-radius: 0.5rem;
-    width: 80%;
+    border-radius: 10px;
 }
-a:hover {
-    border-color: var(--secondary);
-    color: var(--secondary);
-    background: none;
+button:hover,
+a.button:hover {
+    background-color: var(--background);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .highlight {
@@ -126,7 +116,7 @@ a:hover {
 .inverted {
     background: var(--foreground);
     color: var(--background);
-    clip-path: polygon(100px 0%, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0% 100px);
+    clip-path: polygon(60px 0%, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0% 60px);
     ul li::marker {
         color: var(--background);
     }

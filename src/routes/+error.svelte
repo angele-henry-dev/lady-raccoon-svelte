@@ -7,13 +7,13 @@
 	<title>{page.status}</title>
 </svelte:head>
 
-<div class="container">
+<div class="container mx-auto p-5 md:p-10">
 	{#if online}
 		{#if page.status === 404}
 			<h1>Page égarée...</h1>
 			<p>
 				Si vous pensiez trouver quelque chose ici, faites-le nous savoir sur notre 
-				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte">GitHub</a>. Merci !
+				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank">GitHub</a>. Merci !
 			</p>
 		{:else}
 			<h1>Oopsie !</h1>
@@ -24,11 +24,11 @@
 			<p>Essayez de recharger la page.</p>
 			<p>
 				Si l'erreur persiste, faites-le nous savoir sur notre 
-				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte">GitHub</a>. Merci !
+				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank">GitHub</a>. Merci !
 			</p>
 		{/if}
 	{:else}
-		<h1>Il semblerait que vous êtes hors ligne.</h1>
+		<h1>Il semble que vous êtes hors ligne.</h1>
 		<p>Rechargez la page quand vous aurez retrouver internet.</p>
 	{/if}
 </div>
