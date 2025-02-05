@@ -1,18 +1,37 @@
 <script lang="ts">
+	import type { LayoutProps } from './$types';
 	import '../app.css';
 	import GoTop from '../components/GoTop.svelte';
 	import Github from '../components/svg/Github.svelte';
 	import LinkedIn from '../components/svg/LinkedIn.svelte';
 	import Logo from '../components/svg/Logo.svelte';
-	let { children } = $props();
+	let { data, children }: LayoutProps = $props();
 </script>
 
 <header class="p-4 border-b">
-	<nav class="container flex justify-between items-center w-full mx-auto">
+	<nav class="container flex flex-row justify-between items-center w-full mx-auto">
 		<div class="flex-grow flex items-center gap-10">
-			<Logo />
+			<ul class="list-none m-0 p-0 flex flex-row items-center gap-5">
+				<li><Logo /></li>
+				{#each data.sections as section}
+					<li class="cursor-pointer">
+						{#if section.children.length > 0}
+							<div class="dropdown">
+								<span>{section.title}</span>
+								<ul class="dropdown-content list-none m-0 p-2 hidden border">
+									{#each section.children as child}
+									<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
+									{/each}
+								</ul>
+							</div>
+						{:else}
+							<a href="/{section.slug}">{section.title}</a>
+						{/if}
+					</li>
+				{/each}
+			</ul>
 		</div>
-		<div class="flex gap-5 items-center">
+		<div class="hidden sm:flex flex-row gap-5 items-center">
 			<LinkedIn />
 			<Github />
 		</div>
@@ -52,3 +71,39 @@
 		<p class="md:text-right">Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 	</div>
 </footer>
+
+<style>
+	.dropdown {
+		position: relative;
+	}
+	.dropdown span::after {
+		display: inline-block;
+		content: "\276F";
+		width: 1em;
+		height: 1em;
+		margin-left: 15px;
+		text-align: center;
+		vertical-align: middle;
+		transform: rotate(90deg);
+		transform-origin: 50% 50%;
+		transition: all 0.35s;
+	}
+
+	.dropdown:hover {
+		span::after {
+			transform: rotate(270deg);
+		}
+		.dropdown-content {
+			display: block;
+		}
+	}
+
+	.dropdown-content {
+		position: absolute;
+		top: 26px;
+		left: 0;
+		width: 170px;
+		padding: 10px;
+		background-color: var(--background);
+	}
+</style>

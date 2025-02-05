@@ -65,8 +65,8 @@
 </script>
 
 <svelte:head>
-	<title>Lady Raccoon • Outils d'accessibilité</title>
-	<meta name="Description" content="Outils d'accessibilité" />
+	<title>Lady Raccoon • Testeur de Contraste</title>
+	<meta name="Description" content="Testeur de Contraste" />
 </svelte:head>
 
 <section class="container mt-5 p-5 md:p-10 mx-auto">
