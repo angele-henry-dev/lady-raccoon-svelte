@@ -70,7 +70,7 @@
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
 	<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-		<div class="flex flex-col p-10 pt-5">
+		<div class="contrast flex flex-col p-10 pt-5">
 			<div class="flex flex-row gap-5 flex-wrap">
 				<div class="flex flex-col">
 					<h2>Couleur de fond :</h2>
@@ -122,15 +122,16 @@
 	</div>
 </section>
 
-<section class="container flex flex-col mb-5 mx-auto">
-	<div class="flex flex-row gap-4 flex-wrap">
-		<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-			<div class="flex flex-col p-10 pt-5">
+<section class="container flex flex-col my-10 mx-auto">
+	<div class="simulation flex flex-row gap-4 flex-wrap">
+
+		<div class="pickers flex flex-col gap-5 flex-wrap">
+			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste protanopie</h2>
 				<p>Ratio : {visualContrasts.protanopia.toFixed(2)}</p>
 				<p>{getAccessibilityLevel(visualContrasts.protanopia)}</p>
 			</div>
-			<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
+			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
 				<div>
 					<h2>Normal text - 12px</h2>
 					<p class="" style="font-size: 12px;">It's dangerous to go alone! Take this contrast boost!</p>
@@ -142,13 +143,13 @@
 			</div>
 		</div>
 	
-		<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-			<div class="flex flex-col p-10 pt-5">
+		<div class="pickers flex flex-col gap-5 flex-wrap">
+			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste deutéranopie</h2>
 				<p>Ratio : {visualContrasts.deuteranopia.toFixed(2)}</p>
 				<p>{getAccessibilityLevel(visualContrasts.deuteranopia)}</p>
 			</div>
-			<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
+			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
 				<div>
 					<h2>Normal text - 12px</h2>
 					<p class="" style="font-size: 12px;">May the contrast be with you...</p>
@@ -160,13 +161,13 @@
 			</div>
 		</div>
 	
-		<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-			<div class="flex flex-col p-10 pt-5">
+		<div class="pickers flex flex-col gap-5 flex-wrap">
+			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste tritanopie</h2>
 				<p>Ratio : {visualContrasts.tritanopia.toFixed(2)}</p>
 				<p>{getAccessibilityLevel(visualContrasts.tritanopia)}</p>
 			</div>
-			<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
+			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
 				<div>
 					<h2>Normal text - 12px</h2>
 					<p class="" style="font-size: 12px;">Neo, vois-tu enfin les contrastes de la Matrice ?</p>
@@ -178,13 +179,13 @@
 			</div>
 		</div>
 	
-		<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-			<div class="flex flex-col p-10 pt-5">
+		<div class="pickers flex flex-col gap-5 flex-wrap">
+			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste achromatopsie</h2>
 				<p>Ratio : {visualContrasts.achromatopsia.toFixed(2)}</p>
 				<p>{getAccessibilityLevel(visualContrasts.achromatopsia)}</p>
 			</div>
-			<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
+			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
 				<div>
 					<h2>Normal text - 12px</h2>
 					<p class="" style="font-size: 12px;">Debugging contrast levels like a pro.</p>
@@ -236,11 +237,21 @@
 	.pickers button {
 		width: 180px;
 	}
+	.simulation .pickers {
+		width: 40%;
+	}
+
+	.contrast {
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
 	.preview {
+		flex-grow: 1;
 		border-top-right-radius: 10px;
 		border-bottom-right-radius: 10px;
 		border-left-width: 1px;
 	}
+
 	.input-container {
 		background-color: var(--foreground);
 		border-radius: 5px;
@@ -249,6 +260,7 @@
 		display: flex;
 		justify-content: space-evenly;
 	}
+
     .input-container input {
         color: var(--background);
 		background-color: var(--foreground);
