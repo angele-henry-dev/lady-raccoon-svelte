@@ -69,50 +69,60 @@
 <section class="container flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
-    <div class="pickers flex flex-row gap-5 flex-wrap">
-        <div class="flex flex-col">
-            <h2>Couleur de fond :</h2>
-			<div class="input-container">
-				<input
-					type="text"
-					bind:value={bgColor}
-					on:input={(e) => handleHexInput(e, "bg")}
-					pattern="#[0-9A-Fa-f]{6}"
-					aria-label="code hexadecimal"
-					title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-				/>
-				<input type="color" bind:value={bgColor} on:input={updateContrast} />
+	<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
+		<div class="flex flex-col p-10 pt-5">
+			<div class="flex flex-row gap-5 flex-wrap">
+				<div class="flex flex-col">
+					<h2>Couleur de fond :</h2>
+					<div class="input-container">
+						<input
+							type="text"
+							bind:value={bgColor}
+							on:input={(e) => handleHexInput(e, "bg")}
+							pattern="#[0-9A-Fa-f]{6}"
+							aria-label="code hexadecimal"
+							title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+						/>
+						<input type="color" bind:value={bgColor} on:input={updateContrast} />
+					</div>
+					<button on:click={adjustBgColor} class="px-2 py-1 mt-4" title="Ajuster le fond">Ajuster le fond</button>
+				</div>
+				<div class="flex flex-col">
+					<h2>Couleur du texte :</h2>
+					<div class="input-container">
+						<input
+							type="text"
+							bind:value={textColor}
+							on:input={(e) => handleHexInput(e, "text")}
+							pattern="#[0-9A-Fa-f]{6}"
+							aria-label="code hexadecimal"
+							title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+						/>
+						<input type="color" bind:value={textColor} on:input={updateContrast} />
+					</div>
+					<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
+				</div>
 			</div>
-			<button on:click={adjustBgColor} class="px-2 py-1 mt-4" title="Ajuster le fond">Ajuster le fond</button>
-        </div>
-        <div class="flex flex-col">
-            <h2>Couleur du texte :</h2>
-			<div class="input-container">
-				<input
-					type="text"
-					bind:value={textColor}
-					on:input={(e) => handleHexInput(e, "text")}
-					pattern="#[0-9A-Fa-f]{6}"
-					aria-label="code hexadecimal"
-					title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-				/>
-				<input type="color" bind:value={textColor} on:input={updateContrast} />
+			<div>
+				<h2>Contraste</h2>
+				<p><strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
 			</div>
-			<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
-        </div>
-    </div>
+		</div>
+		<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor};">
+			<div>
+				<h2>Normal text - 12px</h2>
+				<p class="" style="font-size: 12px;">I see dead pixels… but not with this contrast!</p>
+			</div>
+			<div>
+				<h2>Large text - 18px</h2>
+				<p style="font-size: 18px;">Mission: Increase contrast. Status: In Progress...</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section class="inverted">
 	<div class="container flex flex-col my-5 mx-auto">
-		<p>Ratio de contraste : <strong>{visualContrasts.contrast.toFixed(2)} {getAccessibilityLevel(visualContrasts.contrast)}</strong></p>
-		<div style="background-color: {bgColor}; color: {textColor};">
-			<p style="font-size: 12px;">Normal text - 12px : I see dead pixels… but not with this contrast!</p>
-			<p style="font-size: 18px;">Large text - 18px : Mission: Increase contrast. Status: In Progress...</p>
-		</div>
-	
-		<div>--------------------------</div>
-	
 		<div>
 			<div class="preview simulation" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
 				<p style="font-size: 12px;">Normal text protanopie - 12px : It's dangerous to go alone! Take this contrast boost!</p>
@@ -171,6 +181,16 @@
 </svg>
 
 <style>
+	.pickers {
+		border-width: 1px;
+		border-radius: 10px;
+		width: fit-content;
+	}
+	.preview {
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-left-width: 1px;
+	}
 	.input-container {
 		background-color: var(--foreground);
 		border-radius: 5px;

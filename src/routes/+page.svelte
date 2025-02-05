@@ -45,7 +45,7 @@
 </div>
 
 <div class='inverted p-5 md:p-10'>
-  <div class="container mx-auto">
+  <div class="container mx-auto my-10">
     <h1>{aboutme.title}</h1>
     <div class="content border-l-4 pl-5 my-10">
       {#each aboutme.items as item}
