@@ -1,6 +1,7 @@
-export const CONTRAST_RATIO_AAA   = 7;
-export const CONTRAST_RATIO_AA    = 4.5;
-export const CONTRAST_RATIO_AA_L  = 3;
+export const CONTRAST_RATIO_AAA     = 7;
+export const CONTRAST_RATIO_AAA_L   = 4.5;
+export const CONTRAST_RATIO_AA      = 4.5;
+export const CONTRAST_RATIO_AA_L    = 3;
 
 export function isCorrect(hex: string): boolean {
     return /^#[0-9A-Fa-f]{6}$/.test(hex);

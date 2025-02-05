@@ -1,9 +1,19 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { CONTRAST_RATIO_AA_L, CONTRAST_RATIO_AAA, CONTRAST_RATIO_AA, contrastRatio, adjustBgColorAuto, adjustTextColorAuto, simulateColorBlindness } from '$lib/contrast';
+    import {
+		CONTRAST_RATIO_AA_L,
+		CONTRAST_RATIO_AA,
+		CONTRAST_RATIO_AAA_L,
+		CONTRAST_RATIO_AAA,
+		contrastRatio,
+		adjustBgColorAuto,
+		adjustTextColorAuto,
+		simulateColorBlindness
+	} from '$lib/contrast';
+	import contrasts from "$data/contrasts.json";
 
-    let bgColor = "#ffffff";
-    let textColor = "#000000";
+    let bgColor = "#f8f8f8";
+    let textColor = "#111110";
     let visualContrasts = {
         contrast: 0,
         protanopia: 0,
@@ -22,40 +32,33 @@
     }
 
 	function updateContrast() {
-		visualContrasts.contrast = contrastRatio(bgColor, textColor);
-
-		visualContrasts.protanopia = contrastRatio(
-			simulateColorBlindness(bgColor, "protanopia"),
-			simulateColorBlindness(textColor, "protanopia")
-		);
-		visualContrasts.deuteranopia = contrastRatio(
-			simulateColorBlindness(bgColor, "deuteranopia"),
-			simulateColorBlindness(textColor, "deuteranopia")
-		);
-		visualContrasts.tritanopia = contrastRatio(
-			simulateColorBlindness(bgColor, "tritanopia"),
-			simulateColorBlindness(textColor, "tritanopia")
-		);
-		visualContrasts.achromatopsia = contrastRatio(
-			simulateColorBlindness(bgColor, "achromatopsia"),
-			simulateColorBlindness(textColor, "achromatopsia")
-		);
-	}
+        visualContrasts.contrast = contrastRatio(bgColor, textColor);
+        
+        (["protanopia", "deuteranopia", "tritanopia", "achromatopsia"] as const).forEach(type => {
+            visualContrasts[type as keyof typeof visualContrasts] = contrastRatio(
+                simulateColorBlindness(bgColor, type),
+                simulateColorBlindness(textColor, type)
+            );
+        });
+    }
 
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
         const input = event.target as HTMLInputElement;
         let value = input.value.trim();
+        if (!/^#[0-9A-Fa-f]{6}$/.test(value)) return;
 
-		if (colorType === "bg") bgColor = value;
-		else textColor = value;
-		updateContrast();
+        if (colorType === "bg") bgColor = value;
+        else textColor = value;
+        updateContrast();
     }
 
-	function getAccessibilityLevel(ratio: number) {
-        if (ratio >= CONTRAST_RATIO_AAA) return "✅ Niveau AAA (Excellent)";
-        if (ratio >= CONTRAST_RATIO_AA) return "✅ Niveau AA (Bon)";
-        if (ratio >= CONTRAST_RATIO_AA_L) return "⚠️ Niveau AA (Texte Large uniquement)";
-        return "❌ Insuffisant";
+	function getAccessibilityLevels(ratio: number) {
+        return [
+            { label: "AA 18px", reached: ratio >= CONTRAST_RATIO_AA_L },
+            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA },
+            { label: "AAA 18px", reached: ratio >= CONTRAST_RATIO_AAA_L },
+            { label: "AAA", reached: ratio >= CONTRAST_RATIO_AAA },
+        ];
     }
 
     onMount(updateContrast);
@@ -106,7 +109,14 @@
 			<div>
 				<h2>Contraste</h2>
 				<p>Ratio : {visualContrasts.contrast.toFixed(2)}</p>
-				<p>{getAccessibilityLevel(visualContrasts.contrast)}</p>
+				<div class="accessibility-levels">
+					{#each getAccessibilityLevels(visualContrasts.contrast) as level}
+						<div class={level.reached ? "badge success" : "badge error"}>
+							<p>{level.label}</p>
+							<p>- {level.reached ? "OK" : "X"} -</p>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
 		<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor};">
@@ -122,80 +132,37 @@
 	</div>
 </section>
 
-<section class="container flex flex-col my-10 mx-auto">
-	<div class="simulation flex flex-row gap-4 flex-wrap">
+<section class="container simulation flex flex-col my-10 mx-auto">
+	<h1>Simulation de vision</h1>
 
-		<div class="pickers flex flex-col gap-5 flex-wrap">
+	<div class="flex flex-row flex-wrap mt-10">
+
+		{#each contrasts as contrast}
+		<div class="pickers flex flex-col gap-5 flex-wrap mb-10">
 			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste protanopie</h2>
-				<p>Ratio : {visualContrasts.protanopia.toFixed(2)}</p>
-				<p>{getAccessibilityLevel(visualContrasts.protanopia)}</p>
+				<h2>Contraste {contrast.title}</h2>
+				<p>Ratio : {visualContrasts[contrast.technical as keyof typeof visualContrasts].toFixed(2)}</p>
+				<div class="accessibility-levels">
+					{#each getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts]) as level}
+						<div class={level.reached ? "badge success" : "badge error"}>
+							<p>{level.label}</p>
+							<p>- {level.reached ? "OK" : "X"} -</p>
+						</div>
+					{/each}
+				</div>
 			</div>
-			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#protanopia);">
+			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
 				<div>
 					<h2>Normal text - 12px</h2>
-					<p class="" style="font-size: 12px;">It's dangerous to go alone! Take this contrast boost!</p>
+					<p class="" style="font-size: 12px;">{contrast.example_1}</p>
 				</div>
 				<div>
 					<h2>Large text - 18px</h2>
-					<p style="font-size: 18px;">Ce texte est super efficace !</p>
+					<p style="font-size: 18px;">{contrast.example_2}</p>
 				</div>
 			</div>
 		</div>
-	
-		<div class="pickers flex flex-col gap-5 flex-wrap">
-			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste deutéranopie</h2>
-				<p>Ratio : {visualContrasts.deuteranopia.toFixed(2)}</p>
-				<p>{getAccessibilityLevel(visualContrasts.deuteranopia)}</p>
-			</div>
-			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#deuteranopia);">
-				<div>
-					<h2>Normal text - 12px</h2>
-					<p class="" style="font-size: 12px;">May the contrast be with you...</p>
-				</div>
-				<div>
-					<h2>Large text - 18px</h2>
-					<p style="font-size: 18px;">Le futur est accessible. Enfin… presque.</p>
-				</div>
-			</div>
-		</div>
-	
-		<div class="pickers flex flex-col gap-5 flex-wrap">
-			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste tritanopie</h2>
-				<p>Ratio : {visualContrasts.tritanopia.toFixed(2)}</p>
-				<p>{getAccessibilityLevel(visualContrasts.tritanopia)}</p>
-			</div>
-			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#tritanopia);">
-				<div>
-					<h2>Normal text - 12px</h2>
-					<p class="" style="font-size: 12px;">Neo, vois-tu enfin les contrastes de la Matrice ?</p>
-				</div>
-				<div>
-					<h2>Large text - 18px</h2>
-					<p style="font-size: 18px;">Error 404: Low contrast not found.</p>
-				</div>
-			</div>
-		</div>
-	
-		<div class="pickers flex flex-col gap-5 flex-wrap">
-			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste achromatopsie</h2>
-				<p>Ratio : {visualContrasts.achromatopsia.toFixed(2)}</p>
-				<p>{getAccessibilityLevel(visualContrasts.achromatopsia)}</p>
-			</div>
-			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#achromatopsia);">
-				<div>
-					<h2>Normal text - 12px</h2>
-					<p class="" style="font-size: 12px;">Debugging contrast levels like a pro.</p>
-				</div>
-				<div>
-					<h2>Large text - 18px</h2>
-					<p style="font-size: 18px;">Accès autorisé : contraste optimal détecté.</p>
-				</div>
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
@@ -237,19 +204,34 @@
 	.pickers button {
 		width: 180px;
 	}
-	.simulation .pickers {
-		width: 40%;
-	}
 
-	.contrast {
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
+	section:not(.simulation) .pickers {
+		width: 100%;
+
+		.contrast {
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+		.preview {
+			flex-grow: 1;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			border-left-width: 1px;
+		}
 	}
-	.preview {
-		flex-grow: 1;
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-		border-left-width: 1px;
+	section.simulation .pickers {
+		width: 50%;
+
+		.contrast {
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		.preview {
+			flex-grow: 1;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			border-top-width: 1px;
+		}
 	}
 
 	.input-container {
@@ -274,5 +256,38 @@
         width: 30px;
         height: 30px;
 		background: none;
+		cursor: pointer;
     }
+
+	.accessibility-levels {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 10px;
+		justify-content: center;
+	}
+	.badge {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 90px;
+		height: 90px;
+		padding: 10px;
+		border-radius: 50%;
+		font-size: 0.85rem;
+		font-weight: bold;
+		text-align: center;
+		border-width: 3px;
+	}
+	.success {
+		border-color: #4caf50;
+		color: #4caf50;
+		background-color: #000f00;
+	}
+	.error {
+		border-color: #ff7070;
+		color: #ff7070;
+		background-color: #000000;
+	}
 </style>

@@ -58,7 +58,7 @@ let { size = "50px" } = $props();
   width: 100%;
   height: 100%;
   background: linear-gradient(to left, var(--secondary), transparent);
-  transform: translateX(100%);
+  transform: translateX(0);
   transition: transform 1s ease-out;
   z-index: 1;
 }
@@ -66,12 +66,12 @@ let { size = "50px" } = $props();
 a:hover .cls-2::before,
 a:hover .cls-3::before,
 a:hover .cls-4::before {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 a:hover .cls-2,
 a:hover .cls-3,
 a:hover .cls-4 {
-  fill: var(--secondary);
+  fill: var(--primary);
 }
 </style>

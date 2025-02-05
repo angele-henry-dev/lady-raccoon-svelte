@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --background: #111111;
+    --background: #111110;
     --foreground: #f8f8f8;
     --grey: #545454;
   
@@ -81,32 +81,26 @@ a {
     color: var(--foreground);
     transition: 0.4s;
 }
-a.icon {
-    margin-left: 15px;
-    font-weight: 900;
-    font-size: 2rem;
+a:hover {
     color: var(--primary);
-    border: 1px solid var(--primary);
-    border-radius: 50px;
-    padding: 0px 16px;
 }
+
 button, 
 a.button {
-    width: fit-content;
     background-color: var(--primary);
+    border-color: var(--background);
     color: var(--background);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1rem;
     padding: 0.7rem 1.5rem;
     border-width: 1px;
-    border-radius: 0.5rem;
+    border-radius: 10px;
 }
 button:hover,
-a:hover {
-    border-color: var(--secondary);
-    color: var(--secondary);
-    background: none;
+a.button:hover {
+    background-color: var(--background);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .highlight {
