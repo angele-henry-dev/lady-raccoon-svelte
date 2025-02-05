@@ -69,32 +69,36 @@
 <section class="container flex flex-col my-5 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
 
-    <div class="pickers grid grid-cols-2 gap-4">
+    <div class="pickers flex flex-row gap-5 flex-wrap">
         <div class="flex flex-col">
-            Couleur de fond :
-            <input type="color" bind:value={bgColor} on:input={updateContrast} />
-			<input
-				type="text"
-				bind:value={bgColor}
-				on:input={(e) => handleHexInput(e, "bg")}
-				pattern="#[0-9A-Fa-f]{6}"
-				aria-label="code hexadecimal"
-				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-			/>
-			<button on:click={adjustBgColor}>Ajuster Fond</button>
+            <h2>Couleur de fond :</h2>
+			<div class="input-container">
+				<input
+					type="text"
+					bind:value={bgColor}
+					on:input={(e) => handleHexInput(e, "bg")}
+					pattern="#[0-9A-Fa-f]{6}"
+					aria-label="code hexadecimal"
+					title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+				/>
+				<input type="color" bind:value={bgColor} on:input={updateContrast} />
+			</div>
+			<button on:click={adjustBgColor} class="px-2 py-1 mt-4" title="Ajuster le fond">Ajuster le fond</button>
         </div>
         <div class="flex flex-col">
-            Couleur du texte :
-            <input type="color" bind:value={textColor} on:input={updateContrast} />
-			<input
-				type="text"
-				bind:value={textColor}
-				on:input={(e) => handleHexInput(e, "text")}
-				pattern="#[0-9A-Fa-f]{6}"
-				aria-label="code hexadecimal"
-				title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-			/>
-			<button on:click={adjustTextColor}>Ajuster Texte</button>
+            <h2>Couleur du texte :</h2>
+			<div class="input-container">
+				<input
+					type="text"
+					bind:value={textColor}
+					on:input={(e) => handleHexInput(e, "text")}
+					pattern="#[0-9A-Fa-f]{6}"
+					aria-label="code hexadecimal"
+					title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+				/>
+				<input type="color" bind:value={textColor} on:input={updateContrast} />
+			</div>
+			<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
         </div>
     </div>
 </section>
@@ -167,7 +171,29 @@
 </svg>
 
 <style>
-    .pickers input {
+	.input-container {
+		background-color: var(--foreground);
+		border-radius: 5px;
+		width: 180px;
+        height: 30px;
+		display: flex;
+		justify-content: space-evenly;
+	}
+    .input-container input {
         color: var(--background);
+		background-color: var(--foreground);
     }
+    .input-container input[type='text'] {
+        width: 90px;
+        height: 30px;
+		padding: 0 3px;
+    }
+    .input-container input[type='color'] {
+        width: 30px;
+        height: 30px;
+		background: none;
+    }
+	.pickers button {
+		width: 180px;
+	}
 </style>

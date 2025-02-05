@@ -44,10 +44,10 @@
 
 </div>
 
-<div class='inverted my-20 p-5 md:p-10'>
-  <div class="container mx-auto mt-20">
+<div class='inverted p-5 md:p-10'>
+  <div class="container mx-auto">
     <h1>{aboutme.title}</h1>
-    <div class="content border-l-4 pl-5 my-20">
+    <div class="content border-l-4 pl-5 my-10">
       {#each aboutme.items as item}
         <h2>{item.title}</h2>
         <ul>
@@ -84,8 +84,8 @@
   </div>
 </div>
 
-<section class='inverted my-20 p-5 md:p-10'>
-  <div class="accordion container mx-auto my-20">
+<section class='inverted mb-10 p-5 md:p-10'>
+  <div class="accordion container mx-auto my-10">
     <h1 class="mb-10">{faq.title}</h1>
     {#each faq.items as item, index}
       <div class="tab">

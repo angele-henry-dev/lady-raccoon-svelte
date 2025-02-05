@@ -92,6 +92,7 @@ a.icon {
 }
 button, 
 a.button {
+    width: fit-content;
     background-color: var(--primary);
     color: var(--background);
     text-transform: uppercase;
@@ -121,7 +122,7 @@ a:hover {
 .inverted {
     background: var(--foreground);
     color: var(--background);
-    clip-path: polygon(100px 0%, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0% 100px);
+    clip-path: polygon(60px 0%, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0% 60px);
     ul li::marker {
         color: var(--background);
     }
