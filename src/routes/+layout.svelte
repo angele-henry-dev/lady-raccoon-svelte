@@ -20,7 +20,7 @@
 								<span>{section.title}</span>
 								<ul class="dropdown-content list-none m-0 p-2 hidden border">
 									{#each section.children as child}
-									<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
+										<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
 									{/each}
 								</ul>
 							</div>
@@ -102,7 +102,6 @@
 		position: absolute;
 		top: 26px;
 		left: 0;
-		width: 170px;
 		padding: 10px;
 		background-color: var(--background);
 	}
