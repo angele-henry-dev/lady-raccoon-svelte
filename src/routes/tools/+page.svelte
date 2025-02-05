@@ -69,12 +69,11 @@
 	<meta name="Description" content="Outils d'accessibilité" />
 </svelte:head>
 
-<section class="container flex flex-col mt-5 mx-auto">
+<section class="container mt-5 p-5 md:p-10 mx-auto">
 	<h1>Testeur de Contraste (WCAG 2.1)</h1>
-
-	<div class="pickers mt-10 flex flex-row gap-5 flex-wrap">
-		<div class="contrast flex flex-col p-10 pt-5">
-			<div class="flex flex-row gap-5 flex-wrap">
+	<div class="pickers flex flex-col gap-5 flex-wrap my-10">
+		<div class="flex flex-row gap-5 flex-wrap">
+			<div class="flex flex-row gap-5 flex-wrap p-5 pt-0">
 				<div class="flex flex-col">
 					<h2>Couleur de fond :</h2>
 					<div class="input-container">
@@ -106,9 +105,9 @@
 					<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
 				</div>
 			</div>
-			<div>
+			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste</h2>
-				<p>Ratio : {visualContrasts.contrast.toFixed(2)}</p>
+				<p class="text-center">Ratio : {visualContrasts.contrast.toFixed(2)}</p>
 				<div class="accessibility-levels">
 					{#each getAccessibilityLevels(visualContrasts.contrast) as level}
 						<div class={level.reached ? "badge success" : "badge error"}>
@@ -119,7 +118,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="preview flex flex-col p-10 pt-5" style="background-color: {bgColor}; color: {textColor};">
+		<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor};">
 			<div>
 				<h2>Normal text - 12px</h2>
 				<p class="" style="font-size: 12px;">I see dead pixels… but not with this contrast!</p>
@@ -130,18 +129,14 @@
 			</div>
 		</div>
 	</div>
-</section>
 
-<section class="container simulation flex flex-col my-10 mx-auto">
 	<h1>Simulation de vision</h1>
-
 	<div class="flex flex-row flex-wrap mt-10">
-
 		{#each contrasts as contrast}
 		<div class="pickers flex flex-col gap-5 flex-wrap mb-10">
 			<div class="contrast flex flex-col p-5 pt-0">
 				<h2>Contraste {contrast.title}</h2>
-				<p>Ratio : {visualContrasts[contrast.technical as keyof typeof visualContrasts].toFixed(2)}</p>
+				<p class="text-center">Ratio : {visualContrasts[contrast.technical as keyof typeof visualContrasts].toFixed(2)}</p>
 				<div class="accessibility-levels">
 					{#each getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts]) as level}
 						<div class={level.reached ? "badge success" : "badge error"}>
@@ -200,27 +195,6 @@
 		border-width: 1px;
 		border-radius: 10px;
 		width: fit-content;
-	}
-	.pickers button {
-		width: 180px;
-	}
-
-	section:not(.simulation) .pickers {
-		width: 100%;
-
-		.contrast {
-			border-top-left-radius: 10px;
-			border-bottom-left-radius: 10px;
-		}
-		.preview {
-			flex-grow: 1;
-			border-top-right-radius: 10px;
-			border-bottom-right-radius: 10px;
-			border-left-width: 1px;
-		}
-	}
-	section.simulation .pickers {
-		width: 50%;
 
 		.contrast {
 			border-top-left-radius: 10px;
@@ -232,6 +206,9 @@
 			border-bottom-right-radius: 10px;
 			border-top-width: 1px;
 		}
+	}
+	.pickers button {
+		width: 180px;
 	}
 
 	.input-container {
