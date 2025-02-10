@@ -48,23 +48,21 @@ body {
 
 header {
     background-color: hsla(0, 0%, 9%, 0.9);
+}
+
+h2 {
     font-family: 'OpenDyslexic', 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 20px 0;
 }
 
 .hero {
     height: calc(100vh - 83px);
 }
-.hero p {
+.hero h1 {
     line-height: 1.2;
-}
-
-h1 {
-    font-family: 'OpenDyslexic', 'Roboto', sans-serif;
-    font-size: 2rem;
-}
-h2 {
-    font-weight: 900;
-    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {

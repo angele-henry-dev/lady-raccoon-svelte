@@ -10,15 +10,15 @@
 </script>
 
 <svelte:head>
-	<title>Lady Raccoon • Un site rapide, accessible et optimisé</title>
-	<meta name="Description" content="Boostez votre impact avec un site rapide, accessible et optimisé" />
+	<title>Lady Raccoon • Spécialiste en Accessibilité Web & Performance • L’accessibilité n’est pas une option</title>
+	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
 </svelte:head>
 
 <BackgroundStars />
 
 <div class="dark hero text-center w-full flex flex-col justify-around">
   <div class="container mx-auto">
-    <p class="text-4xl md:text-6xl mb-20">Boostez votre impact avec un site <br><span class="highlight">rapide, accessible et optimisé.</span></p>
+    <h1 class="text-4xl md:text-6xl mb-20">L’accessibilité web n’est pas une option.<br><span class="highlight">C’est un standard.</span></h1>
     <Audit />
   </div>
 </div>
@@ -26,7 +26,7 @@
 <BackgroundRetro />
 
 <div class="my-20 w-full container mx-auto p-5 md:p-10">
-  <h1 class="text-center">{issues.title}</h1>
+  <h2 class="text-center">{issues.title}</h2>
   <p class="mx-auto text-center w-full md:max-w-[50%] mb-20">
     {issues.subtitle}
   </p>
@@ -34,7 +34,7 @@
   <div class="text-center grid grid-cols-1 lg:grid-cols-3">
     {#each issues.items as item}
       <div class="lg:border-r p-5">
-        <h2 class="text-center"><span class="highlight">{item.title}</span></h2>
+        <h3 class="text-center"><span class="highlight">{item.title}</span></h3>
           {#each item.items as line}
             <p class="border-b p-5">{line}</p>
           {/each}
@@ -46,10 +46,10 @@
 
 <div class='inverted p-5 md:p-10'>
   <div class="container mx-auto my-10">
-    <h1>{aboutme.title}</h1>
+    <h2>{aboutme.title}</h2>
     <div class="content border-l-4 pl-5 my-10">
       {#each aboutme.items as item}
-        <h2>{item.title}</h2>
+        <h3>{item.title}</h3>
         <ul>
           {#each item.why as why}
             <li>{why}</li>
@@ -61,7 +61,7 @@
 </div>
 
 <div class='my-20 container mx-auto p-5 md:p-10'>
-  <h1>{offers.title}</h1>
+  <h2>{offers.title}</h2>
 
   <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 justify-around">
     {#each offers.items as offer}
@@ -86,7 +86,7 @@
 
 <section class='inverted mb-10 p-5 md:p-10'>
   <div class="accordion container mx-auto my-10">
-    <h1 class="mb-10">{faq.title}</h1>
+    <h2 class="mb-10">{faq.title}</h2>
     {#each faq.items as item, index}
       <div class="tab">
         <input type="checkbox" name="accordion-1" id="{'cb' + index}">
