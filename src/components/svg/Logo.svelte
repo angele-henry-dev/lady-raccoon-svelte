@@ -28,6 +28,9 @@ let { size = "50px" } = $props();
 </a>
 
 <style>
+span {
+  font-family: 'OpenDyslexic', 'Roboto', sans-serif;
+}
 .cls-1 {
   fill: var(--background);
 }

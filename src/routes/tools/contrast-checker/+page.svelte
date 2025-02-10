@@ -65,12 +65,12 @@
 </script>
 
 <svelte:head>
-	<title>Lady Raccoon • Testeur de Contraste</title>
-	<meta name="Description" content="Testeur de Contraste" />
+	<title>Testeur de Contraste • Vérifiez l’Accessibilité des Couleurs | Lady Raccoon</title>
+	<meta name="description" content="Testez facilement le contraste des couleurs de votre site web. Vérifiez la conformité aux normes WCAG pour une meilleure accessibilité. Outil rapide, simple et gratuit." />
 </svelte:head>
 
 <section class="container mt-5 p-5 md:p-10 mx-auto">
-	<h1>Testeur de Contraste (WCAG 2.1)</h1>
+	<h1 class="text-2xl md:text-4xl mb-20">Testez le contraste des couleurs de votre site web</h1>
 	<div class="pickers flex flex-col gap-5 flex-wrap my-10">
 		<div class="flex flex-row gap-5 flex-wrap">
 			<div class="flex flex-row gap-5 flex-wrap p-5 pt-0">
@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste</h2>
+				<p class="my-3 font-black">Contraste</p>
 				<p class="text-center">Ratio : {visualContrasts.contrast.toFixed(2)}</p>
 				<div class="accessibility-levels">
 					{#each getAccessibilityLevels(visualContrasts.contrast) as level}
@@ -120,22 +120,22 @@
 		</div>
 		<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor};">
 			<div>
-				<h2>Normal text - 12px</h2>
+				<p class="my-3 font-black">Normal text - 12px</p>
 				<p class="" style="font-size: 12px;">I see dead pixels… but not with this contrast!</p>
 			</div>
 			<div>
-				<h2>Large text - 18px</h2>
+				<p class="my-3 font-black">Large text - 18px</p>
 				<p style="font-size: 18px;">Mission: Increase contrast. Status: In Progress...</p>
 			</div>
 		</div>
 	</div>
 
-	<h1>Simulation de vision</h1>
+	<h2>Simulation de vision</h2>
 	<div class="flex flex-row flex-wrap mt-10">
 		{#each contrasts as contrast}
 		<div class="pickers flex flex-col gap-5 flex-wrap mb-10">
 			<div class="contrast flex flex-col p-5 pt-0">
-				<h2>Contraste {contrast.title}</h2>
+				<p class="my-3 font-black">Contraste {contrast.title}</p>
 				<p class="text-center">Ratio : {visualContrasts[contrast.technical as keyof typeof visualContrasts].toFixed(2)}</p>
 				<div class="accessibility-levels">
 					{#each getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts]) as level}
@@ -148,11 +148,11 @@
 			</div>
 			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
 				<div>
-					<h2>Normal text - 12px</h2>
+					<p class="my-3 font-black">Normal text - 12px</p>
 					<p class="" style="font-size: 12px;">{contrast.example_1}</p>
 				</div>
 				<div>
-					<h2>Large text - 18px</h2>
+					<p class="my-3 font-black">Large text - 18px</p>
 					<p style="font-size: 18px;">{contrast.example_2}</p>
 				</div>
 			</div>
