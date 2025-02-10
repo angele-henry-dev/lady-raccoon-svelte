@@ -43,21 +43,4 @@
         letter-spacing: 1px;
     }
 }
-.card.lumos::after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 110%;
-    width: 110%;
-    transform: scale(0.8);
-    filter: blur(25px);
-    background: linear-gradient(to left, var(--primary) 0%, var(--secondary) 100%);
-    transition: opacity .5s;
-}
-.card.lumos:hover::after {
-    opacity: 0;
-}
 </style>
