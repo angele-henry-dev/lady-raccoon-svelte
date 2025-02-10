@@ -23,8 +23,6 @@
   </div>
 </div>
 
-<BackgroundRetro />
-
 <div class="my-20 w-full container mx-auto p-5 md:p-10">
   <h2 class="text-center">{issues.title}</h2>
   <p class="mx-auto text-center w-full md:max-w-[50%] mb-20">
