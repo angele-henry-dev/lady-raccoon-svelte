@@ -212,18 +212,3 @@ a:hover {
     border: solid 2px var(--secondary);
     border-radius: 50%;
 }
-  
-/* Custom scrollbar */
-  
-body::-webkit-scrollbar {
-    width: 5px;
-}
-body::-moz-scrollbar {
-    width: 5px;
-}
-body::-webkit-scrollbar-track {
-    background: #303030;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-}
