@@ -195,17 +195,42 @@ a:hover {
     top: -.1em;
 }
 
-/* Inverted */
+/* Letter */
 
-.inverted {
-    background: var(--foreground);
+.letter {
+    position: relative;
+	background-color: var(--foreground);
+	background-image: conic-gradient(at calc(100% - 1px) calc(100% - 1px), hsla(0, 0%, 66%, 0.3) 270deg, hsla(0, 0%, 0%, 0) 0);
+	background-size: 20px 20px;
     color: var(--background);
-    clip-path: polygon(60px 0%, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0% 60px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-.inverted .container .content {
+.letter:before, .letter:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  .letter:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+  }
+  .letter:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+  }
+
+.letter .content {
     position: relative;
 }
-.inverted .container .content::before {
+.letter .content::before {
     content: "";
     position: absolute;
     top: 0;

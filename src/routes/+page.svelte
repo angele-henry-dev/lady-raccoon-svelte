@@ -38,8 +38,8 @@
 
 </div>
 
-<div class='inverted p-5 md:p-10'>
-  <div class="container mx-auto my-10">
+<div class='letter container mx-auto p-5 md:p-10'>
+  <div class="mx-auto my-10">
     <h2>{aboutme.title}</h2>
     <div class="content pl-10 my-10">
       {#each aboutme.items as item}
@@ -79,8 +79,8 @@
   </div>
 </div>
 
-<section class='inverted mb-10 p-5 md:p-10'>
-  <div class="accordion container mx-auto my-10">
+<section class='letter container mx-auto mb-10 p-5 md:p-10'>
+  <div class="accordion mx-auto my-10">
     <h2 class="mb-10">{faq.title}</h2>
     {#each faq.items as item, index}
       <div class="tab">
