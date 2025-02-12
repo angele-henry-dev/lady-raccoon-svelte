@@ -70,11 +70,12 @@
         </div>
         <p><b>{offer.deliverable_title} :</b> {offer.deliverable}</p>
       {/snippet}
-      {#snippet cta()}
-        <a class="button bg-primary align-middle" target="_blank" href="{offer.link}">Prendre RDV</a>
-      {/snippet}
+      {#snippet cta()}{/snippet}
       <Card title="{offer.title}" {description} {cta} />
     {/each}
+  </div>
+  <div class="mt-10 text-center">
+    <Audit />
   </div>
 </div>
 
