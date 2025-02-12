@@ -48,7 +48,7 @@
 			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
 			<p>
 				J’aide les entreprises à rendre leurs sites 
-				conformes aux normes WCAG 2.1 pour contribuer à un web accessible à tous.
+				conformes aux normes WCAG pour contribuer à un web accessible à tous.
 			</p>
 			<p class="py-5 flex flex-row gap-5"><LinkedIn /><Github /></p>
 		</div>

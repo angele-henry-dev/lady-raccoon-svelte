@@ -15,9 +15,9 @@
 
 <BackgroundStars />
 
-<div class="dark hero text-center w-full flex flex-col justify-around">
-  <div class="container mx-auto">
-    <h1 class="text-4xl md:text-6xl mb-20">L’accessibilité web n’est pas une option.<br><span class="annotation rounded">C’est un standard.</span></h1>
+<div class="dark hero text-center w-full flex flex-row gap-4">
+  <div class="container m-auto">
+    <h1 class="text-4xl md:text-6xl mb-20">L’accessibilité web n’est pas une option.<br><span class="annotation highlight">C’est un standard.</span></h1>
     <Audit />
   </div>
 </div>
@@ -44,7 +44,7 @@
 <div class='inverted p-5 md:p-10'>
   <div class="container mx-auto my-10">
     <h2>{aboutme.title}</h2>
-    <div class="content border-l-4 pl-5 my-10">
+    <div class="content pl-10 my-10">
       {#each aboutme.items as item}
         <h3>{item.title}</h3>
         <ul>
@@ -101,6 +101,7 @@
   position: relative;
   border: 2px solid var(--secondary);
   border-bottom-width: 0;
+  border-radius: var(--hand-drawn-border);
 }
 .tab:last-child {
   border-bottom-width: 2px;

@@ -15,6 +15,8 @@
 
     --primary: var(--vt-c-yellow);
     --secondary: var(--vt-c-pink);
+
+    --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px;
 }
   
 @font-face {
@@ -74,11 +76,41 @@ ul {
     margin: 10px 40px;
     padding: 0;
 }
-ul li::marker {
-    color: var(--secondary);
+
+button, 
+a.button {
+    position: relative;
+    background-color: var(--background);
+    border: 2px solid var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--hand-drawn-border);
+    overflow: hidden;
+}
+button::before,
+a.button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--primary);
+    border-radius: var(--hand-drawn-border);
+    transform: rotate(2deg);
+    pointer-events: none;
+}
+
+button:hover,
+a.button:hover {
+    background-color: var(--primary);
+    color: var(--background);
+    border-width: 0;
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: var(--foreground);
     transition: 0.4s;
@@ -89,25 +121,8 @@ a:hover {
 
 /* Annotations */
 
-button, 
-a.button {
-    background-color: var(--background);
-    border-color: var(--primary);
-    color: var(--primary);
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 0.7rem 1.5rem;
-    border-width: 2px;
-    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-}
-button:hover,
-a.button:hover {
-    background-color: var(--primary);
-    color: var(--background);
-    border-width: 0;
-}
-
-.annotation {
+.annotation,
+.rounded {
     position: relative;
 }
 .annotation:before,
@@ -141,8 +156,21 @@ a.button:hover {
     transform: rotate(-15deg);
 }
 
-.annotation.rounded:after {
-    /* position: absolute;
+.rounded {
+    position: relative;
+}
+.rounded:before {
+    position: absolute;
+    content: '';
+    border-top: 1px solid var(--primary);
+    border-radius: 50%;
+    width: 90%;
+    bottom: -.3em;
+    left: -.3em;
+    top: -.1em;
+}
+.rounded:after {
+    position: absolute;
     content: '';
     border: 1px solid var(--primary);
     border-top: none;
@@ -150,19 +178,8 @@ a.button:hover {
     bottom: -.3em;
     left: -.3em;
     right: -.3em;
-    top: -.1em; */
+    top: -.1em;
 }
-.annotation.rounded:before {
-    /* position: absolute;
-    content: '';
-    border-top: 1px solid var(--primary);
-    border-radius: 50%;
-    width: 90%;
-    bottom: -.3em;
-    left: 0em;
-    top: -.5em; */
-}
-
 
 /* Inverted */
 
@@ -170,12 +187,18 @@ a.button:hover {
     background: var(--foreground);
     color: var(--background);
     clip-path: polygon(60px 0%, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0% 60px);
-    ul li::marker {
-        color: var(--background);
-    }
 }
 .inverted .container .content {
-    border-color: var(--secondary);
+    position: relative;
+}
+.inverted .container .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: solid 2px var(--secondary);
+    border-radius: 50%;
 }
   
 /* Custom scrollbar */
