@@ -27,10 +27,10 @@
     .card-info {
         padding: 20px;
         background: var(--background);
-        border-width: 1px;
+        border-width: 2px;
         width: 100%;
         height: 100%;
-        border-radius: 15px;
+        border-radius: var(--hand-drawn-border);
     }
     .description {
         margin-top: 30px;
