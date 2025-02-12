@@ -10,7 +10,7 @@
         "Structure HTML et sémantique",
         "Couleurs et contrastes",
         "Navigation clavier et interactions",
-        "Conformité avec les normes WCAG 2.1 (AA et AAA)"
+        "Conformité avec les normes WCAG"
       ],
       "deliverable_title": "Livrable",
       "deliverable": "Un rapport avec un plan d’action priorisé.",
@@ -28,7 +28,7 @@
         "Tests après modifications pour valider la conformité"
       ],
       "deliverable_title": "Livrable",
-      "deliverable": "Un site conforme aux normes WCAG 2.1, accessible à tous.",
+      "deliverable": "Un site conforme aux normes WCAG, accessible à tous.",
       "link": "https://app.lemcal.com/@angelehenry/strategie-web"
     },
     {

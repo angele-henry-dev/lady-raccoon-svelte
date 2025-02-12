@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --background: #111110;
+    --background: #101010;
     --foreground: #f8f8f8;
     --grey: #545454;
   
@@ -15,6 +15,8 @@
 
     --primary: var(--vt-c-yellow);
     --secondary: var(--vt-c-pink);
+
+    --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px;
 }
   
 @font-face {
@@ -74,11 +76,41 @@ ul {
     margin: 10px 40px;
     padding: 0;
 }
-ul li::marker {
-    color: var(--secondary);
+
+button, 
+a.button {
+    position: relative;
+    background-color: var(--background);
+    border: 2px solid var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--hand-drawn-border);
+    overflow: hidden;
+}
+button::before,
+a.button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--primary);
+    border-radius: var(--hand-drawn-border);
+    transform: rotate(2deg);
+    pointer-events: none;
+}
+
+button:hover,
+a.button:hover {
+    background-color: var(--primary);
+    color: var(--background);
+    border-width: 0;
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: var(--foreground);
     transition: 0.4s;
@@ -87,30 +119,66 @@ a:hover {
     color: var(--primary);
 }
 
-button, 
-a.button {
-    background-color: var(--primary);
-    border-color: var(--background);
-    color: var(--background);
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 0.7rem 1.5rem;
-    border-width: 1px;
-    border-radius: 10px;
+/* Annotations */
+
+.annotation,
+.rounded {
+    position: relative;
 }
-button:hover,
-a.button:hover {
-    background-color: var(--background);
-    border-color: var(--primary);
-    color: var(--primary);
+.annotation:before,
+.annotation:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7px;
+    width: 100%;
+    border: solid 2px var(--primary);
+    border-color: var(--primary) transparent transparent transparent;
+    border-radius: 50%;
 }
 
-.highlight {
-    padding: 0 0 1rem 0;
-    background-size: 110% 10%;
-    background-repeat: repeat-x;
-    background-position: left 0 bottom 10px;
-    background-image: linear-gradient(179deg, var(--primary) 0%, var(--primary) 50%, transparent 66%, transparent 100%);
+.annotation.highlight:before,
+.annotation.highlight:after {
+    bottom: -7px;
+}
+.annotation.highlight:after {
+    transform: rotate(1deg);
+    border-width: 4px;
+}
+
+.annotation.not:before,
+.annotation.not:after {
+    top: 50%;
+    transform: rotate(15deg);
+}
+.annotation.not:after {
+    transform: rotate(-15deg);
+}
+
+.rounded {
+    position: relative;
+}
+.rounded:before {
+    position: absolute;
+    content: '';
+    border-top: 1px solid var(--primary);
+    border-radius: 50%;
+    width: 90%;
+    bottom: -.3em;
+    left: -.3em;
+    top: -.1em;
+}
+.rounded:after {
+    position: absolute;
+    content: '';
+    border: 1px solid var(--primary);
+    border-top: none;
+    border-radius: 50%;
+    bottom: -.3em;
+    left: -.3em;
+    right: -.3em;
+    top: -.1em;
 }
 
 /* Inverted */
@@ -119,12 +187,18 @@ a.button:hover {
     background: var(--foreground);
     color: var(--background);
     clip-path: polygon(60px 0%, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0% 60px);
-    ul li::marker {
-        color: var(--background);
-    }
 }
 .inverted .container .content {
-    border-color: var(--secondary);
+    position: relative;
+}
+.inverted .container .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: solid 2px var(--secondary);
+    border-radius: 50%;
 }
   
 /* Custom scrollbar */

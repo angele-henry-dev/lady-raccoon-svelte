@@ -1,5 +1,4 @@
 <script>
-	import BackgroundRetro from "../components/design/BackgroundRetro.svelte";
 	import BackgroundStars from "../components/design/BackgroundStars.svelte";
 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
@@ -16,9 +15,9 @@
 
 <BackgroundStars />
 
-<div class="dark hero text-center w-full flex flex-col justify-around">
-  <div class="container mx-auto">
-    <h1 class="text-4xl md:text-6xl mb-20">L’accessibilité web n’est pas une option.<br><span class="highlight">C’est un standard.</span></h1>
+<div class="dark hero text-center w-full flex flex-row gap-4">
+  <div class="container m-auto">
+    <h1 class="text-4xl md:text-6xl mb-20">L’accessibilité web n’est pas une option.<br><span class="annotation highlight">C’est un standard.</span></h1>
     <Audit />
   </div>
 </div>
@@ -32,7 +31,7 @@
   <div class="text-center grid grid-cols-1 lg:grid-cols-3">
     {#each issues.items as item}
       <div class="lg:border-r p-5">
-        <h3 class="text-center"><span class="highlight">{item.title}</span></h3>
+        <h3 class="text-center"><span class="annotation highlight">{item.title}</span></h3>
           {#each item.items as line}
             <p class="border-b p-5">{line}</p>
           {/each}
@@ -45,7 +44,7 @@
 <div class='inverted p-5 md:p-10'>
   <div class="container mx-auto my-10">
     <h2>{aboutme.title}</h2>
-    <div class="content border-l-4 pl-5 my-10">
+    <div class="content pl-10 my-10">
       {#each aboutme.items as item}
         <h3>{item.title}</h3>
         <ul>
@@ -102,6 +101,7 @@
   position: relative;
   border: 2px solid var(--secondary);
   border-bottom-width: 0;
+  border-radius: var(--hand-drawn-border);
 }
 .tab:last-child {
   border-bottom-width: 2px;
@@ -149,18 +149,5 @@
 .tab__content p {
   margin: 0;
   padding: 1rem;
-}
-
-/* Arrow animation */
-.tab input:not(:checked) + .tab__label:hover::after {
-  animation: bounce .5s infinite;
-}
-@keyframes bounce {
-  25% {
-    transform: rotate(90deg) translate(.25rem);
-  }
-  75% {
-    transform: rotate(90deg) translate(-.25rem);
-  }
 }
 </style>
