@@ -99,6 +99,7 @@ a.button {
     padding: 0.7rem 1.5rem;
     border-radius: var(--hand-drawn-border);
     overflow: hidden;
+    white-space: preserve nowrap;
 }
 button::before,
 a.button::before {
