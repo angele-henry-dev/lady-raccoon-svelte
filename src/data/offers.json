@@ -2,7 +2,7 @@
   "title": "Mon offre en détail",
   "items": [
     {
-      "title": "Audit gratuit d’accessibilité",
+      "title": "Audit complet d’accessibilité",
       "goal_title": "Objectif",
       "goal": "Identifier les problèmes d’accessibilité et proposer des solutions concrètes.",
       "what": "Ce que j'analyse",
@@ -17,7 +17,7 @@
       "link": "https://app.lemcal.com/@angelehenry/audit-accessibilite"
     },
     {
-      "title": "Corrections et mise en conformité",
+      "title": "Mise en conformité",
       "goal_title": "Objectif",
       "goal": "Appliquer les changements nécessaires pour rendre votre site conforme.",
       "what": "Ce que je fais",

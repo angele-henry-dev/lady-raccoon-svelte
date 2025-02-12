@@ -28,7 +28,7 @@
 }
 
 * {
-    border-color: var(--grey);
+    border-color: var(--secondary);
 }
 
 body {
@@ -49,7 +49,19 @@ body {
 }
 
 header {
+    position: relative;
     background-color: hsla(0, 0%, 9%, 0.9);
+    border-bottom: 2px solid var(--secondary);
+    border-bottom-right-radius: 10%;
+}
+header::before {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid var(--secondary);
+    border-radius: 10%;
+    transform: rotate(-0.7deg);
 }
 
 h2 {
@@ -87,6 +99,7 @@ a.button {
     padding: 0.7rem 1.5rem;
     border-radius: var(--hand-drawn-border);
     overflow: hidden;
+    white-space: preserve nowrap;
 }
 button::before,
 a.button::before {
@@ -199,19 +212,4 @@ a:hover {
     height: 100%;
     border: solid 2px var(--secondary);
     border-radius: 50%;
-}
-  
-/* Custom scrollbar */
-  
-body::-webkit-scrollbar {
-    width: 5px;
-}
-body::-moz-scrollbar {
-    width: 5px;
-}
-body::-webkit-scrollbar-track {
-    background: #303030;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
 }
