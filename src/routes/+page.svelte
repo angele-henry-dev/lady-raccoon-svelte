@@ -1,5 +1,4 @@
 <script>
-	import BackgroundStars from "../components/design/BackgroundStars.svelte";
 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
   import issues from "$data/issues.json";
@@ -9,11 +8,9 @@
 </script>
 
 <svelte:head>
-	<title>Lady Raccoon • Spécialiste en Accessibilité Web & Performance • L’accessibilité n’est pas une option</title>
-	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
+	<title>Lady Raccoon • Spécialiste en Accessibilité Web & Performance • L’accessibilité numérique n’est pas une option</title>
+	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité numérique et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
 </svelte:head>
-
-<BackgroundStars />
 
 <div class="dark hero text-center w-full flex flex-row gap-4">
   <div class="container m-auto">
