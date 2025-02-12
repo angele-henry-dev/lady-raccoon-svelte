@@ -5,7 +5,7 @@
 :root {
     --background: #101010;
     --foreground: #f8f8f8;
-    --grey: #545454;
+    --grey: #616161;
   
     --vt-c-pink: hsl(335, 100%, 50%);       /* ff006a */
     --vt-c-lime: hsl(132, 100%, 50%);       /* 00ff33 */
@@ -28,7 +28,7 @@
 }
 
 * {
-    border-color: var(--secondary);
+    border-color: var(--grey);
 }
 
 body {
