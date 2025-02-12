@@ -48,7 +48,7 @@
 			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
 			<p>
 				J’aide les entreprises à rendre leurs sites 
-				conformes aux normes WCAG 2.1 pour <span class="highlight">contribuer à un web accessible à tous</span>.
+				conformes aux normes WCAG 2.1 pour contribuer à un web accessible à tous.
 			</p>
 			<p class="py-5 flex flex-row gap-5"><LinkedIn /><Github /></p>
 		</div>
@@ -66,7 +66,7 @@
 	</div>
 	<div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
 		<p>
-			{new Date().getFullYear()} by <span class="open-dyslexic">Lady Raccoon</span>. Partagez, copiez, améliorez. La créativité est contagieuse.
+			<span class="open-dyslexic">Lady Raccoon</span> {new Date().getFullYear()} <span class="annotation not">Copyright</span>. Partagez, copiez, améliorez. La créativité est contagieuse.
 		</p>
 		<p class="md:text-right">Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 	</div>
