@@ -43,7 +43,7 @@
 	-->
 </nav>
 
-<main class="flex-grow">{@render children()}</main>
+<main class="flex flex-col items-center justify-start">{@render children()}</main>
 
 <GoTop />
 

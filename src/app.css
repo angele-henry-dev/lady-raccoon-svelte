@@ -31,6 +31,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+main {
+    width: 100%;
+}
+
 .cta-button {
     background-color: #75e8ff;
     color: #1E2A38;

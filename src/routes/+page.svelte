@@ -1,4 +1,6 @@
 <script>
+	import Stars from "../components/Stars.svelte";
+
 /* 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
   import issues from "$data/issues.json";
@@ -11,6 +13,8 @@
 	<title>Lady Raccoon • Spécialiste en Accessibilité Web & Performance • L’accessibilité numérique n’est pas une option</title>
 	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité numérique et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
 </svelte:head>
+
+<Stars />
 
 <div class="hero relative text-center">
   <div class="top relative w-full flex flex-col items-center justify-end">
