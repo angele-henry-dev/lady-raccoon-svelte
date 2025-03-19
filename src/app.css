@@ -3,11 +3,11 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --color-blue-night: #1E2A38;
-    --color-blue: #75e8ff;
-    --color-lavanda: #C4B5FD;
-    --color-grey: #A8A29E;
-    --color-white: #F5F5F5;
+    --color-blue-night: hsl(212, 30%, 17%);
+    --color-blue: hsl(190, 100%, 73%);
+    --color-lavanda: hsl(252, 95%, 85%);
+    --color-grey: hsl(24, 5%, 64%);
+    --color-white: hsl(0, 0%, 96%);
 
     --background: var(--color-blue-night);
     --foreground: var(--color-white);
