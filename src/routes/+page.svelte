@@ -1,4 +1,6 @@
 <script>
+	import Button from "../components/Button.svelte";
+	import Moon from "../components/Moon.svelte";
 	import Stars from "../components/Stars.svelte";
 
 /* 	import Audit from "../components/Audit.svelte";
@@ -16,37 +18,45 @@
 
 <Stars />
 
-<div class="hero relative text-center">
-  <div class="top relative w-full flex flex-col items-center justify-end">
-    <div class="moon"></div>
-    <h1 class="relative text-6xl font-bold uppercase p-5">Du code propre, <br>sans stress</h1>
-    <button class="cta-button">Découvrir</button>
+<div class="hero relative text-center flex flex-col items-center justify-center">
+  <div class="top relative w-full flex flex-col items-center justify-end max-w-3xl">
+    <Moon />
+    <h1 class="relative text-5xl font-bold uppercase p-5">Du code propre, sans stress</h1>
+    <Button label="Découvrez" />
   </div>
-  <div class="bottom w-full">
-    <p class="text-xl m-5 p-5">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+  <div class="bottom w-full flex flex-col items-center justify-center">
+    <p class="text-xl m-5 p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
 <style>
   .hero {
+    width: 100%;
     height: calc(100vh - 50px);
-    max-width: 800px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1.5s ease-out forwards;
     will-change: opacity, transform;
-    background: radial-gradient(circle, rgba(30, 42, 56, 0.85) 0%, rgba(30, 42, 56, 0) 70%);
   }
-  .hero .top {
-    height: 60%;
-  }
+  .hero .top { height: 60%; }
   .hero .bottom {
     height: 40%;
+    background-color: var(--background);
   }
 
   h1 {
-    text-shadow: 0 20px 40px rgba(0,0,0,1);
-    -webkit-text-stroke: 1px #1E2A38;
+    /* text-shadow: 0 20px 40px rgba(0,0,0,1); */
+    /* -webkit-text-stroke: 1px #1E2A38; */
+    color: var(--background);
+    text-shadow:
+      0 0 5px var(--primary),
+      0 0 10px var(--primary),
+      0 0 20px var(--primary),
+      0 0 40px var(--primary),
+      0 0 80px var(--primary),
+      0 0 90px var(--primary),
+      0 0 100px var(--primary);
+    line-height: 1.3em;
   }
 
   @keyframes fadeIn {
@@ -57,54 +67,6 @@
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  .moon {
-    width: 300px;
-    height: 300px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 80px rgba(117, 232, 255, 0.6),
-                0 0 150px rgba(117, 232, 255, 0.4),
-                0 0 250px rgba(117, 232, 255, 0.2);
-    animation: pulseGlow 5s infinite ease-in-out, floating 6s infinite ease-in-out;
-    z-index: -1;
-  }
-  .moon::after {
-    content: '';
-    display: block;
-    width: 200%;
-    height: 200%;
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle, rgba(117, 232, 255, 0.4) 0%, rgba(30, 42, 56, 0) 70%);
-  }
-  @keyframes floating {
-    0% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, -10px); }
-    100% { transform: translate(-50%, 0); }
-  }
-  @keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 80px rgba(96, 165, 250, 0.6),
-                    0 0 150px rgba(96, 165, 250, 0.4),
-                    0 0 250px rgba(96, 165, 250, 0.2);
-    }
-    50% {
-        box-shadow: 0 0 100px rgba(96, 165, 250, 0.8),
-                    0 0 180px rgba(96, 165, 250, 0.5),
-                    0 0 300px rgba(96, 165, 250, 0.3);
-    }
-    100% {
-        box-shadow: 0 0 80px rgba(96, 165, 250, 0.6),
-                    0 0 150px rgba(96, 165, 250, 0.4),
-                    0 0 250px rgba(96, 165, 250, 0.2);
     }
   }
 </style>
