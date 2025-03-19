@@ -2,13 +2,13 @@
 
 <style scoped>
     .moon {
+      position: absolute;
+      top: 50px;
+      left: 50%;
       width: 300px;
       height: 300px;
       background-color: var(--foreground);
       border-radius: 50%;
-      position: absolute;
-      top: 50px;
-      left: 50%;
       transform: translateX(-50%);
       animation: pulseGlow 5s infinite ease-in-out, floating 6s infinite ease-in-out;
       z-index: -1;

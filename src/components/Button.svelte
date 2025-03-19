@@ -2,7 +2,7 @@
     export let label = "Cliquez ici";
 </script>
 
-<button class="cta-button fade-in my-5 text-xl font-bold" aria-label={label}>{label}</button>
+<button class="cta-button my-5 text-xl font-bold" aria-label={label}>{label}</button>
 
 <style>
     .cta-button {

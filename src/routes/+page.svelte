@@ -20,16 +20,18 @@
 <Stars />
 
 <div class="hero relative text-center flex flex-col items-center justify-center">
-  <div class="top relative w-full flex flex-col items-center justify-evenly max-w-3xl flex-grow">
-    <Moon />
-    <h1 class="fade-in text-6xl font-bold uppercase">For a better<br>design</h1>
+  <div class="top relative w-full flex flex-col items-center justify-center flex-grow">
+    <div class="moon-container">
+      <Moon />
+      <h1 class="text-6xl font-bold uppercase z-10">For a<br>better<br>design</h1>
+    </div>
   </div>
   <Button label="Découvrez" />
   <div class="bottom relative w-full flex flex-col items-center justify-center">
     <div class="tree-container absolute">
       <Tree />
     </div>
-    <p class="fade-in text-xl p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+    <p class="text-xl p-5 max-w-2xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
@@ -44,6 +46,9 @@
   .hero {
     width: 100%;
     height: calc(100vh - 50px);
+  }
+  .hero .top {
+    width: 300px;
   }
   .hero .bottom {
     height: 35%;
@@ -65,21 +70,12 @@
   }
 
   h1 {
-    line-height: 1.2em;
+    width: 300px;
+    font-family: 'OpenDyslexic';
     text-shadow:
-      0 0 5px var(--primary),
       0 0 10px var(--primary),
-      0 0 20px var(--primary),
-      0 0 40px var(--primary),
-      0 0 80px var(--primary),
-      0 0 90px var(--primary),
       0 0 100px var(--primary);
-    -webkit-text-stroke: 2px var(--background);
-  }
-
-  p {
-    text-shadow:
-      0 0 100px var(--primary);
+    -webkit-text-stroke: 0.5px var(--background);
   }
 </style>
 

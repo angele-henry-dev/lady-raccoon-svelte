@@ -1,4 +1,4 @@
-<div class="tree">
+<div class="tree" aria-hidden="true">
     <div class="tree-triangle3"></div>
     <div class="tree-triangle2"></div>
     <div class="tree-triangle1"></div>
