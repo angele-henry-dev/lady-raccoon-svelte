@@ -1,12 +1,7 @@
-<div class="moon" aria-hidden="true"></div>
+<div class="moon size-[200px] sm:size-[300px] absolute -bottom-[40%] left-[50%]" aria-hidden="true"></div>
 
 <style scoped>
     .moon {
-      position: absolute;
-      top: 50px;
-      left: 50%;
-      width: 300px;
-      height: 300px;
       background-color: var(--foreground);
       border-radius: 50%;
       transform: translateX(-50%);

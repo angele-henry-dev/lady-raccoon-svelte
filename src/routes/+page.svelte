@@ -21,17 +21,17 @@
 
 <div class="hero relative text-center flex flex-col items-center justify-center">
   <div class="top relative w-full flex flex-col items-center justify-center flex-grow">
-    <div class="moon-container">
+    <div class="moon-container relative">
       <Moon />
-      <h1 class="text-6xl font-bold uppercase z-10">For a<br>better<br>design</h1>
+      <h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br>better<br>design</h1>
     </div>
   </div>
   <Button label="Découvrez" />
-  <div class="bottom relative w-full flex flex-col items-center justify-center">
+  <div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <div class="tree-container absolute">
       <Tree />
     </div>
-    <p class="text-xl p-5 max-w-2xl z-10">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+    <p class="sm:text-xl p-5 max-w-2xl z-10">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
@@ -51,7 +51,6 @@
     width: 300px;
   }
   .hero .bottom {
-    height: 35%;
     background-color: var(--background);
   }
   .hero .bottom::before {
