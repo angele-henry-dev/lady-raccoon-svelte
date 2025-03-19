@@ -71,11 +71,10 @@
 
   h1 {
     width: 300px;
-    font-family: 'OpenDyslexic';
     text-shadow:
       0 0 10px var(--primary),
       0 0 100px var(--primary);
-    -webkit-text-stroke: 0.5px var(--background);
+    color: var(--background);
   }
 </style>
 
