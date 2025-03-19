@@ -1,20 +1,11 @@
-<div class="tree-container absolute">
-    <div class="tree">
-        <div class="tree-triangle3"></div>
-        <div class="tree-triangle2"></div>
-        <div class="tree-triangle1"></div>
-    </div>
-    <div class="trunk"></div>
+<div class="tree">
+    <div class="tree-triangle3"></div>
+    <div class="tree-triangle2"></div>
+    <div class="tree-triangle1"></div>
 </div>
+<div class="trunk"></div>
 
 <style>
-    .tree-container {
-        bottom: 0;
-        left: -20%;
-        width: 60vw;
-        height: 150vh;
-    }
-
     .tree {
         position: absolute;
         width: 100%;

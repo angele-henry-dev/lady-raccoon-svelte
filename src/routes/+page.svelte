@@ -22,23 +22,28 @@
 <div class="hero relative text-center flex flex-col items-center justify-center">
   <div class="top relative w-full flex flex-col items-center justify-evenly max-w-3xl flex-grow">
     <Moon />
-    <h1 class="text-6xl font-bold uppercase">Le coworking<br>de la tech</h1>
+    <h1 class="fade-in text-6xl font-bold uppercase">For a better<br>design</h1>
   </div>
   <Button label="Découvrez" />
   <div class="bottom relative w-full flex flex-col items-center justify-center">
-    <Tree />
-    <p class="text-xl p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+    <div class="tree-container absolute">
+      <Tree />
+    </div>
+    <p class="fade-in text-xl p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
 <style>
+  .tree-container {
+      bottom: 0;
+      left: -20%;
+      width: 60vw;
+      height: 150vh;
+  }
+
   .hero {
     width: 100%;
     height: calc(100vh - 50px);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1.5s ease-out forwards;
-    will-change: opacity, transform;
   }
   .hero .bottom {
     height: 35%;
@@ -60,18 +65,7 @@
   }
 
   h1 {
-    /* color: var(--background);
-    text-shadow:
-      0 0 5px var(--primary),
-      0 0 10px var(--primary),
-      0 0 20px var(--primary),
-      0 0 40px var(--primary),
-      0 0 80px var(--primary),
-      0 0 90px var(--primary),
-      0 0 100px var(--primary); */
     line-height: 1.2em;
-
-    /* text-shadow: 0 20px 40px rgba(0,0,0,1); */
     text-shadow:
       0 0 5px var(--primary),
       0 0 10px var(--primary),
@@ -86,17 +80,6 @@
   p {
     text-shadow:
       0 0 100px var(--primary);
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 </style>
 

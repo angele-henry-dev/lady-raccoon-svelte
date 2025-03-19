@@ -11,7 +11,7 @@
 <svelte:window bind:scrollY={scrollHeight} />
 
 <nav
-	class="{showNavBG ? 'bg' : ''} sticky top-0 w-full flex flex-row justify-between items-center p-4 text-xl font-bold"
+	class="{showNavBG ? 'bg' : ''} fade-in sticky top-0 w-full flex flex-row justify-between items-center p-4 text-xl font-bold"
 >
 	<div><Logo /></div>
 	<div class="flex flex-row justify-end items-center gap-5">
