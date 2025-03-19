@@ -8,35 +8,40 @@
 	let { data, children }: LayoutProps = $props();
 </script>
 
-<header class="p-4 border-b">
-	<nav class="container flex flex-row justify-between items-center w-full mx-auto">
-		<div class="flex-grow flex items-center gap-10">
-			<ul class="list-none m-0 p-0 flex flex-row items-center gap-5">
-				<li><Logo /></li>
-				{#each data.sections as section}
-					<li class="cursor-pointer">
-						{#if section.children.length > 0}
-							<div class="dropdown">
-								<span>{section.title}</span>
-								<ul class="dropdown-content list-none m-0 p-2 hidden border">
-									{#each section.children as child}
-										<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
-									{/each}
-								</ul>
-							</div>
-						{:else}
-							<a href="/{section.slug}">{section.title}</a>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		</div>
-		<div class="hidden sm:flex flex-row gap-5 items-center">
-			<LinkedIn />
-			<Github />
-		</div>
-	</nav>
-</header>
+<nav class="sticky top-0 w-full flex flex-row justify-between items-center p-4 text-xl font-bold">
+	<div><Logo /></div>
+	<div class="flex flex-row justify-end items-center gap-5">
+		{#each data.sections as section}
+			<a href="/{section.slug}">{section.title}</a>
+		{/each}
+		<LinkedIn />
+		<Github />
+	</div>
+	
+	<!-- 
+	<div>
+		<ul class="list-none m-0 p-0 flex flex-row items-center gap-5">
+			<li><Logo /></li>
+			{#each data.sections as section}
+				<li class="cursor-pointer">
+					{#if section.children.length > 0}
+						<div class="dropdown">
+							<span>{section.title}</span>
+							<ul class="dropdown-content list-none m-0 p-2 hidden border">
+								{#each section.children as child}
+									<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
+								{/each}
+							</ul>
+						</div>
+					{:else}
+						<a href="/{section.slug}">{section.title}</a>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+	</div>
+	-->
+</nav>
 
 <main class="flex-grow">{@render children()}</main>
 
@@ -66,14 +71,20 @@
 	</div>
 	<div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
 		<p>
-			<span class="open-dyslexic">Lady Raccoon</span> {new Date().getFullYear()} <span class="annotation not">Copyright</span>. Partagez, copiez, améliorez. La créativité est contagieuse.
+			<span class="open-dyslexic">Lady Raccoon</span> {new Date().getFullYear()} ‧ Partagez, copiez, améliorez. La créativité est contagieuse.
 		</p>
 		<p class="md:text-right">Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
 	</div>
 </footer>
 
 <style>
-	.dropdown {
+	nav {
+		background: rgba(30, 42, 56, 0.65);
+		backdrop-filter: blur(5px);
+		z-index: 5;
+	}
+
+	/* .dropdown {
 		position: relative;
 	}
 	.dropdown span::after {
@@ -104,5 +115,5 @@
 		left: 0;
 		padding: 10px;
 		background-color: var(--background);
-	}
+	} */
 </style>

@@ -3,22 +3,20 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --background: #101010;
-    --foreground: #f8f8f8;
-    --grey: #616161;
-  
-    --vt-c-pink: hsl(335, 100%, 50%);       /* ff006a */
-    --vt-c-lime: hsl(132, 100%, 50%);       /* 00ff33 */
-    --vt-c-yellow: hsl(60, 100%, 50%);      /* ffff00 */
-    --vt-c-cyan: hsl(204, 100%, 50%);       /* #00ffff */
-    --vt-c-orange: hsl(26, 100%, 50%);      /* f57d1f */
+    --color-blue-night: #1E2A38;
+    --color-blue: #75e8ff;
+    --color-lavanda: #C4B5FD;
+    --color-grey: #A8A29E;
+    --color-white: #F5F5F5;
 
-    --primary: var(--vt-c-yellow);
-    --secondary: var(--vt-c-pink);
+    --background: var(--color-blue-night);
+    --foreground: var(--color-white);
+    --primary: var(--color-blue);
+    --secondary: var(--color-lavanda);
 
-    --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    /* --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px; */
 }
-  
+
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
@@ -27,215 +25,31 @@
     font-display: swap;
 }
 
-* {
-    border-color: var(--grey);
-}
-
 body {
-    color: var(--foreground);
-    background: var(--background);
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-@media (max-width: 900px) {
-    body {
-      font-size: 12pt;
-    }
-}
-
-header {
-    position: relative;
-    background-color: hsla(0, 0%, 9%, 0.8);
-    border-bottom-width: 2px;
-    border-bottom-right-radius: 10%;
-}
-header::before {
-    position: absolute;
-    bottom: 0;
-    content: '';
-    width: 100%;
-    border-bottom-width: 1px;
-    border-color: var(--grey);
-    border-radius: 10%;
-    transform: rotate(-0.7deg);
-}
-
-h2 {
-    font-family: 'OpenDyslexic', 'Roboto', sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    margin: 20px 0;
-}
-
-.hero {
-    min-height: calc(100vh - 83px);
-}
-.hero h1 {
-    line-height: 1.2;
-    font-family: 'Roboto', sans-serif;
-}
-
-.open-dyslexic {
-    font-family: 'OpenDyslexic', 'Roboto', sans-serif;
-}
-
-ul {
-    list-style: disc;
-    margin: 10px 40px;
-    padding: 0;
-}
-
-button, 
-a.button {
-    position: relative;
     background-color: var(--background);
-    border: 2px solid var(--primary);
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 0.7rem 1.5rem;
-    border-radius: var(--hand-drawn-border);
-    overflow: hidden;
-    white-space: preserve nowrap;
-}
-button::before,
-a.button::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: 2px solid var(--primary);
-    border-radius: var(--hand-drawn-border);
-    transform: rotate(2deg);
-    pointer-events: none;
+    color: var(--foreground);
+    font-family: 'Poppins', sans-serif;
 }
 
-button:hover,
-a.button:hover {
-    background-color: var(--primary);
-    color: var(--background);
-    border-width: 0;
+.cta-button {
+    background-color: #75e8ff;
+    color: #1E2A38;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #C4B5FD;
 }
 
 a {
-    position: relative;
-    text-decoration: none;
-    color: var(--foreground);
-    transition: 0.4s;
+    transition: color 0.3s ease;
 }
 a:hover {
-    color: var(--primary);
-}
-
-/* Annotations */
-
-.annotation,
-.rounded {
-    position: relative;
-}
-.annotation:before,
-.annotation:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 7px;
-    width: 100%;
-    border: solid 2px var(--primary);
-    border-color: var(--primary) transparent transparent transparent;
-    border-radius: 50%;
-}
-
-.annotation.highlight:before,
-.annotation.highlight:after {
-    bottom: -7px;
-}
-.annotation.highlight:after {
-    transform: rotate(1deg);
-    border-width: 4px;
-}
-
-.annotation.not:before,
-.annotation.not:after {
-    top: 50%;
-    transform: rotate(15deg);
-}
-.annotation.not:after {
-    transform: rotate(-15deg);
-}
-
-.rounded {
-    position: relative;
-}
-.rounded:before {
-    position: absolute;
-    content: '';
-    border-top: 1px solid var(--primary);
-    border-radius: 50%;
-    width: 90%;
-    bottom: -.3em;
-    left: -.3em;
-    top: -.1em;
-}
-.rounded:after {
-    position: absolute;
-    content: '';
-    border: 1px solid var(--primary);
-    border-top: none;
-    border-radius: 50%;
-    bottom: -.3em;
-    left: -.3em;
-    right: -.3em;
-    top: -.1em;
-}
-
-/* Letter */
-
-.letter {
-    position: relative;
-	background-color: var(--foreground);
-	background-image: conic-gradient(at calc(100% - 1px) calc(100% - 1px), hsla(0, 0%, 66%, 0.3) 270deg, hsla(0, 0%, 0%, 0) 0);
-	background-size: 20px 20px;
-    color: var(--background);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.letter:before, .letter:after {
-    content: "";
-    height: 98%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-  .letter:before {
-    background: #fafafa;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    left: -5px;
-    top: 4px;
-    transform: rotate(-2.5deg);
-  }
-  .letter:after {
-    background: #f6f6f6;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    right: -3px;
-    top: 1px;
-    transform: rotate(1.4deg);
-  }
-
-.letter .content {
-    position: relative;
-}
-.letter .content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border: solid 2px var(--secondary);
-    border-radius: 50%;
+    color: #C4B5FD;
 }
