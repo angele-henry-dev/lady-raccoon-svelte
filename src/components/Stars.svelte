@@ -1,4 +1,4 @@
-<div class="retrobg-stars">
+<div class="retrobg-stars" aria-hidden="true">
     <div class="shooting_star"></div>
     <div id="stars"></div>
     <div id="stars2"></div>

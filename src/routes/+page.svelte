@@ -2,6 +2,7 @@
 	import Button from "../components/Button.svelte";
 	import Moon from "../components/Moon.svelte";
 	import Stars from "../components/Stars.svelte";
+	import Tree from "../components/Tree.svelte";
 
 /* 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
@@ -19,13 +20,14 @@
 <Stars />
 
 <div class="hero relative text-center flex flex-col items-center justify-center">
-  <div class="top relative w-full flex flex-col items-center justify-end max-w-3xl">
+  <div class="top relative w-full flex flex-col items-center justify-evenly max-w-3xl flex-grow">
     <Moon />
-    <h1 class="relative text-5xl font-bold uppercase p-5">Du code propre, sans stress</h1>
-    <Button label="Découvrez" />
+    <h1 class="text-6xl font-bold uppercase">Le coworking<br>de la tech</h1>
   </div>
-  <div class="bottom w-full flex flex-col items-center justify-center">
-    <p class="text-xl m-5 p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+  <Button label="Découvrez" />
+  <div class="bottom relative w-full flex flex-col items-center justify-center">
+    <Tree />
+    <p class="text-xl p-5 max-w-3xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
@@ -38,16 +40,38 @@
     animation: fadeIn 1.5s ease-out forwards;
     will-change: opacity, transform;
   }
-  .hero .top { height: 60%; }
   .hero .bottom {
-    height: 40%;
+    height: 35%;
     background-color: var(--background);
+  }
+  .hero .bottom::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(2px);
+    background: linear-gradient(to bottom, 
+        rgba(0, 213, 255, 0.1) 0%, 
+        rgba(30, 42, 56, 0.1) 20%, 
+        rgba(30, 42, 56, 0) 70%);
   }
 
   h1 {
+    /* color: var(--background);
+    text-shadow:
+      0 0 5px var(--primary),
+      0 0 10px var(--primary),
+      0 0 20px var(--primary),
+      0 0 40px var(--primary),
+      0 0 80px var(--primary),
+      0 0 90px var(--primary),
+      0 0 100px var(--primary); */
+    line-height: 1.2em;
+
     /* text-shadow: 0 20px 40px rgba(0,0,0,1); */
-    /* -webkit-text-stroke: 1px #1E2A38; */
-    color: var(--background);
     text-shadow:
       0 0 5px var(--primary),
       0 0 10px var(--primary),
@@ -56,7 +80,12 @@
       0 0 80px var(--primary),
       0 0 90px var(--primary),
       0 0 100px var(--primary);
-    line-height: 1.3em;
+    -webkit-text-stroke: 2px var(--background);
+  }
+
+  p {
+    text-shadow:
+      0 0 100px var(--primary);
   }
 
   @keyframes fadeIn {

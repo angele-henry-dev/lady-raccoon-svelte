@@ -1,9 +1,9 @@
-<div class="moon"></div>
+<div class="moon" aria-hidden="true"></div>
 
 <style scoped>
     .moon {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       background-color: var(--foreground);
       border-radius: 50%;
       position: absolute;
