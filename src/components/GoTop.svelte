@@ -30,7 +30,7 @@
         </span>
     </button>
 {/if}
-  
+
 <svelte:window bind:scrollY={scrollHeight} />
 
 <style scoped>

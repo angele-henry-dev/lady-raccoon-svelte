@@ -14,9 +14,9 @@
       z-index: -1;
     }
     @keyframes floating {
-      0% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, -10px); }
-      100% { transform: translate(-50%, 0); }
+      0% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.05); }
+      100% { transform: translateX(-50%) scale(1); }
     }
     @keyframes pulseGlow {
       0% {
