@@ -32,3 +32,10 @@
 {/if}
   
 <svelte:window bind:scrollY={scrollHeight} />
+
+<style scoped>
+    button {
+        border: 1px solid var(--primary);
+        background: var(--background);
+    }
+</style>
