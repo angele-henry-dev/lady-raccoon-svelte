@@ -15,32 +15,16 @@
 
 <GoTop />
 
-<footer class="mb-10 px-4">
-	<div class="p-5 pt-10 grid grid-cols-1 md:grid-cols-3 gap-4 border-t">
-		<div>
-			<h1 class='mb-3 text-lg'>Qui suis-je ?</h1>
-			<p>
-				J’aide les entreprises à rendre leurs sites 
-				conformes aux normes WCAG pour contribuer à un web accessible à tous.
-			</p>
-			<p class="py-5 flex flex-row gap-5"><LinkedIn /><Github /></p>
-		</div>
-		<div class="mb-3 md:text-right">
-			<h1 class='mb-3 text-lg'>Contactez-moi</h1>
-			<p class="mb-2">2 allée Anita Conti, A51
-				<br>31520 Ramonville-Saint-Agne</p>
-			<p>angele.henry[at]ladyraccoon.com</p>
-		</div>
-		<div class="mb-3 md:text-right">
-			<h1 class='mb-3 text-lg'>Mentions légales</h1>
-			<p><a href="/legal-notice">Mentions légales</a></p>
-			<p><a href="/privacy-policy">Politique de confidentialité</a></p>
-		</div>
-	</div>
-	<div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
-		<p>
-			<span class="open-dyslexic">Lady Raccoon</span> {new Date().getFullYear()} ‧ Partagez, copiez, améliorez. La créativité est contagieuse.
+<footer class="mb-10 p-5 pt-10 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
+	<div>
+		<p class="pb-5">
+			<span class="open-dyslexic">Lady Raccoon</span> {new Date().getFullYear()} ‧ No Copyright ‧ Partagez, copiez, améliorez. La créativité est contagieuse.
 		</p>
-		<p class="md:text-right">Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
+		<p class="pb-5">Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez</p>
+		<p class="pb-5 flex flex-row gap-5"><LinkedIn /><Github /></p>
+	</div>
+	<div class="mb-3 md:text-right">
+		<p><a href="/legal-notice">Mentions légales</a></p>
+		<p><a href="/privacy-policy">Politique de confidentialité</a></p>
 	</div>
 </footer>

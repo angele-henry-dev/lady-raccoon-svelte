@@ -1,9 +1,11 @@
-<div class="tree" aria-hidden="true">
-    <div class="tree-triangle3"></div>
-    <div class="tree-triangle2"></div>
-    <div class="tree-triangle1"></div>
+<div class="hidden sm:block">
+    <div class="tree" aria-hidden="true">
+        <div class="tree-triangle3"></div>
+        <div class="tree-triangle2"></div>
+        <div class="tree-triangle1"></div>
+    </div>
+    <div class="trunk"></div>
 </div>
-<div class="trunk"></div>
 
 <style>
     .tree {
@@ -81,7 +83,6 @@
         background: linear-gradient(to bottom,
             hsla(212, 30%, 17%, 0),
             var(--background));
-        z-index: 100;
     }
 
     @keyframes sway {

@@ -31,7 +31,7 @@
     <div class="tree-container absolute">
       <Tree />
     </div>
-    <p class="text-xl p-5 max-w-2xl">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+    <p class="text-xl p-5 max-w-2xl z-10">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
   </div>
 </div>
 
