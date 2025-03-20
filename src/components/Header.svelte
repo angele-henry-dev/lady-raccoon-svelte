@@ -51,11 +51,11 @@
 
 <style>
 	nav {
-		backdrop-filter: blur(5px);
-        transition: background-color 1s ease;
+        transition: backdrop-filter 1s ease, background-color 1s ease;
 	}
 	nav.bg {
 		background-color: rgba(30, 42, 56, 0.65);
+		backdrop-filter: blur(5px);
 	}
 
 	/* .dropdown {

@@ -1,15 +1,15 @@
 <script>
-	import Button from "../components/Button.svelte";
-	import Moon from "../components/Moon.svelte";
-	import Stars from "../components/Stars.svelte";
-	import Raccoon from "../components/svg/Raccoon.svelte";
-	import Tree from "../components/Tree.svelte";
+	import Button from '../components/Button.svelte';
+	import Moon from '../components/Moon.svelte';
+	import Stars from '../components/Stars.svelte';
+	import Raccoon from '../components/svg/Raccoon.svelte';
+	import Tree from '../components/Tree.svelte';
 
-  function goDiscord() {
-    window.open("https://discord.gg/TU2Xaf9RKb", "_blank");
-  }
+	function goDiscord() {
+		window.open('https://discord.gg/TU2Xaf9RKb', '_blank');
+	}
 
-/* 	import Audit from "../components/Audit.svelte";
+	/* 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
   import issues from "$data/issues.json";
   import offers from "$data/offers.json";
@@ -18,79 +18,35 @@
 </script>
 
 <svelte:head>
-	<title>For a better tech • LA communauté tech bienveillante, pour apprendre ensemble et s’entraider. Bienvenue chez toi ! • Lady Raccoon</title>
-	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité numérique et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
+	<title>For a better tech • LA communauté tech bienveillante, pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi ! • Lady Raccoon</title>
+	<meta
+		name="description"
+		content="Un cocon tech pour les développeuses et développeurs, UX/UI, DevOps, architectes & passionné·e·s. Ici, on s'entraide, on échange et on progresse ensemble, sans prise de tête. Rejoins-nous pour apprendre, partager et passer de bons moments dans un espace convivial et inclusif !"
+	/>
 </svelte:head>
 
 <Stars />
 
 <div class="hero relative text-center flex flex-col items-center justify-center">
-  <div class="top relative w-full flex flex-col items-center justify-evenly flex-grow">
-    <div class="moon-container relative">
-      <Moon />
-      <h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br>better<br>tech</h1>
-    </div>
-    <Button label="Rejoins le Discord !" on:click={goDiscord} />
-  </div>
-  <div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
-    <div class="tree-container absolute">
-      <Tree />
-    </div>
-    <p class="sm:text-xl p-5 max-w-2xl z-10">LE cocon tech pour apprendre, échanger et grandir ensemble. Bienvenue chez toi !</p>
-    <div class="raccoon-container absolute">
-      <Raccoon />
-    </div>
-  </div>
+	<div class="top relative w-full flex flex-col items-center justify-evenly flex-grow">
+		<div class="moon-container relative">
+			<Moon />
+			<h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br />better<br />tech</h1>
+		</div>
+		<Button label="Rejoins le Discord !" on:click={goDiscord} />
+	</div>
+	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
+		<div class="tree-container absolute">
+			<Tree />
+		</div>
+		<p class="sm:text-xl p-5 max-w-2xl z-10">
+			LE cocon tech pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi !
+		</p>
+		<div class="raccoon-container absolute">
+			<Raccoon />
+		</div>
+	</div>
 </div>
-
-<style>
-  .tree-container {
-    bottom: 0;
-    left: -25%;
-    width: 60vw;
-    height: 150vh;
-  }
-
-  .raccoon-container {
-    bottom: 60%;
-    right: 5%;
-    width: 180px;
-    height: 102px;
-  }
-
-  .hero {
-    width: 100%;
-    height: calc(100vh - 50px);
-  }
-  .hero .top {
-    width: 300px;
-  }
-  .hero .bottom {
-    background-color: var(--background);
-  }
-  .hero .bottom::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: blur(2px);
-    background: linear-gradient(to bottom, 
-        rgba(0, 213, 255, 0.1) 0%, 
-        rgba(30, 42, 56, 0.1) 20%, 
-        rgba(30, 42, 56, 0) 70%);
-  }
-
-  h1 {
-    width: 300px;
-    text-shadow:
-      0 0 10px var(--primary),
-      0 0 100px var(--primary);
-    color: var(--background);
-  }
-</style>
 
 <!-- <div class="dark hero text-center w-full flex flex-row gap-4">
   <div class="container m-auto">
@@ -229,3 +185,54 @@
   padding: 1rem;
 }
 </style> -->
+
+<style>
+	.tree-container {
+		bottom: 0;
+		left: -25%;
+		width: 60vw;
+		height: 150vh;
+	}
+
+	.raccoon-container {
+		bottom: 60%;
+		right: 5%;
+		width: 180px;
+		height: 102px;
+	}
+
+	.hero {
+		width: 100%;
+		height: calc(100vh - 50px);
+	}
+	.hero .top {
+		width: 300px;
+	}
+	.hero .bottom {
+		background-color: var(--background);
+	}
+	.hero .bottom::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter: blur(2px);
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 213, 255, 0.1) 0%,
+			rgba(30, 42, 56, 0.1) 20%,
+			rgba(30, 42, 56, 0) 70%
+		);
+	}
+
+	h1 {
+		width: 300px;
+		text-shadow:
+			0 0 10px var(--primary),
+			0 0 100px var(--primary);
+		color: var(--background);
+	}
+</style>
