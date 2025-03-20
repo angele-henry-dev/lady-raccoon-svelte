@@ -1,4 +1,4 @@
-<div class="moon size-[200px] sm:size-[300px] absolute -bottom-[40%] left-[50%]" aria-hidden="true"></div>
+<div class="moon size-[200px] sm:size-[300px] absolute -bottom-[35%] left-[50%]" aria-hidden="true"></div>
 
 <style scoped>
     .moon {

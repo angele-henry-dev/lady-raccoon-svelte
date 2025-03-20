@@ -1,8 +1,22 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
+
     export let label = "Cliquez ici";
+
+    const dispatch = createEventDispatcher();
+
+    function handleClick() {
+        dispatch('click');
+    }
 </script>
 
-<button class="cta-button my-5 sm:text-xl font-bold" aria-label={label}>{label}</button>
+<button 
+    class="cta-button my-5 sm:text-xl font-bold"
+    aria-label={label} 
+    on:click={handleClick} 
+>
+    {label}
+</button>
 
 <style>
     .cta-button {
@@ -20,4 +34,3 @@
         background-color: var(--secondary);
     }
 </style>
-  

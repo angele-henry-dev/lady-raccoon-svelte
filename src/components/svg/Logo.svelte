@@ -24,7 +24,7 @@ let { size = "50px" } = $props();
       <polygon id="nose-2" data-name="nose" class="cls-2" points="91.55 168.3 107.53 148.7 123.51 168.3 91.55 168.3"/>
     </g>
   </svg>
-  <span class="open-dyslexic">Lady Raccoon</span>
+  <span class="open-dyslexic">forabetter.tech</span>
 </a>
 
 <style>

@@ -1,8 +1,9 @@
 <script>
 	import '../app.css';
-	import Github from '../components/svg/Github.svelte';
-	import LinkedIn from '../components/svg/LinkedIn.svelte';
-	import Logo from '../components/svg/Logo.svelte';
+	import Github from './svg/Github.svelte';
+	import LinkedIn from './svg/LinkedIn.svelte';
+	import Discord from './svg/Discord.svelte';
+	import Logo from './svg/Logo.svelte';
 
     let scrollHeight = 0;
     $: showNavBG = scrollHeight > 100;
@@ -15,7 +16,10 @@
 >
 	<div><Logo /></div>
 	<div class="flex flex-row justify-end items-center gap-5">
-		//
+		<a href="/commu">La communauté</a>
+		<a href="/tools">Outils</a>
+		<a href="/blog">Blog</a>
+		<Discord />
 		<LinkedIn />
 		<Github />
 	</div>

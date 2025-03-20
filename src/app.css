@@ -3,43 +3,54 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --color-blue-night: hsl(212, 30%, 17%);
-    --color-blue: hsl(190, 100%, 73%);
-    --color-lavanda: hsl(252, 95%, 85%);
-    --color-grey: hsl(24, 5%, 64%);
-    --color-white: hsl(0, 0%, 96%);
 
-    --background: var(--color-blue-night);
-    --foreground: var(--color-white);
-    --primary: var(--color-blue);
-    --secondary: var(--color-lavanda);
+  --color-blue-night: hsl(212, 30%, 17%);
+  --color-blue: hsl(190, 100%, 73%);      /* #75E8FF */
+  --color-lavanda: hsl(287, 100%, 73%);   /* #E075FF */
+  --color-orange: hsl(28, 100%, 73%);     /* #FFB575 */
+  --color-yellow: hsl(60, 100%, 73%);     /* #FFFF75 */
+  --color-grey: hsl(190, 17%, 60%);       /* #87A4AA */
+  --color-grey: hsl(24, 5%, 64%);         /* #A8A29F */
+  --color-white: hsl(0, 0%, 96%);
+
+  /* Dark mode */
+  --background: var(--color-blue-night);
+  --foreground: var(--color-white);
+  --primary: var(--color-blue);
+  --secondary: var(--color-lavanda);
+
+  /* Light mode */
+  --background: var(--color-blue-night);
+  --foreground: var(--color-white);
+  --primary: var(--color-blue);
+  --secondary: var(--color-lavanda);
 
     /* --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px; */
 }
 
 @font-face {
-    font-family: 'OpenDyslexic';
-    src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 a:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .fade-in {

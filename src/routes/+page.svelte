@@ -4,6 +4,10 @@
 	import Stars from "../components/Stars.svelte";
 	import Tree from "../components/Tree.svelte";
 
+  function goDiscord() {
+    window.open("https://discord.gg/TU2Xaf9RKb", "_blank");
+  }
+
 /* 	import Audit from "../components/Audit.svelte";
 	import Card from "../components/Card.svelte";
   import issues from "$data/issues.json";
@@ -23,10 +27,10 @@
   <div class="top relative w-full flex flex-col items-center justify-center flex-grow">
     <div class="moon-container relative">
       <Moon />
-      <h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br>better<br>design</h1>
+      <h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br>better<br>tech</h1>
     </div>
   </div>
-  <Button label="Découvrez" />
+  <Button label="Rejoins le Discord !" on:click={goDiscord} />
   <div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <div class="tree-container absolute">
       <Tree />
@@ -38,7 +42,7 @@
 <style>
   .tree-container {
       bottom: 0;
-      left: -20%;
+      left: -25%;
       width: 60vw;
       height: 150vh;
   }
