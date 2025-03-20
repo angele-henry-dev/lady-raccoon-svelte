@@ -1,5 +1,5 @@
-<div class="hidden sm:block">
-    <div class="tree" aria-hidden="true">
+<div class="hidden sm:block" aria-hidden="true">
+    <div class="tree">
         <div class="tree-triangle tree-triangle3"></div>
         <div class="tree-triangle tree-triangle2"></div>
         <div class="tree-triangle tree-triangle1"></div>
@@ -31,7 +31,7 @@
             var(--tree-dark2) 0%,
             var(--tree-dark1) 20%,
             var(--tree-dark3) 70%);
-        border: 2px solid var(--tree-dark1);
+        border: 4px solid var(--background);
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
 
@@ -47,7 +47,7 @@
             var(--trunk-dark) 0%,
             var(--tree-dark1) 10%,
             var(--tree-dark3) 50%);
-        border-left: 1px solid var(--tree-dark1);
+        border: 4px solid var(--background);
         bottom: 5%;
         left: 40%;
         filter: blur(2px);

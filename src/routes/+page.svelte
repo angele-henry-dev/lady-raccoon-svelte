@@ -2,6 +2,7 @@
 	import Button from "../components/Button.svelte";
 	import Moon from "../components/Moon.svelte";
 	import Stars from "../components/Stars.svelte";
+	import Raccoon from "../components/svg/Raccoon.svelte";
 	import Tree from "../components/Tree.svelte";
 
   function goDiscord() {
@@ -17,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>For a better tech • Spécialiste en Accessibilité Web & Performance • L’accessibilité numérique n’est pas une option • Lady Raccoon</title>
+	<title>For a better tech • LA communauté tech bienveillante, pour apprendre ensemble et s’entraider. Bienvenue chez toi ! • Lady Raccoon</title>
 	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité numérique et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
 </svelte:head>
 
@@ -35,16 +36,26 @@
     <div class="tree-container absolute">
       <Tree />
     </div>
-    <p class="sm:text-xl p-5 max-w-2xl z-10">Une communauté tech bienveillante, pour apprendre ensemble et s’entraider. Bienvenue chez toi !</p>
+    <p class="sm:text-xl p-5 max-w-2xl z-10">LE cocon tech pour apprendre, échanger et grandir ensemble. Bienvenue chez toi !</p>
+    <div class="raccoon-container absolute">
+      <Raccoon />
+    </div>
   </div>
 </div>
 
 <style>
   .tree-container {
-      bottom: 0;
-      left: -25%;
-      width: 60vw;
-      height: 150vh;
+    bottom: 0;
+    left: -25%;
+    width: 60vw;
+    height: 150vh;
+  }
+
+  .raccoon-container {
+    bottom: 60%;
+    right: 5%;
+    width: 180px;
+    height: 102px;
   }
 
   .hero {
