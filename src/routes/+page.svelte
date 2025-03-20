@@ -25,13 +25,13 @@
 <Stars />
 
 <div class="hero relative text-center flex flex-col items-center justify-center">
-  <div class="top relative w-full flex flex-col items-center justify-center flex-grow">
+  <div class="top relative w-full flex flex-col items-center justify-evenly flex-grow">
     <div class="moon-container relative">
       <Moon />
       <h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br>better<br>tech</h1>
     </div>
+    <Button label="Rejoins le Discord !" on:click={goDiscord} />
   </div>
-  <Button label="Rejoins le Discord !" on:click={goDiscord} />
   <div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <div class="tree-container absolute">
       <Tree />
