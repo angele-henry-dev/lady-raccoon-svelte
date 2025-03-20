@@ -9,10 +9,10 @@
 
 <style>
     :root {
-        --tree-dark: hsl(190, 50%, 17%);
-        --tree-light: hsl(190, 59%, 27%);
-        --trunk-color: hsl(190, 50%, 20%);
-        --background-color: var(--background);
+        --tree-dark1: hsl(190, 50%, 17%);
+        --tree-dark2: hsl(190, 59%, 27%);
+        --tree-dark3: hsl(212, 30%, 17%);
+        --trunk-dark: hsl(190, 50%, 20%);
     }
 
     .tree {
@@ -28,10 +28,10 @@
     .tree-triangle {
         position: absolute;
         background: linear-gradient(to left,
-            var(--tree-light) 0%,
-            var(--tree-dark) 20%,
-            var(--background-color) 70%);
-        border: 2px solid var(--tree-dark);
+            var(--tree-dark2) 0%,
+            var(--tree-dark1) 20%,
+            var(--tree-dark3) 70%);
+        border: 2px solid var(--tree-dark1);
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
 
@@ -44,10 +44,10 @@
         width: 10%;
         height: 16%;
         background: linear-gradient(to left,
-            var(--trunk-color) 0%,
-            var(--tree-dark) 10%,
-            var(--background-color) 50%);
-        border-left: 1px solid var(--tree-dark);
+            var(--trunk-dark) 0%,
+            var(--tree-dark1) 10%,
+            var(--tree-dark3) 50%);
+        border-left: 1px solid var(--tree-dark1);
         bottom: 5%;
         left: 40%;
         filter: blur(2px);
@@ -62,7 +62,7 @@
         left: 0;
         width: 100%;
         height: 20%;
-        background: linear-gradient(to bottom, transparent, var(--background-color));
+        background: linear-gradient(to bottom, transparent, var(--tree-dark3));
     }
 
     @keyframes sway {

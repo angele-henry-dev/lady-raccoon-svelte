@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>Lady Raccoon • Spécialiste en Accessibilité Web & Performance • L’accessibilité numérique n’est pas une option</title>
+	<title>For a better tech • Spécialiste en Accessibilité Web & Performance • L’accessibilité numérique n’est pas une option • Lady Raccoon</title>
 	<meta name="description" content="J'accompagne les entreprises à améliorer l’accessibilité numérique et la performance de leurs sites web. Conformité WCAG, optimisation SEO et sites rapides. L’accessibilité est un standard." />
 </svelte:head>
 
@@ -35,7 +35,7 @@
     <div class="tree-container absolute">
       <Tree />
     </div>
-    <p class="sm:text-xl p-5 max-w-2xl z-10">Un espace conçu pour les développeurs qui veulent progresser dans une ambiance calme, moderne et technique.</p>
+    <p class="sm:text-xl p-5 max-w-2xl z-10">Une communauté tech bienveillante, pour apprendre ensemble et s’entraider. Bienvenue chez toi !</p>
   </div>
 </div>
 
