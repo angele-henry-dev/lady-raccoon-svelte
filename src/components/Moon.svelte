@@ -13,13 +13,8 @@
     background-color: var(--moon-color);
     border-radius: 50%;
     transform: translateX(-50%);
-    animation: pulseGlow 5s infinite ease-in-out, floating 6s infinite ease-in-out;
+    animation: pulseGlow 5s infinite ease-in-out;
     z-index: -1;
-  }
-  @keyframes floating {
-    0% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.05); }
-    100% { transform: translateX(-50%) scale(1); }
   }
   @keyframes pulseGlow {
     0% {
