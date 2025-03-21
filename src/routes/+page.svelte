@@ -41,7 +41,7 @@
 		<p class="sm:text-xl p-5 max-w-2xl z-10">
 			LE cocon tech pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi !
 		</p>
-    <Plant class="absolute bottom-[90%] end-[0px] w-[10%]" />
+    <Plant class="absolute bottom-[80%] end-[0%] w-[10%] overflow-hidden" />
     <Raccoon class="absolute top-[0px] end-[5%] w-[15%]" />
 	</div>
 </div>
