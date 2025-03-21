@@ -16,7 +16,8 @@
 >
 	<div><Logo /></div>
 	<div class="flex flex-row justify-end items-center gap-5">
-<!-- 		<a href="/commu">La communauté</a>
+<!-- 		<a href="/about">Qui suis-je ?</a>
+		<a href="/tools">Ressources</a>
 		<a href="/tools">Outils</a>
 		<a href="/blog">Blog</a>
 		<Discord />

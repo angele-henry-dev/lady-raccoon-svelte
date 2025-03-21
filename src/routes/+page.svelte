@@ -1,5 +1,6 @@
 <script>
 	import Button from '../components/Button.svelte';
+	import Faq from '../components/FAQ.svelte';
 	import Moon from '../components/Moon.svelte';
 	import Stars from '../components/Stars.svelte';
 	import Plant from '../components/svg/Plant.svelte';
@@ -28,7 +29,7 @@
 
 <Stars />
 
-<div class="hero relative w-full text-center flex flex-col items-center justify-center">
+<section class="hero relative w-full text-center flex flex-col items-center justify-center">
 	<div class="top w-[300px] relative w-full flex flex-col items-center justify-evenly flex-grow">
 		<div class="relative flex items-center justify-center size-[200px] sm:size-[300px]">
 			<Moon class="size-full absolute top-[0] left-[50%]" />
@@ -39,12 +40,14 @@
 	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <Tree class="absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
 		<p class="sm:text-xl p-5 max-w-2xl z-20">
-			LE cocon tech pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi !
+			LE cocon tech pour prendre le temps d’échanger, de se soutenir, de bosser ensemble, d’apprendre... Bienvenue chez toi !
 		</p>
     <Plant class="absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
     <Raccoon class="absolute bottom-[60%] end-[15%] w-[170px] sm:w-[215px] z-10" />
 	</div>
-</div>
+</section>
+
+<Faq />
 
 <style>
 	.hero {
