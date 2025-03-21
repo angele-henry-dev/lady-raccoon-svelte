@@ -22,13 +22,17 @@
 <style>
     .st0 {
         fill: var(--foreground);
-        animation: twink 5s ease infinite;
     }
-    @keyframes twink {
-        0% { fill: var(--foreground); }
-        2% { fill: var(--background); }
-        5% { fill: var(--foreground); }
-        100% { fill: var(--foreground); }
+    @media (prefers-reduced-motion: no-preference) {
+        .st0 {
+            animation: twink 5s ease infinite;
+        }
+        @keyframes twink {
+            0% { fill: var(--foreground); }
+            2% { fill: var(--background); }
+            5% { fill: var(--foreground); }
+            100% { fill: var(--foreground); }
+        }
     }
 
     .st1, .st2 {

@@ -6,23 +6,37 @@
 </div>
 
 <style scoped>
-    @keyframes shooting {
-      0% {
-        transform: translateX(-20px) translateY(-200px) rotate(var(--rotation));
+    @media (prefers-reduced-motion: no-preference) {
+      .shooting_star {
+        animation: shooting 60s ease-in-out infinite;
       }
-      7% {
-        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
+      #stars {
+        animation: animStar 100s linear infinite;
       }
-      100% {
-        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
+      #stars2 {
+        animation: animStar 200s linear infinite;
       }
-    }
-    @keyframes animStar {
-      from {
-        transform: translateY(0px);
+      #stars3 {
+        animation: animStar 300s linear infinite;
       }
-      to {
-        transform: translateY(-2000px);
+      @keyframes shooting {
+        0% {
+          transform: translateX(-20px) translateY(-200px) rotate(var(--rotation));
+        }
+        7% {
+          transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
+        }
+        100% {
+          transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
+        }
+      }
+      @keyframes animStar {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(-2000px);
+        }
       }
     }
     
@@ -49,9 +63,6 @@
       background: linear-gradient(45deg, #fff, transparent);
       border-radius: 50%;
       filter: drop-shadow(0 0 6px #fff);
-      animation:
-        tail 30s ease-in-out infinite,
-        shooting 30s ease-in-out infinite;
     }
     
     #stars {
@@ -759,7 +770,6 @@
         750px 1210px #fff,
         969px 947px #fff,
         517px 1206px #fff;
-      animation: animStar 50s linear infinite;
     }
     #stars:after {
       content: ' ';
@@ -1676,7 +1686,6 @@
         261px 745px #fff,
         297px 1842px #fff,
         35px 1104px #fff;
-      animation: animStar 100s linear infinite;
     }
     #stars2:after {
       content: ' ';
@@ -1993,7 +2002,6 @@
         1289px 320px #fff,
         714px 695px #fff,
         1311px 715px #fff;
-      animation: animStar 150s linear infinite;
     }
     #stars3:after {
       content: ' ';

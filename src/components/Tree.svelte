@@ -21,7 +21,6 @@
         height: 100%;
         left: 13%;
         top: 5%;
-        animation: sway 5s ease-in-out infinite;
         z-index: 1;
     }
 
@@ -65,9 +64,14 @@
         background: linear-gradient(to bottom, transparent, var(--tree-dark3));
     }
 
-    @keyframes sway {
-        0% { transform: skewX(6deg); }
-        60% { transform: skewX(0deg); }
-        100% { transform: skewX(6deg); }
+    @media (prefers-reduced-motion: no-preference) {
+        .tree {
+            animation: sway 5s ease-in-out infinite;
+        }
+        @keyframes sway {
+            0% { transform: skewX(6deg); }
+            60% { transform: skewX(0deg); }
+            100% { transform: skewX(6deg); }
+        }
     }
 </style>
