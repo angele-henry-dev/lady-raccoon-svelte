@@ -38,11 +38,11 @@
 	</div>
 	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <Tree class="absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
-		<p class="sm:text-xl p-5 max-w-2xl z-10">
+		<p class="sm:text-xl p-5 max-w-2xl z-20">
 			LE cocon tech pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi !
 		</p>
-    <Plant class="absolute bottom-[80%] end-[0%] w-[10%] overflow-hidden" />
-    <Raccoon class="absolute top-[0px] end-[5%] w-[15%]" />
+    <Plant class="absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
+    <Raccoon class="absolute bottom-[60%] end-[15%] w-[170px] sm:w-[215px] z-10" />
 	</div>
 </div>
 

@@ -3,7 +3,7 @@
 </script>
 
 <button 
-    class="cta-button my-5 sm:text-xl font-bold"
+    class="cta-button my-5 sm:text-xl font-bold z-20"
     aria-label={label} 
     onclick={handleClick} 
 >

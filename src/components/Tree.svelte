@@ -1,4 +1,4 @@
-<div aria-hidden="true" class="hidden sm:block" {...$$restProps}>
+<div aria-hidden="true" {...$$restProps}>
     <div class="tree">
         <div class="tree-triangle tree-triangle3"></div>
         <div class="tree-triangle tree-triangle2"></div>
