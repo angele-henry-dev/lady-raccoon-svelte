@@ -1,4 +1,6 @@
-<div class="moon size-[200px] sm:size-[300px] absolute -bottom-[35%] left-[50%]" aria-hidden="true"></div>
+<div aria-hidden="true" {...$$restProps}>
+  <div class="moon size-full"></div>
+</div>
 
 <style scoped>
   :root {

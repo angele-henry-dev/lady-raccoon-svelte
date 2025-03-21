@@ -1,19 +1,11 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-
-    export let label = "Cliquez ici";
-
-    const dispatch = createEventDispatcher();
-
-    function handleClick() {
-        dispatch('click');
-    }
+    let { handleClick, label } = $props();
 </script>
 
 <button 
     class="cta-button my-5 sm:text-xl font-bold"
     aria-label={label} 
-    on:click={handleClick} 
+    onclick={handleClick} 
 >
     {label}
 </button>

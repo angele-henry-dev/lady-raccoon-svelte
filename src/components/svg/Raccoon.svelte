@@ -1,4 +1,4 @@
-<svg aria-hidden="true" id="raccoon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 720 395">
+<svg aria-hidden="true" id="raccoon" {...$$restProps} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 720 395">
     <defs>
         <linearGradient id="raccoonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:var(--primary); stop-opacity:1" />
