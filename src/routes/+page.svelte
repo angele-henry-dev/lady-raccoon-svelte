@@ -10,13 +10,6 @@
 	function goDiscord() {
 		window.open('https://discord.gg/TU2Xaf9RKb', '_blank');
 	}
-
-	/*
-  import issues from "$data/issues.json";
-  import offers from "$data/offers.json";
-  import aboutme from "$data/aboutme.json";
-  import faq from "$data/faq.json";
-  */
 </script>
 
 <svelte:head>

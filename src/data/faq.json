@@ -1,25 +1,26 @@
-{
-    "title": "Questions fréquentes",
-    "items": [
-        {
-            "question": "Notre site fonctionne bien, pourquoi changer ?",
-            "answer": "Un site peut sembler fonctionnel, mais si une partie de votre audience ne peut pas l'utiliser, vous perdez des opportunités. L'accessibilité améliore la portée et l'impact de votre site."
-        },
-        {
-            "question": "Cela va nous coûter trop cher.",
-            "answer": "Ne pas rendre votre site accessible peut coûter encore plus cher en termes d’image, de perte de clients et de risques juridiques. L'accessibilité est un investissement rentable."
-        },
-        {
-            "question": "Nous avons déjà une équipe technique, pourquoi faire appel à vous ?",
-            "answer": "L'accessibilité est un domaine spécialisé qui demande des connaissances approfondies. Mon expertise complète le travail de vos développeurs et les forme à intégrer ces bonnes pratiques durablement."
-        },
-        {
-            "question": "C'est compliqué à mettre en place ?",
-            "answer": "Rendre un site accessible ne signifie pas tout refaire de zéro. Il suffit souvent d’ajuster quelques éléments : meilleure structuration HTML, ajout d’attributs ARIA, amélioration des contrastes… Des actions simples peuvent déjà avoir un impact majeur. L'accessibilité est un processus, et je vous accompagne pour le rendre simple et efficace, sans perturber votre site ou vos outils existants."
-        },
-        {
-            "question": "C’est vraiment obligatoire ?",
-            "answer": "Oui et non. En France, l’accessibilité numérique est une obligation légale pour les sites des services publics (RGAA). Ne pas respecter ces normes peut entraîner des sanctions financières et des recours juridiques. Aux États-Unis, la loi ADA impose également l’accessibilité numérique, et de nombreuses entreprises ont été poursuivies pour non-conformité."
-        }
-    ]
-}
+[
+    {
+        "question": "Qui peut rejoindre forabetter.tech ?",
+        "answer": "Développeur·euse, UX/UI, DevOps, architecte, étudiant·e ou autodidacte… Si tu t'intéresses à la tech et que tu aimes partager dans la bienveillance, tu es chez toi !"
+    },
+    {
+        "question": "Est-ce que la communauté est gratuite ?",
+        "answer": "Oui ! Rejoindre la communauté est 100% gratuit. Certains contenus avancés, ateliers ou accompagnements pourront être proposés en option payante, mais le cœur de la commu reste ouvert à toutes et tous."
+    },
+    {
+        "question": "Est-ce que je peux poser des questions 'basiques' ?",
+        "answer": "Oui, mille fois oui. Il n’y a pas de question bête ici. Que tu sois junior ou senior, tout le monde a ses zones d’ombre. L’entraide est notre moteur ❤️"
+    },
+    {
+        "question": "À quoi sert forabetter.tech si je suis déjà sur Twitter ou Mastodon ?",
+        "answer": "Sur forabetter.tech, on prend le temps d’échanger, de se soutenir, de bosser ensemble (coworking), d’apprendre... C’est plus intime, plus focus, moins scroll."
+    },
+    {
+        "question": "Est-ce que je dois être dispo tous les jours ?",
+        "answer": "Pas du tout. Tu viens quand tu veux, à ton rythme. Même pour lurker tranquille dans ton coin, tu es le·la bienvenu·e."
+    },
+    {
+        "question": "Comment rejoindre ?",
+        "answer": "Un petit clic suffit : <a href='https://discord.gg/TU2Xaf9RKb' target='_blank'>[Lien vers le Discord]</a>"
+    }
+]
