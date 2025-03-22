@@ -16,38 +16,27 @@
 >
 	<div><Logo /></div>
 	<div class="flex flex-row justify-end items-center gap-5">
-<!-- 		<a href="/about">Qui suis-je ?</a>
-		<a href="/tools">Ressources</a>
 		<a href="/tools">Outils</a>
+		<a href="/resources">Ressources</a>
 		<a href="/blog">Blog</a>
+		<a href="/about">A propos</a>
 		<Discord />
 		<LinkedIn />
-		<Github /> -->
+		<Github />
 	</div>
-	
-	<!-- 
-	<div>
-		<ul class="list-none m-0 p-0 flex flex-row items-center gap-5">
-			<li><Logo /></li>
-			{#each data.sections as section}
-				<li class="cursor-pointer">
-					{#if section.children.length > 0}
-						<div class="dropdown">
-							<span>{section.title}</span>
-							<ul class="dropdown-content list-none m-0 p-2 hidden border">
-								{#each section.children as child}
-									<li><a href="/{section.slug}/{child.slug}">{child.title}</a></li>
-								{/each}
-							</ul>
-						</div>
-					{:else}
-						<a href="/{section.slug}">{section.title}</a>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-	</div>
-	-->
+
+<!-- PLAN -->
+<!-- 
+1. Homepage (Communauté)
+- Parfait pour expliquer l’ADN de forabetter.tech : bienveillance, entraide, montée en compétences, etc. 
+- Ajouter quelques témoignages ou autres preuves sociales quand on en aura
+- Un calendrier ou agenda des prochains lives / coworkings ou autres événements (confs, etc.)
+
+2. Outils
+- Le contrast checker avec simulateur de daltonisme
+- Un iframe pour simuler daltonisme sur une adresse URL
+- Un audit auto via URL
+-->
 </nav>
 
 <style>
@@ -58,37 +47,4 @@
 		background-color: rgba(30, 42, 56, 0.65);
 		backdrop-filter: blur(5px);
 	}
-
-	/* .dropdown {
-		position: relative;
-	}
-	.dropdown span::after {
-		display: inline-block;
-		content: "\276F";
-		width: 1em;
-		height: 1em;
-		margin-left: 15px;
-		text-align: center;
-		vertical-align: middle;
-		transform: rotate(90deg);
-		transform-origin: 50% 50%;
-		transition: all 0.35s;
-	}
-
-	.dropdown:hover {
-		span::after {
-			transform: rotate(270deg);
-		}
-		.dropdown-content {
-			display: block;
-		}
-	}
-
-	.dropdown-content {
-		position: absolute;
-		top: 26px;
-		left: 0;
-		padding: 10px;
-		background-color: var(--background);
-	} */
 </style>

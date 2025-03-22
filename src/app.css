@@ -17,8 +17,6 @@
   --foreground: var(--color-white);
   --primary: var(--color-blue);
   --secondary: var(--color-lavanda);
-
-    /* --hand-drawn-border: 255px 15px 225px 15px / 15px 225px 15px 255px; */
 }
 
 @font-face {

@@ -2,6 +2,28 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "/about",
+			"dest": "/about/"
+		},
+		{
+			"src": "/about/",
+			"status": 308,
+			"headers": {
+				"Location": "/about"
+			}
+		},
+		{
+			"src": "/blog",
+			"dest": "/blog/"
+		},
+		{
+			"src": "/blog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog"
+			}
+		},
+		{
 			"src": "/legal-notice",
 			"dest": "/legal-notice/"
 		},
@@ -24,6 +46,17 @@
 			}
 		},
 		{
+			"src": "/resources",
+			"dest": "/resources/"
+		},
+		{
+			"src": "/resources/",
+			"status": 308,
+			"headers": {
+				"Location": "/resources"
+			}
+		},
+		{
 			"src": "/sitemap",
 			"dest": "/sitemap/"
 		},
@@ -35,14 +68,14 @@
 			}
 		},
 		{
-			"src": "/tools/contrast-checker",
-			"dest": "/tools/contrast-checker/"
+			"src": "/tools",
+			"dest": "/tools/"
 		},
 		{
-			"src": "/tools/contrast-checker/",
+			"src": "/tools/",
 			"status": 308,
 			"headers": {
-				"Location": "/tools/contrast-checker"
+				"Location": "/tools"
 			}
 		},
 		{
@@ -63,17 +96,26 @@
 		"index.html": {
 			"path": ""
 		},
+		"about.html": {
+			"path": "about"
+		},
+		"blog.html": {
+			"path": "blog"
+		},
 		"legal-notice.html": {
 			"path": "legal-notice"
 		},
 		"privacy-policy.html": {
 			"path": "privacy-policy"
 		},
+		"resources.html": {
+			"path": "resources"
+		},
 		"sitemap.html": {
 			"path": "sitemap"
 		},
-		"tools/contrast-checker.html": {
-			"path": "tools/contrast-checker"
+		"tools.html": {
+			"path": "tools"
 		}
 	},
 	"images": {
