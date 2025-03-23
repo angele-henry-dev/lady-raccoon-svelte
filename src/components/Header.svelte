@@ -17,12 +17,11 @@
 	<div><Logo /></div>
 	<div class="flex flex-row justify-end items-center gap-5">
 		<a href="/tools">Outils</a>
-		<a href="/resources">Ressources</a>
-		<a href="/blog">Blog</a>
+		<!-- <a href="/resources">Ressources</a> -->
+		<!-- <a href="/blog">Blog</a> -->
 		<a href="/about">A propos</a>
 		<Discord />
 		<LinkedIn />
-		<Github />
 	</div>
 
 <!-- PLAN -->
