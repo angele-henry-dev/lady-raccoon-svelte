@@ -1,15 +1,11 @@
 <script>
-	import Button from '../components/Button.svelte';
 	import Faq from '../components/FAQ.svelte';
+	import Link from '../components/Link.svelte';
 	import Moon from '../components/Moon.svelte';
 	import Stars from '../components/Stars.svelte';
 	import Plant from '../components/svg/Plant.svelte';
 	import Raccoon from '../components/svg/Raccoon.svelte';
 	import Tree from '../components/Tree.svelte';
-
-	function goDiscord() {
-		window.open('https://discord.gg/TU2Xaf9RKb', '_blank');
-	}
 </script>
 
 <svelte:head>
@@ -28,7 +24,7 @@
 			<Moon class="size-full absolute top-[0] left-[50%]" />
 			<h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br />better<br />tech</h1>
 		</div>
-		<Button label="Rejoins le Discord !" handleClick={goDiscord} />
+		<Link label="Rejoins le Discord →" href="https://discord.gg/TU2Xaf9RKb" target="_blank" />
 	</div>
 	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <Tree class="absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />

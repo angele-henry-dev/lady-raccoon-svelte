@@ -1,3 +1,7 @@
+<script>
+	import Link from "../../components/Link.svelte";
+
+</script>
 <svelte:head>
   <title>À propos • La communauté tech bienveillante | forabetter.tech</title>
   <meta name="description" content="Découvre qui se cache derrière forabetter.tech : une communauté inclusive pour les devs, UX, UI, DevOps et passionné·es de tech, fondée par Angele Henry." />
@@ -66,7 +70,5 @@
     <strong>Bienvenue chez toi.</strong>
   </p>
 
-  <a href="https://discord.gg/TU2Xaf9RKb" class="inline-block mt-6 px-6 py-3 bg-[var(--primary)] text-[var(--background)] font-semibold rounded-full hover:bg-[var(--secondary)] transition">
-    Rejoins le Discord →
-  </a>
+  <Link label="Rejoins le Discord →" href="https://discord.gg/TU2Xaf9RKb" target="_blank" />
 </section>
