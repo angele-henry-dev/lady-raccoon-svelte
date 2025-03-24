@@ -24,15 +24,15 @@
 			<Moon class="size-full absolute top-[0] left-[50%]" />
 			<h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br />better<br />tech</h1>
 		</div>
-		<Link label="Rejoins le Discord →" href="https://discord.gg/TU2Xaf9RKb" target="_blank" />
-	</div>
-	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
-    <Tree class="absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
-		<p class="sm:text-xl p-5 max-w-2xl z-20">
-			LE cocon tech pour prendre le temps d’échanger, de se soutenir, de bosser ensemble, d’apprendre.
+		<p class="sm:text-2xl p-5 max-w-2xl z-20">
+			Le cocon tech pour<br>se motiver, s’entraider, progresser.<br>Ensemble.
 		</p>
-    <Plant class="absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
-    <Raccoon class="absolute bottom-[60%] end-[15%] w-[170px] sm:w-[215px] z-10" />
+	</div>
+	<div class="bottom relative h-[33%] w-full flex flex-col items-center justify-center">
+		<Tree class="hidden sm:block absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
+		<Plant class="hidden sm:block absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
+		<Raccoon class="absolute bottom-[60%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] z-10" />
+		<Link label="Rejoins le Discord →" href="https://discord.gg/TU2Xaf9RKb" target="_blank" />
 	</div>
 </section>
 

@@ -58,7 +58,8 @@
       cursor: pointer;
   }
   .menu a:hover {
-      background-color: var(--foreground);
+    color: var(--background);
+    background-color: var(--foreground);
   }
   .nav {
       max-height: 0;
@@ -121,10 +122,6 @@
     }
     .menu li{
       float: left;
-    }
-    .menu a:hover{
-      background-color: transparent;
-      color: var(--gray);
     }
 
     .hamb{
