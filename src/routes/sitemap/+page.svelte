@@ -103,9 +103,18 @@
 </style>
 
 <svelte:head>
-	<title>Lady Raccoon • Plan du site</title>
-	<meta name="Description" content="Plan du site" />
+	<title>Plan du site • forabetter.tech</title>
+	<meta name="description" content="Explorez facilement toutes les pages de forabetter.tech grâce à notre plan du site. Un accès clair et rapide à l’ensemble du contenu." />
+	<meta property="og:title" content="Plan du site • forabetter.tech" />
+	<meta property="og:description" content="Explorez facilement toutes les pages de forabetter.tech grâce à notre plan du site." />
+	<meta property="og:image" content="https://forabetter.tech/og/sitemap-preview.png" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Plan du site • forabetter.tech" />
+	<meta name="twitter:description" content="Un aperçu clair de toutes les sections de forabetter.tech pour mieux s’y retrouver." />
+	<meta name="twitter:image" content="https://forabetter.tech/og/sitemap-preview.png" />
 </svelte:head>
+
   
 <div class="sitemap">
 	<h1>Sitemap</h1>

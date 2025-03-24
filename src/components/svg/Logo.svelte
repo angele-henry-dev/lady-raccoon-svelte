@@ -18,13 +18,13 @@ let { size = "50px" } = $props();
         <circle id="left-2" data-name="left" class="cls-3" cx="84.63" cy="114.96" r="5.98"/>
       </g>
       <g id="ears">
-        <polygon id="left-3" data-name="left" class="cls-2" points="60.91 76.6 62.26 45.38 85.38 62.83 60.91 76.6"/>
-        <polygon id="right-3" data-name="right" class="cls-3" points="150.65 76.6 148.17 45.83 126.74 62.33 150.65 76.6"/>
+        <polygon id="left-3" data-name="left" class="cls-1" points="60.91 76.6 62.26 45.38 85.38 62.83 60.91 76.6"/>
+        <polygon id="right-3" data-name="right" class="cls-1" points="150.65 76.6 148.17 45.83 126.74 62.33 150.65 76.6"/>
       </g>
-      <polygon id="nose-2" data-name="nose" class="cls-2" points="91.55 168.3 107.53 148.7 123.51 168.3 91.55 168.3"/>
+      <polygon id="nose-2" data-name="nose" class="cls-1" points="91.55 168.3 107.53 148.7 123.51 168.3 91.55 168.3"/>
     </g>
   </svg>
-  <span class="open-dyslexic">Lady Raccoon</span>
+  <span class="hidden sm:block open-dyslexic">forabetter.tech</span>
 </a>
 
 <style>
