@@ -10,20 +10,20 @@
 
 
 <header
-	class="{showNavBG ? 'bg' : ''} sticky top-0 w-full flex flex-row justify-between items-start p-4 text-xl font-bold z-50 overflow-hidden"
+	class="{showNavBG ? 'bg' : ''} sticky top-0 w-full flex flex-row justify-between items-start p-4 text-xl text-right font-bold z-50"
 >
+  <div><Logo /></div>
+
   <input class="side-menu" type="checkbox" id="side-menu"/>
-  <label class="hamb pt-6" for="side-menu"><span class="hamb-line"></span></label>
-  <nav class="nav overflow-hidden size-full">
+  <label class="hamb cursor-pointer pt-6" for="side-menu"><span class="hamb-line"></span></label>
+  <nav class="nav overflow-hidden w-full absolute top-[60px] left-0">
       <ul class="menu">
           <li><a href="/tools">Outils</a></li>
-          <li><a href="/resources">Ressources</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <!-- <li><a href="/resources">Ressources</a></li>
+          <li><a href="/blog">Blog</a></li> -->
           <li><a href="/about">A propos</a></li>
       </ul>
   </nav>
-
-	<div><Logo /></div>
 
 <!-- PLAN -->
 <!-- 
@@ -49,6 +49,9 @@
 	}
 
   /* Nav menu */
+  .menu {
+		background-color: rgba(30, 42, 56, 0.95);
+  }
   .menu a {
       display: block;
       padding: 10px;
@@ -63,9 +66,6 @@
   }
 
   /* Menu Icon */
-  .hamb {
-      cursor: pointer;
-  }
   .hamb-line {
       position: relative;
       background: var(--foreground);
@@ -95,7 +95,7 @@
 
   /* Toggle menu icon */
   .side-menu:checked ~ nav{
-    max-height: 100%;
+    max-height: fit-content;
   }
   .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
