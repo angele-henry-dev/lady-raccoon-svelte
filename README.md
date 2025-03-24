@@ -1,51 +1,52 @@
-# Lady Raccoon - Site en Svelte
+# forabetter.tech
 
-Un site web moderne, rapide et accessible développé avec **Svelte**.
+Bienvenue sur le dépôt du site [forabetter.tech](https://forabetter.tech), une communauté chaleureuse dédiée aux devs, UX/UI, DevOps, architectes et tous les passionnés de technologie.
 
-## Aperçu du site
+---
 
-Lien en ligne : https://ladyraccoon.com
+## Objectif
 
-<img width="1511" alt="Capture d’écran 2025-01-29 à 18 56 15" src="https://github.com/user-attachments/assets/be42c840-3ea2-4d83-a1aa-0cb616adeb03" />
+Ici, pas de jugement, pas de pression, pas de course à la productivité. Juste des gens passionnés, curieux, parfois un peu perdus (et c’est ok), qui aiment apprendre et s’entraider.
 
-## Caractéristiques principales
-* Développé avec SvelteKit pour une performance optimale.
-* Accessibilité web (WCAG 2.1) pour un site inclusif.
-* Optimisation SEO & Performance (Lighthouse, bonnes pratiques).
-* Hébergé sur Vercel.
+Que tu sois développeur·se, UX/UI designer, DevOps, architecte, infra, ou juste passionné·e de technologie, tu es le ou la bienvenue.
 
-## Installation & Développement
-1. Cloner le projet
-```bash
-git clone https://github.com/angele-henry-dev/lady-raccoon-svelte.git
-cd dungeonbuddy
-```
-2. Installer les dépendances
-```bash
-npm install
-```
-3. Lancer en mode développement
-```bash
-npm run dev
-```
+## Notre mission
 
-👉 Le site sera accessible sur http://localhost:5173/ (ou un autre port défini par Vite/SvelteKit).
+- Apprendre à son rythme (formations, ressources, lives)
+- Échanger et s’entraider sur ses projets ou ses galères
+- Monter en compétences, ensemble
+- Trouver du soutien et de la motivation (parfois même le weekend ou à 2h du mat)
 
-## Structure du projet
-```
-/src
- ├── components/      # Composants réutilisables
- ├── data/            # JSON, fichiers de données
- ├── lib/             # Fonctions utilitaires
- ├── routes/          # Pages et routes du site
- ├── static/          # Images et fichiers statiques
- ├── app.html         # Point d'entrée HTML
-```
+## Concrètement, tu y trouveras :
 
-## Licence
-Ce projet est sous licence MIT.
+- Un Discord communautaire avec salons publics & privés
+- Des sessions de coworking en live sur Twitch et Discord
+- Des outils gratuits pour les devs (comme un testeur de contraste WCAG)
+- Des ebooks, formations et ressources créés avec amour
+- Des gens qui te comprennent quand tu dis "je suis bloqué sur un bug depuis 4h et c’était un $*!$ de ; manquant"
 
-## Contact
-👩‍💻 Développeuse : Angele Henry
+## Rejoins-nous !
 
-📧 Contact : angele.henry[at]ladyraccoon.com
+Tu veux avancer dans la tech sans te sentir seul·e ?
+Tu veux un endroit où poser tes questions sans avoir peur du jugement ?
+Tu veux progresser avec des gens qui partagent tes valeurs ?
+
+Tu es au bon endroit.
+Bienvenue chez toi.
+
+---
+
+## Stack technique
+
+- **Framework** : [SvelteKit](https://kit.svelte.dev/)
+- **CSS** : [TailwindCSS](https://tailwindcss.com/)
+
+## Déploiement
+
+- **Nom de domaine** : [`forabetter.tech`](https://forabetter.tech)
+- **Hébergeur** : [Vercel](https://vercel.com/)
+- **Déploiement** : CI/CD depuis GitHub
+
+---
+
+**forabetter.tech** — Le cocon tech pour se motiver, s’entraider, progresser. Ensemble.
