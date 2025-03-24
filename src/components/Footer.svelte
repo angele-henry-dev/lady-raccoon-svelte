@@ -1,6 +1,5 @@
 <script>
 	import Discord from "./svg/Discord.svelte";
-	import Github from "./svg/Github.svelte";
 	import LinkedIn from "./svg/LinkedIn.svelte";
 </script>
 

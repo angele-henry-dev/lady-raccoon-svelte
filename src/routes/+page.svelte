@@ -29,7 +29,7 @@
 	<div class="bottom relative h-48 w-full flex flex-col items-center justify-center">
     <Tree class="absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
 		<p class="sm:text-xl p-5 max-w-2xl z-20">
-			LE cocon tech pour prendre le temps d’échanger, de se soutenir, de bosser ensemble, d’apprendre... Bienvenue chez toi !
+			LE cocon tech pour prendre le temps d’échanger, de se soutenir, de bosser ensemble, d’apprendre.
 		</p>
     <Plant class="absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
     <Raccoon class="absolute bottom-[60%] end-[15%] w-[170px] sm:w-[215px] z-10" />
