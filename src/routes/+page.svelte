@@ -9,17 +9,16 @@
 </script>
 
 <svelte:head>
-	<title>For a better tech • LA communauté tech bienveillante, pour apprendre, s'entraider et échanger ensemble. Bienvenue chez toi ! • Lady Raccoon</title>
+	<title>For a better tech • Le cocon tech pour se motiver, s’entraider, progresser. Ensemble. • Lady Raccoon</title>
 	<meta
 		name="description"
 		content="Un cocon tech pour les développeuses et développeurs, UX/UI, DevOps, architectes & passionné·e·s. Ici, on s'entraide, on échange et on progresse ensemble, sans prise de tête. Rejoins-nous pour apprendre, partager et passer de bons moments dans un espace convivial et inclusif !"
 	/>
 </svelte:head>
 
-<Stars />
-
 <section class="hero relative w-full text-center flex flex-col items-center justify-center">
 	<div class="top w-[300px] relative w-full flex flex-col items-center justify-evenly flex-grow">
+		<Stars />
 		<div class="relative flex items-center justify-center size-[200px] sm:size-[300px]">
 			<Moon class="size-full absolute top-[0] left-[50%]" />
 			<h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br />better<br />tech</h1>
