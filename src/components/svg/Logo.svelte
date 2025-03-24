@@ -2,7 +2,7 @@
 let { size = "50px" } = $props();
 </script>
 
-<a href="/" class="flex items-center gap-5">
+<a href="/" title="Homepage" class="flex items-center gap-5">
   <svg id="logo" data-name="Logo" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.1 211.1" width="{size}" height="{size}">
     <g id="head">
       <polygon id="fond_vert" class="cls-4" points="197.83 123.74 153.62 74.51 150.74 38.86 126.74 59.3 126.74 59.3 105.55 70.47 87.46 59.84 87.46 59.84 59.51 38.86 57.97 74.51 13.27 126.09 70.58 150.97 90.62 137.52 79.56 172.24 90.62 172.24 124.69 172.24 135.71 172.24 123.51 137.52 143.87 151.61 197.83 123.74"/>
