@@ -31,7 +31,7 @@
 		<Tree class="hidden sm:block absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
 		<Plant class="hidden sm:block absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
 		<Raccoon class="absolute bottom-[60%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] z-10" />
-		<Link label="Rejoins le Discord →" href="https://discord.gg/TU2Xaf9RKb" target="_blank" />
+		<Link label="Rejoins le Discord →" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
 	</div>
 </section>
 
