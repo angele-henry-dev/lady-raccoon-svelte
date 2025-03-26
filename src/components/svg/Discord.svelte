@@ -1,5 +1,5 @@
 <a
-    href="https://discord.gg/TU2Xaf9RKb"
+    href="https://discord.gg/BAZdtgcuNX"
     target="_blank"
     title="Join the Discord"
     aria-label="Join the Discord"
