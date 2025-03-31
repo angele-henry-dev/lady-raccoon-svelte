@@ -3,17 +3,13 @@
 @import 'tailwindcss/utilities';
 
 :root {
+  --color-blue-night: hsl(222, 41%, 21%);       /* #202D4C */
+  --color-black: hsl(235, 41%, 11%);            /* #101226 */
+  --color-blue: hsl(190, 100%, 73%);            /* #75E8FF */
+  --color-lavanda: hsl(230, 42%, 59%);          /* #6A78C2 */
+  --color-white: hsl(40, 20%, 92%);             /* #EFECE7 */
 
-  --color-blue-night: hsl(212, 30%, 17%); /* #1E2A38 */
-  --color-blue: hsl(190, 100%, 73%);      /* #75E8FF */
-  --color-lavanda: hsl(287, 100%, 73%);   /* #E075FF */
-
-  --color-orange: hsl(28, 100%, 73%);     /* #FFB575 */
-  --color-yellow: hsl(60, 100%, 73%);     /* #FFFF75 */
-  --color-grey: hsl(24, 5%, 64%);         /* #A8A29F */
-  --color-white: hsl(40, 20%, 92%);       /* #EFECE7 */
-
-  --background: var(--color-blue-night);
+  --background: var(--color-black);
   --foreground: var(--color-white);
   --primary: var(--color-blue);
   --secondary: var(--color-lavanda);

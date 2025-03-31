@@ -16,11 +16,11 @@
 
   <input class="side-menu" type="checkbox" id="side-menu"/>
   <label class="hamb cursor-pointer pt-6" for="side-menu"><span class="hamb-line"></span></label>
-  <nav class="nav overflow-hidden w-full absolute top-[60px] left-0">
+  <nav class="nav overflow-hidden w-full absolute top-[82px] left-0">
       <ul class="menu">
           <li><a href="/tools">Outils</a></li>
-          <!-- <li><a href="/resources">Ressources</a></li>
-          <li><a href="/blog">Blog</a></li> -->
+          <!-- <li><a href="/resources">Ressources</a></li> -->
+          <!-- <li><a href="/blog">Blog</a></li> -->
           <li><a href="/about">A propos</a></li>
       </ul>
   </nav>
@@ -44,13 +44,13 @@
     transition: backdrop-filter 1s ease, background-color 1s ease;
 	}
 	header.bg {
-		background-color: rgba(30, 42, 56, 0.65);
+		background-color: rgba(32, 45, 76, 0.65);
 		backdrop-filter: blur(5px);
 	}
 
   /* Nav menu */
   .menu {
-		background-color: rgba(30, 42, 56, 0.95);
+		background-color: var(--background);
   }
   .menu a {
       display: block;
