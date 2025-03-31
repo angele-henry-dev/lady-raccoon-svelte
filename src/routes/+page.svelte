@@ -20,7 +20,7 @@
 	<div class="top w-[300px] px-5 relative w-full flex flex-col sm:flex-row items-center justify-evenly flex-grow">
 		<Stars />
 		<div class="relative flex items-center justify-center size-[200px] sm:size-[300px]">
-			<Moon class="size-[70%]" />
+			<Moon class="relative size-[200px]" />
 		</div>
 		<div class="z-10">
 			<h1 class="text-4xl sm:text-6xl font-bold uppercase">Le cocon tech</h1>
