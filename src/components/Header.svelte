@@ -19,8 +19,8 @@
   <nav class="nav overflow-hidden w-full absolute top-[60px] left-0">
       <ul class="menu">
           <li><a href="/tools">Outils</a></li>
-          <!-- <li><a href="/resources">Ressources</a></li>
-          <li><a href="/blog">Blog</a></li> -->
+          <li><a href="/resources">Ressources</a></li>
+          <!-- <li><a href="/blog">Blog</a></li> -->
           <li><a href="/about">A propos</a></li>
       </ul>
   </nav>

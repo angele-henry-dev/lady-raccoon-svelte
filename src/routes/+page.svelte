@@ -5,7 +5,7 @@
 	import Stars from '../components/Stars.svelte';
 	import Plant from '../components/svg/Plant.svelte';
 	import Raccoon from '../components/svg/Raccoon.svelte';
-	import Tree from '../components/Tree.svelte';
+	import Tree from '../components/svg/Tree.svelte';
 </script>
 
 <svelte:head>
@@ -16,22 +16,34 @@
 	/>
 </svelte:head>
 
-<section class="hero relative w-full text-center flex flex-col items-center justify-center">
-	<div class="top w-[300px] relative w-full flex flex-col items-center justify-evenly flex-grow">
+<section class="hero relative w-full text-left flex flex-col items-center justify-center">
+	<div class="top w-[300px] relative w-full flex flex-row items-center justify-evenly flex-grow">
 		<Stars />
-		<div class="relative flex items-center justify-center size-[200px] sm:size-[300px]">
-			<Moon class="size-full absolute top-[0] left-[50%]" />
-			<h1 class="text-4xl sm:text-6xl font-bold uppercase z-10">For a<br />better<br />tech</h1>
+		<div class="z-10">
+			<h1 class="text-4xl sm:text-6xl font-bold uppercase">Le cocon tech</h1>
+			<p class="sm:text-2xl p-5 max-w-2xl">
+				pour se motiver, s’entraider, progresser.<br> Ensemble.
+			</p>
+			<Link label="Rejoins le Discord →" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
 		</div>
-		<p class="sm:text-2xl p-5 max-w-2xl z-20">
-			Le cocon tech pour<br>se motiver, s’entraider, progresser.<br>Ensemble.
-		</p>
+		<div class="relative flex items-center justify-center size-[200px] sm:size-[300px]">
+			<Moon class="size-[100%]" />
+		</div>
 	</div>
-	<div class="bottom relative h-[33%] w-full flex flex-col items-center justify-center">
-		<Tree class="hidden sm:block absolute bottom-0 -start-[25%] w-[60vw] h-[150vh]" />
-		<Plant class="hidden sm:block absolute bottom-[80%] end-[0%] w-[150px] scale-[70%] sm:scale-100 overflow-hidden" />
-		<Raccoon class="absolute bottom-[60%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] z-10" />
-		<Link label="Rejoins le Discord →" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
+	<div class="bottom bg-[var(--color-blue-night)] relative h-[23%] w-full flex flex-col items-center justify-center">
+		<div class="grass absolute top-0 start-0 size-full flex flex-row items-end justify-start">
+			<div class="element relative bg-[#1b2340] h-[130%] w-[25%]"></div>
+			<div class="element relative bg-[#1b2340] h-[130%] w-[25%]"></div>
+			<div class="element relative bg-[#1b2340] h-[130%] w-[55%]"></div>
+		</div>
+		<div class="grass absolute top-0 start-0 size-full flex flex-row items-end justify-start">
+			<div class="element relative bg-[var(--background)] h-[100%] w-[40%]"></div>
+			<div class="element relative bg-[var(--background)] h-[100%] w-[60%]"></div>
+		</div>
+		<Tree class="hidden sm:block absolute bottom-[85%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
+		<Plant class="hidden sm:block absolute bottom-[85%] end-[40%] w-[60px] scale-[70%] sm:scale-100 overflow-hidden" />
+		<Plant class="hidden sm:block absolute bottom-[85%] end-[2%] w-[100px] scale-[70%] sm:scale-100 overflow-hidden" />
+		<!-- <Raccoon class="absolute bottom-[60%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px]" /> -->
 	</div>
 </section>
 
@@ -40,31 +52,17 @@
 <style>
 	.hero {
 		height: calc(100vh - 50px);
-	}
-	.hero .bottom {
-		background-color: var(--background);
-	}
-	.hero .bottom::before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		filter: blur(10px);
-		background: linear-gradient(
-			to bottom,
-			rgba(0, 213, 255, 0.1) 0%,
-			rgba(30, 42, 56, 0.1) 20%,
-			rgba(30, 42, 56, 0) 70%
-		);
-	}
 
-	h1 {
-		text-shadow:
-			0 0 10px var(--primary),
-			0 0 100px var(--primary);
-		color: var(--background);
+		.top {
+			background: linear-gradient(
+				to bottom,
+				var(--background) 0%,
+				var(--color-blue-night) 70%
+			);
+		}
+
+		.bottom .grass .element {
+			clip-path: ellipse(85% 100% at 50% 100%);
+		}
 	}
 </style>

@@ -5,15 +5,11 @@
 <style scoped>
   :root {
     --moon-color: var(--color-white);
-    --shadow-color: 0, 213, 255;
-    --shadow-color: 0, 213, 255;
-    --shadow-color: 0, 213, 255;
+    --shadow-color: 107, 121, 194;
   }
   .moon {
     background-color: var(--moon-color);
     border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
   }
   @media (prefers-reduced-motion: no-preference) {
     .moon {

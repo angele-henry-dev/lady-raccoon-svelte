@@ -47,7 +47,7 @@
       height: 100%;
       overflow: hidden;
       opacity: 0.5;
-      z-index: -1;
+      z-index: 0;
     }
     
     .shooting_star {
