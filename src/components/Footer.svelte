@@ -12,9 +12,9 @@
 			No Copyright ‧ Partagez, copiez, améliorez. La créativité est contagieuse.
 		</p>
 	</div>
-	<div class="mb-3 md:text-right">
+	<div class="text-left md:text-right">
 		<p><a href="/legal-notice">Mentions légales</a></p>
 		<p><a href="/privacy-policy">Politique de confidentialité</a></p>
-		<p class="flex flex-row justify-end gap-5"><Discord /><LinkedIn /></p>
+		<p class="my-5 flex flex-row justify-start md:justify-end gap-5 text-3xl"><Discord /><LinkedIn /></p>
 	</div>
 </footer>
