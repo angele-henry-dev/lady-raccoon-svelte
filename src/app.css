@@ -6,7 +6,7 @@
   --color-blue-night: hsl(222, 41%, 21%);       /* #202D4C */
   --color-black: hsl(235, 41%, 11%);            /* #101226 */
   --color-blue: hsl(190, 100%, 73%);            /* #75E8FF */
-  --color-lavanda: hsl(230, 42%, 59%);          /* #6A78C2 */
+  --color-lavanda: hsl(287, 100%, 73%);         /* #E075FF */
   --color-white: hsl(40, 20%, 92%);             /* #EFECE7 */
 
   --background: var(--color-black);
