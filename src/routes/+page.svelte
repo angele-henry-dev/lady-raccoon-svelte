@@ -31,18 +31,14 @@
 		</div>
 	</div>
 	<div class="bottom bg-[var(--color-blue-night)] relative h-[23%] w-full flex flex-col items-center justify-center">
-		<div class="grass absolute top-0 start-0 size-full flex flex-row items-end justify-start">
-			<div class="element hidden sm:block relative bg-[#1b2340] h-[130%] w-[25%]"></div>
-			<div class="element hidden sm:block relative bg-[#1b2340] h-[130%] w-[45%]"></div>
-			<div class="element relative bg-[#1b2340] h-[130%] w-[100%] sm:w-[55%]"></div>
+		<div class="relative size-full overflow-x-clip" aria-hidden="true">
+			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[#181f3a] rounded-t-[50%] rounded-b-none"></div>
+			<div class="hidden sm:block absolute bottom-[2vmin] -end-[20vmin] w-[80%] h-[120%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
+			<div class="absolute bottom-[0] start-0 w-full h-[80%] bg-[var(--background)]"></div>
 		</div>
-		<div class="grass absolute top-0 start-0 size-full flex flex-row items-end justify-start">
-			<div class="element hidden sm:block relative bg-[var(--background)] h-[100%] w-[40%]"></div>
-			<div class="element relative bg-[var(--background)] h-[100%] w-[100%] sm:w-[60%]"></div>
-		</div>
-		<Tree class="hidden sm:block absolute bottom-[85%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
-		<Plant class="absolute bottom-[85%] end-[40%] w-[60px] scale-[70%] sm:scale-100 overflow-hidden" />
-		<Plant class="absolute bottom-[55%] sm:bottom-[85%] end-[2%] w-[100px] scale-[70%] sm:scale-100 overflow-hidden" />
+		<Tree class="hidden sm:block absolute bottom-[55%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
+		<Plant class="absolute bottom-[55%] sm:bottom-[5%] end-[2%] w-[100px] scale-[70%] sm:scale-100" />
+		<Plant class="absolute bottom-[55%] end-[40%] w-[60px] scale-[70%] sm:scale-100" />
 		<!-- <Raccoon class="absolute bottom-[60%] start-[0] sm:end-[15%] w-[170px] sm:w-[215px]" /> -->
 	</div>
 </section>
@@ -61,8 +57,8 @@
 			);
 		}
 
-		.bottom .grass .element {
+		/* .bottom .grass .element {
 			clip-path: ellipse(85% 100% at 50% 100%);
-		}
+		} */
 	}
 </style>
