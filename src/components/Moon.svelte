@@ -13,6 +13,12 @@
     --shadow-color: 107, 121, 194;
   }
 
+  .moon {
+          box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),
+                      0 0 180px rgba(var(--shadow-color), 0.5),
+                      0 0 300px rgba(var(--shadow-color), 0.3);
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     .moon {
       animation: pulseGlow 5s infinite ease-in-out;

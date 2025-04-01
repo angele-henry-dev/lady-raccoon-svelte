@@ -6,64 +6,68 @@
 </div>
 
 <style scoped>
-    @media (prefers-reduced-motion: no-preference) {
-      .shooting_star {
-        animation: shooting 60s ease-in-out infinite;
+  .shooting_star {
+    transform: translateX(-200px) translateY(-200px) rotate(var(--rotation));
+  }
+  .shooting_star {
+    animation: shooting 60s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #stars {
+      animation: animStar 100s linear infinite;
+    }
+    #stars2 {
+      animation: animStar 200s linear infinite;
+    }
+    #stars3 {
+      animation: animStar 300s linear infinite;
+    }
+    @keyframes shooting {
+      0% {
+        transform: translateX(-20px) translateY(-200px) rotate(var(--rotation));
       }
-      #stars {
-        animation: animStar 100s linear infinite;
+      7% {
+        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
       }
-      #stars2 {
-        animation: animStar 200s linear infinite;
-      }
-      #stars3 {
-        animation: animStar 300s linear infinite;
-      }
-      @keyframes shooting {
-        0% {
-          transform: translateX(-20px) translateY(-200px) rotate(var(--rotation));
-        }
-        7% {
-          transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
-        }
-        100% {
-          transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
-        }
-      }
-      @keyframes animStar {
-        from {
-          transform: translateY(0px);
-        }
-        to {
-          transform: translateY(-2000px);
-        }
+      100% {
+        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
       }
     }
+    @keyframes animStar {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-2000px);
+      }
+    }
+  }
     
-    .retrobg-stars {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      opacity: 0.5;
-      z-index: 0;
-    }
+  .retrobg-stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.5;
+    z-index: 0;
+  }
     
-    .shooting_star {
-      --rotation: 160deg;
-      --star-tail-length: 6em;
-      --star-tail-height: 2px;
-      position: absolute;
-      left: -20px;
-      top: 60%;
-      width: var(--star-tail-length);
-      height: var(--star-tail-height);
-      color: #fff;
-      background: linear-gradient(45deg, #fff, transparent);
-      border-radius: 50%;
-      filter: drop-shadow(0 0 6px #fff);
-    }
+  .shooting_star {
+    --rotation: 160deg;
+    --star-tail-length: 6em;
+    --star-tail-height: 2px;
+    position: absolute;
+    left: -20px;
+    top: 60%;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    color: #fff;
+    background: linear-gradient(45deg, #fff, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px #fff);
+  }
     
     #stars {
       width: 1px;
