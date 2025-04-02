@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     let scrollHeight = 0;
     const gotoTop = () => {
           window.scrollTo({ top: 0, behavior: 'smooth' })

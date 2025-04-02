@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import Faq from '../components/FAQ.svelte';
 	import Link from '../components/Link.svelte';
-	import Moon from '../components/Moon.svelte';
-	import Stars from '../components/Stars.svelte';
-	import Plant from '../components/svg/Plant.svelte';
-	import Raccoon from '../components/svg/Raccoon.svelte';
-	import Tree from '../components/svg/Tree.svelte';
+	import Moon from '../components/design/Moon.svelte';
+	import Stars from '../components/design/Stars.svelte';
+	import Plant from '../components/design/Plant.svelte';
+	import Raccoon from '../components/design/Raccoon.svelte';
+	import Tree from '../components/design/Tree.svelte';
 </script>
 
 <svelte:head>

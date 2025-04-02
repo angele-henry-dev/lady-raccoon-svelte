@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import '../app.css';
-	import Logo from './svg/Logo.svelte';
+	import Logo from './design/Logo.svelte';
 
     let scrollHeight = 0;
     $: showNavBG = scrollHeight > 100;
@@ -19,7 +19,7 @@
   <nav class="nav overflow-hidden w-full absolute top-[82px] left-0">
       <ul class="menu">
           <li><a href="/tools">Outils</a></li>
-          <!-- <li><a href="/resources">Ressources</a></li> -->
+          <li><a href="/resources">Ressources</a></li>
           <!-- <li><a href="/blog">Blog</a></li> -->
           <li><a href="/about">A propos</a></li>
       </ul>

@@ -1,6 +1,6 @@
-<script>
-	import Discord from "./svg/Discord.svelte";
-	import LinkedIn from "./svg/LinkedIn.svelte";
+<script lang="ts">
+	import Discord from "./design/Discord.svelte";
+	import LinkedIn from "./design/LinkedIn.svelte";
 </script>
 
 <footer class="mb-10 px-5 pt-10 pb-20 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
