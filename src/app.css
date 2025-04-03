@@ -25,6 +25,10 @@
   font-display: swap;
 }
 
+.open-dyslexic {
+  font-family: 'OpenDyslexic', 'Poppins', sans-serif;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background);
@@ -36,10 +40,16 @@ main {
 }
 
 a {
+  padding: 5px;
   transition: color 0.3s ease;
 }
 a:hover {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+a.icon:hover {
   color: var(--secondary);
+  background: none;
 }
 
 .fade-in {

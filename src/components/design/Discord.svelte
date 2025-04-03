@@ -1,6 +1,7 @@
 <a
     href="https://discord.gg/BAZdtgcuNX"
     target="_blank"
+    class="icon"
     title="Join the Discord"
     aria-label="Join the Discord"
 >

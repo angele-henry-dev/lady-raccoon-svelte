@@ -1,6 +1,7 @@
 <a
     href="https://www.linkedin.com/in/angele-henry/"
     target="_blank"
+    class="icon"
     title="Opens LinkedIn in a new tab or window"
     aria-label="Opens LinkedIn in a new tab or window"
 >

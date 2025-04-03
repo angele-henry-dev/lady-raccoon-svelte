@@ -1,6 +1,7 @@
 <a
     href="https://github.com/angele-henry-dev"
     target="_blank"
+    class="icon"
     title="Opens Github in a new tab or window"
     aria-label="Opens Github in a new tab or window"
 >

@@ -8,8 +8,11 @@
 		<p class="pb-5">
 			<span class="open-dyslexic">forabetter.tech by Lady Raccoon with 💜</span> {new Date().getFullYear()}
 		</p>
-		<p class="pb-5">
+		<p>
 			No Copyright ‧ Partagez, copiez, améliorez. La créativité est contagieuse.
+		</p>
+		<p class="pb-5">
+			Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez
 		</p>
 	</div>
 	<div class="text-left md:text-right">

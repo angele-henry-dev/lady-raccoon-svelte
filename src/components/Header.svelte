@@ -29,13 +29,7 @@
 <!-- 
 1. Homepage (Communauté)
 - Parfait pour expliquer l’ADN de forabetter.tech : bienveillance, entraide, montée en compétences, etc. 
-- Ajouter quelques témoignages ou autres preuves sociales quand on en aura
 - Un calendrier ou agenda des prochains lives / coworkings ou autres événements (confs, etc.)
-
-2. Outils
-- Le contrast checker avec simulateur de daltonisme
-- Un iframe pour simuler daltonisme sur une adresse URL
-- Un audit auto via URL
 -->
 </header>
 
@@ -55,11 +49,6 @@
   .menu a {
       display: block;
       padding: 10px;
-      cursor: pointer;
-  }
-  .menu a:hover {
-    color: var(--background);
-    background-color: var(--foreground);
   }
   .nav {
       max-height: 0;
