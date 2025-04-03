@@ -47,8 +47,10 @@ a:hover {
   color: var(--background);
   background-color: var(--foreground);
 }
-a.icon:hover {
+a.icon:hover,
+:focus {
   color: var(--secondary);
+  border: 1px solid var(--secondary);
   background: none;
 }
 
