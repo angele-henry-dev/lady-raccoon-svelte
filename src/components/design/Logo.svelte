@@ -27,7 +27,7 @@ let { size = "50px" } = $props();
   <span class="hidden sm:block open-dyslexic">forabetter.tech</span>
 </a>
 
-<style>
+<style scoped>
 .cls-1 {
   fill: var(--background);
 }

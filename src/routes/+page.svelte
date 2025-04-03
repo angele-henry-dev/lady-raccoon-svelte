@@ -45,7 +45,7 @@
 
 <Faq />
 
-<style>
+<style scoped>
 	.hero {
 		height: calc(100vh - 50px);
 
@@ -56,9 +56,5 @@
 				var(--color-blue-night) 70%
 			);
 		}
-
-		/* .bottom .grass .element {
-			clip-path: ellipse(85% 100% at 50% 100%);
-		} */
 	}
 </style>

@@ -19,7 +19,7 @@
 
 </svg>
 
-<style>
+<style scoped>
     .st0 {
         fill: var(--foreground);
     }

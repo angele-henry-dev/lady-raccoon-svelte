@@ -201,7 +201,7 @@
 	</defs>
 </svg>
 
-<style>
+<style scoped>
 	.pickers {
 		border-width: 1px;
 		border-radius: 10px;

@@ -9,7 +9,7 @@
 </svg>
 </a>
 
-<style>
+<style scoped>
     svg {
         fill: var(--foreground);
     }

@@ -10,7 +10,7 @@
     {label}
 </button>
 
-<style>
+<style scoped>
     .cta-button {
         padding: 0.8rem 2rem;
         color: var(--background);

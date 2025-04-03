@@ -2,7 +2,7 @@
 <div aria-hidden="true" {...$$restProps}>
     <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.66 313.78">
         <defs>
-            <style>
+            <style scoped>
                 .tree {
                     fill: #101226;
                 }

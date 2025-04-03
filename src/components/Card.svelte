@@ -1,17 +1,22 @@
 <script lang="ts">
-    let { title, badges, description } = $props();
+    let { title, badges, description, image } = $props();
 </script>
 
-<div class="card p-5 rounded-xl transition">
-    <div class="flex justify-between items-start">
-      <h2 class="text-xl font-semibold">{ title }</h2>
-      <div>
-        {#each badges as badge}
-          <span class="text-sm px-2 py-1 ml-3 bg-[var(--primary)] text-[var(--background)] rounded-full">{ badge }</span>
-        {/each}
-      </div>
+<div class="card p-5 rounded-xl transition grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="mx-auto flex flex-col justify-start items-start">
+    <h2 class="text-xl font-semibold mb-3">{ title }</h2>
+    <div class="mb-5">
+      {#each badges as badge}
+        <span class="text-sm capitalize px-2 py-1 mr-3 bg-[var(--primary)] text-[var(--background)] rounded-full">{ badge }</span>
+      {/each}
     </div>
-    <p class="mt-2">{ description }</p>
+    <div>
+        {@html description}
+    </div>
+  </div>
+  <div class="mx-auto max-w-[250px]">
+    <img src="{ image }" alt="{ title }" />
+  </div>
 </div>
 
 <style scoped>
