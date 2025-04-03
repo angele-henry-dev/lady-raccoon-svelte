@@ -21,9 +21,9 @@
     <h1 class="text-4xl sm:text-5xl font-bold mb-6">Ressources</h1>
     <p class="mb-8 text-lg">Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
   
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+    <div class="grid grid-cols-1 gap-2">
       {#each resources as res}
-        <Card title="{res.title}" badges="{[res.type, res.badge]}" description="{res.description}" image="{res.image}" />
+        <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
       {/each}
     </div>
 </section>

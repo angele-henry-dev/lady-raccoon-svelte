@@ -1,8 +1,10 @@
 <script lang="ts">
-    let { title, badges, description, image } = $props();
+	import Link from "./Link.svelte";
+
+    let { title, badges, description, image, link } = $props();
 </script>
 
-<div class="card p-5 rounded-xl transition grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="card p-5 rounded-xl transition grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[850px]">
   <div class="mx-auto flex flex-col justify-start items-start">
     <h2 class="text-xl font-semibold mb-3">{ title }</h2>
     <div class="mb-5">
@@ -13,9 +15,12 @@
     <div>
         {@html description}
     </div>
+    <div>
+      <Link href={link} label="Récupérer" target="_blank" color="secondary" />
+    </div>
   </div>
-  <div class="mx-auto max-w-[250px]">
-    <img src="{ image }" alt="{ title }" />
+  <div class="mx-auto max-w-[250px]" aria-hidden="true">
+    <img src={ image } alt={ title } />
   </div>
 </div>
 
