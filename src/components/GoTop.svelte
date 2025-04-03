@@ -13,7 +13,7 @@
         title="Go to top"
         data-twe-ripple-init
         data-twe-ripple-color="light"
-        class="!fixed bottom-5 end-5 rounded-full p-3 text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out z-50"
+        class="!fixed icon bottom-5 end-5 rounded-full p-3 text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out z-50"
     >
         <span class="[&>svg]:w-4">
             <svg

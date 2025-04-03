@@ -43,12 +43,13 @@ a {
   padding: 5px;
   transition: color 0.3s ease;
 }
-a:hover {
+a:hover,
+:focus {
   color: var(--background);
   background-color: var(--foreground);
 }
 a.icon:hover,
-:focus {
+.icon:focus {
   color: var(--secondary);
   border: 1px solid var(--secondary);
   background: none;
