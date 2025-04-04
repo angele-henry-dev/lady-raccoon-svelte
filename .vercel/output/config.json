@@ -2,6 +2,50 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "/about",
+			"dest": "/about/"
+		},
+		{
+			"src": "/about/",
+			"status": 308,
+			"headers": {
+				"Location": "/about"
+			}
+		},
+		{
+			"src": "/blog",
+			"dest": "/blog/"
+		},
+		{
+			"src": "/blog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog"
+			}
+		},
+		{
+			"src": "/legal-notice",
+			"dest": "/legal-notice/"
+		},
+		{
+			"src": "/legal-notice/",
+			"status": 308,
+			"headers": {
+				"Location": "/legal-notice"
+			}
+		},
+		{
+			"src": "/privacy-policy",
+			"dest": "/privacy-policy/"
+		},
+		{
+			"src": "/privacy-policy/",
+			"status": 308,
+			"headers": {
+				"Location": "/privacy-policy"
+			}
+		},
+		{
 			"src": "/resources",
 			"dest": "/resources/"
 		},
@@ -10,6 +54,28 @@
 			"status": 308,
 			"headers": {
 				"Location": "/resources"
+			}
+		},
+		{
+			"src": "/sitemap",
+			"dest": "/sitemap/"
+		},
+		{
+			"src": "/sitemap/",
+			"status": 308,
+			"headers": {
+				"Location": "/sitemap"
+			}
+		},
+		{
+			"src": "/tools",
+			"dest": "/tools/"
+		},
+		{
+			"src": "/tools/",
+			"status": 308,
+			"headers": {
+				"Location": "/tools"
 			}
 		},
 		{
@@ -30,8 +96,26 @@
 		"index.html": {
 			"path": ""
 		},
+		"about.html": {
+			"path": "about"
+		},
+		"blog.html": {
+			"path": "blog"
+		},
+		"legal-notice.html": {
+			"path": "legal-notice"
+		},
+		"privacy-policy.html": {
+			"path": "privacy-policy"
+		},
 		"resources.html": {
 			"path": "resources"
+		},
+		"sitemap.html": {
+			"path": "sitemap"
+		},
+		"tools.html": {
+			"path": "tools"
 		}
 	},
 	"images": {
