@@ -25,7 +25,7 @@
         {@html description}
     </div>
     <div>
-      <Link href={link} label="Opens in a new window the {type}" target="_blank" color="secondary" />
+      <Link href={link} label="Acheter" target="_blank" color="secondary" />
     </div>
   </div>
   <div class="mx-auto max-w-[250px]" aria-hidden="true">

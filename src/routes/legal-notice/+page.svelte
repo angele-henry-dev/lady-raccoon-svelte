@@ -29,7 +29,7 @@
 		<li><strong>Vercel Inc.</strong></li>
 		<li>440 N Barranca Ave #4133</li>
 		<li>Covina, CA 91723</li>
-		<li><a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a></li>
+		<li><a href="https://vercel.com" target="_blank" title="Opens in a new window Vercel" aria-label="Opens in a new window Vercel" rel="noopener">https://vercel.com</a></li>
 	</ul>
   
 	<h2>Propriété intellectuelle</h2>

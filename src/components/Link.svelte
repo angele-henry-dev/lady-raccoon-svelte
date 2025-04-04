@@ -11,6 +11,8 @@
 
 <a
     href="{href}"
+    title={target === '_blank' ? 'Opens in a new window': label}
+    aria-label={target === '_blank' ? 'Opens in a new window': label}
     target="{target}"
     class="inline-block mt-6 px-6 py-3 
         rounded-full font-semibold 
