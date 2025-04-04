@@ -41,8 +41,6 @@
   }
   header.bg {
 		background-color: rgba(32, 45, 76, 0.65);
-    -webkit-backdrop-filter: none; /* fallback */
-    backdrop-filter: none;
   }
   @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
     header.bg {

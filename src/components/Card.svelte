@@ -29,15 +29,13 @@
     </div>
   </div>
   <div class="mx-auto max-w-[250px]" aria-hidden="true">
-    <img src={ image } alt={ title } width="376px" height="250px" class="w-full h-auto" />
+    <img src={ image } alt={ title } width="376" height="250" class="w-full h-auto" />
   </div>
 </div>
 
 <style>
 .card {
     background-color: rgba(32, 45, 76, 0.65);
-    -webkit-backdrop-filter: none; /* fallback */
-    backdrop-filter: none;
     border: 1px solid rgba(255, 255, 255, 0.222);
 }
 .card:hover {
