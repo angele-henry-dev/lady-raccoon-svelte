@@ -21,7 +21,7 @@
 <section class="w-5/6 mx-auto my-10">
 
   <div class="absolute top-[20px] end-[5%] flex items-center justify-center size-[200px] sm:size-[300px]">
-    <Moon class="relative size-[200px]" />
+    <Moon class="hidden lg:block relative size-[200px]" />
   </div>
 
   <h1 class="text-4xl sm:text-5xl font-bold mb-6">Ressources</h1>
