@@ -29,17 +29,24 @@
     </div>
   </div>
   <div class="mx-auto max-w-[250px]" aria-hidden="true">
-    <img src={ image } alt={ title } width="100%" height="100%" />
+    <img src={ image } alt={ title } width="376px" height="250px" class="w-full h-auto" />
   </div>
 </div>
 
 <style>
 .card {
-    backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.074);
+    background-color: rgba(32, 45, 76, 0.65);
+    -webkit-backdrop-filter: none; /* fallback */
+    backdrop-filter: none;
     border: 1px solid rgba(255, 255, 255, 0.222);
 }
 .card:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;
+}
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .card {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari */
+  }
 }
 </style>
