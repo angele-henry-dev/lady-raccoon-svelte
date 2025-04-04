@@ -1,5 +1,12 @@
 <script lang="ts">
-    let { href, label, target, color="primary" } = $props();
+	interface Props {
+		href: string;
+		label: string;
+		target: string;
+		color?: string;
+	}
+
+	let { href, label, target, color="primary" }: Props = $props();
 </script>
 
 <a

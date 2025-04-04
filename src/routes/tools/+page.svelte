@@ -11,6 +11,7 @@
 		simulateColorBlindness
 	} from '$lib/contrast';
 	import contrasts from "$data/contrasts.json";
+	import Button from '../../components/Button.svelte';
 
     let bgColor = "#f8f8f8";
     let textColor = "#111110";
@@ -44,7 +45,7 @@
 
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
         const input = event.target as HTMLInputElement;
-        let value = input.value.trim();
+        const value = input.value.trim();
         if (!/^#[0-9A-Fa-f]{6}$/.test(value)) return;
 
         if (colorType === "bg") bgColor = value;
@@ -98,7 +99,7 @@
 						/>
 						<input type="color" bind:value={bgColor} on:input={updateContrast} id="hexaBg" />
 					</div>
-					<button on:click={adjustBgColor} class="px-2 py-1 mt-4" title="Ajuster le fond">Ajuster le fond</button>
+					<Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
 				</div>
 				<div class="flex flex-col">
 					<label for="hexaText" class="font-black my-5">Couleur du texte :</label>
@@ -113,7 +114,7 @@
 						/>
 						<input type="color" bind:value={textColor} on:input={updateContrast} id="hexaText" />
 					</div>
-					<button on:click={adjustTextColor} class="px-2 py-1 mt-4" title="Ajuster le texte">Ajuster le texte</button>
+					<Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
 				</div>
 			</div>
 			<div class="contrast flex flex-col p-5 pt-0">
@@ -217,9 +218,6 @@
 			border-bottom-right-radius: 10px;
 			border-top-width: 1px;
 		}
-	}
-	.pickers button {
-		width: 180px;
 	}
 
 	.input-container {

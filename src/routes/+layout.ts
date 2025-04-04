@@ -5,10 +5,7 @@ export const load: LayoutLoad = () => {
 		sections: [
 			{
                 slug: 'tools',
-                title: 'Tools',
-                children: [
-                    { slug: 'contrast-checker', title: 'Contrast checker' }
-                ]
+                title: 'Tools'
             }
 		]
 	};

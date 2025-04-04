@@ -1,5 +1,9 @@
 <script lang="ts">
-let { size = "50px" } = $props();
+	interface Props {
+		size?: string;
+	}
+
+	let { size = "50px" }: Props = $props();
 </script>
 
 <div class="logo flex flex-row items-center">

@@ -5,7 +5,7 @@
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	let { children }: LayoutProps = $props();
+	const { children }: LayoutProps = $props();
 </script>
 
 <Header />

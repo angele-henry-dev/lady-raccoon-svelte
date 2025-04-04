@@ -1,7 +1,15 @@
 <script lang="ts">
 	import Link from "./Link.svelte";
 
-    let { title, badges, description, image, link } = $props();
+	interface Props {
+    title: string;
+    badges: string[];
+    description: string;
+    image: string;
+    link: string;
+	}
+
+	let { title, badges, description, image, link }: Props = $props();
 </script>
 
 <div class="card p-5 rounded-xl transition grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[850px]">
