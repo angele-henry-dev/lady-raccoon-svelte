@@ -37,9 +37,9 @@
 			<div class="absolute bottom-[0] start-0 w-full h-[80%] bg-[var(--background)]"></div>
 		</div>
 		<Tree class="hidden sm:block absolute bottom-[55%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
-		<Plant class="absolute bottom-[55%] sm:bottom-[5%] end-[2%] w-[100px] scale-[70%] sm:scale-100" />
-		<Plant class="absolute bottom-[55%] end-[40%] w-[60px] scale-[70%] sm:scale-100" />
-		<!-- <Raccoon class="absolute bottom-[60%] start-[0] sm:end-[15%] w-[170px] sm:w-[215px]" /> -->
+		<Plant class="absolute bottom-[55%] end-[80%] sm:end-[40%] w-[60px] scale-[70%] sm:scale-100" />
+		<Raccoon class="absolute bottom-[50%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px]" />
+		<Plant class="hidden sm:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
 </section>
 
