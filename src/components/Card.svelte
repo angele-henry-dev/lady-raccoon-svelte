@@ -13,7 +13,7 @@
 	let { type, title, badges, description, image, link }: Props = $props();
 </script>
 
-<div class="card p-5 rounded-xl transition grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[850px]">
+<div class="card p-5 rounded-xl transition grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[850px] z-10">
   <div class="mx-auto flex flex-col justify-start items-start">
     <h2 class="text-xl font-semibold mb-3">{ title }</h2>
     <div class="mb-5">
@@ -35,16 +35,10 @@
 
 <style>
 .card {
-    background-color: rgba(32, 45, 76, 0.65);
+    background-color: rgba(32, 45, 76, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.222);
 }
 .card:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;
-}
-@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-  .card {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* Safari */
-  }
 }
 </style>

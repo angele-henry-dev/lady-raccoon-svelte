@@ -36,17 +36,11 @@
 <style>
   @media (prefers-reduced-motion: no-preference) {
     header {
-      transition: backdrop-filter 1s ease, background-color 1s ease;
+      transition: background-color 1s ease;
     }
   }
   header.bg {
-		background-color: rgba(32, 45, 76, 0.65);
-  }
-  @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-    header.bg {
-		backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); /* Safari */
-    }
+		background-color: rgba(32, 45, 76, 0.95);
   }
 
   /* Nav menu */
