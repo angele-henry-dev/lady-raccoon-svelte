@@ -63,7 +63,7 @@
 	}
 </script>
   
-<style scoped>
+<style>
 .sitemap ul {
     list-style: none;
 }

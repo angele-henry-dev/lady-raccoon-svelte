@@ -33,7 +33,7 @@
 -->
 </header>
 
-<style scoped>
+<style>
 	header {
     transition: backdrop-filter 1s ease, background-color 1s ease;
 	}

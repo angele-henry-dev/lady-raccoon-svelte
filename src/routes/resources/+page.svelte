@@ -29,12 +29,12 @@
 
   <div class="grid grid-cols-1 gap-2">
     {#each resources as res}
-      <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
+      <Card type={res.type} title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
     {/each}
   </div>
 </section>
   
-<style scoped>
+<style>
     :global(button) {
       font-weight: bold;
       transition: background-color 0.2s ease;

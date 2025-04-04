@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<style scoped>
+<style>
   :root {
     --moon-color-dark: var(--color-white);
     --moon-color: #ffffff;

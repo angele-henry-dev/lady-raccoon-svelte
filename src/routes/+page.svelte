@@ -45,7 +45,7 @@
 
 <Faq />
 
-<style scoped>
+<style>
 	.hero {
 		height: calc(100vh - 50px);
 

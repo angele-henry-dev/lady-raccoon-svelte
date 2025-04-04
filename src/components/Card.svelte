@@ -2,6 +2,7 @@
 	import Link from "./Link.svelte";
 
 	interface Props {
+    type: string;
     title: string;
     badges: string[];
     description: string;
@@ -9,7 +10,7 @@
     link: string;
 	}
 
-	let { title, badges, description, image, link }: Props = $props();
+	let { type, title, badges, description, image, link }: Props = $props();
 </script>
 
 <div class="card p-5 rounded-xl transition grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[850px]">
@@ -24,15 +25,15 @@
         {@html description}
     </div>
     <div>
-      <Link href={link} label="Récupérer" target="_blank" color="secondary" />
+      <Link href={link} label="Opens in a new window the {type}" target="_blank" color="secondary" />
     </div>
   </div>
   <div class="mx-auto max-w-[250px]" aria-hidden="true">
-    <img src={ image } alt={ title } />
+    <img src={ image } alt={ title } width="100%" height="100%" />
   </div>
 </div>
 
-<style scoped>
+<style>
 .card {
     backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.074);

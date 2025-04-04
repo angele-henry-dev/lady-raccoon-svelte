@@ -55,9 +55,9 @@
 
 	function getAccessibilityLevels(ratio: number) {
         return [
-            { label: "AA 18px", reached: ratio >= CONTRAST_RATIO_AA_L },
+            { label: "AA 18pt", reached: ratio >= CONTRAST_RATIO_AA_L },
             { label: "AA", reached: ratio >= CONTRAST_RATIO_AA },
-            { label: "AAA 18px", reached: ratio >= CONTRAST_RATIO_AAA_L },
+            { label: "AAA 18pt", reached: ratio >= CONTRAST_RATIO_AAA_L },
             { label: "AAA", reached: ratio >= CONTRAST_RATIO_AAA },
         ];
     }
@@ -132,12 +132,12 @@
 		</div>
 		<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor};">
 			<div>
-				<p class="my-3 font-black">Normal text - 12px</p>
-				<p class="" style="font-size: 12px;">I see dead pixels… but not with this contrast!</p>
+				<p class="my-3 font-black">Normal text - 12pt</p>
+				<p class="" style="font-size: 12pt;">I see dead pixels… but not with this contrast!</p>
 			</div>
 			<div>
-				<p class="my-3 font-black">Large text - 18px</p>
-				<p style="font-size: 18px;">Mission: Increase contrast. Status: In Progress...</p>
+				<p class="my-3 font-black">Large text - 18pt</p>
+				<p style="font-size: 18pt;">Mission: Increase contrast. Status: In Progress...</p>
 			</div>
 		</div>
 	</div>
@@ -160,12 +160,12 @@
 			</div>
 			<div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
 				<div>
-					<p class="my-3 font-black">Normal text - 12px</p>
-					<p class="" style="font-size: 12px;">{contrast.example_1}</p>
+					<p class="my-3 font-black">Normal text - 12pt</p>
+					<p class="" style="font-size: 12pt;">{contrast.example_1}</p>
 				</div>
 				<div>
-					<p class="my-3 font-black">Large text - 18px</p>
-					<p style="font-size: 18px;">{contrast.example_2}</p>
+					<p class="my-3 font-black">Large text - 18pt</p>
+					<p style="font-size: 18pt;">{contrast.example_2}</p>
 				</div>
 			</div>
 		</div>
@@ -202,7 +202,7 @@
 	</defs>
 </svg>
 
-<style scoped>
+<style>
 	.pickers {
 		border-width: 1px;
 		border-radius: 10px;

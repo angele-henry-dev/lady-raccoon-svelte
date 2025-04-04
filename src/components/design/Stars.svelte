@@ -87,7 +87,7 @@
   {/each}  
 </div>
 
-<style scoped>
+<style>
   @media (prefers-reduced-motion: no-preference) {
     .starslayer1 .star {
       animation: twinkle 2s infinite;
