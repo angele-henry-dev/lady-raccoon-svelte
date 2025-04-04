@@ -2,6 +2,17 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "/resources",
+			"dest": "/resources/"
+		},
+		{
+			"src": "/resources/",
+			"status": 308,
+			"headers": {
+				"Location": "/resources"
+			}
+		},
+		{
 			"src": "/_app/immutable/.+",
 			"headers": {
 				"cache-control": "public, immutable, max-age=31536000"
@@ -18,6 +29,9 @@
 	"overrides": {
 		"index.html": {
 			"path": ""
+		},
+		"resources.html": {
+			"path": "resources"
 		}
 	},
 	"images": {
