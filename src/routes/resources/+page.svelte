@@ -20,8 +20,8 @@
   
 <section class="w-5/6 mx-auto my-10">
 
-  <div class="absolute top-[20px] end-[5%] flex items-center justify-center size-[200px] sm:size-[300px]">
-    <Moon classes="hidden md:block relative size-[200px]" full={false} />
+  <div class="relative h-[50px] sm:h-[100px] w-full flex flex-row items-start justify-end">
+    <Moon size="100px" full={false} />
   </div>
 
   <h1 class="text-4xl sm:text-5xl font-bold mb-6">Ressources</h1>
@@ -29,7 +29,7 @@
 
   <div class="grid grid-cols-1 gap-2">
     {#each resources as res}
-      <Card type={res.type} title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
+      <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
     {/each}
   </div>
 </section>

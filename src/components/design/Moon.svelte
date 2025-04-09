@@ -1,14 +1,15 @@
 <script lang="ts">
 	interface Props {
-		classes: string;
+		classes?: string;
+		size?: string;
 		full?: boolean;
 	}
 
-	let { classes, full = true }: Props = $props();
+	let { classes, full = true, size = "200px" }: Props = $props();
 </script>
 
-<div aria-hidden="true" class={classes}>
-  <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent' }">
+<div aria-hidden="true" class="{classes} size-[{size}]">
+  <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent absolute -top-[60px]' } -z-1">
     {#if full}
       <div class="absolute top-[20%] start-[15%] bg-[var(--moon-color-dark)] size-[30%] rounded-full"></div>
       <div class="absolute top-[60%] start-[40%] bg-[var(--moon-color-dark)] size-[15%] rounded-full"></div>
@@ -22,10 +23,11 @@
     --moon-color-dark: var(--color-white);
     --moon-color: #ffffff;
     --shadow-color: 107, 121, 194;
+    /* --shadow-size: calc({size} * (40/100)); */
   }
 
   .moon {
-    box-shadow: 50px 10px 0px 0px #EFD19F;
+    box-shadow: 40px 10px 0px 0px #EFD19F;
   }
   .moon.full {
     box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),
