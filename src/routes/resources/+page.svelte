@@ -1,5 +1,5 @@
 <script lang="ts">
-    import resources from "$data/resources.json";
+  import resources from "$data/resources.json";
 	import Card from "../../components/Card.svelte";
 	import Moon from "../../components/design/Moon.svelte";
 </script>
@@ -21,7 +21,7 @@
 <section class="w-5/6 mx-auto my-10">
 
   <div class="absolute top-[20px] end-[5%] flex items-center justify-center size-[200px] sm:size-[300px]">
-    <Moon class="hidden lg:block relative size-[200px]" />
+    <Moon classes="hidden md:block relative size-[200px]" full={false} />
   </div>
 
   <h1 class="text-4xl sm:text-5xl font-bold mb-6">Ressources</h1>
