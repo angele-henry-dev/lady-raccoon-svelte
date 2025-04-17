@@ -33,7 +33,7 @@
     C’est pourquoi j’ai créé <strong>forabetter.tech</strong>.
   </p>
 
-  <h2 class="text-2xl font-semibold mt-12 mb-4">Une communauté safe, inclusive et bienveillante</h2>
+  <h2>Une communauté safe, inclusive et bienveillante</h2>
   <p class="mb-6">
     Ici, pas de jugement, pas de pression, pas de course à la productivité. Juste des gens passionnés, curieux, parfois un peu perdus (et c’est ok), qui aiment apprendre et s’entraider.
   </p>
@@ -41,7 +41,7 @@
     Que tu sois <strong>développeur·se, UX/UI designer, DevOps, architecte, infra</strong>, ou juste passionné·e de technologie, tu es le ou la bienvenue.
   </p>
 
-  <h2 class="text-2xl font-semibold mt-12 mb-4">Notre mission</h2>
+  <h2>Notre mission</h2>
   <ul class="list-disc pl-6 space-y-2">
     <li> <strong>Apprendre à son rythme</strong> (formations, ressources, lives)</li>
     <li><strong>Échanger et s’entraider</strong> sur ses projets ou ses galères</li>
@@ -49,7 +49,7 @@
     <li><strong>Trouver du soutien et de la motivation</strong> (parfois même le weekend ou à 2h du mat)</li>
   </ul>
 
-  <h2 class="text-2xl font-semibold mt-12 mb-4">Concrètement, tu y trouveras :</h2>
+  <h2>Concrètement, tu y trouveras :</h2>
   <ul class="list-disc pl-6 space-y-2">
     <li>Un Discord communautaire avec salons publics & privés</li>
     <li>Des <strong>sessions de coworking en live sur Twitch et Discord</strong></li>
@@ -58,7 +58,7 @@
     <li>Des gens qui te comprennent quand tu dis "je suis bloqué sur un bug depuis 4h et c’était un *!$$ de <code>;</code> manquant"</li>
   </ul>
 
-  <h2 class="text-2xl font-semibold mt-12 mb-4">Rejoins-nous !</h2>
+  <h2>Rejoins-nous !</h2>
   <p class="mb-6">
     Tu veux avancer dans la tech sans te sentir seul·e ?<br>
     Tu veux un endroit où poser tes questions sans avoir peur du jugement ?<br>
@@ -70,5 +70,5 @@
     <strong>Bienvenue chez toi.</strong>
   </p>
 
-  <Link label="Découvre le Discord " href="https://discord.gg/BAZdtgcuNX" target="_blank" />
+  <Link title="Discord" label="Découvre le Discord" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
 </section>

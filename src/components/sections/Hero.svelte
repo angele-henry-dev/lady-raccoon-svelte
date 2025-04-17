@@ -30,9 +30,9 @@
 			/>
 		</div>
 	</div>
-	<div class="bottom bg-[var(--color-blue-night)] relative h-[23%] w-full flex flex-col items-center justify-center">
+	<div class="bottom bg-[var(--color-blue-dark)] relative h-[23%] w-full flex flex-col items-center justify-center">
 		<div class="relative size-full overflow-x-clip" aria-hidden="true">
-			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[#181f3a] rounded-t-[50%] rounded-b-none"></div>
+			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[#111528] rounded-t-[50%] rounded-b-none"></div>
 			<div class="hidden sm:block absolute bottom-[2vmin] -end-[20vmin] w-[80%] h-[120%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
 			<div class="absolute bottom-[0] start-0 w-full h-[80%] bg-[var(--background)]"></div>
 		</div>
@@ -49,7 +49,7 @@
 			background: linear-gradient(
 				to bottom,
 				var(--background) 0%,
-				var(--color-blue-night) 70%
+				var(--color-blue-dark) 70%
 			);
 		}
 	}

@@ -4,7 +4,7 @@
         <defs>
           <style>
             .flower {
-              fill: #5a4987;
+              fill: var(--color-lavanda-dark);
             }
             .tige {
               fill: #29304a;

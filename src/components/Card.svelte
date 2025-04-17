@@ -10,12 +10,12 @@
 	export let badges: string[] = [];
 </script>
 
-<div class="relative card bg-[var(--color-blue-night)] p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
+<div class="relative card bg-[var(--background-light)] p-5 transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
   <div class="flex flex-col justify-start items-start">
-    <h2 class="text-xl font-semibold mb-3">{ title }</h2>
+    <h2>{ title }</h2>
     <div class="mb-5">
       {#each badges as badge}
-        <span class="text-sm capitalize px-2 py-1 mr-3 bg-[var(--primary)] text-[var(--background)] rounded-full">{ badge }</span>
+        <span class="text-sm capitalize px-2 py-1 mr-3 bg-[var(--primary)] text-[var(--background)]">{ badge }</span>
       {/each}
     </div>
     <div class="flex-grow">

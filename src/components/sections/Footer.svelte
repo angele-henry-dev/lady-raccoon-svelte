@@ -2,7 +2,7 @@
 	import Link from "../Link.svelte";
 </script>
 
-<footer class="w-[95%] m-auto p-5 text-sm text-center md:text-left">
+<footer class="w-[95%] m-auto mt-20 p-5 text-sm text-center md:text-left">
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="mb-3">
 			<p><strong>Pages</strong></p>

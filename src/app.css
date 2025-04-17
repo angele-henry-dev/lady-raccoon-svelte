@@ -3,19 +3,26 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --color-blue-night: hsl(222, 41%, 21%);       /* #202D4C */
-  --color-black: hsl(235, 31%, 11%);            /* # */
+  --color-black: hsl(0, 0%, 0%);
+  --color-black-light: rgb(17, 17, 17);
+
   --color-blue: hsl(190, 100%, 73%);            /* #75E8FF */
+  --color-blue-dark: hsl(222, 41%, 21%);        /* #202D4C */
+
   --color-lavanda: hsl(287, 100%, 73%);         /* #E075FF */
   --color-lavanda-light: hsl(287, 100%, 83%);   /* #ECA8FF */
+  --color-lavanda-dark: hsl(287, 30%, 51%);     /* # */
+
   --color-white: hsl(0, 0%, 85%);               /* #DADADA */
 
   --background: var(--color-black);
+  --background-light: var(--color-black-light);
   --background-tr: hsla(235, 31%, 11%, 0.4);
+
   --foreground: var(--color-white);
+
   --primary: var(--color-blue);
   --secondary: var(--color-lavanda);
-  --secondary-light: var(--color-lavanda-light);
 }
 
 @font-face {
@@ -28,8 +35,9 @@
 
 * {
   border-color: rgb(68, 68, 68);
+  border-radius: 0.75rem;
 }
-:focus {
+:focus-visible {
   color: var(--background);
   background-color: var(--foreground);
 }
