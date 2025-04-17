@@ -14,7 +14,7 @@
 	let { title, badges = [], description, href, image, link, target = "_self" }: Props = $props();
 </script>
 
-<div class="relative card bg-[var(--color-blue-night)] backdrop-blur-3xl p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
+<div class="relative card bg-[var(--color-blue-night)] p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
   <div class="flex flex-col justify-start items-start">
     <h2 class="text-xl font-semibold mb-3">{ title }</h2>
     <div class="mb-5">

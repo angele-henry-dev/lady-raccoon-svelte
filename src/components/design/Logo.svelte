@@ -1,85 +1,48 @@
-<script lang="ts">
-	interface Props {
-		size?: string;
-	}
-
-	let { size = "50px" }: Props = $props();
-</script>
-
-<div class="logo flex flex-row items-center">
-  <a href="/" title="Homepage" aria-label="Go on forabetter.tech homepage" class="icon">
-    <svg data-name="Logo" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.1 211.1" width="{size}" height="{size}">
-      <g>
-        <polygon class="cls-4" points="197.83 123.74 153.62 74.51 150.74 38.86 126.74 59.3 126.74 59.3 105.55 70.47 87.46 59.84 87.46 59.84 59.51 38.86 57.97 74.51 13.27 126.09 70.58 150.97 90.62 137.52 79.56 172.24 90.62 172.24 124.69 172.24 135.71 172.24 123.51 137.52 143.87 151.61 197.83 123.74"/>
-        <polygon class="cls-3" points="112.29 106.74 101.77 106.74 84.2 168.3 130.86 168.3 112.29 106.74"/>
-        <polygon class="cls-3" points="192.14 122.79 76.95 58.09 18.96 124.99 192.14 122.79"/>
-        <polygon class="cls-2" points="18.96 124.99 134.03 58.09 192.14 122.79 18.96 124.99"/>
-        <g>
-          <polygon class="cls-1" points="192.14 122.79 143.66 147.83 110.97 126.38 131.32 94.06 192.14 122.79"/>
-          <polygon class="cls-1" points="18.96 124.99 69.89 147.83 104.07 126.26 82.22 94.06 18.96 124.99"/>
+<div class="logo w-[50px] h-[40px]">
+  <a href="/" title="Homepage" aria-label="Go on forabetter.tech homepage" class="icon size-full block">
+    <svg data-name="Logo" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.1 211.1" width="40" height="40">
+      <g id="head">
+        <polygon id="fond_vert" class="st2" points="189.1 89.8 144.8 40.6 142 5 118 25.4 118 25.4 96.8 36.6 78.7 26 78.7 26 50.7 5 49.2 40.6 4.5 92.2 61.8 117.1 81.8 103.6 70.8 138.4 81.9 138.4 115.9 138.4 126.9 138.4 114.7 103.6 135.1 117.7 189.1 89.8"/>
+        <polygon id="nose" class="st2" points="103.5 72.9 93 72.9 75.4 134.4 122.1 134.4 103.5 72.9"/>
+        <polygon id="face_left" class="st2" points="183.4 88.9 68.2 24.2 10.2 91.1 183.4 88.9"/>
+        <polygon id="face_right" class="st1" points="10.2 91.1 125.3 24.2 183.4 88.9 10.2 91.1"/>
+        <g id="black">
+          <polygon id="right" class="st0" points="183.4 88.9 134.9 113.9 98.8 90 122.6 60.2 183.4 88.9"/>
+          <polygon id="left" class="st0" points="10.2 91.1 61.1 113.9 98.8 90 73.4 60.2 10.2 91.1"/>
         </g>
-        <g>
-          <circle data-name="right" class="cls-3" cx="128.57" cy="114.96" r="5.98"/>
-          <circle data-name="left" class="cls-3" cx="84.63" cy="114.96" r="5.98"/>
+        <g id="eyes">
+          <circle id="right-2" class="st2" cx="119.8" cy="81.1" r="6"/>
+          <circle id="left-2" class="st2" cx="75.9" cy="81.1" r="6"/>
         </g>
-        <g>
-          <polygon data-name="left" class="cls-1" points="60.91 76.6 62.26 45.38 85.38 62.83 60.91 76.6"/>
-          <polygon data-name="right" class="cls-1" points="150.65 76.6 148.17 45.83 126.74 62.33 150.65 76.6"/>
+        <g id="ears">
+          <polygon id="left-3" class="st0" points="52.1 42.7 53.5 11.5 76.6 28.9 52.1 42.7"/>
+          <polygon id="right-3" class="st0" points="141.9 42.7 139.4 12 118 28.4 141.9 42.7"/>
         </g>
-        <polygon data-name="nose" class="cls-1" points="91.55 168.3 107.53 148.7 123.51 168.3 91.55 168.3"/>
+        <polygon id="nose-2" class="st0" points="82.8 135.7 98.8 116.1 114.7 135.7 82.8 135.7"/>
       </g>
     </svg>
-  </a>
-  <a href="/" title="Homepage" aria-label="Go on forabetter.tech homepage">
-    <span class="open-dyslexic">forabetter.tech</span>
   </a>
 </div>
 
 <style>
-.cls-1 {
+.st0 {
   fill: var(--background);
 }
-.cls-2,
-.cls-3,
-.cls-4 {
+.st1, .st2 {
   transition: fill 1s;
-  position: relative;
-  overflow: hidden;
 }
-.cls-2 {
+.st1 {
   fill: var(--secondary);
 }
-.cls-3 {
-  fill: var(--primary);
-}
-.cls-4 {
+.st2 {
   fill: var(--primary);
 }
 
-.cls-2::before,
-.cls-3::before,
-.cls-4::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to left, var(--secondary), transparent);
-  transform: translateX(0);
-  transition: transform 1s ease-out;
-  z-index: 1;
+.logo:hover .st1,
+.logo:hover .st2 {
+  fill: var(--background);
 }
-
-.logo:hover .cls-2::before,
-.logo:hover .cls-3::before,
-.logo:hover .cls-4::before {
-  transform: translateX(100%);
-}
-
-.logo:hover .cls-2,
-.logo:hover .cls-3,
-.logo:hover .cls-4 {
-  fill: var(--primary);
+.logo:hover #eyes .st2 {
+  fill: var(--foreground);
 }
 </style>

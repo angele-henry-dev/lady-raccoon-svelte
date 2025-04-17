@@ -52,7 +52,7 @@
 <style>
 	.hero {
 		.top {
-			margin-top: 50px;
+			margin-top: 80px;
 			background: linear-gradient(
 				to bottom,
 				var(--background) 0%,
