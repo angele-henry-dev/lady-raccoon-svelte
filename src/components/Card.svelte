@@ -3,10 +3,10 @@
 
 	export let title: string;
 	export let description: string;
-	export let href: string;
-	export let link: string;
+	export let href: string = "";
+	export let link: string = "";
 	export let target: "_blank" | "_self" = "_self";
-	export let image: string;
+	export let image: string = "";
 	export let badges: string[] = [];
 </script>
 

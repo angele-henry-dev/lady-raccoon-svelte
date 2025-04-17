@@ -3,7 +3,6 @@
 </script>
 
 <section class="w-full max-w-5xl mx-auto px-4 py-10">
-	<h2 class="text-center">Ici, on ne vend pas du rêve. On partage du concret.</h2>
 	<div class="grid grid-cols-3 gap-4">
 		<Card title="Formations" description="Formations et ressources pour devs à télécharger." href="/resources" link="Voir les formations " />
 		<Card title="Ressources" description="Formations et ressources pour devs à télécharger." href="/resources" link="Voir les ressources " />

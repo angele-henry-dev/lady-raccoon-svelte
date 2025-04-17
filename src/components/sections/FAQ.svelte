@@ -17,7 +17,7 @@
 			<li class="border rounded-lg overflow-hidden">
 				<button
 					on:click={() => toggle(index)}
-					class="w-full text-left p-4 flex justify-between items-center"
+					class="w-full text-left p-4 flex justify-between items-center hover:text-[var(--background)] hover:bg-[var(--foreground)]"
 				>
 					<span>{faq.question}</span>
 					<span class="text-xl">{openIndex === index ? "-" : "+"}</span>
