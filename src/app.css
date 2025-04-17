@@ -26,6 +26,14 @@
   font-display: swap;
 }
 
+* {
+  border-color: rgb(68, 68, 68);
+}
+:focus {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
 .open-dyslexic {
   font-family: 'OpenDyslexic', 'Poppins', sans-serif;
 }
@@ -37,6 +45,7 @@ body {
   color: var(--foreground);
 }
 
+
 main {
   width: 100%;
 }
@@ -45,21 +54,6 @@ h2 {
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 1em;
-}
-
-a {
-  padding: 5px;
-}
-@media (prefers-reduced-motion: no-preference) {
-  a {
-    transition: color 0.3s ease;
-  }
-}
-
-a:hover,
-:focus {
-  color: var(--background);
-  background-color: var(--foreground);
 }
 
 .fade-in {

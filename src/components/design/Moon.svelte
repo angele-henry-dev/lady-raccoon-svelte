@@ -1,10 +1,6 @@
 <script lang="ts">
-	interface Props {
-		classes?: string;
-		full?: boolean;
-	}
-
-	let { classes, full = true }: Props = $props();
+	export let classes: string;
+	export let full: boolean = true;
 </script>
 
 <div aria-hidden="true" class="{classes}">

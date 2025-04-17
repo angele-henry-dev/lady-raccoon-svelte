@@ -1,17 +1,13 @@
 <script lang="ts">
 	import Link from "./Link.svelte";
 
-	interface Props {
-    title: string;
-    description: string;
-    href?: string;
-    link?: string;
-    target?: "_blank" | "_self";
-    image?: string;
-    badges?: string[];
-	}
-
-	let { title, badges = [], description, href, image, link, target = "_self" }: Props = $props();
+	export let title: string;
+	export let description: string;
+	export let href: string;
+	export let link: string;
+	export let target: "_blank" | "_self" = "_self";
+	export let image: string;
+	export let badges: string[] = [];
 </script>
 
 <div class="relative card bg-[var(--color-blue-night)] p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
@@ -27,7 +23,7 @@
     </div>
     {#if link && href}
       <div>
-        <Link href={href} label={link} target={target} />
+        <Link href={href} title={title} label={link} target={target} />
       </div>
     {/if}
   </div>
@@ -40,6 +36,6 @@
 
 <style>
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.222);
+  border: 1px solid rgb(68, 68, 68);
 }
 </style>

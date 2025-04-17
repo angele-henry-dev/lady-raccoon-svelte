@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import Link from '../components/Link.svelte';
 	const online = typeof navigator !== 'undefined' ? navigator.onLine : true;
 </script>
 
@@ -13,7 +14,7 @@
 			<h1>Page égarée...</h1>
 			<p>
 				Si vous pensiez trouver quelque chose ici, faites-le nous savoir sur notre 
-				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank">GitHub</a>. Merci !
+				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" label="GitHub" />. Merci !
 			</p>
 		{:else}
 			<h1>Oopsie !</h1>
@@ -24,7 +25,7 @@
 			<p>Essayez de recharger la page.</p>
 			<p>
 				Si l'erreur persiste, faites-le nous savoir sur notre 
-				<a href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank">GitHub</a>. Merci !
+				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" label="GitHub" />. Merci !
 			</p>
 		{/if}
 	{:else}

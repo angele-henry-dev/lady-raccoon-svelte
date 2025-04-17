@@ -1,25 +1,37 @@
 <script lang="ts">
-	interface Props {
-		href: string;
-		label: string;
-		target: "_blank" | "_self";
-		color?: string;
-	}
+	export let href: string;
+	export let title: string;
+	export let label: string;
+	export let target: "_blank" | "_self";
+	export let colored: boolean = true;
+	export let button: boolean = false;
 
-	let { href, label, target, color="primary" }: Props = $props();
+	const labelText = target === '_blank'
+		? `Ouvre dans une nouvelle fenêtre ${title}`
+		: `Ouvre la page ${title}`;
+
+	const basicClasses = `py-1 px-2 hover:text-[var(--background)] hover:bg-[var(--foreground)] ${colored ? 'text-[var(--primary)]' : ''}`;
+	const buttonClasses = "px-6 py-3 rounded-xl font-semibold text-[var(--background)] hover:text-[var(--background)] bg-[var(--primary)] hover:bg-[var(--secondary-light)]";
 </script>
 
 <a
-    href="{href}"
-    title={target === '_blank' ? 'Ouvre dans une nouvelle fenêtre ' + label : label}
-    aria-label={target === '_blank' ? 'Ouvre dans une nouvelle fenêtre ' + label : label}
-    target="{target}"
-    class="inline-block mt-6 px-6 py-2 
-        rounded-xl font-semibold text-sm 
-        text-[var(--background)] hover:text-[var(--background)] 
-        {color === "primary" ? 'bg-[var(--primary)]' : 'bg-[var(--secondary-light)]'} 
-        {color === "primary" ? 'hover:bg-[var(--secondary-light)]' : 'hover:bg-[var(--primary)]'} 
-        transition z-20"
+    href={href}
+    title={labelText}
+    aria-label={labelText}
+    target={target}
+	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+	class={ button ? buttonClasses : basicClasses }
 >
     { label }
+	{#if target === '_blank'}
+		<span aria-hidden="true" class="ml-1">→</span>
+	{/if}
 </a>
+
+<style>
+	@media (prefers-reduced-motion: no-preference) {
+		a {
+			transition: all 0.3s ease;
+		}
+	}
+</style>

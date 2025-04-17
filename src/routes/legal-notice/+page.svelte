@@ -1,3 +1,8 @@
+<script>
+
+	import Link from "../../components/Link.svelte";
+
+</script>
 <svelte:head>
 	<title>Mentions légales | forabetter.tech</title>
 	<meta name="description" content="Découvrez les informations légales du site forabetter.tech : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies." />
@@ -29,7 +34,7 @@
 		<li><strong>Vercel Inc.</strong></li>
 		<li>440 N Barranca Ave #4133</li>
 		<li>Covina, CA 91723</li>
-		<li><a href="https://vercel.com" target="_blank" title="Ouvre dans une nouvelle fenêtre Vercel" aria-label="Ouvre dans une nouvelle fenêtre Vercel" rel="noopener">Vercel</a></li>
+		<li><Link href="https://vercel.com" target="_blank" label="Vercel" /></li>
 	</ul>
   
 	<h2>Propriété intellectuelle</h2>
@@ -48,7 +53,7 @@
 	</p>
 	<p>
 		Plus d’informations disponibles dans la
-		<a href="/privacy-policy" class="text-primary underline">Politique de confidentialité</a>.
+		<Link href="/privacy-policy" target="_self" label="Politique de confidentialité" />.
 	</p>
   
 	<h2>Cookies</h2>

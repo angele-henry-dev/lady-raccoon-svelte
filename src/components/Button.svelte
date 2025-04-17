@@ -1,13 +1,9 @@
 
 <script lang="ts">
-	interface Props {
-		children: any;
-		label: string;
-		color?: string;
-        handleClick: () => void;
-	}
-
-	let { handleClick, children, label, color="primary" }: Props = $props();
+	export let children: any;
+	export let label: string;
+	export let color: string = "primary";
+	export let handleClick: () => void;
 </script>
 
 <button 

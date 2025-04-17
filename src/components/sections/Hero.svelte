@@ -4,6 +4,7 @@
 	import Plant from '../design/Plant.svelte';
 	import Raccoon from '../design/Raccoon.svelte';
 	import Tree from '../design/Tree.svelte';
+	import Link from '../Link.svelte';
 </script>
 
 <section class="hero h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
@@ -17,23 +18,16 @@
 			<p class="lg:text-2xl py-5 max-w-2xl">
 				Bienvenue dans l’open space virtuel de la tech.
 			</p>
-			<p class="lg:text-2xl py-5 max-w-2xl">
+			<p class="lg:text-2xl py-5 max-w-2xl mb-5">
 				Coworking, entraide, formations, et ressources pour progresser sans se cramer.
 			</p>
-			<a
-				href="https://discord.gg/BAZdtgcuNX"
-				title="Ouvre dans une nouvelle fenêtre Discord"
-				aria-label="Ouvre dans une nouvelle fenêtre Discord"
-				target="_blank"
-				class="inline-block mt-6 px-6 py-3 
-					rounded-xl font-semibold text-sm md:text-xl 
-					text-[var(--background)] hover:text-[var(--background)] 
-					bg-[var(--primary)] 
-					hover:bg-[var(--secondary-light)] 
-					transition z-20"
-			>
-				Découvre le Discord →
-			</a>
+			<Link 
+				href="https://discord.gg/BAZdtgcuNX" 
+				target="_blank" 
+				title="Discord" 
+				label="Découvre le Discord"
+				button={true}
+			/>
 		</div>
 	</div>
 	<div class="bottom bg-[var(--color-blue-night)] relative h-[23%] w-full flex flex-col items-center justify-center">
