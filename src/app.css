@@ -4,11 +4,11 @@
 
 :root {
   --color-blue-night: hsl(222, 41%, 21%);       /* #202D4C */
-  --color-black: hsl(235, 41%, 11%);            /* #101226 */
+  --color-black: hsl(235, 31%, 11%);            /* # */
   --color-blue: hsl(190, 100%, 73%);            /* #75E8FF */
   --color-lavanda: hsl(287, 100%, 73%);         /* #E075FF */
   --color-lavanda-light: hsl(287, 100%, 83%);   /* #ECA8FF */
-  --color-white: hsl(40, 20%, 92%);             /* #EFECE7 */
+  --color-white: hsl(0, 0%, 85%);               /* #DADADA */
 
   --background: var(--color-black);
   --foreground: var(--color-white);
@@ -62,9 +62,7 @@ a:hover,
 }
 a.icon:hover,
 .icon:focus {
-  color: var(--secondary);
-  border: 1px solid var(--secondary);
-  background: none;
+  background-color: var(--secondary);
 }
 
 .fade-in {

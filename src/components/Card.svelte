@@ -15,7 +15,7 @@
 </script>
 
 <div class="relative card p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
-  <div class="mx-auto flex flex-col justify-start items-start">
+  <div class="flex flex-col justify-start items-start">
     <h2 class="text-xl font-semibold mb-3">{ title }</h2>
     <div class="mb-5">
       {#each badges as badge}

@@ -15,6 +15,6 @@
         fill: var(--foreground);
     }
     svg:hover {
-        fill: var(--secondary);
+        fill: var(--background);
     }
 </style>

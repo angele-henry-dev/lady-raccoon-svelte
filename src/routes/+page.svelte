@@ -8,10 +8,10 @@
 </script>
 
 <svelte:head>
-	<title>For a better tech • Le cocon tech pour se motiver, s’entraider, progresser. Ensemble. • Lady Raccoon</title>
+	<title>For a better tech • Le cocon tech pour se motiver, s’entraider, progresser. Ensemble.</title>
 	<meta
 		name="description"
-		content="Un cocon tech pour les développeuses et développeurs, UX/UI, DevOps, architectes & passionné·e·s. Ici, on s'entraide, on échange et on progresse ensemble, sans prise de tête. Rejoins-nous pour apprendre, partager et passer de bons moments dans un espace convivial et inclusif !"
+		content="Un cocon tech pour les développeuses et développeurs, UX UI, DevOps, architectes & passionné·e·s. Ici, on s'entraide, on échange et on progresse ensemble, sans prise de tête. Rejoins-nous pour apprendre, partager et passer de bons moments dans un espace convivial et inclusif !"
 	/>
 </svelte:head>
 

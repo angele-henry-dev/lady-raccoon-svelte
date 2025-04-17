@@ -2,15 +2,14 @@
 	import '../../app.css';
 	import Logo from '../design/Logo.svelte';
 
-    let scrollHeight = 0;
-    $: showNavBG = scrollHeight > 100;
+  let scrollHeight = 0;
+  $: showNavBG = scrollHeight > 100;
 </script>
   
 <svelte:window bind:scrollY={scrollHeight} />
 
-
 <header
-	class="{showNavBG ? 'bg' : ''} sticky top-0 w-full flex flex-row justify-between items-start p-4 text-xl text-right font-bold z-50"
+	class="{showNavBG ? 'bg' : ''} fixed w-full flex flex-row justify-between items-start p-4 text-xl text-right font-bold z-50"
 >
   <div><Logo /></div>
 
@@ -23,13 +22,6 @@
           <li><a href="/blog">Blog</a></li>
       </ul>
   </nav>
-
-<!-- PLAN -->
-<!-- 
-1. Homepage (Communauté)
-- Parfait pour expliquer l’ADN de forabetter.tech : bienveillance, entraide, montée en compétences, etc. 
-- Un calendrier ou agenda des prochains lives / coworkings ou autres événements (confs, etc.)
--->
 </header>
 
 <style>

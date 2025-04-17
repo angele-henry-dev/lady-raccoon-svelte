@@ -1,14 +1,13 @@
 <script lang="ts">
 	interface Props {
 		classes?: string;
-		size?: string;
 		full?: boolean;
 	}
 
-	let { classes, full = true, size = "200px" }: Props = $props();
+	let { classes, full = true }: Props = $props();
 </script>
 
-<div aria-hidden="true" class="{classes} size-[{size}]">
+<div aria-hidden="true" class="{classes}">
   <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent absolute -top-[60px]' } -z-1">
     {#if full}
       <div class="absolute top-[20%] start-[15%] bg-[var(--moon-color-dark)] size-[30%] rounded-full"></div>
