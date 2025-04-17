@@ -12,7 +12,7 @@
 
 <button 
     class="inline-block mt-6 px-6 py-3 
-        rounded-full font-semibold 
+        rounded-xl font-semibold 
         text-[var(--background)] hover:text-[var(--background)] 
         {color === "primary" ? 'bg-[var(--primary)]' : 'bg-[var(--secondary-light)]'} 
         {color === "primary" ? 'hover:bg-[var(--secondary-light)]' : 'hover:bg-[var(--primary)]'} 

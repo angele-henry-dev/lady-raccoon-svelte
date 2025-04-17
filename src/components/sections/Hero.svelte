@@ -6,18 +6,18 @@
 	import Tree from '../design/Tree.svelte';
 </script>
 
-<section class="hero h-screen w-full text-center sm:text-left flex flex-col items-center justify-center">
-	<div class="top w-[300px] px-5 w-full flex flex-col sm:flex-row items-center justify-evenly flex-grow">
+<section class="hero h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
+	<div class="top px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
 		<Stars />
-		<div class="px-10 mb-5">
+		<div class="px-10 m-auto md:my-0 md:mx-auto mb-5">
 			<Moon classes="size-[150px] md:size-[200px]" />
 		</div>
 		<div class="z-10">
-			<h1 class="text-4xl md:text-6xl font-bold uppercase">Le cocon tech</h1>
-			<p class="md:text-2xl py-5 max-w-2xl">
+			<h1 class="text-4xl lg:text-6xl font-bold uppercase">Le cocon tech</h1>
+			<p class="lg:text-2xl py-5 max-w-2xl">
 				Bienvenue dans l’open space virtuel de la tech.
 			</p>
-			<p class="md:text-2xl py-5 max-w-2xl">
+			<p class="lg:text-2xl py-5 max-w-2xl">
 				Coworking, entraide, formations, et ressources pour progresser sans se cramer.
 			</p>
 			<a
@@ -26,7 +26,7 @@
 				aria-label="Ouvre dans une nouvelle fenêtre Discord"
 				target="_blank"
 				class="inline-block mt-6 px-6 py-3 
-					rounded-full font-semibold text-sm md:text-xl 
+					rounded-xl font-semibold text-sm md:text-xl 
 					text-[var(--background)] hover:text-[var(--background)] 
 					bg-[var(--primary)] 
 					hover:bg-[var(--secondary-light)] 

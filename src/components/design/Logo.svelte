@@ -31,7 +31,7 @@
     </svg>
   </a>
   <a href="/" title="Homepage" aria-label="Go on forabetter.tech homepage">
-    <span class="hidden sm:block open-dyslexic">forabetter.tech</span>
+    <span class="open-dyslexic">forabetter.tech</span>
   </a>
 </div>
 

@@ -11,6 +11,7 @@
   --color-white: hsl(0, 0%, 85%);               /* #DADADA */
 
   --background: var(--color-black);
+  --background-tr: hsla(235, 31%, 11%, 0.4);
   --foreground: var(--color-white);
   --primary: var(--color-blue);
   --secondary: var(--color-lavanda);

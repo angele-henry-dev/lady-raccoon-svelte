@@ -14,7 +14,7 @@
 	let { title, badges = [], description, href, image, link, target = "_self" }: Props = $props();
 </script>
 
-<div class="relative card p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
+<div class="relative card bg-[var(--color-blue-night)] backdrop-blur-3xl p-5 rounded-xl transition grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 max-w-[850px] z-10">
   <div class="flex flex-col justify-start items-start">
     <h2 class="text-xl font-semibold mb-3">{ title }</h2>
     <div class="mb-5">
@@ -40,21 +40,6 @@
 
 <style>
 .card {
-  --blur: 5px;
   border: 1px solid rgba(255, 255, 255, 0.222);
-}
-.card::before {
-  content: '';
-  position: absolute;
-  top: calc(var(--blur) / 2 * -1);
-  left: calc(var(--blur) / 2 * -1);
-  width: calc(100% + var(--blur));
-  height: calc(100% + var(--blur));
-  background-color: rgba(22, 30, 51, 0.9);
-  filter: blur(var(--blur));
-  z-index: -1;
-}
-.card:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
 }
 </style>

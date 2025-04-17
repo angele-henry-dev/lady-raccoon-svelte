@@ -4,7 +4,7 @@
 	import LinkedIn from "../design/LinkedIn.svelte";
 </script>
 
-<footer class="mb-10 px-5 pt-10 pb-20 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
+<footer class="mb-5 px-5 pt-10 grid grid-cols-1 md:grid-cols-2 gap-4 border-t">
 	<div>
 		<p class="pb-5">
 			<span class="open-dyslexic">forabetter.tech by Lady Raccoon with 💜</span> {new Date().getFullYear()}

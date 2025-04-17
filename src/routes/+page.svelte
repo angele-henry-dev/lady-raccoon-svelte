@@ -20,4 +20,3 @@
 <What />
 <Community />
 <SupportMe />
-<Faq />
