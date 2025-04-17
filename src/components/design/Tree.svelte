@@ -7,7 +7,7 @@
 
 <style>
     .tree {
-        fill: #101226;
+        fill: var(--background);
     }
     @media (prefers-reduced-motion: no-preference) {
         .tree {
