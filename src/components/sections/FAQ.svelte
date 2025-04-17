@@ -9,7 +9,7 @@
 	}
 </script>
 
-<section class="w-full max-w-4xl mx-auto px-4 py-10">
+<section class="w-full max-w-5xl mx-auto px-4 py-10">
 	<h2 class="text-3xl sm:text-4xl font-bold mb-6">FAQ</h2>
 
 	<ul class="space-y-4">

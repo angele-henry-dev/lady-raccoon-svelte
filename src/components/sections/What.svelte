@@ -2,7 +2,7 @@
 	import Card from '../Card.svelte';
 </script>
 
-<section class="w-full max-w-4xl mx-auto px-4 py-10">
+<section class="w-full max-w-5xl mx-auto px-4 py-10">
 	<h2>Ici, on ne vend pas du rêve. On partage du concret.</h2>
 	<div class="grid grid-flow-row md:grid-flow-col gap-4">
 		<Card title="Formations et ressources" description="Formations et ressources pour devs à télécharger." href="/resources" link="Voir les ressources →" />
