@@ -40,6 +40,12 @@ main {
   width: 100%;
 }
 
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
 a {
   padding: 5px;
 }
