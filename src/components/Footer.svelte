@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Discord from "./design/Discord.svelte";
+	import Kofi from "./design/Kofi.svelte";
 	import LinkedIn from "./design/LinkedIn.svelte";
 </script>
 
@@ -18,6 +19,6 @@
 	<div class="text-left md:text-right">
 		<p><a href="/legal-notice">Mentions légales</a></p>
 		<p><a href="/privacy-policy">Politique de confidentialité</a></p>
-		<p class="my-5 flex flex-row justify-start md:justify-end gap-5 text-3xl"><Discord /><LinkedIn /></p>
+		<p class="my-5 flex flex-row justify-start md:justify-end gap-5 text-3xl"><Kofi /><Discord /><LinkedIn /></p>
 	</div>
 </footer>

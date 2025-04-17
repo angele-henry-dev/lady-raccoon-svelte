@@ -70,5 +70,5 @@
     <strong>Bienvenue chez toi.</strong>
   </p>
 
-  <Link label="Rejoins le Discord →" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
+  <Link label="Découvre le Discord →" href="https://discord.gg/BAZdtgcuNX" target="_blank" />
 </section>

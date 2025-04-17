@@ -29,7 +29,7 @@
 
   <div class="grid grid-cols-1 gap-2">
     {#each resources as res}
-      <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} link={res.link} />
+      <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} href={res.link} link="Acheter" />
     {/each}
   </div>
 </section>
