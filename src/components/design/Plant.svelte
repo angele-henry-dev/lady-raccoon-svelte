@@ -7,7 +7,7 @@
               fill: var(--color-lavanda-dark);
             }
             .tige {
-              fill: #29304a;
+              fill: #2f4b59;
             }
           </style>
         </defs>

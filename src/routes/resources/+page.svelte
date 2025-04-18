@@ -1,7 +1,8 @@
 <script lang="ts">
   import resources from "$data/resources.json";
-	import Card from "../../components/Card.svelte";
 	import Moon from "../../components/design/Moon.svelte";
+	import Plant from "../../components/design/Plant.svelte";
+	import Stars from "../../components/design/Stars.svelte";
 </script>
 
 <svelte:head>
@@ -18,25 +19,35 @@
     <meta name="twitter:image" content="https://forabetter.tech/images/preview-ressources.jpg" />
 </svelte:head>
   
-<section class="w-5/6 mx-auto my-10">
-
-  <div class="relative h-[50px] sm:h-[100px] w-full flex flex-row items-start justify-end">
-    <Moon size="100px" full={false} />
+<section class="relative w-full flex flex-col items-center justify-center mb-10">
+  <div aria-hidden="true" class="resources-top relative h-[250px] w-full overflow-x-clip">
+    <Stars />
+    <Moon classes="absolute top-[10%] end-[10%] size-[100px]" full={false} />
+    <div class="absolute -bottom-[0] -start-[5%] sm:-start-[20vmin] w-[70%] h-[50%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
+    <div class="absolute bottom-[0] -end-[20vmin] w-[120%] h-[30%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
   </div>
 
-  <h1 class="text-4xl sm:text-5xl font-bold mb-6">Ressources</h1>
-  <p class="mb-8 text-lg">Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
-
-  <div class="grid grid-cols-1 gap-2">
-    {#each resources as res}
-      <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} href={res.link} link="Acheter" />
-    {/each}
-  </div>
-</section>
+  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
+    <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Ressources</h1>
+    <p>Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
   
+    <div class="grid grid-cols-1 gap-2">
+      {#each resources as res}
+        <!-- <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} href={res.link} link="Acheter" /> -->
+      {/each}
+    </div>
+
+  </div>
+
+  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px] scale-100" />
+</section>
+
 <style>
-    :global(button) {
-      font-weight: bold;
-      transition: background-color 0.2s ease;
-    }
+	.resources-top {
+    background: linear-gradient(
+      to bottom,
+      var(--background) 0%,
+      var(--color-blue-dark) 70%
+    );
+	}
 </style>

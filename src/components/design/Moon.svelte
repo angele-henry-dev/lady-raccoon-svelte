@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let classes: string;
+	export let classes: string = "";
 	export let full: boolean = true;
 </script>
 
 <div aria-hidden="true" class="{classes}">
-  <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent absolute -top-[60px]' } -z-1">
+  <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent' } -z-1">
     {#if full}
       <div class="absolute top-[20%] start-[15%] bg-[var(--moon-color-dark)] size-[30%] rounded-full"></div>
       <div class="absolute top-[60%] start-[40%] bg-[var(--moon-color-dark)] size-[15%] rounded-full"></div>
@@ -20,6 +20,9 @@
     --shadow-color: 250, 250, 250;
   }
 
+  .moon {
+    box-shadow: 25px 10px 0px 0px #EFD19F;
+  }
   .moon.full {
     box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),
                 0 0 180px rgba(var(--shadow-color), 0.5);

@@ -4,7 +4,7 @@
 
 :root {
   --color-black: hsl(0, 0%, 0%);
-  --color-black-light: rgb(17, 17, 17);
+  --color-black-light: hsl(219, 70%, 9%);
 
   --color-blue: hsl(219, 100%, 80%);            /* #99bdff */
   --color-blue-dark: hsl(219, 70%, 25%);        /* #13326c */
@@ -15,8 +15,7 @@
   --color-white: hsl(0, 0%, 85%);               /* #dadada */
 
   --background: var(--color-black);
-  --background-light: var(--color-black-light);
-  --background-tr: hsla(235, 31%, 11%, 0.4);
+  --background-tr: hsla(0, 0%, 0%, 0.4);
 
   --foreground: var(--color-white);
 
