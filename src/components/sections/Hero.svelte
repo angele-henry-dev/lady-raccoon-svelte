@@ -38,7 +38,7 @@
 		</div>
 		<Tree class="hidden sm:block absolute bottom-[55%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
 		<Plant class="absolute bottom-[55%] end-[80%] sm:end-[40%] w-[60px] scale-[70%] sm:scale-100" />
-		<!-- <Raccoon class="absolute bottom-[50%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px]" /> -->
+		<img src="/images/raccoon_dreaming.png" alt="Raccoon working on his computer" width="170" height="250" class="absolute bottom-[50%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] h-auto" />
 		<Plant class="hidden sm:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
 </section>

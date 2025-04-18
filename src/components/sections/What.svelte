@@ -26,6 +26,7 @@
 			title="Coworking" 
 			description="Des sessions de coworking en live sur Discord pour se motiver et s'encourager." 
 			href="https://discord.gg/BAZdtgcuNX" 
+			target="_blank"
 			link="Découvrir le Discord" 
 		/>
 		<Card 
