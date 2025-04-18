@@ -17,8 +17,7 @@
   :root {
     --moon-color-dark: var(--color-white);
     --moon-color: #ffffff;
-    --shadow-color: 107, 121, 194;
-    /* --shadow-size: calc({size} * (40/100)); */
+    --shadow-color: 250, 250, 250;
   }
 
   .moon {

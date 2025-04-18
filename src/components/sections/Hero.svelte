@@ -2,7 +2,6 @@
 	import Moon from '../design/Moon.svelte';
 	import Stars from '../design/Stars.svelte';
 	import Plant from '../design/Plant.svelte';
-	import Raccoon from '../design/Raccoon.svelte';
 	import Tree from '../design/Tree.svelte';
 	import Link from '../Link.svelte';
 </script>
@@ -15,10 +14,10 @@
 		</div>
 		<div class="z-10">
 			<h1 class="text-4xl lg:text-6xl font-bold uppercase">Le cocon tech</h1>
-			<p class="lg:text-2xl py-5 max-w-2xl">
+			<p class="lg:text-2xl pt-5 max-w-2xl">
 				Bienvenue dans l’open space virtuel de la tech.
 			</p>
-			<p class="lg:text-2xl py-5 max-w-2xl mb-5">
+			<p class="lg:text-2xl pb-5 max-w-2xl mb-5">
 				Coworking, entraide, formations et ressources pour progresser en toute bienveillance.
 			</p>
 			<Link 
@@ -32,13 +31,13 @@
 	</div>
 	<div class="bottom bg-[var(--color-blue-dark)] relative h-[23%] w-full flex flex-col items-center justify-center">
 		<div class="relative size-full overflow-x-clip" aria-hidden="true">
-			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[#111528] rounded-t-[50%] rounded-b-none"></div>
+			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
 			<div class="hidden sm:block absolute bottom-[2vmin] -end-[20vmin] w-[80%] h-[120%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
 			<div class="absolute bottom-[0] start-0 w-full h-[80%] bg-[var(--background)]"></div>
 		</div>
-		<Tree class="hidden sm:block absolute bottom-[55%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
+		<Tree class="hidden sm:block absolute bottom-[85%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
 		<Plant class="absolute bottom-[55%] end-[80%] sm:end-[40%] w-[60px] scale-[70%] sm:scale-100" />
-		<img src="/images/raccoon_dreaming.png" alt="Raccoon working on his computer" width="170" height="250" class="absolute bottom-[50%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] h-auto" />
+		<img aria-hidden="true" src="/images/raccoon_dreaming.png" alt="Raccoon working on his computer" width="170" height="250" class="absolute bottom-[50%] end-[0] sm:end-[15%] w-[170px] sm:w-[215px] h-auto" />
 		<Plant class="hidden sm:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
 </section>

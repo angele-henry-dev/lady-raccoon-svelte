@@ -11,7 +11,7 @@
 		: `Ouvre la page ${title}`;
 
 	const basicClasses = `py-1 px-3 hover:text-[var(--background)] hover:bg-[var(--foreground)] ${colored ? 'text-[var(--primary)]' : ''} group-hover:text-[var(--background)] group-hover:border`;
-	const buttonClasses = "px-6 py-3 font-semibold text-[var(--background)] hover:text-[var(--background)] bg-[var(--color-lavanda-light)] hover:bg-[var(--primary)]";
+	const buttonClasses = "px-6 py-3 font-semibold text-[var(--background)] hover:text-[var(--background)] bg-[var(--secondary)] hover:bg-[var(--primary)]";
 </script>
 
 <a

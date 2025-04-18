@@ -10,7 +10,7 @@
 </script>
 
 <section class="w-full max-w-5xl mx-auto py-10">
-	<div class="w-full bg-[var(--background-light)] grid grid-cols-1 md:grid-cols-2 gap-4 border p-10">
+	<div class="w-full bg-[var(--background)] grid grid-cols-1 md:grid-cols-2 gap-4 border p-10">
 		<div>
 			<h2>Trouve les réponses aux questions les plus fréquentes</h2>
 		</div>

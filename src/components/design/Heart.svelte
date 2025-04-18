@@ -1,12 +1,6 @@
-<div class="heart"></div>
+<div aria-hidden="true" class="heart"></div>
 
 <style>
-.heart {
-    bottom: 4em;
-    position: absolute;
-    right: 4em;
-}
-
 .heart::before,
 .heart::after {
     background-color: var(--secondary);

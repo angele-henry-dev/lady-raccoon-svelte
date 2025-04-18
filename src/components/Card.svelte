@@ -10,8 +10,9 @@
 </script>
 
 <div class="relative overflow-hidden grid grid-cols-1 {image ? 'md:grid-cols-2' : ''} gap-4 bg-[var(--background)] border group">
-  <div
-    class="circle absolute h-[5em] w-[5em] -top-[2.5em] -right-[2.5em] rounded-full bg-[var(--color-lavanda-light)] group-hover:scale-[1000%] duration-500 z-[0]"
+  <div 
+    aria-hidden="true"
+    class="circle absolute h-[5em] w-[5em] -top-[2.5em] -right-[2.5em] rounded-full bg-[var(--secondary)] group-hover:scale-[1000%] duration-500 z-[0]"
   ></div>
   <div class="flex flex-col justify-start items-start p-5 group-hover:text-[var(--background)] z-[1]">
     <h2>{ title }</h2>

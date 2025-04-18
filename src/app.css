@@ -6,11 +6,10 @@
   --color-black: hsl(0, 0%, 0%);
   --color-black-light: rgb(17, 17, 17);
 
-  --color-blue: hsl(190, 100%, 73%);            /* #75E8FF */
-  --color-blue-dark: hsl(222, 41%, 21%);        /* #202D4C */
+  --color-blue: hsl(190, 100%, 73%);            /* #8ac8ff */
+  --color-blue-dark: hsl(200, 100%, 15%);        /* #202D4C */
 
-  --color-lavanda: hsl(287, 100%, 73%);         /* #E075FF */
-  --color-lavanda-light: hsl(287, 100%, 83%);   /* #ECA8FF */
+  --color-lavanda: hsl(287, 100%, 80%);         /* #E075FF */
   --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975DA8 */
 
   --color-white: hsl(0, 0%, 85%);               /* #DADADA */
@@ -62,6 +61,10 @@ h2 {
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 .fade-in {
