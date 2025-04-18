@@ -3,7 +3,7 @@
 </script>
 
 <section class="w-full max-w-5xl mx-auto px-4 py-10">
-	<div class="grid grid-cols-3 gap-4">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 		<Card 
 			title="Outils" 
 			description="Des outils pensés pour t’aider à coder plus vite, mieux, et avec plus de sérénité." 

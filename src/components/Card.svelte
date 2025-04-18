@@ -25,7 +25,7 @@
     {/if}
   </div>
   {#if image}
-    <div class="mx-auto max-w-[250px]" aria-hidden="true">
+    <div class="mx-auto max-w-[250px] z-[1]" aria-hidden="true">
       <img src={ image } alt={ title } width="376" height="250" class="w-full h-auto" />
     </div>
   {/if}
