@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Moon from '../design/Moon.svelte';
-	import Stars from '../design/Stars.svelte';
-	import Plant from '../design/Plant.svelte';
-	import Tree from '../design/Tree.svelte';
-	import Link from '../Link.svelte';
+	import Moon from '../../design/Moon.svelte';
+	import Stars from '../../design/Stars.svelte';
+	import Plant from '../../design/Plant.svelte';
+	import Tree from '../../design/Tree.svelte';
+	import Link from '../../Link.svelte';
 </script>
 
 <section class="hero h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
@@ -37,7 +37,7 @@
 		</div>
 		<Tree class="hidden sm:block absolute bottom-[85%] -start-[5%] w-[400px] h-[520px] scale-[70%] sm:scale-100" />
 		<Plant class="absolute bottom-[55%] end-[80%] sm:end-[40%] w-[60px] scale-[70%] sm:scale-100" />
-		<img aria-hidden="true" src="/images/raccoon_dreaming.png" alt="Raccoon working on his computer" width="170" height="150" class="absolute bottom-[50%] end-[5%] sm:end-[15%] w-[100px] sm:w-[145px] h-auto" />
+		<img aria-hidden="true" src="/images/raccoon_dreaming.webp" alt="Raccoon working on his computer" width="170" height="150" class="absolute bottom-[50%] end-[5%] sm:end-[15%] w-[100px] sm:w-[145px] h-auto" />
 		<Plant class="hidden sm:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
 </section>

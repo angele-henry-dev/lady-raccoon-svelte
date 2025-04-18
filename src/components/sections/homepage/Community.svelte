@@ -1,6 +1,6 @@
 <section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 grid grid-cols-1 md:grid-cols-2 gap-4">
 	<div aria-hidden="true">
-		<img src="/images/raccoons.png" alt="Raccoons working together" width="350" height="250" class="h-auto mr-auto" />
+		<img src="/images/raccoons.webp" alt="Raccoons working together" width="350" height="250" class="h-auto mr-auto" />
 	</div>
 	<div>
 		<h2>Une communauté <span class="text-[var(--secondary)]">bienveillante</span>.</h2>

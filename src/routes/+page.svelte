@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Faq from '../components/sections/FAQ.svelte';
-	import Why from '../components/sections/Why.svelte';
-	import What from '../components/sections/What.svelte';
-	import Community from '../components/sections/Community.svelte';
-	import Hero from '../components/sections/Hero.svelte';
-	import SupportMe from '../components/sections/SupportMe.svelte';
+	import Faq from '../components/sections/homepage/FAQ.svelte';
+	import Why from '../components/sections/homepage/Why.svelte';
+	import What from '../components/sections/homepage/What.svelte';
+	import Community from '../components/sections/homepage/Community.svelte';
+	import Hero from '../components/sections/homepage/Hero.svelte';
+	import SupportMe from '../components/sections/homepage/SupportMe.svelte';
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Heart from '../design/Heart.svelte';
-	import Link from '../Link.svelte';
+	import Heart from '../../design/Heart.svelte';
+	import Link from '../../Link.svelte';
 </script>
 
 <section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 text-center">
