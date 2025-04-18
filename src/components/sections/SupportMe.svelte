@@ -3,7 +3,7 @@
 	import Link from '../Link.svelte';
 </script>
 
-<section class="w-full max-w-5xl mx-auto px-4 my-20 sm:py-20 text-center">
+<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 text-center">
 	<div class="relative bg-[var(--background)] border w-full p-10">
 		<div class="absolute"><Heart /></div>
 		<div aria-hidden="true" class="absolute bg-[var(--secondary)] opacity-80 start-[5%] top-[5%] size-[90%] rotate-[-6deg] blur-[50px] z-[-1]"></div>

@@ -2,7 +2,7 @@
 	import Link from '../Link.svelte';
 </script>
 
-<section class="w-full max-w-5xl mx-auto px-4 my-20 sm:py-20 grid grid-cols-1 md:grid-cols-2 gap-4">
+<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 grid grid-cols-1 md:grid-cols-2 gap-4">
 	<div>
 		<h2><span class="text-[var(--secondary)]">Un cocon</span>... Pour qui&nbsp;? Pour quoi&nbsp;?</h2>
 		<p>Que tu sois développeur·se, UX/UI designer, DevOps, architecte, infra, ou juste passionné·e de technologie, tu es le ou la bienvenu·e.</p>

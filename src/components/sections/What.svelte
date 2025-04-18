@@ -2,7 +2,7 @@
 	import Card from '../Card.svelte';
 </script>
 
-<section class="w-full max-w-5xl mx-auto px-4 my-20 sm:py-20">
+<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10">
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 		<Card 
 			title="Outils" 
