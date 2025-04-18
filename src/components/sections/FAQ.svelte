@@ -9,7 +9,7 @@
 	}
 </script>
 
-<section class="w-full max-w-5xl mx-auto py-10">
+<section class="w-full max-w-5xl mx-auto my-20 px-4 sm:py-20">
 	<div class="w-full bg-[var(--background)] grid grid-cols-1 md:grid-cols-2 gap-4 border p-10">
 		<div>
 			<h2>Trouve les réponses aux questions les plus fréquentes</h2>

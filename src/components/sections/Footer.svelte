@@ -2,7 +2,7 @@
 	import Link from "../Link.svelte";
 </script>
 
-<footer class="w-[95%] m-auto mt-20 p-5 text-sm text-center md:text-left">
+<footer class="w-[95%] m-auto p-5 text-sm text-center md:text-left">
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="flex flex-col mb-3">
 			<strong>Pages</strong>
@@ -22,7 +22,7 @@
 			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité" label="Politique de confidentialité" />
 		</div>
 	</div>
-	<div class="flex flex-col md:flex-row items-center md:items-start justify-between border-t p-5">
+	<div class="flex flex-col md:flex-row items-center md:items-start justify-between border-t rounded-none p-5">
 		<p class="md:mr-5">
 			<span class="open-dyslexic">forabetter.tech par Lady Raccoon</span> ‧ 2024 - {new Date().getFullYear()}
 		</p>

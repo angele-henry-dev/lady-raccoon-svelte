@@ -20,13 +20,9 @@
     --shadow-color: 250, 250, 250;
   }
 
-  .moon {
-    box-shadow: 40px 10px 0px 0px #EFD19F;
-  }
   .moon.full {
     box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),
-                0 0 180px rgba(var(--shadow-color), 0.5),
-                0 0 300px rgba(var(--shadow-color), 0.3);
+                0 0 180px rgba(var(--shadow-color), 0.5);
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -36,18 +32,15 @@
     @keyframes pulseGlow {
       0% {
           box-shadow: 0 0 80px rgba(var(--shadow-color), 0.6),
-                      0 0 150px rgba(var(--shadow-color), 0.4),
-                      0 0 250px rgba(var(--shadow-color), 0.2);
+                      0 0 150px rgba(var(--shadow-color), 0.4);
       }
       50% {
           box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),
-                      0 0 180px rgba(var(--shadow-color), 0.5),
-                      0 0 300px rgba(var(--shadow-color), 0.3);
+                      0 0 180px rgba(var(--shadow-color), 0.5);
       }
       100% {
           box-shadow: 0 0 80px rgba(var(--shadow-color), 0.6),
-                      0 0 150px rgba(var(--shadow-color), 0.4),
-                      0 0 250px rgba(var(--shadow-color), 0.2);
+                      0 0 150px rgba(var(--shadow-color), 0.4);
       }
     }
   }
