@@ -11,59 +11,59 @@
   <meta name="twitter:image" content="https://forabetter.tech/images/preview-privacy.png" />
 </svelte:head>
 
-<section class="prose prose-lg mx-auto my-10 px-4 max-w-3xl">
-	<h1>Politique de confidentialité</h1>
+<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10">
+	<h1 class="text-2xl lg:text-4xl font-bold uppercase">Politique de confidentialité</h1>
   
-	<p>Dernière mise à jour : mars 2025</p>
+	<p>Dernière mise à jour : avril 2025</p>
   
-	<h2>Introduction</h2>
+	<h2 class="mt-5">Introduction</h2>
 	<p>
 		Bienvenue dans la zone de confiance de forabetter.tech ! Ici, tes données sont protégées
 		comme le loot épique d’un boss de fin.
 	</p>
   
-	<h2>Données collectées</h2>
+	<h2 class="mt-5">Données collectées</h2>
 	<p>En naviguant sur ce site ou en me contactant, certaines informations peuvent être collectées :</p>
-	<ul>
+	<ul class="list-disc pl-5">
 		<li>Nom et prénom (si tu remplis un formulaire)</li>
 		<li>Adresse e-mail (pour te répondre, jamais pour spammer)</li>
 		<li>Données de navigation (via des cookies pour améliorer l’expérience utilisateur)</li>
 	</ul>
   
-	<h2>Utilisation des données</h2>
+	<h2 class="mt-5">Utilisation des données</h2>
 	<p>Les données sont utilisées uniquement pour :</p>
-	<ul>
+	<ul class="list-disc pl-5">
 		<li>Répondre à tes messages</li>
 		<li>Améliorer le site et ses performances (merci les cookies 🍪)</li>
 	</ul>
   
-	<h2>Partage des données</h2>
+	<h2 class="mt-5">Partage des données</h2>
 	<p>
 		Tes infos ne seront jamais vendues à des seigneurs maléfiques ni à d’autres entités.
 		Elles ne sont partagées qu’en cas d’obligation légale.
 	</p>
   
-	<h2>Sécurité</h2>
+	<h2 class="mt-5">Sécurité</h2>
 	<p>
 		Des mesures techniques et organisationnelles sont mises en place pour sécuriser tes données.
 	</p>
   
-	<h2>Vos droits</h2>
+	<h2 class="mt-5">Vos droits</h2>
 	<p>Tu as le pouvoir de :</p>
-	<ul>
+	<ul class="list-disc pl-5">
 		<li>Accéder à tes données</li>
 		<li>Demander leur modification ou leur suppression</li>
 		<li>Limiter ou t’opposer à leur traitement</li>
 	</ul>
 	<p>Pour exercer ces droits : <strong>angele.henry[at]ladyraccoon.com</strong></p>
   
-	<h2>Cookies</h2>
+	<h2 class="mt-5">Cookies</h2>
 	<p>
 		Ce site utilise des cookies pour rendre ta navigation plus agréable. Si tu préfères t’en passer,
 		tu peux les désactiver dans les paramètres de ton navigateur.
 	</p>
   
-	<h2>Loi applicable</h2>
+	<h2 class="mt-5">Loi applicable</h2>
 	<p>
 		Cette politique est régie par la législation française. En cas de litige, les tribunaux français
 		seront les seuls compétents.

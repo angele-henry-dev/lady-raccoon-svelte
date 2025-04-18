@@ -2,17 +2,6 @@
 	"version": 3,
 	"routes": [
 		{
-			"src": "/about",
-			"dest": "/about/"
-		},
-		{
-			"src": "/about/",
-			"status": 308,
-			"headers": {
-				"Location": "/about"
-			}
-		},
-		{
 			"src": "/blog",
 			"dest": "/blog/"
 		},
@@ -95,9 +84,6 @@
 	"overrides": {
 		"index.html": {
 			"path": ""
-		},
-		"about.html": {
-			"path": "about"
 		},
 		"blog.html": {
 			"path": "blog"

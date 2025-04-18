@@ -24,7 +24,7 @@
 >
     { label }
 	{#if target === '_blank'}
-		→
+		<span aria-hidden="true" class="ml-1">→</span>
 	{/if}
 </a>
 

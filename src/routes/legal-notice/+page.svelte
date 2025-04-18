@@ -16,8 +16,8 @@
 	<meta name="twitter:image" content="https://forabetter.tech/og-legal.jpg" />
 </svelte:head>
 
-<section class="prose prose-lg mx-auto my-10 px-4 max-w-3xl">
-	<h1>Mentions légales</h1>
+<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10">
+	<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Mentions légales</h1>
   
 	<h2>Éditeur du site</h2>
 	<p><strong>forabetter.tech</strong> est édité par :</p>
@@ -28,16 +28,16 @@
 		<li>Email de contact : angele.henry[at]ladyraccoon.com</li>
 	</ul>
   
-	<h2>Hébergement</h2>
+	<h2 class="mt-5">Hébergement</h2>
 	<p>Le site est hébergé par :</p>
 	<ul>
 		<li><strong>Vercel Inc.</strong></li>
 		<li>440 N Barranca Ave #4133</li>
 		<li>Covina, CA 91723</li>
-		<li><Link href="https://vercel.com" target="_blank" label="Vercel" /></li>
+		<li><Link href="https://vercel.com" target="_blank" title="Vercel" label="Ouvrir dans une nouvelle fenêtre Vercel" /></li>
 	</ul>
   
-	<h2>Propriété intellectuelle</h2>
+	<h2 class="mt-5">Propriété intellectuelle</h2>
 	<p>
 		Tous les contenus présents sur ce site (textes, images, illustrations, vidéos, logos, etc.)
 		sont la propriété exclusive d’Angele Henry, sauf indication contraire.
@@ -46,23 +46,22 @@
 	  	Toute reproduction ou utilisation, totale ou partielle, sans autorisation préalable est interdite.
 	</p>
   
-	<h2>Données personnelles</h2>
+	<h2 class="mt-5">Données personnelles</h2>
 	<p>
 		Les données collectées via les formulaires ou outils présents sur le site ne sont jamais
 		revendues ni cédées. Elles sont utilisées uniquement dans le cadre prévu.
 	</p>
 	<p>
-		Plus d’informations disponibles dans la
-		<Link href="/privacy-policy" target="_self" label="Politique de confidentialité" />.
+		<Link href="/privacy-policy" target="_self" title="Politique de confidentialité" label="Plus d’informations disponibles dans la politique de confidentialité" />
 	</p>
   
-	<h2>Cookies</h2>
+	<h2 class="mt-5">Cookies</h2>
 	<p>
 		Le site utilise des cookies pour améliorer l’expérience utilisateur. Tu peux refuser ou configurer leur
 		usage dans les paramètres de ton navigateur.
 	</p>
   
-	<h2>Loi applicable</h2>
+	<h2 class="mt-5">Loi applicable</h2>
 	<p>
 		Les présentes mentions légales sont régies par la législation française. En cas de litige,
 		les tribunaux français seront seuls compétents.
