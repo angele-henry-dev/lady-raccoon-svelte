@@ -9,7 +9,5 @@
 		<p>Ici, pas de jugement, pas de pression, pas de course à la productivité. Juste des gens passionnés, curieux, parfois un peu perdus (et c’est ok), qui aiment apprendre et s’entraider.</p>
 		<p>→ <Link label="En savoir plus sur mon histoire" href="/about" target="_self" title="A propos" /></p>
 	</div>
-	<div aria-hidden="true">
-		<img src="/images/raccoon_working.webp" alt="Raccoon working on his computer" width="350" height="350" class="h-auto ml-auto" />
-	</div>
+	<img aria-hidden="true" src="/images/raccoon_working.webp" alt="Raccoon working on his computer" width="350" height="350" class="ml-auto" />
 </section>
