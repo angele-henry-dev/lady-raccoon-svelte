@@ -6,13 +6,13 @@
   --color-black: hsl(0, 0%, 0%);
   --color-black-light: rgb(17, 17, 17);
 
-  --color-blue: hsl(190, 100%, 73%);            /* #8ac8ff */
-  --color-blue-dark: hsl(200, 100%, 15%);       /* #00334d */
+  --color-blue: hsl(219, 100%, 80%);            /* # */
+  --color-blue-dark: hsl(219, 70%, 25%);        /* #13326c */
 
-  --color-lavanda: hsl(287, 100%, 80%);         /* #E075FF */
-  --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975DA8 */
+  --color-lavanda: hsl(287, 100%, 80%);         /* #e999ff */
+  --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975da8 */
 
-  --color-white: hsl(0, 0%, 85%);               /* #DADADA */
+  --color-white: hsl(0, 0%, 85%);               /* #dadada */
 
   --background: var(--color-black);
   --background-light: var(--color-black-light);
