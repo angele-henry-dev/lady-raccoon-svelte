@@ -6,8 +6,8 @@
 	import Link from '../../Link.svelte';
 </script>
 
-<section class="hero h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
-	<div class="top px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
+<section class="h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
+	<div class="hero px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
 		<Stars />
 		<div class="px-10 m-auto md:my-0 md:mx-auto mb-5">
 			<Moon classes="size-[150px] md:size-[200px]" />
@@ -42,15 +42,3 @@
 		<Plant class="hidden sm:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
 </section>
-
-<style>
-	.hero {
-		.top {
-			background: linear-gradient(
-				to bottom,
-				var(--background) 0%,
-				var(--color-blue-dark) 70%
-			);
-		}
-	}
-</style>

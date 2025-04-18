@@ -82,3 +82,11 @@ p {
     transform: translateY(0);
   }
 }
+
+.hero {
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--color-blue-dark) 70%
+  );
+}
