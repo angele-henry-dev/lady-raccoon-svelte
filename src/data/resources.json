@@ -2,10 +2,36 @@
     {
         "title": "Keep calm et code accessible",
         "type": "ebook",
-        "isFree": false,
-        "badge": "Nouveauté",
+        "isNew": false,
         "link": "https://ko-fi.com/s/fe92c62be0",
-        "image": "/images/keep_calm_couv_seule.webp",
-        "description": "<p>Ce que tu vas trouver dans ce guide pour dévs&nbsp;:</p><ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
+        "description": "<ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
+    },
+    {
+        "title": "Keep calm et code accessible",
+        "type": "ebook",
+        "isNew": false,
+        "link": "https://ko-fi.com/s/fe92c62be0",
+        "description": "<ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
+    },
+    {
+        "title": "Keep calm et code accessible",
+        "type": "ebook",
+        "isNew": false,
+        "link": "https://ko-fi.com/s/fe92c62be0",
+        "description": "<ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
+    },
+    {
+        "title": "Keep calm et code accessible",
+        "type": "ebook",
+        "isNew": false,
+        "link": "https://ko-fi.com/s/fe92c62be0",
+        "description": "<ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
+    },
+    {
+        "title": "Keep calm et code accessible",
+        "type": "ebook",
+        "isNew": false,
+        "link": "https://ko-fi.com/s/fe92c62be0",
+        "description": "<ul class='list-disc p-5'><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li><li>Une checklist prête à l’emploi</li></ul>"
     }
 ]

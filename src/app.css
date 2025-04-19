@@ -90,3 +90,7 @@ p {
     var(--color-blue-dark) 70%
   );
 }
+
+.blend {
+  mix-blend-mode: difference;
+}

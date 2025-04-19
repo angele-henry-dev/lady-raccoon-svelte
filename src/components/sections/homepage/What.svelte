@@ -8,32 +8,32 @@
 			title="Outils" 
 			description="Des outils pensés pour t’aider à coder plus vite, mieux, et avec plus de sérénité." 
 			href="/tools" 
-			link="Découvrir les outils" 
+			label="Découvrir les outils" 
 		/>
 		<Card 
 			title="Ressources" 
 			description="Ebooks, fiches pratiques… Des contenus pensés pour t’accompagner au quotidien." 
 			href="/resources" 
-			link="Découvrir les ressources" 
+			label="Découvrir les ressources" 
 		/>
 		<Card 
 			title="Formations" 
 			description="Des formations accessibles pour apprendre toujours plus, pas à pas, sans se noyer." 
 			href="/resources" 
-			link="Découvrir les formations" 
+			label="Découvrir les formations" 
 		/>
 		<Card 
 			title="Coworking" 
 			description="Des sessions de coworking en live sur Discord pour se motiver et s'encourager." 
 			href="https://discord.gg/BAZdtgcuNX" 
 			target="_blank"
-			link="Découvrir le Discord" 
+			label="Découvrir le Discord" 
 		/>
 		<Card 
 			title="Blog" 
 			description="Des articles qui parlent tech, accessibilité, émotions, et trucs pas toujours dits ailleurs." 
 			href="/blog" 
-			link="Découvrir le blog" 
+			label="Découvrir le blog" 
 		/>	  
 	</div>
 </section>

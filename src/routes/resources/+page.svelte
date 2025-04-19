@@ -3,6 +3,9 @@
 	import Moon from "../../components/design/Moon.svelte";
 	import Plant from "../../components/design/Plant.svelte";
 	import Stars from "../../components/design/Stars.svelte";
+	import Item from "../../components/Item.svelte";
+
+  const types = ["ebook", "formation", "abonnement"];
 </script>
 
 <svelte:head>
@@ -25,20 +28,20 @@
     <Moon classes="absolute top-[10%] end-[10%] size-[100px]" full={false} />
     <div class="absolute -bottom-[0] -start-[5%] sm:-start-[20vmin] w-[70%] h-[50%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
     <div class="absolute bottom-[0] -end-[20vmin] w-[120%] h-[30%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
-    <Plant class="absolute bottom-[10px] start-[10px] w-[30px] sm:w-[50px] scale-100" />
+    <Plant class="absolute bottom-[10px] start-[10px] w-[30px] sm:w-[50px]" />
   </div>
 
   <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Ressources</h1>
     <p>Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
   
-    <div class="grid grid-cols-1 gap-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {#each resources as res}
-        <!-- <Card title={res.title} badges={[res.type, res.badge]} description={res.description} image={res.image} href={res.link} link="Acheter" /> -->
+        <Item type={res.type} title={res.title} description={res.description} href={res.link} label="Plus d'information ici" isNew={res.isNew} />
       {/each}
     </div>
 
   </div>
 
-  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px] scale-100" />
+  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px]" />
 </section>
