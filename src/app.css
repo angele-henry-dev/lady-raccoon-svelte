@@ -12,6 +12,8 @@
   --color-lavanda: hsl(287, 100%, 80%);         /* #e999ff */
   --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975da8 */
 
+  --color-yellow: hsl(45, 100%, 80%);           /* # */
+
   --color-white: hsl(0, 0%, 85%);               /* #dadada */
 
   --background: var(--color-black);
