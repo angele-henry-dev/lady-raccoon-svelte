@@ -1,8 +1,10 @@
 <script lang="ts">
 	import Header from "$components/design/Header.svelte";
 	import Plant from "$components/design/Plant.svelte";
+	import Item from "$components/Item.svelte";
 
   let { data } = $props();
+  const tags = ["Vie de dev"];
 </script>
 
 <svelte:head>
@@ -22,22 +24,16 @@
 <section class="relative w-full flex flex-col items-center justify-center mb-10">
   <Header />
   <Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
+  <Plant class="absolute bottom-0 start-[0] w-[90px] sm:w-[150px]" />
 
-  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
+  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Blog</h1>
     <p>Des articles et des réflexions pour progresser et mieux comprendre.</p>
 
-    <ul>
-      {#each data.posts as post}
-        <li>
-          <a href={`/blog/${post.slug}`}>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-          </a>
-        </li>
-      {/each}
-    </ul>
-
+    {#each data.posts as post}
+      {#if post.published}
+        <Item types={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire la suite de l'article" />
+      {/if}
+    {/each}
   </div>
-  <Plant class="absolute bottom-0 start-[0] w-[90px] sm:w-[150px]" />
 </section>

@@ -30,7 +30,7 @@
   
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {#each resources as res}
-        <Item type={res.type} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
+        <Item types={[res.type]} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
       {/each}
     </div>
 

@@ -1,6 +1,6 @@
 
 <div aria-hidden="true" {...$$restProps}>
-    <svg data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173.27 288.78">
+    <svg class="z-[-1]" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173.27 288.78">
         <defs>
           <style>
             .flower {
