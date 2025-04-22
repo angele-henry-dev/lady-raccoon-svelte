@@ -16,12 +16,12 @@
 			href="/resources" 
 			label="Découvrir les ressources" 
 		/>
-		<Card 
+		<!-- <Card 
 			title="Formations" 
 			description="Des formations accessibles pour apprendre toujours plus, pas à pas, sans se noyer." 
 			href="/resources" 
 			label="Découvrir les formations" 
-		/>
+		/> -->
 		<Card 
 			title="Coworking" 
 			description="Des sessions de coworking en live sur Discord pour se motiver et s'encourager." 
@@ -29,11 +29,11 @@
 			target="_blank"
 			label="Découvrir le Discord" 
 		/>
-		<Card 
+		<!-- <Card 
 			title="Blog" 
 			description="Des articles qui parlent tech, accessibilité, émotions, et trucs pas toujours dits ailleurs." 
 			href="/blog" 
 			label="Découvrir le blog" 
-		/>	  
+		/>	  --> 
 	</div>
 </section>
