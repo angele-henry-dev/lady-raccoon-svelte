@@ -24,7 +24,7 @@
 <section class="relative w-full flex flex-col items-center justify-center mb-10">
   <Header />
 
-  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
+  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Ressources</h1>
     <p>Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
   
@@ -36,5 +36,5 @@
 
   </div>
 
-  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px]" />
+  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px] z-[-1]" />
 </section>
