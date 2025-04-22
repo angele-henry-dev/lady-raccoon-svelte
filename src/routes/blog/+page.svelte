@@ -1,7 +1,6 @@
 <script>
-	import Moon from "../../components/design/Moon.svelte";
+	import Header from "../../components/design/Header.svelte";
 	import Plant from "../../components/design/Plant.svelte";
-	import Stars from "../../components/design/Stars.svelte";
 
 </script>
 <svelte:head>
@@ -19,17 +18,11 @@
 </svelte:head>
 
 <section class="relative w-full flex flex-col items-center justify-center mb-10">
-  <div aria-hidden="true" class="hero relative h-[250px] w-full overflow-x-clip">
-    <Stars />
-    <Moon classes="absolute top-[10%] end-[10%] size-[100px]" full={false} />
-    <div class="absolute -bottom-[0] -start-[5%] sm:-start-[20vmin] w-[70%] h-[50%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
-    <div class="absolute bottom-[0] -end-[20vmin] w-[120%] h-[30%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
-    <Plant class="absolute bottom-[10px] start-[10px] w-[30px] sm:w-[50px]" />
-  </div>
+  <Header />
 
   <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Blog</h1>
-    <p>Articles pour progresser et mieux comprendre.</p>
+    <p>Des articles pour progresser et mieux comprendre.</p>
 
   </div>
 

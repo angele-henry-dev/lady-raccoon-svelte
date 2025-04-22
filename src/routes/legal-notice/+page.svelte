@@ -1,8 +1,9 @@
 <script>
-
+	import Header from "../../components/design/Header.svelte";
+	import Plant from "../../components/design/Plant.svelte";
 	import Link from "../../components/Link.svelte";
-
 </script>
+
 <svelte:head>
 	<title>Mentions légales | forabetter.tech</title>
 	<meta name="description" content="Découvrez les informations légales du site forabetter.tech : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies." />
@@ -16,7 +17,8 @@
 	<meta name="twitter:image" content="https://forabetter.tech/og-legal.jpg" />
 </svelte:head>
 
-<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10">
+<Header />
+<section class="relative w-full max-w-5xl mx-auto px-4 mb-10 sm:py-10">
 	<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Mentions légales</h1>
   
 	<h2>Éditeur du site</h2>
@@ -66,4 +68,6 @@
 		Les présentes mentions légales sont régies par la législation française. En cas de litige,
 		les tribunaux français seront seuls compétents.
 	</p>
+
 </section>
+<Plant class="absolute bottom-0 end-0 w-[90px] sm:w-[150px]" />

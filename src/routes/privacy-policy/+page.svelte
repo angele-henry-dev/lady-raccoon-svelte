@@ -1,3 +1,8 @@
+<script>
+	import Header from "../../components/design/Header.svelte";
+	import Plant from "../../components/design/Plant.svelte";
+</script>
+
 <svelte:head>
   <title>Politique de confidentialité • forabetter.tech</title>
   <meta name="description" content="Découvrez comment nous protégeons vos données personnelles sur forabetter.tech, une communauté tech bienveillante, inclusive et sécurisée." />
@@ -11,7 +16,8 @@
   <meta name="twitter:image" content="https://forabetter.tech/images/preview-privacy.png" />
 </svelte:head>
 
-<section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10">
+<Header />
+<section class="w-full max-w-5xl mx-auto px-4 mb-10 sm:py-10">
 	<h1 class="text-2xl lg:text-4xl font-bold uppercase">Politique de confidentialité</h1>
   
 	<p>Dernière mise à jour : avril 2025</p>
@@ -69,3 +75,4 @@
 		seront les seuls compétents.
 	</p>
 </section>
+<Plant class="absolute bottom-0 end-0 w-[90px] sm:w-[150px]" />

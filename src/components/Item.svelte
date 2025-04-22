@@ -20,8 +20,8 @@
       <Ribbon text={type} />
     {/if}
   </div>
-  <div class="flex flex-col justify-start items-start p-5 mt-4 z-[1]">
-    <h2>{ title }</h2>
+  <div class="flex flex-col justify-start items-start p-5 z-[1]">
+    <h2 class="mb-0">{ title }</h2>
     <div class="flex-grow">
         {@html description}
     </div>
