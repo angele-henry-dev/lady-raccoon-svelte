@@ -1,7 +1,7 @@
 <script>
-	import Header from "../../components/design/Header.svelte";
-	import Plant from "../../components/design/Plant.svelte";
-	import Link from "../../components/Link.svelte";
+	import Header from "$components/design/Header.svelte";
+	import Plant from "$components/design/Plant.svelte";
+	import Link from "$components/Link.svelte";
 </script>
 
 <svelte:head>

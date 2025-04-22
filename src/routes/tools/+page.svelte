@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Plant from '../../components/design/Plant.svelte';
-	import ContrastChecker from '../../components/sections/tools/ContrastChecker.svelte';
-	import Header from '../../components/design/Header.svelte';
+	import Plant from '$components/design/Plant.svelte';
+	import ContrastChecker from '$components/sections/tools/ContrastChecker.svelte';
+	import Header from '$components/design/Header.svelte';
 </script>
 
 <svelte:head>

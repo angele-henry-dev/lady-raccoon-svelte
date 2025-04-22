@@ -1,8 +1,8 @@
 <script lang="ts">
-  import resources from "$data/resources.json";
-	import Header from "../../components/design/Header.svelte";
-	import Plant from "../../components/design/Plant.svelte";
-	import Item from "../../components/Item.svelte";
+  import resources from "$content/resources.json";
+	import Header from "$components/design/Header.svelte";
+	import Plant from "$components/design/Plant.svelte";
+	import Item from "$components/Item.svelte";
 
   const types = ["ebook", "formation", "abonnement"];
 </script>

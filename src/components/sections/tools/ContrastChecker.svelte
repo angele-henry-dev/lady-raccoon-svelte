@@ -10,8 +10,8 @@
 		adjustTextColorAuto,
 		simulateColorBlindness
 	} from '$lib/contrast';
-	import contrasts from "$data/contrasts.json";
-	import Button from '../../Button.svelte';
+	import contrasts from "$content/contrasts.json";
+	import Button from '$components/Button.svelte';
 
     let bgColor = "#f8f8f8";
     let textColor = "#111110";

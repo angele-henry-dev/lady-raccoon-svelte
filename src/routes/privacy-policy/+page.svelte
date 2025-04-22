@@ -1,6 +1,6 @@
 <script>
-	import Header from "../../components/design/Header.svelte";
-	import Plant from "../../components/design/Plant.svelte";
+	import Header from "$components/design/Header.svelte";
+	import Plant from "$components/design/Plant.svelte";
 </script>
 
 <svelte:head>

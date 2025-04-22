@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Ribbon from "./design/Ribbon.svelte";
-	import Link from "./Link.svelte";
+	import Ribbon from "$components/design/Ribbon.svelte";
+	import Link from "$components/Link.svelte";
 
 	export let type: string;
 	export let title: string;

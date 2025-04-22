@@ -1,7 +1,3 @@
-<script lang="ts">
-	import Link from '../../Link.svelte';
-</script>
-
 <section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 grid grid-cols-1 md:grid-cols-2 gap-4">
 	<div>
 		<h2><span class="text-[var(--secondary)]">Un cocon</span>... Pour quoi&nbsp;? Pour qui&nbsp;?</h2>

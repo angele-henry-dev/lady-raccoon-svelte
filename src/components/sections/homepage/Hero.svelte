@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Moon from '../../design/Moon.svelte';
-	import Stars from '../../design/Stars.svelte';
-	import Plant from '../../design/Plant.svelte';
-	import Tree from '../../design/Tree.svelte';
-	import Link from '../../Link.svelte';
+	import Moon from '$components/design/Moon.svelte';
+	import Stars from '$components/design/Stars.svelte';
+	import Plant from '$components/design/Plant.svelte';
+	import Tree from '$components/design/Tree.svelte';
+	import Link from '$components/Link.svelte';
 </script>
 
 <section class="h-screen w-full text-center md:text-left flex flex-col items-center justify-center">

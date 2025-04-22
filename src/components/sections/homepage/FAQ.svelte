@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-    import faqs from "$data/faq.json";
+    import faqs from "$content/faq.json";
 
 	let openIndex: number | null = null;
 
