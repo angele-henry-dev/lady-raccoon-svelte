@@ -14,7 +14,7 @@
 <div class="relative flex flex-col bg-[var(--background)] border">
   <div class="w-full flex flex-row">
     {#if isNew}
-      <Ribbon text="Nouveau" color="var(--color-yellow)" />
+      <Ribbon text="Nouveauté" color="var(--color-yellow)" />
     {/if}
     {#if type}
       <Ribbon text={type} />
