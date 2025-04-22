@@ -1,7 +1,7 @@
 <script lang="ts">
     export let text: string;
     export let color: string = "var(--secondary)";
-    export let type: "up" | "down" | "slant-up" | "slant-down" = "up";
+    export let type: "up" | "down" | "slant-up" | "slant-down" = "down";
 </script>
 
 <div
@@ -11,7 +11,6 @@
   {text}
 </div>
 
-  
 <style>
     .ribbon {
         background-color: var(--fallback-color, var(--secondary));

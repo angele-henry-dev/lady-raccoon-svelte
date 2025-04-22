@@ -7,8 +7,6 @@ tags: ["Vie de dev"]
 published: true
 ---
 
-# De la littérature aux lignes de code
-
 Mon parcours est un peu atypique... et j’ai décidé de l’embrasser à fond. Voici mon histoire :
 
 ---

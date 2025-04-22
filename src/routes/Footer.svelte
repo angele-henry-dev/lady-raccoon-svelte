@@ -5,19 +5,19 @@
 <footer class="w-[95%] m-auto p-5 text-sm text-center md:text-left">
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="flex flex-col mb-3">
-			<strong>Pages</strong>
+			<b>Pages</b>
 			<Link href="/tools" target="_self" title="Outils" label="Outils" />
 			<Link href="/resources" target="_self" title="Ressources" label="Ressources" />
 			<Link href="/blog" target="_self" title="Blog" label="Blog" />
 		</div>
 		<div class="flex flex-col mb-3">
-			<strong>Contact</strong>
+			<b>Contact</b>
 			<Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord" label="Rejoins le Discord" />
 			<Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi" label="Soutiens-moi sur Ko-fi" />
 			<Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn" label="Contacte-moi sur LinkedIn" />
 		</div>
 		<div class="flex flex-col mb-3">
-			<strong>Confidentialité</strong>
+			<b>Confidentialité</b>
 			<Link href="/legal-notice" target="_self" title="Mentions légales" label="Mentions légales" />
 			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité" label="Politique de confidentialité" />
 		</div>

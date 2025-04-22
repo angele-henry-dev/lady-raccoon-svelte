@@ -65,16 +65,23 @@ h1 {
   h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 h2 {
   font-size: 1.5em;
   font-weight: 700;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
 p {
   margin-bottom: 20px;
+}
+
+strong {
+  color: var(--primary);
 }
 
 .fade-in {
