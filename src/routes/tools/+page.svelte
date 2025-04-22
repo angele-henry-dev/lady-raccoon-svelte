@@ -20,18 +20,22 @@
   <link rel="canonical" href="https://forabetter.tech/tools" />
 </svelte:head>
 
-
 <section class="relative w-full flex flex-col items-center justify-center mb-10">
-	<div aria-hidden="true" class="hero relative h-[250px] w-full overflow-x-clip">
-	  <Stars />
-	  <Moon classes="absolute top-[10%] end-[10%] size-[100px]" full={false} />
-	  <div class="absolute -bottom-[0] -start-[5%] sm:-start-[20vmin] w-[70%] h-[50%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
-	  <div class="absolute bottom-[0] -end-[20vmin] w-[120%] h-[30%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
-	</div>
+  <div aria-hidden="true" class="hero relative h-[250px] w-full overflow-x-clip">
+    <Stars />
+    <Moon classes="absolute top-[10%] end-[10%] size-[100px]" full={false} />
+    <div class="absolute -bottom-[0] -start-[5%] sm:-start-[20vmin] w-[70%] h-[50%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
+    <div class="absolute bottom-[0] -end-[20vmin] w-[120%] h-[30%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
+    <Plant class="absolute bottom-[10px] start-[10px] w-[30px] sm:w-[50px]" />
+  </div>
+
+  <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
+    <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Outils</h1>
+    <p>Des outils gratuits pour l’accessibilité, la performance et l’inclusivité.</p>
   
-	<div class="w-full max-w-5xl mx-auto px-4 sm:pb-10 z-[10]">
-	  <ContrastChecker />
-	</div>
-  
-	<Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px] scale-100" />
+	<ContrastChecker />
+
+  </div>
+
+  <Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px]" />
 </section>

@@ -65,7 +65,7 @@
     onMount(updateContrast);
 </script>
 
-<h1 class="text-2xl md:text-4xl mb-20">Testez le contraste des couleurs de votre site web</h1>
+<h2 class="text-2xl md:text-4xl mb-20">Tester le contraste des couleurs</h2>
 <div class="pickers flex flex-col gap-5 flex-wrap my-10">
     <div class="flex flex-row gap-5 flex-wrap">
         <div class="flex flex-row gap-5 flex-wrap p-5 pt-0">

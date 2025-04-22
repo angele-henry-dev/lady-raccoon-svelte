@@ -29,11 +29,11 @@
 			target="_blank"
 			label="Découvrir le Discord" 
 		/>
-		<!-- <Card 
+		<Card 
 			title="Blog" 
 			description="Des articles qui parlent tech, accessibilité, émotions, et trucs pas toujours dits ailleurs." 
 			href="/blog" 
 			label="Découvrir le blog" 
-		/>	  --> 
+		/>
 	</div>
 </section>
