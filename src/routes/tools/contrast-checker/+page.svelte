@@ -2,18 +2,36 @@
     import { onMount } from 'svelte';
     import {
 		/* CONTRAST_RATIO_AA_L,
-		CONTRAST_RATIO_AA, */
-		CONTRAST_RATIO_AAA_L,
+		CONTRAST_RATIO_AA,
+		CONTRAST_RATIO_AAA_L, */
 		CONTRAST_RATIO_AAA,
 		contrastRatio,
 		adjustBgColorAuto,
 		adjustTextColorAuto,
 		simulateColorBlindness
 	} from '$lib/contrast';
-	import contrasts from "$content/contrasts.json";
 	import Button from '$components/Button.svelte';
 	import Header from '$components/design/Header.svelte';
 	import Plant from '$components/design/Plant.svelte';
+
+    const contrasts = [
+        {
+            "title": "protanopie",
+            "technical": "protanopia"
+        },
+        {
+            "title": "deutéranopie",
+            "technical": "deuteranopia"
+        },
+        {
+            "title": "tritanopie",
+            "technical": "tritanopia"
+        },
+        {
+            "title": "achromatopsie",
+            "technical": "achromatopsia"
+        }
+    ];
 
     let bgColor = "#f8f8f8";
     let textColor = "#111110";
@@ -58,8 +76,8 @@
 	function getAccessibilityLevels(ratio: number) {
         return [
             /* { label: "AA 18pt", reached: ratio >= CONTRAST_RATIO_AA_L },
-            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA }, */
-            { label: "AAA 18pt", reached: ratio >= CONTRAST_RATIO_AAA_L },
+            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA },
+            { label: "AAA 18pt", reached: ratio >= CONTRAST_RATIO_AAA_L }, */
             { label: "AAA", reached: ratio >= CONTRAST_RATIO_AAA },
         ];
     }
@@ -74,7 +92,7 @@
 		<h1>Tester le contraste des couleurs</h1>
 
         <div class="w-full flex flex-row gap-5 flex-wrap justify-start items-end">
-            <div>
+            <div class="grow">
                 <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
                 <div class="input-container">
                     <input
@@ -89,7 +107,7 @@
                 </div>
                 <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
             </div>
-            <div>
+            <div class="grow">
                 <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
                 <div class="input-container">
                     <input
@@ -108,48 +126,23 @@
 
         <hr class="my-10">
 
-        <h2>Contraste sans handicap visuel</h2>
-        <div class="flex flex-row gap-4 mb-10 flex-wrap justify-start items-center">
-            <div class="flex flex-row gap-4 justify-start items-center">
-                <div class="p-3 border" style="background-color: {bgColor}; color: {textColor}; font-size: 12pt;">
-                    Normal text - 12pt
-                </div>
-                <div class={getAccessibilityLevels(visualContrasts.contrast)[1].reached ? "badge success" : "badge error"}>
-                    {getAccessibilityLevels(visualContrasts.contrast)[1].reached ? "Pass" : "Fail"}
-                </div>
+        <div class="flex flex-row gap-4 justify-start items-center mb-5">
+            <div class={getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "badge success" : "badge error"}>
+                {getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "Pass" : "Fail"}
             </div>
-            <div class="flex flex-row gap-4 justify-start items-center">
-                <div class="p-2 border" style="background-color: {bgColor}; color: {textColor}; font-size: 18pt;">
-                    Large text - 18pt
-                </div>
-                <div class={getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "badge success" : "badge error"}>
-                    {getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "Pass" : "Fail"}
-                </div>
+            <div class="p-2 border grow" style="background-color: {bgColor}; color: {textColor};">
+                Contraste sans handicap visuel
             </div>
         </div>
-
-        <hr class="my-10">
-
         {#each contrasts as contrast}
-        <h2>Contraste avec daltonisme {contrast.title}</h2>
-        <div class="flex flex-row gap-4 mb-10 flex-wrap justify-start items-center">
-            <div class="flex flex-row gap-4 justify-start items-center">
-                <div class="p-3 border" style="background-color: {bgColor}; color: {textColor}; font-size: 12pt; filter: url(#{[contrast.technical]});">
-                    Normal text - 12pt
-                </div>
-                <div class={getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[1].reached ? "badge success" : "badge error"}>
-                    {getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[1].reached ? "Pass" : "Fail"}
-                </div>
-            </div>
-            <div class="flex flex-row gap-4 justify-start items-center">
-                <div class="p-2 border" style="background-color: {bgColor}; color: {textColor}; font-size: 18pt; filter: url(#{[contrast.technical]});">
-                    Large text - 18pt
-                </div>
+            <div class="flex flex-row gap-4 justify-start items-center mb-5">
                 <div class={getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "badge success" : "badge error"}>
                     {getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "Pass" : "Fail"}
                 </div>
+                <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
+                    Contraste avec daltonisme <b>{contrast.title}</b>
+                </div>
             </div>
-        </div>
         {/each}
         
 		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
@@ -189,10 +182,9 @@
 	.input-container {
 		background-color: var(--foreground);
 		border-radius: 5px;
-		width: 180px;
-        height: 30px;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
+        padding: 5px 15px;
 	}
     .input-container input {
         color: var(--background);

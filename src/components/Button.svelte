@@ -7,7 +7,8 @@
 </script>
 
 <button 
-    class="inline-block mt-6 px-6 py-3 
+    class="inline-block mt-6 px-3 py-2 sm:px-6 sm:py-3 
+        w-full
         font-semibold 
         text-[var(--background)] hover:text-[var(--background)] 
         {color === "primary" ? 'bg-[var(--primary)]' : 'bg-[var(--secondary)]'} 
