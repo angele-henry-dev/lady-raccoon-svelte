@@ -3,7 +3,7 @@
         "title": "Tester le contraste des couleurs",
         "isNew": true,
         "slug": "contrast-checker",
-        "description": "Tester le contraste des couleurs",
+        "description": "Le testeur de contraste de forabetter.tech te permet de vérifier en un clic si les couleurs de texte et d’arrière-plan de ton site sont accessibles et conformes aux normes WCAG. Obtiens instantanément le ratio de contraste entre deux couleurs, pour garantir une expérience utilisateur optimale et un site web inclusif pour tous, y compris les personnes malvoyantes ou daltoniennes.",
         "published": true
     }
 ]

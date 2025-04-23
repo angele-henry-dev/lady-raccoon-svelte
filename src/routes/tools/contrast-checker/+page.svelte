@@ -85,11 +85,32 @@
     onMount(updateContrast);
 </script>
 
+<svelte:head>
+  <title>Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne.</title>
+  <meta name="description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <meta property="og:title" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <meta property="og:description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <meta property="og:image" content="https://forabetter.tech/og-tools.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://forabetter.tech/tools/contrast-checker" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <meta name="twitter:description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <meta name="twitter:image" content="https://forabetter.tech/og-tools.png" />
+  <link rel="canonical" href="https://forabetter.tech/tools/contrast-checker" />
+</svelte:head>
+
 <Header />
 <Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
 		<h1>Tester le contraste des couleurs</h1>
+
+        <p class="mb-10">
+            Le testeur de contraste de forabetter.tech te permet de vérifier en un clic si les couleurs de texte et d’arrière-plan de ton site sont accessibles 
+            et conformes aux normes WCAG. Obtiens instantanément le ratio de contraste entre deux couleurs, pour garantir une expérience utilisateur 
+            optimale et un site web inclusif pour tous, y compris les personnes malvoyantes ou daltoniennes.
+        </p>
 
         <div class="w-full flex flex-row gap-5 flex-wrap justify-start items-end">
             <div class="grow">
