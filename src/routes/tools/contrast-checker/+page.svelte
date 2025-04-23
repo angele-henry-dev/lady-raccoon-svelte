@@ -130,7 +130,7 @@
             <div class={getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "badge success" : "badge error"}>
                 {getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "Pass" : "Fail"}
             </div>
-            <div class="p-2 border grow" style="background-color: {bgColor}; color: {textColor};">
+            <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor};">
                 Contraste sans handicap visuel
             </div>
         </div>
