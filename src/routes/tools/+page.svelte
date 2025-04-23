@@ -1,7 +1,8 @@
 <script lang="ts">
+  import tools from "$content/tools.json";
 	import Plant from '$components/design/Plant.svelte';
-	import ContrastChecker from '$components/sections/tools/ContrastChecker.svelte';
 	import Header from '$components/design/Header.svelte';
+	import Item from "$components/Item.svelte";
 </script>
 
 <svelte:head>
@@ -23,10 +24,13 @@
 	<Header />
 
 	<div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
-		<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Outils</h1>
-		<p>Des outils gratuits pour l’accessibilité, la performance et l’inclusivité.</p>
+		<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Outils pour l’accessibilité et la performance</h1>
 	
-		<ContrastChecker />
+    {#each tools as tool}
+      {#if tool.published}
+        <Item types={[]} title={tool.title} description={tool.description} href={`/tools/${tool.slug}`} label="Accéder à l'outil" isNew={tool.isNew} />
+      {/if}
+    {/each}
 
 	</div>
 

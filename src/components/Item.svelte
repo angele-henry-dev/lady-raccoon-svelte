@@ -20,8 +20,8 @@
       <Ribbon text={type} />
     {/each}
   </div>
-  <div class="flex flex-col justify-start items-start p-5 z-[1]">
-    <h2 class="mb-0">{ title }</h2>
+  <div class="flex flex-col justify-start items-start px-5 pb-5 z-[1]">
+    <h2>{ title }</h2>
     <div class="flex-grow">
         {@html description}
     </div>
