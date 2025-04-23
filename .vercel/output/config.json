@@ -68,6 +68,17 @@
 			}
 		},
 		{
+			"src": "/tools/contrast-checker",
+			"dest": "/tools/contrast-checker/"
+		},
+		{
+			"src": "/tools/contrast-checker/",
+			"status": 308,
+			"headers": {
+				"Location": "/tools/contrast-checker"
+			}
+		},
+		{
 			"src": "/blog/2025-04-22-presentation",
 			"dest": "/blog/2025-04-22-presentation/"
 		},
@@ -113,6 +124,9 @@
 		},
 		"tools.html": {
 			"path": "tools"
+		},
+		"tools/contrast-checker.html": {
+			"path": "tools/contrast-checker"
 		},
 		"blog/2025-04-22-presentation.html": {
 			"path": "blog/2025-04-22-presentation"

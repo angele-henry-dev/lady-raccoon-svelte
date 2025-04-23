@@ -1,8 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import {
-		CONTRAST_RATIO_AA_L,
-		CONTRAST_RATIO_AA,
+		/* CONTRAST_RATIO_AA_L,
+		CONTRAST_RATIO_AA, */
 		CONTRAST_RATIO_AAA_L,
 		CONTRAST_RATIO_AAA,
 		contrastRatio,
@@ -57,8 +57,8 @@
 
 	function getAccessibilityLevels(ratio: number) {
         return [
-            { label: "AA 18pt", reached: ratio >= CONTRAST_RATIO_AA_L },
-            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA },
+            /* { label: "AA 18pt", reached: ratio >= CONTRAST_RATIO_AA_L },
+            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA }, */
             { label: "AAA 18pt", reached: ratio >= CONTRAST_RATIO_AAA_L },
             { label: "AAA", reached: ratio >= CONTRAST_RATIO_AAA },
         ];
@@ -71,92 +71,85 @@
 <Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
-		<h1 class="mb-0">Tester le contraste des couleurs</h1>
+		<h1>Tester le contraste des couleurs</h1>
 
-        <div class="pickers flex flex-col gap-5 flex-wrap my-10">
-            <div class="flex flex-row gap-5 flex-wrap">
-                <div class="flex flex-row gap-5 flex-wrap p-5 pt-0">
-                    <div class="flex flex-col">
-                        <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
-                        <div class="input-container">
-                            <input
-                                type="text"
-                                bind:value={bgColor}
-                                on:input={(e) => handleHexInput(e, "bg")}
-                                pattern="#[0-9A-Fa-f]{6}"
-                                aria-label="code hexadecimal fond"
-                                title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-                            />
-                            <input type="color" bind:value={bgColor} on:input={updateContrast} id="hexaBg" />
-                        </div>
-                        <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
-                        <div class="input-container">
-                            <input
-                                type="text"
-                                bind:value={textColor}
-                                on:input={(e) => handleHexInput(e, "text")}
-                                pattern="#[0-9A-Fa-f]{6}"
-                                aria-label="code hexadecimal texte"
-                                title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
-                            />
-                            <input type="color" bind:value={textColor} on:input={updateContrast} id="hexaText" />
-                        </div>
-                        <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
-                    </div>
+        <div class="w-full flex flex-row gap-5 flex-wrap justify-start items-end">
+            <div>
+                <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
+                <div class="input-container">
+                    <input
+                        type="text"
+                        bind:value={bgColor}
+                        on:input={(e) => handleHexInput(e, "bg")}
+                        pattern="#[0-9A-Fa-f]{6}"
+                        aria-label="code hexadecimal fond"
+                        title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+                    />
+                    <input type="color" bind:value={bgColor} on:input={updateContrast} id="hexaBg" />
                 </div>
-                <div class="contrast flex flex-col p-5 pt-0">
-                    <p class="my-3 font-black">Contraste</p>
-                    <p class="text-center">Ratio : {visualContrasts.contrast.toFixed(2)}</p>
-                    <div class="accessibility-levels">
-                        {#each getAccessibilityLevels(visualContrasts.contrast) as level}
-                            <div class={level.reached ? "badge success" : "badge error"}>
-                                <p>{level.label}</p>
-                                <p>- {level.reached ? "OK" : "X"} -</p>
-                            </div>
-                        {/each}
-                    </div>
+                <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
+            </div>
+            <div>
+                <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
+                <div class="input-container">
+                    <input
+                        type="text"
+                        bind:value={textColor}
+                        on:input={(e) => handleHexInput(e, "text")}
+                        pattern="#[0-9A-Fa-f]{6}"
+                        aria-label="code hexadecimal texte"
+                        title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+                    />
+                    <input type="color" bind:value={textColor} on:input={updateContrast} id="hexaText" />
+                </div>
+                <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
+            </div>
+        </div>
+
+        <hr class="my-10">
+
+        <h2>Contraste sans handicap visuel</h2>
+        <div class="flex flex-row gap-4 mb-10 flex-wrap justify-start items-center">
+            <div class="flex flex-row gap-4 justify-start items-center">
+                <div class="p-3 border" style="background-color: {bgColor}; color: {textColor}; font-size: 12pt;">
+                    Normal text - 12pt
+                </div>
+                <div class={getAccessibilityLevels(visualContrasts.contrast)[1].reached ? "badge success" : "badge error"}>
+                    {getAccessibilityLevels(visualContrasts.contrast)[1].reached ? "Pass" : "Fail"}
                 </div>
             </div>
-            <div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor};">
-                <div>
-                    <p class="my-3 font-black">Normal text - 12pt</p>
-                    <p class="" style="font-size: 12pt;">I see dead pixels… but not with this contrast!</p>
+            <div class="flex flex-row gap-4 justify-start items-center">
+                <div class="p-2 border" style="background-color: {bgColor}; color: {textColor}; font-size: 18pt;">
+                    Large text - 18pt
                 </div>
-                <div>
-                    <p class="my-3 font-black">Large text - 18pt</p>
-                    <p style="font-size: 18pt;">Mission: Increase contrast. Status: In Progress...</p>
+                <div class={getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "badge success" : "badge error"}>
+                    {getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "Pass" : "Fail"}
                 </div>
             </div>
         </div>
 
+        <hr class="my-10">
+
         {#each contrasts as contrast}
-            <div class="pickers flex flex-col gap-5 flex-wrap mb-10">
-                <div class="contrast flex flex-col p-5 pt-0">
-                    <p class="my-3 font-black">Contraste {contrast.title}</p>
-                    <p class="text-center">Ratio : {visualContrasts[contrast.technical as keyof typeof visualContrasts].toFixed(2)}</p>
-                    <div class="accessibility-levels">
-                        {#each getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts]) as level}
-                            <div class={level.reached ? "badge success" : "badge error"}>
-                                <p>{level.label}</p>
-                                <p>- {level.reached ? "OK" : "X"} -</p>
-                            </div>
-                        {/each}
-                    </div>
+        <h2>Contraste avec daltonisme {contrast.title}</h2>
+        <div class="flex flex-row gap-4 mb-10 flex-wrap justify-start items-center">
+            <div class="flex flex-row gap-4 justify-start items-center">
+                <div class="p-3 border" style="background-color: {bgColor}; color: {textColor}; font-size: 12pt; filter: url(#{[contrast.technical]});">
+                    Normal text - 12pt
                 </div>
-                <div class="preview flex flex-col p-5 pt-0" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
-                    <div>
-                        <p class="my-3 font-black">Normal text - 12pt</p>
-                        <p class="" style="font-size: 12pt;">{contrast.example_1}</p>
-                    </div>
-                    <div>
-                        <p class="my-3 font-black">Large text - 18pt</p>
-                        <p style="font-size: 18pt;">{contrast.example_2}</p>
-                    </div>
+                <div class={getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[1].reached ? "badge success" : "badge error"}>
+                    {getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[1].reached ? "Pass" : "Fail"}
                 </div>
             </div>
+            <div class="flex flex-row gap-4 justify-start items-center">
+                <div class="p-2 border" style="background-color: {bgColor}; color: {textColor}; font-size: 18pt; filter: url(#{[contrast.technical]});">
+                    Large text - 18pt
+                </div>
+                <div class={getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "badge success" : "badge error"}>
+                    {getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "Pass" : "Fail"}
+                </div>
+            </div>
+        </div>
         {/each}
         
 		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
@@ -201,7 +194,6 @@
 		display: flex;
 		justify-content: space-evenly;
 	}
-
     .input-container input {
         color: var(--background);
 		background-color: var(--foreground);
@@ -218,20 +210,13 @@
 		cursor: pointer;
     }
 
-	.accessibility-levels {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		margin-top: 10px;
-		justify-content: center;
-	}
 	.badge {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 90px;
-		height: 90px;
+		width: 50px;
+		height: 50px;
 		padding: 10px;
 		border-radius: 50%;
 		font-size: 0.85rem;
