@@ -88,53 +88,6 @@
 </div>
 
 <style>
-  @media (prefers-reduced-motion: no-preference) {
-    .starslayer1 .star {
-      animation: twinkle 2s infinite;
-    }
-    .starslayer2 .star {
-      animation: twinkle 4s infinite;
-    }
-    .starslayer3 .star {
-      animation: twinkle 5s infinite;
-    }
-    @keyframes twinkle {
-      0%, 100% {
-        opacity: 0.2;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-
-    .shooting_star {
-      --rotation: 160deg;
-      --star-tail-length: 6em;
-      --star-tail-height: 2px;
-      position: absolute;
-      left: -20px;
-      top: 60%;
-      width: var(--star-tail-length);
-      height: var(--star-tail-height);
-      color: #fff;
-      background: linear-gradient(45deg, #fff, transparent);
-      border-radius: 50%;
-      filter: drop-shadow(0 0 6px #fff);
-      animation: shooting 60s ease-in-out infinite;
-    }
-    @keyframes shooting {
-      0% {
-        transform: translateX(-70px) translateY(-200px) rotate(var(--rotation));
-      }
-      7% {
-        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
-      }
-      100% {
-        transform: translateX(1000px) translateY(-600px) rotate(var(--rotation));
-      }
-    }
-  }
-
   .starfield {
     --star-color: #fff;
     position: absolute;
