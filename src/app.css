@@ -86,31 +86,10 @@ strong {
   color: var(--primary);
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 2s ease-out forwards;
-  will-change: opacity, transform;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .hero {
   background: linear-gradient(
     to bottom,
     var(--background) 0%,
     var(--color-blue-dark) 70%
   );
-}
-
-.blend {
-  mix-blend-mode: difference;
 }

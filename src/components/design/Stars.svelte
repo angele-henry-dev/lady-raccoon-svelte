@@ -25,9 +25,7 @@
       }));
     };
 
-    starsLayer1 = generateStars(isMobile ? 50 : 100, 1);
-    starsLayer2 = generateStars(isMobile ? 25 : 20, 2);
-    starsLayer3 = generateStars(isMobile ? 12 : 25, 3);
+    starsLayer1 = generateStars(isMobile ? 50 : 100, 2);
   });
 </script>
 

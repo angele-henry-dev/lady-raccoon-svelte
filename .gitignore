@@ -16,6 +16,7 @@ yarn-error.log*
 dist/
 build/
 .svelte-kit
+.vercel/outputs
 
 # Environment variables
 .env
