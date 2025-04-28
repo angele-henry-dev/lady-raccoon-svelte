@@ -46,7 +46,7 @@
 		<h1>Simulateur de handicaps visuels</h1>
 
     <form
-      class="flex gap-2 mb-4"
+      class="flex gap-2 mb-4 text-[var(--background)]"
       on:submit|preventDefault={() => { /* On empêche le submit */ }}
       autocomplete="off"
     >
