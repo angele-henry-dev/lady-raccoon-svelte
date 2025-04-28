@@ -5,5 +5,12 @@
         "slug": "contrast-checker",
         "description": "Le testeur de contraste de forabetter.tech te permet de vérifier en un clic si les couleurs de texte et d’arrière-plan de ton site sont accessibles et conformes aux normes WCAG. Obtiens instantanément le ratio de contraste entre deux couleurs, pour garantir une expérience utilisateur optimale et un site web inclusif pour tous, y compris les personnes malvoyantes ou daltoniennes.",
         "published": true
+    },
+    {
+        "title": "Simulateur de handicaps visuels",
+        "isNew": true,
+        "slug": "visual-simulator",
+        "description": "Testez l’accessibilité de n’importe quel site en simulant différents types de daltonisme et de déficiences visuelles. Visualisez instantanément le rendu pour mieux concevoir des interfaces vraiment inclusives.",
+        "published": true
     }
 ]

@@ -13,25 +13,8 @@
 	import Button from '$components/Button.svelte';
 	import Header from '$components/design/Header.svelte';
 	import Plant from '$components/design/Plant.svelte';
-
-    const contrasts = [
-        {
-            "title": "protanopie",
-            "technical": "protanopia"
-        },
-        {
-            "title": "deutéranopie",
-            "technical": "deuteranopia"
-        },
-        {
-            "title": "tritanopie",
-            "technical": "tritanopia"
-        },
-        {
-            "title": "achromatopsie",
-            "technical": "achromatopsia"
-        }
-    ];
+	import Filters from '$components/sections/tools/Filters.svelte';
+    import { FILTERS } from "$lib/contrast";
 
     let bgColor = "#f8f8f8";
     let textColor = "#111110";
@@ -100,6 +83,8 @@
   <link rel="canonical" href="https://forabetter.tech/tools/contrast-checker" />
 </svelte:head>
 
+<Filters />
+
 <Header />
 <Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
@@ -155,49 +140,22 @@
                 Contraste sans handicap visuel
             </div>
         </div>
-        {#each contrasts as contrast}
+        {#each FILTERS as filter}
+        {#if visualContrasts[filter as keyof typeof visualContrasts]}
             <div class="flex flex-row gap-4 justify-start items-center mb-5">
-                <div class={getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "badge success" : "badge error"}>
-                    {getAccessibilityLevels(visualContrasts[contrast.technical as keyof typeof visualContrasts])[0].reached ? "Pass" : "Fail"}
+                <div class={getAccessibilityLevels(visualContrasts[filter as keyof typeof visualContrasts])[0].reached ? "badge success" : "badge error"}>
+                    {getAccessibilityLevels(visualContrasts[filter as keyof typeof visualContrasts])[0].reached ? "Pass" : "Fail"}
                 </div>
-                <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[contrast.technical]});">
-                    Contraste avec daltonisme <b>{contrast.title}</b>
+                <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[filter]});">
+                    Contraste avec daltonisme <b>{filter}</b>
                 </div>
             </div>
+        {/if}
         {/each}
         
 		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
 	</article>
 </div>
-
-<svg height="0" width="0">
-	<defs>
-		<filter id="protanopia">
-			<feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0
-													0.558, 0.442, 0, 0, 0
-													0, 0.242, 0.758, 0, 0
-													0, 0, 0, 1, 0"/>
-		</filter>
-		<filter id="deuteranopia">
-			<feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0
-													0.7, 0.3, 0, 0, 0
-													0, 0.3, 0.7, 0, 0
-													0, 0, 0, 1, 0"/>
-		</filter>
-		<filter id="tritanopia">
-			<feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0
-													0, 0.433, 0.567, 0, 0
-													0, 0.475, 0.525, 0, 0
-													0, 0, 0, 1, 0"/>
-		</filter>
-		<filter id="achromatopsia">
-			<feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0
-													0.299, 0.587, 0.114, 0, 0
-													0.299, 0.587, 0.114, 0, 0
-													0, 0, 0, 1, 0"/>
-		</filter>
-	</defs>
-</svg>
 
 <style>
 	.input-container {

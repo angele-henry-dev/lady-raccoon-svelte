@@ -11,7 +11,7 @@
 	export let isNew: boolean = false;
 </script>
 
-<div class="relative flex flex-col bg-[var(--background)] border">
+<div class="relative flex flex-col bg-[var(--background)] border mb-4">
   <div class="w-full flex flex-row">
     {#if isNew}
       <Ribbon text="Nouveauté" color="var(--color-yellow)" />
