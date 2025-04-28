@@ -2,7 +2,8 @@
 	import Header from "$components/design/Header.svelte";
 	import Plant from "$components/design/Plant.svelte";
 	import Filters from "$components/sections/tools/Filters.svelte";
-  import { FILTERS } from "$lib/contrast";
+  import { FILTERS_DATA } from "$lib/contrast";
+  const FILTERS = Object.keys(FILTERS_DATA) as Array<keyof typeof FILTERS_DATA>;
 
   let url = "https://forabetter.tech";
   let selectedFilter = "none";
@@ -62,7 +63,7 @@
       <li>Testez plusieurs filtres pour comparer et ajuster vos designs en conséquence.</li>
     </ol>
 
-    <p class="border-l rounded-none pl-5 my-10">Astuce : Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</p>
+    <aside class="border-l rounded-none pl-5 my-10">Astuce : Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</aside>
 
     <form
       class="flex gap-2 mb-4 text-[var(--background)]"
@@ -76,11 +77,11 @@
         placeholder="Entrez l’URL à prévisualiser (ex : https://…)"
         required
       />
-      <select bind:value={selectedFilter} class="p-2 border">
+      <select bind:value={selectedFilter} class="p-2 border" aria-label="Choix du filtre de daltonisme">
         <option value="none">Aucun filtre</option>
         <optgroup label="Daltonismes">
-          {#each FILTERS as f}
-            <option value={f}>{f.charAt(0).toUpperCase() + f.slice(1)}</option>
+          {#each FILTERS as filter}
+            <option value={filter}>{FILTERS_DATA[filter].label}</option>
           {/each}
         </optgroup>
       </select>

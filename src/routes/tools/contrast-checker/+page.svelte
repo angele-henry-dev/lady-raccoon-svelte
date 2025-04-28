@@ -1,9 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import {
-		/* CONTRAST_RATIO_AA_L,
 		CONTRAST_RATIO_AA,
-		CONTRAST_RATIO_AAA_L, */
 		CONTRAST_RATIO_AAA,
 		contrastRatio,
 		adjustBgColorAuto,
@@ -14,55 +12,48 @@
 	import Header from '$components/design/Header.svelte';
 	import Plant from '$components/design/Plant.svelte';
 	import Filters from '$components/sections/tools/Filters.svelte';
-    import { FILTERS } from "$lib/contrast";
+    import { FILTERS_DATA } from "$lib/contrast";
+    const FILTERS = Object.keys(FILTERS_DATA) as Array<keyof typeof FILTERS_DATA>;
 
     let bgColor = "#f8f8f8";
     let textColor = "#111110";
-    let visualContrasts = {
-        contrast: 0,
-        protanopia: 0,
-        deuteranopia: 0,
-        tritanopia: 0,
-        achromatopsia: 0
-    };
+    let visualContrasts: Record<string, number> = { contrast: 0 };
 
     function adjustTextColor() {
-		textColor = adjustTextColorAuto(bgColor, textColor);
-		updateContrast();
+        textColor = adjustTextColorAuto(bgColor, textColor);
+        updateContrast();
     }
     function adjustBgColor() {
-		bgColor = adjustBgColorAuto(bgColor, textColor);
-		updateContrast();
+        bgColor = adjustBgColorAuto(bgColor, textColor);
+        updateContrast();
     }
 
 	function updateContrast() {
+        // Contraste "normal"
         visualContrasts.contrast = contrastRatio(bgColor, textColor);
-        
-        (["protanopia", "deuteranopia", "tritanopia", "achromatopsia"] as const).forEach(type => {
-            visualContrasts[type as keyof typeof visualContrasts] = contrastRatio(
-                simulateColorBlindness(bgColor, type),
-                simulateColorBlindness(textColor, type)
+
+        // Contrastes pour tous les handicaps visuels définis dans FILTERS
+        for (const filter of FILTERS) {
+            visualContrasts[filter] = contrastRatio(
+                simulateColorBlindness(bgColor, filter),
+                simulateColorBlindness(textColor, filter)
             );
-        });
+        }
     }
 
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
         const input = event.target as HTMLInputElement;
         const value = input.value.trim();
         if (!/^#[0-9A-Fa-f]{6}$/.test(value)) return;
-
         if (colorType === "bg") bgColor = value;
         else textColor = value;
         updateContrast();
     }
 
-	function getAccessibilityLevels(ratio: number) {
-        return [
-            /* { label: "AA 18pt", reached: ratio >= CONTRAST_RATIO_AA_L },
-            { label: "AA", reached: ratio >= CONTRAST_RATIO_AA },
-            { label: "AAA 18pt", reached: ratio >= CONTRAST_RATIO_AAA_L }, */
-            { label: "AAA", reached: ratio >= CONTRAST_RATIO_AAA },
-        ];
+	function getAccessibilityLevel(ratio: number) {
+        if (ratio >= CONTRAST_RATIO_AAA) return "AAA";
+        if (ratio >= CONTRAST_RATIO_AA) return "AA";
+        return "Fail";
     }
 
     onMount(updateContrast);
@@ -102,6 +93,7 @@
                 <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
                 <div class="input-container">
                     <input
+                        id="hexaBg"
                         type="text"
                         bind:value={bgColor}
                         on:input={(e) => handleHexInput(e, "bg")}
@@ -109,7 +101,7 @@
                         aria-label="code hexadecimal fond"
                         title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={bgColor} on:input={updateContrast} id="hexaBg" />
+                    <input type="color" bind:value={bgColor} on:input={updateContrast} aria-label="Choisir couleur fond" />
                 </div>
                 <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
             </div>
@@ -117,6 +109,7 @@
                 <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
                 <div class="input-container">
                     <input
+                        id="hexaText"
                         type="text"
                         bind:value={textColor}
                         on:input={(e) => handleHexInput(e, "text")}
@@ -124,7 +117,7 @@
                         aria-label="code hexadecimal texte"
                         title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={textColor} on:input={updateContrast} id="hexaText" />
+                    <input type="color" bind:value={textColor} on:input={updateContrast} aria-label="Choisir couleur texte" />
                 </div>
                 <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
             </div>
@@ -133,24 +126,22 @@
         <hr class="my-10">
 
         <div class="flex flex-row gap-4 justify-start items-center mb-5">
-            <div class={getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "badge success" : "badge error"}>
-                {getAccessibilityLevels(visualContrasts.contrast)[0].reached ? "Pass" : "Fail"}
+            <div class={"badge " + getAccessibilityLevel(visualContrasts.contrast).toLowerCase()}>
+                {getAccessibilityLevel(visualContrasts.contrast)}
             </div>
             <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor};">
                 Contraste sans handicap visuel
             </div>
         </div>
         {#each FILTERS as filter}
-        {#if visualContrasts[filter as keyof typeof visualContrasts]}
             <div class="flex flex-row gap-4 justify-start items-center mb-5">
-                <div class={getAccessibilityLevels(visualContrasts[filter as keyof typeof visualContrasts])[0].reached ? "badge success" : "badge error"}>
-                    {getAccessibilityLevels(visualContrasts[filter as keyof typeof visualContrasts])[0].reached ? "Pass" : "Fail"}
+                <div class={"badge " + getAccessibilityLevel(visualContrasts[filter]).toLowerCase()}>
+                    {getAccessibilityLevel(visualContrasts[filter])}
                 </div>
                 <div class="p-3 border grow" style="background-color: {bgColor}; color: {textColor}; filter: url(#{[filter]});">
-                    Contraste avec daltonisme <b>{filter}</b>
+                    Contraste avec daltonisme <b>{FILTERS_DATA[filter].label}</b>
                 </div>
             </div>
-        {/if}
         {/each}
         
 		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
@@ -195,12 +186,17 @@
 		text-align: center;
 		border-width: 3px;
 	}
-	.success {
+	.aaa {
 		border-color: #4caf50;
 		color: #4caf50;
 		background-color: #000f00;
 	}
-	.error {
+	.aa {
+		border-color: #ffae00;
+		color: #ffae00;
+		background-color: #000f00;
+	}
+	.fail {
 		border-color: #ff7070;
 		color: #ff7070;
 		background-color: #000000;

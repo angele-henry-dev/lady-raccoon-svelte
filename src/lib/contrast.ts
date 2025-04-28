@@ -2,16 +2,73 @@ export const CONTRAST_RATIO_AAA     = 7;
 export const CONTRAST_RATIO_AAA_L   = 4.5;
 export const CONTRAST_RATIO_AA      = 4.5;
 export const CONTRAST_RATIO_AA_L    = 3;
-export const FILTERS = [
-    "protanopia",
-    "protanomaly",
-    "deuteranopia",
-    "deuteranomaly",
-    "tritanopia",
-    "tritanomaly",
-    "achromatopsia",
-    "achromatomaly"
-];
+export const FILTERS_DATA = {
+    protanopia: {
+      label: "Protanopie",
+      matrix: [
+        [0.567, 0.433, 0.000],
+        [0.558, 0.442, 0.000],
+        [0.000, 0.242, 0.758]
+      ]
+    },
+    protanomaly: {
+      label: "Protanomalie",
+      matrix: [
+        [0.817, 0.183, 0.000],
+        [0.333, 0.667, 0.000],
+        [0.000, 0.125, 0.875]
+      ]
+    },
+    deuteranopia: {
+      label: "Deutéranopie",
+      matrix: [
+        [0.625, 0.375, 0.000],
+        [0.700, 0.300, 0.000],
+        [0.000, 0.300, 0.700]
+      ]
+    },
+    deuteranomaly: {
+      label: "Deutéranomalie",
+      matrix: [
+        [0.800, 0.200, 0.000],
+        [0.258, 0.742, 0.000],
+        [0.000, 0.142, 0.858]
+      ]
+    },
+    tritanopia: {
+      label: "Tritanopie",
+      matrix: [
+        [0.950, 0.050, 0.000],
+        [0.000, 0.433, 0.567],
+        [0.000, 0.475, 0.525]
+      ]
+    },
+    tritanomaly: {
+      label: "Tritanomalie",
+      matrix: [
+        [0.967, 0.033, 0.000],
+        [0.000, 0.733, 0.267],
+        [0.000, 0.183, 0.817]
+      ]
+    },
+    achromatopsia: {
+      label: "Achromatopsie",
+      matrix: [
+        [0.299, 0.587, 0.114],
+        [0.299, 0.587, 0.114],
+        [0.299, 0.587, 0.114]
+      ]
+    },
+    achromatomaly: {
+      label: "Achromatomalie",
+      matrix: [
+        [0.618, 0.320, 0.062],
+        [0.163, 0.775, 0.062],
+        [0.163, 0.320, 0.516]
+      ]
+    }
+} as const;
+  
 
 export function isCorrect(hex: string): boolean {
     return /^#[0-9A-Fa-f]{6}$/.test(hex);
@@ -96,36 +153,24 @@ export function adjustTextColorAuto(bgColor: string, textColor: string) {
     return textColor;
 }
 
-export function simulateColorBlindness(color: string, type: "protanopia" | "deuteranopia" | "tritanopia" | "achromatopsia"): string {
+export function simulateColorBlindness(
+    color: string,
+    blindType: keyof typeof FILTERS_DATA
+  ): string {
     const { r, g, b } = hexToRgb(color);
-
-    const matrices = {
-        protanopia: [
-            [0.567, 0.433, 0.000],
-            [0.558, 0.442, 0.000],
-            [0.000, 0.242, 0.758]
-        ],
-        deuteranopia: [
-            [0.625, 0.375, 0.000],
-            [0.700, 0.300, 0.000],
-            [0.000, 0.300, 0.700]
-        ],
-        tritanopia: [
-            [0.950, 0.050, 0.000],
-            [0.000, 0.433, 0.567],
-            [0.000, 0.475, 0.525]
-        ],
-        achromatopsia: [
-            [0.299, 0.587, 0.114],
-            [0.299, 0.587, 0.114],
-            [0.299, 0.587, 0.114]
-        ]
-    };
-
-    const matrix = matrices[type];
-    const newR = Math.max(0, Math.min(255, Math.round(r * matrix[0][0] + g * matrix[0][1] + b * matrix[0][2])));
-    const newG = Math.max(0, Math.min(255, Math.round(r * matrix[1][0] + g * matrix[1][1] + b * matrix[1][2])));
-    const newB = Math.max(0, Math.min(255, Math.round(r * matrix[2][0] + g * matrix[2][1] + b * matrix[2][2])));
-
+    const matrix = FILTERS_DATA[blindType]?.matrix ?? FILTERS_DATA.achromatopsia.matrix;
+    const newR = Math.max(
+      0,
+      Math.min(255, Math.round(r * matrix[0][0] + g * matrix[0][1] + b * matrix[0][2]))
+    );
+    const newG = Math.max(
+      0,
+      Math.min(255, Math.round(r * matrix[1][0] + g * matrix[1][1] + b * matrix[1][2]))
+    );
+    const newB = Math.max(
+      0,
+      Math.min(255, Math.round(r * matrix[2][0] + g * matrix[2][1] + b * matrix[2][2]))
+    );
+  
     return rgbToHex(newR, newG, newB);
-}
+}  
