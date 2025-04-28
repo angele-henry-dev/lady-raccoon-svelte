@@ -111,48 +111,6 @@ export function contrastRatio(color1: string, color2: string) {
     return (Math.max(lum1, lum2) + 0.05) / (Math.min(lum1, lum2) + 0.05);
 }
 
-export function adjustBgColorAuto(bgColor: string, textColor: string): string {
-    let newBgColor = bgColor;
-    let tries = 0;
-
-    while (contrastRatio(newBgColor, textColor) < CONTRAST_RATIO_AAA && tries < 50) {
-        newBgColor = adjustTextColorAuto(textColor, newBgColor);
-        tries++;
-    }
-
-    return newBgColor;
-}
-
-export function adjustTextColorAuto(bgColor: string, textColor: string) {
-    if (!isCorrect(bgColor) || !isCorrect(textColor)) return textColor;
-
-    const textRgb = hexToRgb(textColor);
-    let ratio = contrastRatio(bgColor, textColor);
-    let iterations = 0;
-
-    const shouldDarken = contrastRatio(bgColor, "#000000") > contrastRatio(bgColor, "#ffffff");
-
-    while (ratio < CONTRAST_RATIO_AAA && iterations < 50) {
-        if (shouldDarken) {
-            // To black (#000000)
-            textRgb.r = Math.max(0, textRgb.r - 5);
-            textRgb.g = Math.max(0, textRgb.g - 5);
-            textRgb.b = Math.max(0, textRgb.b - 5);
-        } else {
-            // To white (#ffffff)
-            textRgb.r = Math.min(255, textRgb.r + 5);
-            textRgb.g = Math.min(255, textRgb.g + 5);
-            textRgb.b = Math.min(255, textRgb.b + 5);
-        }
-
-        textColor = rgbToHex(textRgb.r, textRgb.g, textRgb.b);
-        ratio = contrastRatio(bgColor, textColor);
-        iterations++;
-    }
-
-    return textColor;
-}
-
 export function simulateColorBlindness(
     color: string,
     blindType: keyof typeof FILTERS_DATA
@@ -173,4 +131,85 @@ export function simulateColorBlindness(
     );
   
     return rgbToHex(newR, newG, newB);
-}  
+}
+
+export function adjustTextColorAuto(bgColor: string, textColor: string): string {
+  if (!isCorrect(bgColor) || !isCorrect(textColor)) return textColor;
+
+  // On veut satisfaire AAA pour tous les cas (vision normale + tous les filtres daltonisme)
+  let rgb = hexToRgb(textColor);
+  let current = textColor;
+  let iterations = 0;
+
+  // On détermine la direction d’ajustement : vers noir ou blanc
+  const shouldDarken = contrastRatio(bgColor, "#000000") > contrastRatio(bgColor, "#ffffff");
+
+  function isRatioOk(bg: string, txt: string): boolean {
+      // Ratio en vision normale
+      if (contrastRatio(bg, txt) < CONTRAST_RATIO_AAA) return false;
+      // Pour chaque filtre daltonisme, on simule et on teste
+      for (const key in FILTERS_DATA) {
+          const simBg = simulateColorBlindness(bg, key as keyof typeof FILTERS_DATA);
+          const simTxt = simulateColorBlindness(txt, key as keyof typeof FILTERS_DATA);
+          if (contrastRatio(simBg, simTxt) < CONTRAST_RATIO_AAA) return false;
+      }
+      return true;
+  }
+
+  // On boucle tant qu’on n’a pas atteint un ratio AAA pour tous les filtres (ou max iterations)
+  while (!isRatioOk(bgColor, current) && iterations < 50) {
+      if (shouldDarken) {
+          rgb.r = Math.max(0, rgb.r - 5);
+          rgb.g = Math.max(0, rgb.g - 5);
+          rgb.b = Math.max(0, rgb.b - 5);
+      } else {
+          rgb.r = Math.min(255, rgb.r + 5);
+          rgb.g = Math.min(255, rgb.g + 5);
+          rgb.b = Math.min(255, rgb.b + 5);
+      }
+      current = rgbToHex(rgb.r, rgb.g, rgb.b);
+      iterations++;
+  }
+
+  return current;
+}
+
+export function adjustBgColorAuto(bgColor: string, textColor: string): string {
+  if (!isCorrect(bgColor) || !isCorrect(textColor)) return bgColor;
+
+  let rgb = hexToRgb(bgColor);
+  let current = bgColor;
+  let iterations = 0;
+
+  // On détermine la direction d’ajustement pour maximiser le contraste
+  const shouldDarken = contrastRatio("#000000", textColor) > contrastRatio("#ffffff", textColor);
+
+  function isRatioOk(bg: string, txt: string): boolean {
+      // Test normal
+      if (contrastRatio(bg, txt) < CONTRAST_RATIO_AAA) return false;
+      // Test pour tous les filtres daltonisme
+      for (const key in FILTERS_DATA) {
+          const simBg = simulateColorBlindness(bg, key as keyof typeof FILTERS_DATA);
+          const simTxt = simulateColorBlindness(txt, key as keyof typeof FILTERS_DATA);
+          if (contrastRatio(simBg, simTxt) < CONTRAST_RATIO_AAA) return false;
+      }
+      return true;
+  }
+
+  // Boucle d’ajustement
+  while (!isRatioOk(current, textColor) && iterations < 50) {
+      if (shouldDarken) {
+          rgb.r = Math.max(0, rgb.r - 5);
+          rgb.g = Math.max(0, rgb.g - 5);
+          rgb.b = Math.max(0, rgb.b - 5);
+      } else {
+          rgb.r = Math.min(255, rgb.r + 5);
+          rgb.g = Math.min(255, rgb.g + 5);
+          rgb.b = Math.min(255, rgb.b + 5);
+      }
+      current = rgbToHex(rgb.r, rgb.g, rgb.b);
+      iterations++;
+  }
+
+  return current;
+}
