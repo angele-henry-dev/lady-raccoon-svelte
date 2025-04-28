@@ -45,6 +45,25 @@
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
 		<h1>Simulateur de handicaps visuels</h1>
 
+    <p>
+      Le simulateur de handicaps visuels vous permet de visualiser en temps réel 
+      comment un site internet apparaît pour des personnes atteintes de différents 
+      types de daltonisme ou de troubles de la vision. Cet outil est idéal pour sensibiliser, 
+      tester et améliorer l’accessibilité de vos interfaces, en rendant vos choix de couleurs 
+      inclusifs pour tous.
+    </p>
+
+    <p><strong>Comment l'utiliser ?</strong></p>
+
+    <ol>
+      <li>Saisissez l’URL du site web que vous souhaitez tester dans le champ prévu à cet effet.</li>
+      <li>Choisissez le filtre (protanopie, tritanopie, achromatopsie, etc.) dans le menu déroulant.</li>
+      <li>Visualisez immédiatement le rendu du site tel qu’il serait perçu par une personne concernée.</li>
+      <li>Testez plusieurs filtres pour comparer et ajuster vos designs en conséquence.</li>
+    </ol>
+
+    <p class="border-l rounded-none pl-5 my-10">Astuce : Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</p>
+
     <form
       class="flex gap-2 mb-4 text-[var(--background)]"
       on:submit|preventDefault={() => { /* On empêche le submit */ }}
