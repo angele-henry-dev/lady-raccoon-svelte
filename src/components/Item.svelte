@@ -2,7 +2,7 @@
 	import Ribbon from "$components/design/Ribbon.svelte";
 	import Link from "$components/Link.svelte";
 
-	export let types: string[];
+	export let tags: string[];
 	export let title: string;
 	export let description: string;
 	export let href: string = "";
@@ -16,8 +16,8 @@
     {#if isNew}
       <Ribbon text="Nouveauté" color="var(--color-yellow)" />
     {/if}
-    {#each types as type}
-      <Ribbon text={type} />
+    {#each tags as tag}
+      <Ribbon text={tag} />
     {/each}
   </div>
   <div class="flex flex-col justify-start items-start px-5 pb-5 z-[1]">

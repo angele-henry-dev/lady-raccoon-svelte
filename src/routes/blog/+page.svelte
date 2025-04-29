@@ -32,7 +32,7 @@
 
     {#each data.posts as post}
       {#if post.published}
-        <Item types={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire la suite de l'article" />
+        <Item tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire la suite de l'article" />
       {/if}
     {/each}
   </div>
