@@ -4,6 +4,7 @@
 	import Header from '$components/design/Header.svelte';
 	import Item from "$components/Item.svelte";
 
+
   const FILTER_NEW = "new";
   let selectedTag: string = "all";
 
@@ -64,7 +65,7 @@
       {/each}
     </div>    
 	
-    {#each tools as tool}
+    {#each tools as tool (tool.slug)}
       {#if tool.published && (
             selectedTag === "all" ||
             (selectedTag === FILTER_NEW && tool.isNew) ||
@@ -76,10 +77,11 @@
           description={tool.description}
           href={`/tools/${tool.slug}`}
           label="Accéder à l'outil"
-          isNew={tool.isNew} 
+          isNew={tool.isNew}
         />
       {/if}
     {/each}
+
 
 
 	</div>

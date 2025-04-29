@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Ribbon from "$components/design/Ribbon.svelte";
 	import Link from "$components/Link.svelte";
+  import { fly, fade } from 'svelte/transition';
 
 	export let tags: string[];
 	export let title: string;
@@ -11,7 +12,11 @@
 	export let isNew: boolean = false;
 </script>
 
-<div class="relative flex flex-col bg-[var(--background)] border mb-4">
+<div
+  class="relative flex flex-col bg-[var(--background)] border mb-4"
+  in:fly={{ y: 20, duration: 400 }}
+  out:fade={{ duration: 200 }}
+>
   <div class="w-full flex flex-row">
     {#if isNew}
       <Ribbon text="Nouveauté" color="var(--color-yellow)" />
