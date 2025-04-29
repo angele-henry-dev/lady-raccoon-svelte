@@ -35,28 +35,27 @@
 
 <style>
 .tag-button {
-  padding: 5px 12px;
-  border: 2px solid var(--primary);
-  border-radius: 9999px;
-  background: none;
-  color: var(--primary);
-  font-weight: bold;
-  transition: all 0.3s;
-  cursor: pointer;
+    font-size: medium;
+    padding: 0.1em 0.5em;
+    border: 1px solid var(--primary);
+    background: var(--background);
+    color: var(--primary);
+    transition: all 0.3s;
+    cursor: pointer;
 }
 .tag-button:hover,
 .tag-button.selected {
-  background: var(--primary);
-  color: var(--background);
+    background: var(--primary);
+    color: var(--background);
 }
 
 .tag-button.new {
-  border: 2px solid var(--color-yellow);
-  color: var(--color-yellow);
+    border-color: var(--color-yellow);
+    color: var(--color-yellow);
 }
 .tag-button.new:hover,
 .tag-button.new.selected {
-  background: var(--color-yellow);
-  color: var(--background);
+    background: var(--color-yellow);
+    color: var(--background);
 }
 </style>
