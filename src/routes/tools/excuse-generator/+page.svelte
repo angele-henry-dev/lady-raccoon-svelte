@@ -4,12 +4,12 @@
   import Header from "$components/design/Header.svelte";
 	import Plant from "$components/design/Plant.svelte";
 
-  type ExcuseType = "soft" | "cash" | "wtf";
-  const excusesTypes: ExcuseType[] = ["soft", "cash", "wtf"];
+  type ExcuseType = "neutre" | "cash" | "wtf";
+  const excusesTypes: ExcuseType[] = ["neutre", "cash", "wtf"];
 
   let excuse = $state("");
 
-  function generateExcuse(excuseLevel: ExcuseType = "soft") {
+  function generateExcuse(excuseLevel: ExcuseType) {
     const filteredExcuses = excuses[excuseLevel];
     const index = Math.floor(Math.random() * filteredExcuses.length);
     excuse = filteredExcuses[index];
