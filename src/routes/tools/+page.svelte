@@ -3,10 +3,9 @@
 	import Plant from '$components/design/Plant.svelte';
 	import Header from '$components/design/Header.svelte';
 	import Item from "$components/Item.svelte";
+	import Filters from "$components/Filters.svelte";
 
-
-  const FILTER_NEW = "new";
-  let selectedTag: string = "all";
+	let selectedTag = $state("all");
 
   const allTags = Array.from(
     new Set(
@@ -36,39 +35,12 @@
 	<div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
 		<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Outils pour l’accessibilité et la performance</h1>
 
-    <div class="flex flex-wrap items-center justify-start gap-2 mb-20">
-      Filtres&nbsp;:&nbsp;
-      <button
-        class="tag-button"
-        on:click={() => selectedTag = "all"}
-        class:selected={selectedTag === "all"}
-      >
-        Tous
-      </button>
-
-      <button
-        class="tag-button-new"
-        on:click={() => selectedTag = FILTER_NEW}
-        class:selected={selectedTag === FILTER_NEW}
-      >
-        Nouveautés
-      </button>
-
-      {#each allTags as tag}
-        <button
-          class="tag-button"
-          on:click={() => selectedTag = tag}
-          class:selected={selectedTag === tag}
-        >
-          {tag}
-        </button>
-      {/each}
-    </div>    
+    <Filters bind:selectedTag={selectedTag} allTags={allTags} newFilter={true} />
 	
     {#each tools as tool (tool.slug)}
       {#if tool.published && (
             selectedTag === "all" ||
-            (selectedTag === FILTER_NEW && tool.isNew) ||
+            (selectedTag === "new" && tool.isNew) ||
             tool.tags.includes(selectedTag)
           )}
         <Item 
@@ -81,44 +53,7 @@
         />
       {/if}
     {/each}
-
-
-
 	</div>
 
 	<Plant class="absolute bottom-[-15px] end-[0] w-[90px] sm:w-[150px] z-[-1]" />
 </section>
-
-<style>
-.tag-button {
-  padding: 5px 12px;
-  border: 2px solid var(--primary);
-  border-radius: 9999px;
-  background: none;
-  color: var(--primary);
-  font-weight: bold;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.tag-button:hover,
-.tag-button.selected {
-  background: var(--primary);
-  color: var(--background);
-}
-
-.tag-button-new {
-  padding: 5px 12px;
-  border: 2px solid var(--color-yellow);
-  border-radius: 9999px;
-  background: none;
-  color: var(--color-yellow);
-  font-weight: bold;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.tag-button-new:hover,
-.tag-button-new.selected {
-  background: var(--color-yellow);
-  color: var(--background);
-}
-</style>
