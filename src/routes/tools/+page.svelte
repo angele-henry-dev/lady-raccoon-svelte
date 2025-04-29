@@ -39,10 +39,10 @@
 	
     {#each tools as tool (tool.slug)}
       {#if tool.published && (
-            selectedTag === "all" ||
-            (selectedTag === "new" && tool.isNew) ||
-            tool.tags.includes(selectedTag)
-          )}
+          selectedTag === "all" ||
+          (selectedTag === "new" && tool.isNew) ||
+          tool.tags.includes(selectedTag)
+      )}
         <Item 
           tags={tool.tags}
           title={tool.title}

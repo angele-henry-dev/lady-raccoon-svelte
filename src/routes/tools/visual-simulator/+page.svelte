@@ -63,7 +63,7 @@
       <li>Testez plusieurs filtres pour comparer et ajuster vos designs en conséquence.</li>
     </ol>
 
-    <aside class="border-l rounded-none pl-5 my-10">Astuce : Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</aside>
+    <aside class="border-l rounded-none pl-5 my-10">Astuce&nbsp;:&nbsp;Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</aside>
 
     <form
       class="flex gap-2 mb-4 text-[var(--background)]"
