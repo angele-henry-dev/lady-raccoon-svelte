@@ -4,19 +4,19 @@
         "tags": [ "Funny" ],
         "isNew": true,
         "slug": "excuse-generator",
-        "description": "Marre des tests techniques absurdes&nbsp;? Notre générateur d'excuses vous sauve la mise en un clic. Un outil indispensable pour préserver votre énergie (et votre bonne humeur).",
+        "description": "Marre des tests techniques absurdes&nbsp;? Notre générateur d'excuses te sauve la mise en un clic. Un outil indispensable pour préserver ton énergie (et ta bonne humeur).",
         "published": true
     },
     {
-        "title": "Préparez vos entretiens de développeur",
+        "title": "Prépare tes entretiens de développeur",
         "tags": [ "Formation" ],
         "isNew": true,
         "slug": "https://chatgpt.com/g/g-67f38c0acfd8819199d7ff2cf1ee32f7-cto-asked",
-        "description": "Préparez vos entretiens de développeur (frontend, backend, fullstack), de Devops ou tout expert tech grâce à notre simulateur interactif. Répondez à des questions types, entraînez-vous et gagnez en assurance avant vos recrutements.",
+        "description": "Prépare tes entretiens de développeur (frontend, backend, fullstack), de Devops ou tout expert tech grâce à notre simulateur interactif. Réponds à des questions types, entraîne-toi et gagne en assurance avant tes recrutements.",
         "published": true
     },
     {
-        "title": "Testez le contraste des couleurs",
+        "title": "Teste le contraste des couleurs",
         "tags": [ "Accessibilité", "Dev" ],
         "isNew": false,
         "slug": "contrast-checker",
@@ -28,7 +28,7 @@
         "tags": [ "Accessibilité" ],
         "isNew": false,
         "slug": "visual-simulator",
-        "description": "Testez l’accessibilité de n’importe quel site en simulant différents types de daltonisme et de déficiences visuelles. Visualisez instantanément le rendu pour mieux concevoir des interfaces vraiment inclusives.",
+        "description": "Teste l’accessibilité de n’importe quel site en simulant différents types de daltonisme et de déficiences visuelles. Visualise instantanément le rendu pour mieux concevoir des interfaces vraiment inclusives.",
         "published": true
     }
 ]

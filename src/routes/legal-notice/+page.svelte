@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Mentions légales - forabetter.tech</title>
-	<meta name="description" content="Découvrez les informations légales du site forabetter.tech : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies." />
+	<meta name="description" content="Découvre les informations légales du site forabetter.tech : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies." />
 </svelte:head>
 
 <Header />

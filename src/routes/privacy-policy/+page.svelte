@@ -5,7 +5,7 @@
 
 <svelte:head>
   <title>Politique de confidentialité - forabetter.tech</title>
-  <meta name="description" content="Découvrez comment nous protégeons vos données personnelles sur forabetter.tech, une communauté tech bienveillante, inclusive et sécurisée." />
+  <meta name="description" content="Découvre comment nous protégeons tes données personnelles sur forabetter.tech, une communauté tech bienveillante, inclusive et sécurisée." />
 </svelte:head>
 
 <Header />
@@ -46,7 +46,7 @@
 		Des mesures techniques et organisationnelles sont mises en place pour sécuriser tes données.
 	</p>
   
-	<h2 class="mt-5">Vos droits</h2>
+	<h2 class="mt-5">Tes droits</h2>
 	<p>Tu as le pouvoir de :</p>
 	<ul>
 		<li>Accéder à tes données</li>

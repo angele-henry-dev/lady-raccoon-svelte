@@ -49,7 +49,7 @@
 
 <svelte:head>
   <title>Besoin d'une excuse pour esquiver un test technique ? - forabetter.tech</title>
-  <meta name="description" content="Besoin d'une excuse pour éviter un test technique ? Utilisez notre générateur et économisez votre temps et votre énergie." />
+  <meta name="description" content="Besoin d'une excuse pour éviter un test technique ? Utilise notre générateur et économise ton temps et ton énergie." />
 </svelte:head>
 
 <Header />
@@ -63,7 +63,7 @@
       Marre des tests techniques chronophages, parfois absurdes, souvent inutiles ? Nous aussi.
     </p>
     <p>
-      Avec ce générateur d'excuses, trouvez en un clic une bonne (ou très mauvaise) raison d'esquiver ces épreuves qui ressemblent plus à un marathon qu'à une réelle évaluation de vos compétences.
+      Avec ce générateur d'excuses, trouve en un clic une bonne (ou très mauvaise) raison d'esquiver ces épreuves qui ressemblent plus à un marathon qu'à une réelle évaluation de tes compétences.
     </p>
     <p class="text-[var(--secondary)]">Parce qu’un test technique ne devrait jamais être&nbsp;:</p>
     <ul class="mb-5 list-disc list-inside">
@@ -72,7 +72,7 @@
       <li>ou pire… un simple filtre automatique sans regard humain.</li>
     </ul>
     <p>
-      Notre générateur est là pour vous rappeler qu’il est légitime de poser vos limites. Un clic, une excuse, et on passe à autre chose.
+      Notre générateur est là pour te rappeler qu’il est légitime de poser tes limites. Un clic, une excuse, et on passe à autre chose.
     </p>
 
     <div class="container mt-10">
@@ -86,13 +86,13 @@
 
       <div class="flex flex-row flex-wrap gap-2">
         <Button handleClick={copyToClipboard} label="Copier l'excuse" disabled={!excuse}>
-          Copier l'excuse
+          Copie l'excuse
         </Button>
         <Button handleClick={shareOnLinkedIn} label="Partager sur LinkedIn" disabled={!excuse}>
-          <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" /> Partager sur LinkedIn
+          <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" /> Partage sur LinkedIn
         </Button>
         <Button handleClick={shareOnTwitter} label="Partager sur Twitter" disabled={!excuse}>
-          <img src="/icons/x.svg" alt="Twitter" class="rounded-none" /> Partager sur Twitter
+          <img src="/icons/x.svg" alt="Twitter" class="rounded-none" /> Partage sur Twitter
         </Button>
       </div>
 

@@ -37,23 +37,23 @@
 		<h1>Simulateur de handicaps visuels</h1>
 
     <p>
-      Le simulateur de handicaps visuels vous permet de visualiser en temps réel 
+      Le simulateur de handicaps visuels te permet de visualiser en temps réel 
       comment un site internet apparaît pour des personnes atteintes de différents 
       types de daltonisme ou de troubles de la vision. Cet outil est idéal pour sensibiliser, 
-      tester et améliorer l’accessibilité de vos interfaces, en rendant vos choix de couleurs 
+      tester et améliorer l’accessibilité de tes interfaces, en rendant tes choix de couleurs 
       inclusifs pour tous.
     </p>
 
     <p><strong>Comment l'utiliser ?</strong></p>
 
     <ol>
-      <li>Saisissez l’URL du site web que vous souhaitez tester dans le champ prévu à cet effet.</li>
-      <li>Choisissez le filtre (protanopie, tritanopie, achromatopsie, etc.) dans le menu déroulant.</li>
-      <li>Visualisez immédiatement le rendu du site tel qu’il serait perçu par une personne concernée.</li>
-      <li>Testez plusieurs filtres pour comparer et ajuster vos designs en conséquence.</li>
+      <li>Saisis l’URL du site web que tu souhaites tester dans le champ prévu à cet effet.</li>
+      <li>Choisis le filtre (protanopie, tritanopie, achromatopsie, etc.) dans le menu déroulant.</li>
+      <li>Visualise immédiatement le rendu du site tel qu’il serait perçu par une personne concernée.</li>
+      <li>Teste plusieurs filtres pour comparer et ajuster tes designs en conséquence.</li>
     </ol>
 
-    <aside class="border-l rounded-none pl-5 my-10">Astuce&nbsp;:&nbsp;Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais vous pouvez toujours tester vos propres projets, maquettes ou sites compatibles.</aside>
+    <aside class="border-l rounded-none pl-5 my-10">Astuce&nbsp;:&nbsp;Certains sites peuvent refuser l’affichage dans l’aperçu (restriction de sécurité), mais tu peux toujours tester tes propres projets, maquettes ou sites compatibles.</aside>
 
     <form
       class="flex gap-2 mb-4 text-[var(--background)]"
@@ -64,7 +64,7 @@
         type="url"
         bind:value={url}
         class="flex-1 p-2 border"
-        placeholder="Entrez l’URL à prévisualiser (ex : https://…)"
+        placeholder="Entre l’URL à prévisualiser (ex : https://…)"
         required
       />
       <select bind:value={selectedFilter} class="p-2 border" aria-label="Choix du filtre de daltonisme">

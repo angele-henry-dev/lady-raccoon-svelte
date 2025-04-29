@@ -60,8 +60,8 @@
 </script>
 
 <svelte:head>
-  <title>Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne - forabetter.tech</title>
-  <meta name="description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
+  <title>Assure la conformité de ton site et rends-le accessible à tous grâce à notre testeur de contraste en ligne - forabetter.tech</title>
+  <meta name="description" content="Assure la conformité de ton site et rends-le accessible à tous grâce à notre testeur de contraste en ligne." />
 </svelte:head>
 
 <Filters />
@@ -89,9 +89,9 @@
                         on:input={(e) => handleHexInput(e, "bg")}
                         pattern="#[0-9A-Fa-f]{6}"
                         aria-label="code hexadecimal fond"
-                        title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+                        title="Entre un code hexadécimal valide (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={bgColor} on:input={updateContrast} aria-label="Choisir couleur fond" />
+                    <input type="color" bind:value={bgColor} on:input={updateContrast} aria-label="Choisir couleur de fond" />
                 </div>
                 <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
             </div>
@@ -105,9 +105,9 @@
                         on:input={(e) => handleHexInput(e, "text")}
                         pattern="#[0-9A-Fa-f]{6}"
                         aria-label="code hexadecimal texte"
-                        title="Veuillez entrer un code hexadécimal valide (ex: #FF5733)"
+                        title="Entre un code hexadécimal valide (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={textColor} on:input={updateContrast} aria-label="Choisir couleur texte" />
+                    <input type="color" bind:value={textColor} on:input={updateContrast} aria-label="Choisir couleur de texte" />
                 </div>
                 <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
             </div>

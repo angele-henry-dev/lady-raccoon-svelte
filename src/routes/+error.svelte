@@ -13,7 +13,7 @@
 		{#if page.status === 404}
 			<h1>Page égarée...</h1>
 			<p>
-				Si vous pensiez trouver quelque chose ici, faites-le nous savoir sur notre 
+				Si tu penses trouver quelque chose ici, fais-le nous savoir sur notre 
 				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" title="GitHub" label="GitHub" target="_blank" />. Merci !
 			</p>
 		{:else}
@@ -22,14 +22,14 @@
 			{#if page.error?.message}
 				<p class="error">{page.status}: {page.error.message}</p>
 			{/if}
-			<p>Essayez de recharger la page.</p>
+			<p>Essaye de recharger la page.</p>
 			<p>
-				Si l'erreur persiste, faites-le nous savoir sur notre 
+				Si l'erreur persiste, fais-le nous savoir sur notre 
 				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" title="GitHub" label="GitHub" target="_blank" />. Merci !
 			</p>
 		{/if}
 	{:else}
-		<h1>Il semble que vous êtes hors ligne.</h1>
-		<p>Rechargez la page quand vous aurez retrouver internet.</p>
+		<h1>Il semble que tu sois hors ligne.</h1>
+		<p>Recharge la page quand tu auras retrouvé internet.</p>
 	{/if}
 </div>

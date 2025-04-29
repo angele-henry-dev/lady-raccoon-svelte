@@ -104,7 +104,7 @@
 
 <svelte:head>
 	<title>Plan du site - forabetter.tech</title>
-	<meta name="description" content="Explorez facilement toutes les pages de forabetter.tech grâce à notre plan du site. Un accès clair et rapide à l’ensemble du contenu." />
+	<meta name="description" content="Explore facilement toutes les pages de forabetter.tech grâce à notre plan du site. Un accès clair et rapide à l’ensemble du contenu." />
 </svelte:head>
 
   
