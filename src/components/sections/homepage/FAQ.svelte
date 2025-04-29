@@ -15,7 +15,7 @@
 			<h2>Trouve les réponses aux questions les plus fréquentes</h2>
 			<img aria-hidden="true" src="/images/raccoon_asking.webp" alt="Raccoon asking questions" width="350" height="350" class="m-auto" />
 		</div>
-		<ul class="space-y-4">
+		<ul class="pl-0 space-y-4">
 			{#each faqs as faq, index}
 				<li class="border-b rounded-none overflow-hidden">
 					<button

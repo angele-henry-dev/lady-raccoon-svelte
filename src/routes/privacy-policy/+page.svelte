@@ -4,16 +4,8 @@
 </script>
 
 <svelte:head>
-  <title>Politique de confidentialité • forabetter.tech</title>
+  <title>Politique de confidentialité - forabetter.tech</title>
   <meta name="description" content="Découvrez comment nous protégeons vos données personnelles sur forabetter.tech, une communauté tech bienveillante, inclusive et sécurisée." />
-  <meta property="og:title" content="Politique de confidentialité • forabetter.tech" />
-  <meta property="og:description" content="Transparence, sécurité et respect de votre vie privée. Consultez notre politique de confidentialité." />
-  <meta property="og:image" content="https://forabetter.tech/images/preview-privacy.png" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Politique de confidentialité • forabetter.tech" />
-  <meta name="twitter:description" content="Transparence, sécurité et respect de votre vie privée. Consultez notre politique de confidentialité." />
-  <meta name="twitter:image" content="https://forabetter.tech/images/preview-privacy.png" />
 </svelte:head>
 
 <Header />
@@ -30,7 +22,7 @@
   
 	<h2 class="mt-5">Données collectées</h2>
 	<p>En naviguant sur ce site ou en me contactant, certaines informations peuvent être collectées :</p>
-	<ul class="list-disc pl-5">
+	<ul>
 		<li>Nom et prénom (si tu remplis un formulaire)</li>
 		<li>Adresse e-mail (pour te répondre, jamais pour spammer)</li>
 		<li>Données de navigation (via des cookies pour améliorer l’expérience utilisateur)</li>
@@ -38,7 +30,7 @@
   
 	<h2 class="mt-5">Utilisation des données</h2>
 	<p>Les données sont utilisées uniquement pour :</p>
-	<ul class="list-disc pl-5">
+	<ul>
 		<li>Répondre à tes messages</li>
 		<li>Améliorer le site et ses performances (merci les cookies 🍪)</li>
 	</ul>
@@ -56,7 +48,7 @@
   
 	<h2 class="mt-5">Vos droits</h2>
 	<p>Tu as le pouvoir de :</p>
-	<ul class="list-disc pl-5">
+	<ul>
 		<li>Accéder à tes données</li>
 		<li>Demander leur modification ou leur suppression</li>
 		<li>Limiter ou t’opposer à leur traitement</li>

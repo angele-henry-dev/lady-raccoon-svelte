@@ -1,19 +1,34 @@
 [
-
     {
-        "title": "Simulateur de handicaps visuels",
-        "tags": [ "Accessibilité", "Dev" ],
+        "title": "Pas dispo pour ton test",
+        "tags": [ "Funny" ],
         "isNew": true,
-        "slug": "visual-simulator",
-        "description": "Testez l’accessibilité de n’importe quel site en simulant différents types de daltonisme et de déficiences visuelles. Visualisez instantanément le rendu pour mieux concevoir des interfaces vraiment inclusives.",
+        "slug": "excuse-generator",
+        "description": "Marre des tests techniques absurdes&nbsp;? Notre générateur d'excuses vous sauve la mise en un clic. Un outil indispensable pour préserver votre énergie (et votre bonne humeur).",
         "published": true
     },
     {
-        "title": "Tester le contraste des couleurs",
+        "title": "Préparez vos entretiens de développeur",
+        "tags": [ "Formation" ],
+        "isNew": true,
+        "slug": "https://chatgpt.com/g/g-67f38c0acfd8819199d7ff2cf1ee32f7-cto-asked",
+        "description": "Préparez vos entretiens de développeur (frontend, backend, fullstack), de Devops ou tout expert tech grâce à notre simulateur interactif. Répondez à des questions types, entraînez-vous et gagnez en assurance avant vos recrutements.",
+        "published": true
+    },
+    {
+        "title": "Testez le contraste des couleurs",
         "tags": [ "Accessibilité", "Dev" ],
         "isNew": false,
         "slug": "contrast-checker",
         "description": "Le testeur de contraste de forabetter.tech te permet de vérifier en un clic si les couleurs de texte et d’arrière-plan de ton site sont accessibles et conformes aux normes WCAG. Obtiens instantanément le ratio de contraste entre deux couleurs, pour garantir une expérience utilisateur optimale et un site web inclusif pour tous, y compris les personnes malvoyantes ou daltoniennes.",
+        "published": true
+    },
+    {
+        "title": "Simulateur de handicaps visuels",
+        "tags": [ "Accessibilité" ],
+        "isNew": false,
+        "slug": "visual-simulator",
+        "description": "Testez l’accessibilité de n’importe quel site en simulant différents types de daltonisme et de déficiences visuelles. Visualisez instantanément le rendu pour mieux concevoir des interfaces vraiment inclusives.",
         "published": true
     }
 ]

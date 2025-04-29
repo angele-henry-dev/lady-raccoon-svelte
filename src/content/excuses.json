@@ -1,0 +1,17 @@
+{
+    "soft": [
+        "Merci pour le test, mais je préfère échanger directement sur vos besoins.",
+        "Je ne suis pas à l’aise avec les tests hors contexte projet.",
+        "Je préfère coder en conditions réelles."
+    ],
+    "cash": [
+        "J’ai 9 ans d’expérience, je ne vais pas passer un test de FizzBuzz.",
+        "Si je voulais passer un examen, je retournerais à l’école.",
+        "Ma valeur ne se mesure pas à un chrono en live coding."
+    ],
+    "wtf": [
+        "Je peux pas, j'ai poney-piscine.",
+        "Une autre fois, là j’ai un bug à résoudre dans Baldur’s Gate 3.",
+        "Le test technique a été mangé par mon linter."
+    ]
+}

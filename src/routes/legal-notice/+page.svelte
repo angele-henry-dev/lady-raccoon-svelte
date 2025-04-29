@@ -5,16 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>Mentions légales | forabetter.tech</title>
+	<title>Mentions légales - forabetter.tech</title>
 	<meta name="description" content="Découvrez les informations légales du site forabetter.tech : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies." />
-	<meta property="og:title" content="Mentions légales | forabetter.tech" />
-	<meta property="og:description" content="Toutes les informations légales sur le site forabetter.tech. Transparence, confidentialité et conformité au rendez-vous." />
-	<meta property="og:image" content="https://forabetter.tech/og-legal.jpg" />
-	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Mentions légales | forabetter.tech" />
-	<meta name="twitter:description" content="Transparence, confidentialité et conformité sur le site forabetter.tech." />
-	<meta name="twitter:image" content="https://forabetter.tech/og-legal.jpg" />
 </svelte:head>
 
 <Header />

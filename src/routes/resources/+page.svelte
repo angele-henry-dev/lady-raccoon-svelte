@@ -15,17 +15,8 @@
 </script>
 
 <svelte:head>
-    <title>Ressources pour les développeurs et passionnés de tech • forabetter.tech</title>
+    <title>Ressources pour les développeurs et passionnés de tech - forabetter.tech</title>
     <meta name="description" content="Découvre mes ebooks, formations, guides, contenus premium pour les développeurs, UX/UI, DevOps et passionnés de technologie." />
-    <meta property="og:title" content="Ressources pour les développeurs et passionnés de tech • forabetter.tech" />
-    <meta property="og:description" content="Une sélection de contenus pour progresser : ebooks, formations, guides, contenus premium et bien plus." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://forabetter.tech/ressources" />
-    <meta property="og:image" content="https://forabetter.tech/images/preview-ressources.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ressources pour les développeurs et passionnés de tech • forabetter.tech" />
-    <meta name="twitter:description" content="Une sélection de contenus pour progresser : ebooks, formations, guides, contenus premium et bien plus." />
-    <meta name="twitter:image" content="https://forabetter.tech/images/preview-ressources.jpg" />
 </svelte:head>
 
 <section class="relative w-full flex flex-col items-center justify-center mb-10">

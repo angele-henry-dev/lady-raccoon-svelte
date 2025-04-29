@@ -11,7 +11,7 @@
 	import Button from '$components/Button.svelte';
 	import Header from '$components/design/Header.svelte';
 	import Plant from '$components/design/Plant.svelte';
-	import Filters from '$components/sections/tools/Filters.svelte';
+	import Filters from '$components/sections/tools/ColorBlind.svelte';
     import { FILTERS_DATA } from "$lib/contrast";
     const FILTERS = Object.keys(FILTERS_DATA) as Array<keyof typeof FILTERS_DATA>;
 
@@ -60,18 +60,8 @@
 </script>
 
 <svelte:head>
-  <title>Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne.</title>
+  <title>Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne - forabetter.tech</title>
   <meta name="description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
-  <meta property="og:title" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
-  <meta property="og:description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
-  <meta property="og:image" content="https://forabetter.tech/og-tools.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://forabetter.tech/tools/contrast-checker" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
-  <meta name="twitter:description" content="Assurez la conformité de votre site et rendez-le accessible à tous grâce à notre testeur de contraste en ligne." />
-  <meta name="twitter:image" content="https://forabetter.tech/og-tools.png" />
-  <link rel="canonical" href="https://forabetter.tech/tools/contrast-checker" />
 </svelte:head>
 
 <Filters />

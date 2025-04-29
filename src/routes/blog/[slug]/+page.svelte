@@ -7,10 +7,8 @@
 </script>
 
 <svelte:head>
-	<title>{data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-	<meta property="og:description" content={data.meta.description} />
+	<title>{data.meta.title} - forabetter.tech</title>
+	<meta name="description" content={data.meta.description} />
 </svelte:head>
 
 <Header />

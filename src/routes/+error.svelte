@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{page.status}</title>
+	<title>{page.status} - forabetter.tech</title>
 </svelte:head>
 
 <div class="container mx-auto p-5 md:p-10">
