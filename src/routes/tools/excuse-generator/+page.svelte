@@ -85,19 +85,21 @@
       </div>
 
       <div class="flex flex-row flex-wrap gap-2">
-        <Button handleClick={copyToClipboard} label="Copier l'excuse" disabled={!excuse}>
+        <Button handleClick={copyToClipboard} label="Copier l'excuse" disabled={!displayed}>
           Copie l'excuse
         </Button>
-        <Button handleClick={shareOnLinkedIn} label="Partager sur LinkedIn" disabled={!excuse}>
+        <Button handleClick={shareOnLinkedIn} label="Partager sur LinkedIn" disabled={!displayed}>
           <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" /> Partage sur LinkedIn
         </Button>
-        <Button handleClick={shareOnTwitter} label="Partager sur Twitter" disabled={!excuse}>
+        <Button handleClick={shareOnTwitter} label="Partager sur Twitter" disabled={!displayed}>
           <img src="/icons/x.svg" alt="Twitter" class="rounded-none" /> Partage sur Twitter
         </Button>
       </div>
 
       <div class="min-h-[100px] italic mt-6 p-4 border rounded-xl bg-[var(--foreground)] text-[var(--background)] shadow-md">
-        {excuse}
+        {#if displayed}
+          {displayed}
+        {/if}
       </div>
     </div>
 
