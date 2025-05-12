@@ -8,7 +8,7 @@
 </script>
 
 <button 
-    class="flex flex-row gap-3 inline-block my-2 px-3 py-1 
+    class="flex flex-row px-3 py-1 
         text-base hover:text-[var(--background)] 
         bg-[var(--background)] border 
         pointer transition z-20

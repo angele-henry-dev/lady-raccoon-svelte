@@ -81,7 +81,7 @@
         <div class="w-full flex flex-row gap-5 flex-wrap justify-start items-end">
             <div class="grow">
                 <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
-                <div class="input-container">
+                <div class="input-container mb-5">
                     <input
                         id="hexaBg"
                         type="text"
@@ -97,7 +97,7 @@
             </div>
             <div class="grow">
                 <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
-                <div class="input-container">
+                <div class="input-container mb-5">
                     <input
                         id="hexaText"
                         type="text"

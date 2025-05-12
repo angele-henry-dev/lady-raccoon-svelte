@@ -76,7 +76,7 @@
     </p>
 
     <div class="container mt-10">
-      <div class="flex flex-row flex-wrap gap-2">
+      <div class="flex flex-row flex-wrap gap-2 mb-5">
         {#each excusesTypes as excusesType}
           <Button handleClick={() => generateExcuse(excusesType)} label={`Générer une excuse ${excusesType}`}>
             Excuse {excusesType}
@@ -89,10 +89,10 @@
           Copie l'excuse
         </Button>
         <Button handleClick={shareOnLinkedIn} label="Partager sur LinkedIn" disabled={!displayed}>
-          <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" /> Partage sur LinkedIn
+          <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" />&nbsp;Partage sur LinkedIn
         </Button>
         <Button handleClick={shareOnTwitter} label="Partager sur Twitter" disabled={!displayed}>
-          <img src="/icons/x.svg" alt="Twitter" class="rounded-none" /> Partage sur Twitter
+          <img src="/icons/x.svg" alt="Twitter" class="rounded-none" />&nbsp;Partage sur Twitter
         </Button>
       </div>
 

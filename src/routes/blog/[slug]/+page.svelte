@@ -19,8 +19,8 @@
 			<Ribbon text={tag} />
 		{/each}
 
-		<h1 class="mb-0">{data.meta.title}</h1>
-		<p><i>Publié le {data.meta.date}</i></p>
+		<h1>{data.meta.title}</h1>
+		<p class="text-sm"><i>Publié le {data.meta.date}</i></p>
 	
 		<div class="prose">
 			<data.content />

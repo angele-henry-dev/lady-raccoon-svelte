@@ -15,7 +15,7 @@
 	} else if (linkType === "button") {
 		generatedClass = "px-6 py-3 text-[var(--background)] border border-[var(--secondary)] hover:text-[var(--secondary)] bg-[var(--secondary)] hover:bg-[var(--background)]";
 	} else if (linkType === "outline") {
-		generatedClass = "px-6 py-3 text-[var(--secondary)] border border-[var(--secondary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--secondary)]";
+		generatedClass = "px-3 py-2 text-[var(--secondary)] border border-[var(--secondary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--secondary)]";
 	} else {
 		generatedClass = "py-1 hover:px-3 hover:text-[var(--background)] hover:bg-[var(--secondary)]";
 	}

@@ -10,9 +10,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-			layout: {
-			  	blog: path.resolve('./src/routes/blog/+layout.svelte')
-			}
+			layout: path.resolve('./src/layouts/markdownLayout.svelte')
 		})
 	],
 

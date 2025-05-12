@@ -1,7 +1,7 @@
 ---
 title: "Freelance, maman et encore debout"
 slug: "freelance-maman"
-date: "2025-05-12"
+date: "2025-05-05"
 description: "Une journée (presque) comme les autres dans la vie d’une développeuse freelance et maman"
 tags: ["Vie de dev"]
 published: true

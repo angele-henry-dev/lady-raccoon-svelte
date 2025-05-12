@@ -4,7 +4,7 @@
     let { selectedTag = $bindable(), allTags = [], newFilter = false } = $props()
 </script>
 
-<div class="flex flex-wrap items-center justify-start gap-2 mb-20">
+<div class="flex flex-wrap items-center justify-start gap-2 mb-10">
     Filtres&nbsp;:&nbsp;
     <Button
         handleClick={() => selectedTag = 'all'}
