@@ -9,18 +9,14 @@
 </script>
 
 <div class="relative overflow-hidden flex flex-col bg-[var(--background)] border group">
-  <div 
-    aria-hidden="true"
-    class="circle absolute h-[5em] w-[5em] -top-[2.5em] -right-[2.5em] rounded-full bg-[var(--secondary)] group-hover:scale-[1000%] duration-500 z-[0]"
-  ></div>
-  <div class="flex flex-col justify-start items-start p-5 group-hover:text-[var(--background)] z-[1]">
+  <div class="flex flex-col justify-start items-start p-5 z-[1]">
     <h2>{ title }</h2>
     <div class="flex-grow">
         {@html description}
     </div>
     {#if label && href}
-      <div class="w-full border-t rounded-none pt-5 mt-5 text-center">
-        <Link title={title} label={label} href={href} target={target} />
+      <div class="pt-5 my-5 text-center">
+        <Link title={title} href={href} target={target} linkType="outline">{label}</Link>
       </div>
     {/if}
   </div>

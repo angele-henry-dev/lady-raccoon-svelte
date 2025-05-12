@@ -19,7 +19,6 @@
             handleClick={() => selectedTag = 'new'}
             active={selectedTag === "new"}
             label="Uniquement les nouveaux éléments"
-            colored={true}
         >
             Nouveautés
         </Button>

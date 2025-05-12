@@ -22,12 +22,13 @@
 				Coworking, entraide, formations et ressources pour progresser en toute bienveillance.
 			</p>
 			<Link 
-				href="https://discord.gg/BAZdtgcuNX" 
-				target="_blank" 
-				title="Discord" 
-				label="Découvre le Discord"
-				button={true}
-			/>
+				href="https://discord.gg/BAZdtgcuNX"
+				target="_blank"
+				title="Discord"
+				linkType="button"
+			>
+			Découvre le Discord
+			</Link>
 		</div>
 	</div>
 	<div class="bottom bg-[var(--color-blue-dark)] relative h-[23%] w-full flex flex-col items-center justify-center">

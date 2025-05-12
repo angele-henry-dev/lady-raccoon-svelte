@@ -4,7 +4,7 @@
 
 :root {
   --color-black: hsl(0, 0%, 0%);
-  --color-black-light: hsl(219, 70%, 9%);
+  --color-black-light: hsl(219, 70%, 9%);       /* #071227 */
 
   --color-blue: hsl(219, 100%, 80%);            /* #99bdff */
   --color-blue-dark: hsl(219, 70%, 25%);        /* #13326c */
@@ -12,7 +12,7 @@
   --color-lavanda: hsl(287, 100%, 80%);         /* #e999ff */
   --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975da8 */
 
-  --color-yellow: hsl(45, 100%, 80%);           /* # */
+  --color-yellow: hsl(37, 71%, 78%);            /* #EFD19F */
 
   --color-white: hsl(0, 0%, 85%);               /* #dadada */
 
@@ -22,7 +22,8 @@
   --foreground: var(--color-white);
 
   --primary: var(--color-blue);
-  --secondary: var(--color-lavanda);
+  --secondary: var(--color-yellow);
+  --tertiary: var(--color-lavanda);
 }
 
 @font-face {

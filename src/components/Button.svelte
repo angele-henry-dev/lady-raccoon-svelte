@@ -2,7 +2,6 @@
 <script lang="ts">
 	export let children: any;
 	export let label: string;
-	export let colored: boolean = false;
     export let disabled: boolean = false;
     export let active: boolean = false;
 	export let handleClick: () => void;
@@ -14,7 +13,6 @@
         bg-[var(--background)] border 
         pointer transition z-20
         {active ? 'active ' : ''}
-        {colored ? 'colored ' : ''}
         "
     aria-label={label} 
     disabled={disabled} 
@@ -34,22 +32,14 @@
         border-color: var(--primary);
         color: var(--background);
     }
-    button.active {
-        background-color: var(--primary);
-        color: var(--background);
-    }
 
-    button.colored {
+    button.active {
         background-color: var(--background);
-        border-color: var(--color-yellow);
-        color: var(--color-yellow);
+        border-color: var(--tertiary);
+        color: var(--tertiary);
     }
-    button.colored:hover {
-        background-color: var(--color-yellow);
-        color: var(--background);
-    }
-    button.colored.active {
-        background-color: var(--color-yellow);
+    button.active:hover {
+        background-color: var(--tertiary);
         color: var(--background);
     }
 

@@ -6,20 +6,20 @@
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="flex flex-col mb-3">
 			<b>Pages</b>
-			<Link href="/tools" target="_self" title="Outils" label="Outils" />
-			<Link href="/resources" target="_self" title="Ressources" label="Ressources" />
-			<Link href="/blog" target="_self" title="Blog" label="Blog" />
+			<Link href="/tools" target="_self">Outils</Link>
+			<Link href="/resources" target="_self">Ressources</Link>
+			<Link href="/blog" target="_self">Blog</Link>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Contact</b>
-			<Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord" label="Rejoins le Discord" />
-			<Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi" label="Soutiens-moi sur Ko-fi" />
-			<Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn" label="Contacte-moi sur LinkedIn" />
+			<Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord">Rejoins le Discord</Link>
+			<Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi">Soutiens-moi sur Ko-fi</Link>
+			<Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn">Contacte-moi sur LinkedIn</Link>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Confidentialité</b>
-			<Link href="/legal-notice" target="_self" title="Mentions légales" label="Mentions légales" />
-			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité" label="Politique de confidentialité" />
+			<Link href="/legal-notice" target="_self">Mentions légales</Link>
+			<Link href="/privacy-policy" target="_self">Politique de confidentialité</Link>
 		</div>
 	</div>
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between border-t rounded-none p-5">

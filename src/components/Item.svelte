@@ -18,12 +18,16 @@
   out:fade={{ duration: 200 }}
 >
   <div class="w-full flex flex-row">
-    {#if isNew}
-      <Ribbon text="Nouveauté" color="var(--color-yellow)" />
-    {/if}
-    {#each tags as tag}
-      <Ribbon text={tag} />
-    {/each}
+    <div class="grow flex flex-row ml-5">
+      {#each tags as tag}
+        <Ribbon text={tag} />
+      {/each}
+    </div>
+    <div class="mr-5">
+      {#if isNew}
+        <Ribbon text="Nouveauté" />
+      {/if}
+    </div>
   </div>
   <div class="flex flex-col justify-start items-start px-5 pb-5 z-[1]">
     <h2>{ title }</h2>
@@ -31,8 +35,8 @@
         {@html description}
     </div>
     {#if label && href}
-      <div class="w-full border-t rounded-none pt-5 mt-5">
-        <Link title={title} label={label} href={href} target={target} />
+      <div class="w-full pt-5 my-5">
+        <Link title={title} href={href} target={target} linkType="outline">{label}</Link>
       </div>
     {/if}
   </div>

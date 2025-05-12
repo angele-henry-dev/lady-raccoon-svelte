@@ -66,7 +66,7 @@
       Avec ce générateur d'excuses, trouve en un clic une bonne (ou très mauvaise) raison d'esquiver ces épreuves qui ressemblent plus à un marathon qu'à une réelle évaluation de tes compétences.
     </p>
     <p class="text-[var(--secondary)]">Parce qu’un test technique ne devrait jamais être&nbsp;:</p>
-    <ul class="mb-5 list-disc list-inside">
+    <ul class="mb-5">
       <li>un projet de trois jours non rémunéré,</li>
       <li>un test pour voir si tu gères le stress et la mauvaise ambiance,</li>
       <li>ou pire… un simple filtre automatique sans regard humain.</li>

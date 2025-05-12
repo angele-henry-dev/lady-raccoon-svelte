@@ -1,17 +1,24 @@
 <script lang="ts">
 	export let href: string;
-	export let title: string;
-	export let label: string;
-	export let target: "_blank" | "_self";
-	export let colored: boolean = true;
-	export let button: boolean = false;
+	export let children: any;
+	export let title: string = children;
+	export let target: "_blank" | "_self" = "_self";
+	export let linkType: "text" | "simple" | "button" | "outline" = "simple";
 
 	const labelText = target === '_blank'
 		? `Ouvre dans une nouvelle fenêtre ${title}`
 		: `Ouvre la page ${title}`;
 
-	const basicClasses = `py-1 px-3 hover:text-[var(--background)] hover:bg-[var(--primary)] ${colored ? 'text-[var(--primary)]' : ''} group-hover:text-[var(--background)] group-hover:border`;
-	const buttonClasses = "px-6 py-3 font-semibold text-[var(--background)] hover:text-[var(--background)] bg-[var(--secondary)] hover:bg-[var(--primary)]";
+	let generatedClass = "";
+	if (linkType === "simple") {
+		generatedClass = "py-1 hover:px-3 text-[var(--secondary)] hover:text-[var(--background)] hover:bg-[var(--secondary)]";
+	} else if (linkType === "button") {
+		generatedClass = "px-6 py-3 text-[var(--background)] border border-[var(--secondary)] hover:text-[var(--secondary)] bg-[var(--secondary)] hover:bg-[var(--background)]";
+	} else if (linkType === "outline") {
+		generatedClass = "px-6 py-3 text-[var(--secondary)] border border-[var(--secondary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--secondary)]";
+	} else {
+		generatedClass = "py-1 hover:px-3 hover:text-[var(--background)] hover:bg-[var(--secondary)]";
+	}
 </script>
 
 <a
@@ -20,9 +27,9 @@
     aria-label={labelText}
     target={target}
 	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-	class={ button ? buttonClasses : basicClasses }
+	class={generatedClass}
 >
-    { label }
+	{@render children()}
 	{#if target === '_blank'}
 		<span aria-hidden="true" class="ml-1">→</span>
 	{/if}
