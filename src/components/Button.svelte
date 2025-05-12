@@ -18,7 +18,7 @@
     disabled={disabled} 
     onclick={handleClick} 
 >
-    {@render children()}
+    {@render children?.()}
 </button>
 
 <style>

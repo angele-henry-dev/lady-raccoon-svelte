@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="z-10">
-			<h1 class="text-4xl lg:text-6xl font-bold uppercase">Le cocon tech</h1>
+			<h1 class="text-4xl lg:text-6xl font-bold uppercase">forabetter.tech</h1>
 			<p class="lg:text-2xl pt-5 max-w-2xl">
 				Bienvenue dans l’open space virtuel de la tech.
 			</p>

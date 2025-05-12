@@ -26,7 +26,7 @@ Entre les deux&nbsp;? Une journée de freelance classique… ou presque.
 ## Du boulot, en pointillés
 
 En tant qu’indépendante, mes journées ne se ressemblent jamais. Mais aujourd’hui, c’était le combo parfait&nbsp;:
-- Travail sur les outils d’**accessibilité web** pour [forabetter.tech](/)
+- Travail sur les outils d’**accessibilité web** pour [forabetter.tech](/ "Ouvrir la page forabetter.tech")
 - Préparation de ma prochaine **mission** cet été
 - Un peu de **gestion financière** pour mon entreprise
 - Du **rangement**, un peu de **ménage** (parce qu’il faut bien que ça tourne)
@@ -55,4 +55,4 @@ Et demain, on remet ça !
 ---
 
 Tu veux partager ton expérience de parent freelance ou de journée galère&nbsp;?  
-**Viens en discuter avec nous sur [le Discord de forabetter.tech](/)**.
+**Viens en discuter avec nous sur le [Discord](https://discord.gg/BAZdtgcuNX "Ouvrir dans une nouvelle fenêtre le Discord")** de forabetter.tech.

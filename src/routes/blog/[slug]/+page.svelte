@@ -22,7 +22,7 @@
 		<h1>{data.meta.title}</h1>
 		<p class="text-sm"><i>Publié le {data.meta.date}</i></p>
 	
-		<div class="prose">
+		<div>
 			<data.content />
 		</div>
 		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
