@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Moon from '$components/design/Moon.svelte';
-	import Stars from '$components/design/Stars.svelte';
 	import Plant from '$components/design/Plant.svelte';
 	import Tree from '$components/design/Tree.svelte';
 	import Link from '$components/Link.svelte';
-	import Cloud from '$components/design/Cloud.svelte';
 	import Background from '$components/design/Background.svelte';
 </script>
 
