@@ -1,6 +1,6 @@
 <div class="logo w-[45px] h-[40px] flex flex-row">
   <a href="/" title="Ouvre la page d'accueil" aria-label="Ouvre la page d'accueil de forabetter.tech" class="icon size-full block py-1 hover:bg-[var(--primary)] pt-[7px] pl-[5px]">
-    <svg data-name="Logo" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.1 211.1" width="40" height="40">
+    <svg aria-hidden="true" data-name="Logo" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.1 211.1" width="40" height="40">
       <g id="head">
         <polygon id="fond_vert" class="primary" points="184.6 84.9 140.4 35.7 137.5 0 113.5 20.5 113.5 20.5 92.3 31.6 74.2 21 74.2 21 46.2 0 44.7 35.7 0 87.2 57.3 112.1 77.4 98.7 66.3 133.4 77.4 133.4 111.4 133.4 122.4 133.4 110.2 98.7 130.6 112.8 184.6 84.9"/>
         <polygon id="nose" class="primary" points="99 67.9 88.5 67.9 70.9 129.5 117.6 129.5 99 67.9"/>
