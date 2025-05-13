@@ -13,12 +13,12 @@
     <Star classes="absolute top-[13%] end-[7%] size-[18px] shiny" />
     <Star classes="absolute top-[49%] start-[40%] size-[12px] shiny" />
 
-    <Cloud classes="absolute bottom-[20%] start-[30%] size-[50px]" />
+    <Cloud classes="hidden md:block absolute bottom-[20%] start-[30%] size-[50px]" />
     <Cloud classes="absolute top-[25%] end-[10%] size-[80px]" />
-    <Cloud classes="absolute top-[10%] start-[35%] size-[120px]" />
+    <Cloud classes="hidden md:block absolute top-[10%] start-[35%] size-[120px]" />
 
-    <div class="size-full grid grid-cols-2">
-        <Moon classes="size-[150px] md:size-[200px] m-auto" />
+    <div class="size-full grid grid-cols-1 md:grid-cols-2">
+        <Moon classes="size-[150px] md:size-[200px] mx-auto md:m-auto" />
         <div class="shadow size-full"></div>
     </div>
 </div>

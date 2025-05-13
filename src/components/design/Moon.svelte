@@ -4,7 +4,7 @@
 </script>
 
 <div aria-hidden="true" class="{classes}">
-  <div class="moon relative size-full rounded-full opacity-80 { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent' } -z-1">
+  <div class="moon relative size-full rounded-full { full ? 'full bg-[var(--moon-color)]' : 'bg-transparent' }">
     {#if full}
       <div class="absolute top-[20%] start-[15%] bg-[var(--moon-color-dark)] size-[30%] rounded-full"></div>
       <div class="absolute top-[60%] start-[40%] bg-[var(--moon-color-dark)] size-[15%] rounded-full"></div>
