@@ -86,14 +86,9 @@ p {
 a {
   text-decoration-line: underline;
   color: var(--secondary);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 a:hover {
-  color: var(--background);
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  background-color: var(--secondary);
+  color: var(--primary);
 }
 @media (prefers-reduced-motion: no-preference) {
   a {

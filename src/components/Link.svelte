@@ -13,9 +13,9 @@
 	if (linkType === "text") {
 		generatedClass = "no-underline text-[var(--foreground)]";
 	} else if (linkType === "button") {
-		generatedClass = "no-underline px-3 py-3 text-[var(--background)] border border-[var(--secondary)] hover:text-[var(--secondary)] bg-[var(--secondary)] hover:bg-[var(--background)]";
+		generatedClass = "no-underline px-3 py-3 text-[var(--background)] hover:text-[var(--background)] bg-[var(--secondary)] hover:bg-[var(--primary)]";
 	} else if (linkType === "outline") {
-		generatedClass = "no-underline px-3 py-2 text-[var(--secondary)] border border-[var(--secondary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--secondary)]";
+		generatedClass = "no-underline px-3 py-2 text-[var(--secondary)] border border-[var(--secondary)] hover:border-[var(--primary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--primary)]";
 	}
 </script>
 
