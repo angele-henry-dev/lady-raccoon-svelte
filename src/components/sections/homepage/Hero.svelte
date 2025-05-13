@@ -7,10 +7,10 @@
 </script>
 
 <section class="h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
-	<div class="hero px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
+	<div class="hero relative px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
 		<Background />
 		<div class="px-10 m-auto md:my-0 md:mx-auto mb-5">
-			<Moon classes="size-[150px] md:size-[200px]" />
+			
 		</div>
 
 		<div class="z-10">
@@ -31,7 +31,7 @@
 			</Link>
 		</div>
 	</div>
-	<div class="bottom bg-[var(--color-blue-dark)] relative h-[23%] w-full flex flex-col items-center justify-center">
+	<div class="bottom bg-[var(--color-blue-dark)] relative h-[20%] w-full flex flex-col items-center justify-center">
 		<div aria-hidden="true" class="relative size-full overflow-x-clip">
 			<div class="absolute bottom-[2vmin] -start-[5%] sm:-start-[20vmin] w-[110%] sm:w-[70%] h-[130%] bg-[var(--color-black-light)] rounded-t-[50%] rounded-b-none"></div>
 			<div class="hidden sm:block absolute bottom-[2vmin] -end-[20vmin] w-[80%] h-[120%] bg-[var(--background)] rounded-t-[50%] rounded-b-none"></div>
