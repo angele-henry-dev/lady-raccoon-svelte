@@ -4,11 +4,13 @@
 	import Plant from '$components/design/Plant.svelte';
 	import Tree from '$components/design/Tree.svelte';
 	import Link from '$components/Link.svelte';
+	import Cloud from '$components/design/Cloud.svelte';
+	import Background from '$components/design/Background.svelte';
 </script>
 
 <section class="h-screen w-full text-center md:text-left flex flex-col items-center justify-center">
 	<div class="hero px-5 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center flex-grow">
-		<Stars />
+		<Background />
 		<div class="px-10 m-auto md:my-0 md:mx-auto mb-5">
 			<Moon classes="size-[150px] md:size-[200px]" />
 		</div>

@@ -5,84 +5,51 @@
     size: number;
     top: string;
     left: string;
-    opacity: number;
-    animationDelay: string;
   }
 
-  let starsLayer1: Star[] = [];
-  let starsLayer2: Star[] = [];
-  let starsLayer3: Star[] = [];
+  let starsLayer: Star[] = [];
+  let starsLayerBig: Star[] = [];
+
+  const centeredRandom = (spread: number = 20) => {
+    return 40 + (Math.random() - 0.5) * 60;
+  };
 
   onMount(() => {
     const isMobile = window.innerWidth < 768;
     const generateStars = (count: number, size: number): Star[] => {
       return Array.from({ length: count }).map(() => ({
-        size,
-        top: `${Math.random() * 100}vh`,
-        left: `${Math.random() * 100}vw`,
-        opacity: 0.5 + Math.random() * 0.5,
-        animationDelay: `${Math.random() * 2}s`,
+        size: size,
+        top: `${centeredRandom(20)}vh`,
+        left: `${Math.random() * 100}vw`
       }));
     };
 
-    starsLayer1 = generateStars(isMobile ? 50 : 100, 2);
+    starsLayer = generateStars(isMobile ? 10 : 20, 0.2);
+    starsLayerBig = generateStars(isMobile ? 5 : 10, 0.3);
   });
 </script>
 
 <div class="starfield" aria-hidden="true">
-  <div class="shooting_star"></div>
-
-  <div class="starslayer1">
-    {#each starsLayer1 as star}
+  {#each starsLayer as star}
     <div
-    class="star"
-    style="
-      width: {star.size}px;
-      height: {star.size}px;
-      top: {star.top};
-      left: {star.left};
-      opacity: {star.opacity};
-      animation-delay: {star.animationDelay};
-    "
-  ></div>
-    {/each}
-    {#each starsLayer1 as star}
+      class="star relative"
+      style="
+        top: {star.top};
+        left: {star.left};
+        font-size: {star.size}em;
+      "
+    ></div>
+  {/each}
+  {#each starsLayerBig as star}
     <div
-    class="star"
-    style="
-      width: {star.size}px;
-      height: {star.size}px;
-      top: {star.top};
-      left: {star.left};
-      opacity: {star.opacity};
-      animation-delay: {star.animationDelay};
-    "
-  ></div>
-    {/each}
-  </div>
-  
-
-  {#each [
-    { stars: starsLayer1, class: "starslayer1" },
-    { stars: starsLayer2, class: "starslayer2" },
-    { stars: starsLayer3, class: "starslayer3" }
-  ] as layer}
-    <div class={layer.class}>
-      {#each layer.stars as star}
-        <div
-          class="star"
-          style="
-            width: {star.size}px;
-            height: {star.size}px;
-            top: {star.top};
-            left: {star.left};
-            opacity: {star.opacity};
-            animation-delay: {star.animationDelay};
-          "
-        ></div>
-      {/each}
-    </div>
-  {/each}  
+      class="star relative"
+      style="
+        top: {star.top};
+        left: {star.left};
+        font-size: {star.size}em;
+      "
+    ></div>
+  {/each}
 </div>
 
 <style>
@@ -98,11 +65,21 @@
     z-index: 0;
   }
 
-  .star {
+  .star:before,
+  .star:after {
+    content: "";
     position: absolute;
     background: var(--star-color);
-    border-radius: 50%;
-    box-shadow: 0 0 2px var(--star-color);
-    pointer-events: none;
+    width: 1em;
+    height: 1.15em;
+    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.15);
+  }
+
+  .star:before {
+    transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+  }
+
+  .star:after {
+    transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
   }
 </style>
