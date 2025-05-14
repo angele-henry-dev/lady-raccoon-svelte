@@ -79,7 +79,7 @@ h2 {
   }
 }
 
-p {
+p, pre, ul {
   margin-bottom: 20px;
 }
 
@@ -108,4 +108,23 @@ ol {
 
 strong {
   color: var(--primary);
+}
+
+pre {
+  border-width: 1px;
+  border-left: 10px solid var(--tertiary);
+  white-space: pre-wrap;
+  /* overflow-x: auto; */
+  max-height: 300px;
+  overflow: auto;
+  tab-size: 4;
+}
+pre code {
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  padding: 20px;
+  color: var(--foreground);
+}
+pre code .tag {
+  color: hsl(24, 100%, 70%);
 }

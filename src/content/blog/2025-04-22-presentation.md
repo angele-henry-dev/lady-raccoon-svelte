@@ -7,7 +7,7 @@ tags: ["Vie de dev"]
 published: true
 ---
 
-Mon parcours est un peu atypique... et j’ai décidé de l’embrasser à fond. Voici mon histoire&nbsp;:
+Mon parcours est un peu atypique... et j’ai décidé de l’embrasser à fond !
 
 ---
 
@@ -15,8 +15,7 @@ Mon parcours est un peu atypique... et j’ai décidé de l’embrasser à fond.
 
 Tout commence il y a longtemps dans une galaxie pas si lointaine&nbsp;: **Toulouse**, la ville rose. L’informatique coulait déjà dans mes veines avant même ma première bouffée d’air ! Mon père était développeur informatique, et mon grand frère allait, lui aussi, devenir développeur.
 
-Naturellement, j’ai tapé mes premières lignes de code gamine, sur une vieille Amstrad. Une passion était née. 
-Mais comme souvent, la vie prend des détours...
+Naturellement, j’ai tapé mes premières lignes de code gamine, sur une vieille Amstrad. Une passion était née. Mais comme souvent, la vie prend des détours...
 
 ---
 
@@ -32,7 +31,7 @@ Malgré cela, les études de lettres ne me convenaient pas. Sans un sou, j’ai 
 
 Premier plot twist&nbsp;: je publie un article de presse puis deviens **animatrice radio** ! Mais le stress du direct, ce n’était pas pour moi. Alors, je passe de l’autre côté de la vitre et deviens **technicienne du son**.
 
-C’était chouette, mais... le spectre de mes amours passées flottait toujours au-dessus de ma tête. 
+C’était chouette, mais... le spectre de mes amours passées flottait toujours au-dessus de ma tête.
 
 ---
 
@@ -72,9 +71,9 @@ Quand il est parti, j’ai su&nbsp;: **je réaliserai ce rêve qu’il n’a jam
 
 ## Ce que je lui dirais
 
-> Être freelance, ce n’est pas juste travailler où on veut, quand on veut.  
-> C’est un vrai job, avec ses hauts, ses bas, ses doutes.  
-> Mais qu’est-ce que je l’aime, ce job.
+- Être freelance, ce n’est pas juste travailler où on veut, quand on veut,
+- c’est un vrai job, avec ses hauts, ses bas, ses doutes,
+- mais qu’est-ce que je l’aime, ce job !
 
 Et je sais que **là-haut**, il est fier.
 
@@ -82,5 +81,4 @@ Et je sais que **là-haut**, il est fier.
 
 ## Et maintenant ?
 
-Je construis **forabetter.tech**, j’écris, je crée, je partage.  
-Et je continue ce chemin qui est le mien&nbsp;: atypique, imparfait, mais résolument sincère.
+Je construis **forabetter.tech**, j’écris, je crée, je partage. Et je continue ce chemin qui est le mien&nbsp;: atypique, imparfait, mais résolument sincère.

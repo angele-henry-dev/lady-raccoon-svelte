@@ -16,8 +16,8 @@ On est lundi soir. Je suis épuisée. Et pourtant, j’ai l’impression de n’
 J’ai deux enfants, de 12 et 4 ans. Cette nuit, le petit s’est réveillé à 3h. Je l’ai recouché mais moi, impossible de me rendormir.
 
 Le matin a commencé sur les chapeaux de roue&nbsp;:
-- 30 minutes de trottinette pour accompagner le grand au collège
-- 45 minutes de marche pour récupérer les deux et rentrer le soir
+- 30 minutes de trottinette pour accompagner le grand au collège,
+- 45 minutes de marche pour récupérer les deux et rentrer le soir.
 
 Entre les deux&nbsp;? Une journée de freelance classique… ou presque.
 
@@ -26,11 +26,12 @@ Entre les deux&nbsp;? Une journée de freelance classique… ou presque.
 ## Du boulot, en pointillés
 
 En tant qu’indépendante, mes journées ne se ressemblent jamais. Mais aujourd’hui, c’était le combo parfait&nbsp;:
-- Travail sur les outils d’**accessibilité web** pour [forabetter.tech](/ "Ouvrir la page forabetter.tech")
-- Préparation de ma prochaine **mission** cet été
-- Un peu de **gestion financière** pour mon entreprise
-- Du **rangement**, un peu de **ménage** (parce qu’il faut bien que ça tourne)
-- Et, **victoire personnelle**, une vraie pause d’une heure devant deux épisodes de mon animé du moment
+
+- travail sur les outils d’**accessibilité web** pour [forabetter.tech](/ "Ouvrir la page forabetter.tech"),
+- préparation de ma prochaine **mission** cet été,
+- un peu de **gestion financière** pour mon entreprise,
+- du **rangement**, un peu de **ménage** (parce qu’il faut bien que ça tourne),
+- et, **victoire personnelle**, une vraie pause d’une heure devant deux épisodes de mon animé du moment.
 
 J'ai pas chômé&nbsp;!
 
@@ -41,7 +42,7 @@ J'ai pas chômé&nbsp;!
 Travailler à son compte, ce n’est pas simple. Et avec des enfants, c’est encore un autre niveau. C’est jongler en permanence entre les urgences pro, les imprévus familiaux, et les besoins qu’on oublie trop souvent&nbsp;: **les nôtres**.
 
 Alors je me pose ces questions, encore et encore&nbsp;:
-- Comment concilier **vie de famille** et **vie pro** efficacement&nbsp;?  
+- Comment concilier **vie de famille** et **vie pro** efficacement&nbsp;?
 - Comment avancer **sans laisser des morceaux de soi** sur le chemin&nbsp;?
 
 ---
@@ -52,7 +53,4 @@ Je n’ai pas toutes les réponses. Mais je sais une chose&nbsp;: je suis fière
 
 Et demain, on remet ça !
 
----
-
-Tu veux partager ton expérience de parent freelance ou de journée galère&nbsp;?  
-**Viens en discuter avec nous sur le [Discord](https://discord.gg/BAZdtgcuNX "Ouvrir dans une nouvelle fenêtre le Discord")** de forabetter.tech.
+Tu veux partager ton expérience de parent freelance ou de journée galère&nbsp;? **Viens en discuter avec nous sur le [Discord](https://discord.gg/BAZdtgcuNX "Ouvrir dans une nouvelle fenêtre le Discord")** de forabetter.tech.

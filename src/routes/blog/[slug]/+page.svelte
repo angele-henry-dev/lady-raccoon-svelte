@@ -11,9 +11,11 @@
 
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
-		{#each data.meta.tags as tag}
-			<Ribbon text={tag} />
-		{/each}
+		<div class="grow flex flex-row">
+			{#each data.meta.tags as tag}
+				<Ribbon text={tag} />
+			{/each}
+		</div>
 
 		<h1>{data.meta.title}</h1>
 		<p class="text-sm"><i>Publié le {data.meta.date}</i></p>
