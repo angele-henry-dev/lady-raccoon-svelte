@@ -1,7 +1,7 @@
 ---
 title: "<a> ≠ <button>"
 slug: "a-vs-button"
-date: "2025-05-14"
+date: "2025-05-07"
 description: "Un rappel essentiel pour améliorer l’accessibilité et l’UX de tes sites web : la différence entre les balises a et button"
 tags: ["Accessibilité", "HTML", "Dev"]
 published: true
