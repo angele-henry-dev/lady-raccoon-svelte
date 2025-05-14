@@ -57,7 +57,8 @@
         background: linear-gradient(
             to bottom,
             var(--background) 0%,
-            var(--color-blue-dark) 70%
+            var(--color-blue-dark) 70%,
+            hsl(257, 56%, 28%) 90%
         );
         z-index: -1;
     }
