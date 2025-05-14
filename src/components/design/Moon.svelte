@@ -21,7 +21,7 @@
   }
 
   .moon {
-    box-shadow: 25px 10px 0px 0px #EFD19F;
+    box-shadow: 25px 10px 0px 0px var(--secondary);
   }
   .moon.full {
     box-shadow: 0 0 100px rgba(var(--shadow-color), 0.8),

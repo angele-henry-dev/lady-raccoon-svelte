@@ -6,13 +6,13 @@
   --color-black: hsl(0, 0%, 0%);
   --color-black-light: hsl(219, 70%, 9%);       /* #071227 */
 
-  --color-blue: hsl(219, 100%, 80%);            /* #99bdff */
+  --color-blue: hsl(190, 100%, 80%);            /* #99eeff */
   --color-blue-dark: hsl(219, 70%, 25%);        /* #13326c */
 
-  --color-lavanda: hsl(287, 100%, 80%);         /* #e999ff */
+  --color-lavanda: hsl(305, 100%, 80%);         /* #ff99f7 */
   --color-lavanda-dark: hsl(287, 30%, 51%);     /* #975da8 */
 
-  --color-yellow: hsl(37, 71%, 78%);            /* #EFD19F */
+  --color-yellow: hsl(50, 100%, 80%);           /* #ffee99 */
 
   --color-white: hsl(0, 0%, 85%);               /* #dadada */
 
@@ -84,7 +84,6 @@ p, pre, ul {
 }
 
 a {
-  text-decoration-line: underline;
   color: var(--secondary);
 }
 a:hover {

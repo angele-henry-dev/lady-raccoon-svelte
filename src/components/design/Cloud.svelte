@@ -2,7 +2,7 @@
 	export let classes: string = "";
 </script>
 
-<div aria-hidden="true" class="cloud rounded-full bg-[var(--color-blue)] opacity-15 {classes}"></div>
+<div aria-hidden="true" class="cloud rounded-full bg-[var(--color-blue)] opacity-10 {classes}"></div>
 
 <style>
     .cloud {
