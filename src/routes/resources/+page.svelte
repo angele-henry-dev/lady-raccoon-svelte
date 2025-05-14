@@ -26,7 +26,13 @@
   
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {#each resources as res}
-        <Item tags={res.tags} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
+        {#if res.published && (
+            selectedTag === "all" ||
+            (selectedTag === "new" && res.isNew) ||
+            res.tags.includes(selectedTag)
+        )}
+          <Item tags={res.tags} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
+        {/if}
       {/each}
     </div>
   </div>

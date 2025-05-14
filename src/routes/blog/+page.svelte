@@ -25,7 +25,10 @@
     <Filters bind:selectedTag={selectedTag} allTags={allTags} />
 
     {#each data.posts as post}
-      {#if post.published}
+      {#if post.published && (
+          selectedTag === "all" ||
+          post.tags.includes(selectedTag)
+      )}
         <Item tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire la suite de l'article" />
       {/if}
     {/each}
