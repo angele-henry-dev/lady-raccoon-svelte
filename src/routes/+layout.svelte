@@ -8,6 +8,6 @@
 	<Menu />
 </header>
 
-<main class="mt-[50px] flex flex-col items-center justify-start"><slot /></main>
+<main class="flex flex-col items-center justify-start"><slot /></main>
 
 <Footer />
