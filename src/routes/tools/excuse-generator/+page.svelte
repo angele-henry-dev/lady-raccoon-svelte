@@ -1,8 +1,6 @@
 <script lang="ts">
   import excuses from "$content/excuses.json";
 	import Button from "$components/Button.svelte";
-  import Header from "$components/design/Header.svelte";
-	import Plant from "$components/design/Plant.svelte";
 
   type ExcuseType = "neutre" | "cash" | "wtf";
   const excusesTypes: ExcuseType[] = ["neutre", "cash", "wtf"];
@@ -52,9 +50,6 @@
   <meta name="description" content="Besoin d'une excuse pour éviter un test technique ? Utilise notre générateur et économise ton temps et ton énergie." />
 </svelte:head>
 
-<Header />
-<Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
-
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
 		<h1>Besoin d’une excuse pour dire « non merci » ?</h1>
@@ -102,8 +97,6 @@
         {/if}
       </div>
     </div>
-
-    <Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
   </article>
 </div>
      

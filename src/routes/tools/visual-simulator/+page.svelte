@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Header from "$components/design/Header.svelte";
-	import Plant from "$components/design/Plant.svelte";
 	import Filters from "$components/sections/tools/ColorBlind.svelte";
   import { FILTERS_DATA } from "$lib/contrast";
   const FILTERS = Object.keys(FILTERS_DATA) as Array<keyof typeof FILTERS_DATA>;
@@ -30,8 +28,6 @@
 
 <Filters />
 
-<Header />
-<Plant class="absolute top-[150px] end-[0] w-[90px] sm:w-[150px]" />
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
 		<h1>Simulateur de handicaps visuels</h1>
@@ -100,7 +96,5 @@
     <p class="text-xs mt-2">
       Certains sites peuvent ne pas s’afficher (restriction sécurité navigateur).
     </p>
-
-		<Plant class="absolute bottom-0 start-0 md:start-[-15%] w-[90px] sm:w-[150px] z-[-1]" />
   </article>
 </div>
