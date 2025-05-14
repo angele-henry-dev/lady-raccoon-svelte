@@ -58,7 +58,7 @@
             to bottom,
             var(--background) 0%,
             var(--color-blue-dark) 70%,
-            hsl(257, 56%, 28%) 90%
+            #663399 100%
         );
         z-index: -1;
     }
