@@ -12,9 +12,9 @@
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Contact</b>
-			<p>Rejoins le <Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord">Discord</Link></p>
-			<p>Soutiens-moi sur <Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi">Ko-fi</Link></p>
-			<p>Contacte-moi sur <Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn">LinkedIn</Link></p>
+			<p class="mb-0">Rejoins le <Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord">Discord</Link></p>
+			<p class="mb-0">Soutiens-moi sur <Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi">Ko-fi</Link></p>
+			<p class="mb-0">Contacte-moi sur <Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn">LinkedIn</Link></p>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Confidentialité</b>
