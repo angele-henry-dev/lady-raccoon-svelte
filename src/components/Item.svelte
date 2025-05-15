@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Ribbon from "$components/design/Ribbon.svelte";
 	import Link from "$components/Link.svelte";
   import { fly, fade } from 'svelte/transition';
 	import Button from "./Button.svelte";
@@ -11,7 +10,6 @@
     description,
     href = "",
     label = "",
-    isNew = false,
     target = "_self",
   } = $props();
 
@@ -22,13 +20,8 @@
   in:fly={{ y: 20, duration: 400 }}
   out:fade={{ duration: 200 }}
 >
-  <div class="w-full flex flex-row justify-end pt-5 pr-5">
-      {#if isNew}
-        <Ribbon text="Nouveauté" />
-      {/if}
-  </div>
   <div class="flex flex-col justify-start items-start px-5 pb-5 z-[1]">
-    <h2 class="mt-0 mb-2">{ title }</h2>
+    <h2 class="mb-2">{ title }</h2>
     <div class="flex flex-row gap-2 mb-10">
       {#each tags as tag}
         <Button

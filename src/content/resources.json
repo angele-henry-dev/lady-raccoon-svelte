@@ -2,7 +2,6 @@
     {
         "title": "Keep calm et code accessible",
         "tags": [ "Accessibilité", "Dev" ],
-        "isNew": true,
         "published": true,
         "link": "https://ko-fi.com/s/fe92c62be0",
         "description": "<p>Tu veux rendre ton site accessible, mais tu ne sais pas par où commencer&nbsp;? Ce guide est pour toi.</p><p>Ce que tu vas apprendre&nbsp;:</p><ul><li>Les bases de l’accessibilité web, sans jargon</li><li>Les types de handicaps à connaître</li><li>Les technologies d’assistance et comment les tester</li><li>Les erreurs fréquentes (et comment les éviter)</li><li>Des bonnes pratiques HTML et design</li></ul><p>Et en bonus une checklist prête à l'emploi pour être sûr de garder son code accessible&nbsp;!</p>"

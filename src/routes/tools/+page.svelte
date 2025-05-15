@@ -21,12 +21,11 @@
 	<div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
 		<h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Outils pour l’accessibilité et la performance</h1>
 
-    <Filters bind:selectedTag={selectedTag} allTags={allTags} newFilter={true} />
+    <Filters bind:selectedTag={selectedTag} allTags={allTags} />
 	
     {#each tools as tool (tool.slug)}
       {#if tool.published && (
           selectedTag === "all" ||
-          (selectedTag === "new" && tool.isNew) ||
           tool.tags.includes(selectedTag)
       )}
         <Item 
@@ -34,7 +33,6 @@
           tags={tool.tags}
           title={tool.title}
           description={tool.description}
-          isNew={tool.isNew}
           href={tool.slug.startsWith('http') ? tool.slug : `/tools/${tool.slug}`}
           target={tool.slug.startsWith('http') ? "_blank" : "_self"}
           label="l'outil"

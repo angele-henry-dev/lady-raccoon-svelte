@@ -22,16 +22,15 @@
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Ressources</h1>
     <p>Formations, ebooks, guides, bonus et contenus premios pour progresser.</p>
 
-    <Filters bind:selectedTag={selectedTag} allTags={allTags} newFilter={true} />
+    <Filters bind:selectedTag={selectedTag} allTags={allTags} />
   
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {#each resources as res}
         {#if res.published && (
             selectedTag === "all" ||
-            (selectedTag === "new" && res.isNew) ||
             res.tags.includes(selectedTag)
         )}
-          <Item bind:selectedTag={selectedTag} tags={res.tags} title={res.title} description={res.description} href={res.link} label="la ressource" isNew={res.isNew} target="_blank" />
+          <Item bind:selectedTag={selectedTag} tags={res.tags} title={res.title} description={res.description} href={res.link} label="la ressource" target="_blank" />
         {/if}
       {/each}
     </div>

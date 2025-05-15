@@ -21,17 +21,8 @@
 
   --foreground: var(--color-white);
 
-/*   --primary: var(--color-blue);
-  --secondary: var(--color-lavanda);
-  --tertiary: var(--color-yellow); */
-
   --primary: var(--color-yellow);
   --secondary: var(--color-lavanda);
-/*   --tertiary: var(--color-lavanda); */
-
-/*   --primary: var(--color-lavanda);
-  --secondary: var(--color-yellow);
-  --tertiary: var(--color-blue); */
 }
 
 @font-face {

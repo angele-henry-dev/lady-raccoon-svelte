@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from "./Button.svelte";
 
-    let { selectedTag = $bindable(), allTags = [], newFilter = false } = $props()
+    let { selectedTag = $bindable(), allTags = [] } = $props()
 </script>
 
 <div class="flex flex-col flex-wrap gap-2 mb-10">
@@ -15,16 +15,6 @@
         >
             Tous
         </Button>
-
-        {#if newFilter}
-            <Button
-                handleClick={() => selectedTag = 'new'}
-                active={selectedTag === "new"}
-                label="Uniquement les nouveaux éléments"
-            >
-                Nouveautés
-            </Button>
-        {/if}
 
         {#each allTags as tag}
             <Button
