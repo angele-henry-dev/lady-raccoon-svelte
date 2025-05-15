@@ -29,7 +29,7 @@
               selectedTag === "all" ||
               post.tags.includes(selectedTag)
           )}
-            <Item bind:selectedTag={selectedTag} tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire l'article" />
+            <Item bind:selectedTag={selectedTag} tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="l'article" />
           {/if}
         {/each}
       </div>

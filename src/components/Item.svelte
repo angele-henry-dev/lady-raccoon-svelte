@@ -44,7 +44,7 @@
     </div>
     {#if label && href}
       <div class="w-full pt-5 my-5">
-        <Link title={title} href={href} target={target as "_blank" | "_self"} linkType="outline">{label}</Link>
+        <Link title={label + " " + title} href={href} target={target as "_blank" | "_self"} linkType="outline">Accéder à {label}</Link>
       </div>
     {/if}
   </div>

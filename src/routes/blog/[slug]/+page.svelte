@@ -11,7 +11,7 @@
 
 <div class="relative w-full max-w-5xl mx-auto px-4 mb-10">
 	<article class="w-full px-10 pb-10 bg-[var(--background)] border">
-		<div class="grow flex flex-row">
+		<div class="grow flex flex-row pt-4">
 			{#each data.meta.tags as tag}
 				<Ribbon text={tag} />
 			{/each}

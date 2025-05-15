@@ -37,7 +37,7 @@
           isNew={tool.isNew}
           href={tool.slug.startsWith('http') ? tool.slug : `/tools/${tool.slug}`}
           target={tool.slug.startsWith('http') ? "_blank" : "_self"}
-          label={tool.slug.startsWith('http') ? "Ouvrir l'outil" : "Accéder à l'outil"}
+          label="l'outil"
         />
       {/if}
     {/each}
