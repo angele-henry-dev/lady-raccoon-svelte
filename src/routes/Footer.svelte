@@ -6,20 +6,20 @@
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="flex flex-col mb-3">
 			<b>Pages</b>
-			<Link href="/tools" target="_self" title="Outils">Outils</Link>
-			<Link href="/resources" target="_self" title="Ressources">Ressources</Link>
-			<Link href="/blog" target="_self" title="Blog">Blog</Link>
+			<Link href="/tools" target="_self" title="Accéder aux Outils">Outils</Link>
+			<Link href="/resources" target="_self" title="Accéder aux Ressources">Ressources</Link>
+			<Link href="/blog" target="_self" title="Accéder au Blog">Blog</Link>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Contact</b>
-			<p class="mb-0">Rejoins le <Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Discord">Discord</Link></p>
-			<p class="mb-0">Soutiens-moi sur <Link href="https://ko-fi.com/forabettertech" target="_blank" title="Ko-fi">Ko-fi</Link></p>
-			<p class="mb-0">Contacte-moi sur <Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="LinkedIn">LinkedIn</Link></p>
+			<p class="mb-0"><Link href="https://discord.gg/BAZdtgcuNX" target="_blank" title="Rejoins le Discord">Rejoins le Discord</Link></p>
+			<p class="mb-0"><Link href="https://ko-fi.com/forabettertech" target="_blank" title="Soutiens-moi sur Ko-fi">Soutiens-moi sur Ko-fi</Link></p>
+			<p class="mb-0"><Link href="https://www.linkedin.com/in/angele-henry" target="_blank" title="Contacte-moi sur LinkedIn">Contacte-moi sur LinkedIn</Link></p>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Confidentialité</b>
-			<Link href="/legal-notice" target="_self" title="Mentions légales">Mentions légales</Link>
-			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité">Politique de confidentialité</Link>
+			<Link href="/legal-notice" target="_self" title="Accéder aux Mentions légales">Mentions légales</Link>
+			<Link href="/privacy-policy" target="_self" title="Accéder à la Politique de confidentialité">Politique de confidentialité</Link>
 		</div>
 	</div>
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between border-t rounded-none p-5">

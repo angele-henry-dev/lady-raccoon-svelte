@@ -16,7 +16,7 @@
     </div>
     {#if label && href}
       <div class="pt-5 my-5 text-center">
-        <Link title={title} href={href} target={target} linkType="outline">{label}</Link>
+        <Link title={label} href={href} target={target} linkType="outline">{label}</Link>
       </div>
     {/if}
   </div>

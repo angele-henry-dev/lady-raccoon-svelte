@@ -88,12 +88,11 @@ hr {
 
 a {
   color: var(--primary);
-  text-decoration-line: underline;
   text-underline-offset: 4px;
 }
 a:hover {
   color: var(--primary);
-  text-decoration-line: none;
+  text-decoration-line: underline;
   text-underline-offset: 4px;
 }
 @media (prefers-reduced-motion: no-preference) {

@@ -27,7 +27,7 @@
 			<li>440 N Barranca Ave #4133</li>
 			<li>Covina, CA 91723</li>
 			<li>
-				<Link href="https://vercel.com" target="_blank" title="Vercel">
+				<Link href="https://vercel.com" target="_blank" title="Ouvrir Vercel">
 					Vercel
 				</Link>
 			</li>
@@ -49,7 +49,7 @@
 		</p>
 		<p>
 			Plus d’informations disponibles dans la
-			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité">
+			<Link href="/privacy-policy" target="_self" title="Accéder à la Politique de confidentialité" linkType="outline">
 				politique de confidentialité
 			</Link>
 		</p>

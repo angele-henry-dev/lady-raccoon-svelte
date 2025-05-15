@@ -14,7 +14,7 @@
 			<h1>Page égarée...</h1>
 			<p>
 				Si tu penses trouver quelque chose ici, fais-le nous savoir sur notre 
-				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" title="GitHub">GitHub</Link>
+				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" title="Ouvrir GitHub">GitHub</Link>
 				. Merci !
 			</p>
 		{:else}
@@ -26,7 +26,7 @@
 			<p>Essaye de recharger la page.</p>
 			<p>
 				Si l'erreur persiste, fais-le nous savoir sur notre 
-				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" title="GitHub">GitHub</Link>
+				<Link href="https://github.com/angele-henry-dev/lady-raccoon-svelte" target="_blank" title="Ouvrir GitHub">GitHub</Link>
 				. Merci !
 			</p>
 		{/if}

@@ -15,10 +15,10 @@
 		<Link 
 			href="https://discord.gg/BAZdtgcuNX"
 			target="_blank"
-			title="Discord"
+			title="Accéder au Discord"
 			linkType="button"
 		>
-			Ouvre Discord
+			Accéder au Discord
 		</Link>
 	</div>
 </section>

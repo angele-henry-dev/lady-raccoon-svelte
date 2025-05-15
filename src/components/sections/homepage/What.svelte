@@ -8,26 +8,26 @@
 			title="Les Outils" 
 			description="Des outils pensés pour t’aider à coder plus vite, mieux, et avec plus de sérénité." 
 			href="/tools" 
-			label="Ouvre les outils" 
+			label="Accéder aux outils" 
 		/>
 		<Card 
 			title="Les Ressources" 
 			description="Ebooks, fiches pratiques… Des contenus pensés pour t’accompagner au quotidien." 
 			href="/resources" 
-			label="Ouvre les ressources" 
+			label="Accéder aux ressources" 
 		/>
 		<Card 
 			title="Discord" 
 			description="Des sessions de coworking en live sur Discord pour se motiver et s'encourager." 
 			href="https://discord.gg/BAZdtgcuNX" 
 			target="_blank"
-			label="Ouvre Discord" 
+			label="Ouvrir le Discord" 
 		/>
 		<Card 
 			title="Le Blog" 
 			description="Des articles qui parlent tech, accessibilité, émotions, et trucs pas toujours dits ailleurs." 
 			href="/blog" 
-			label="Ouvre le blog" 
+			label="Accéder au blog" 
 		/>
 	</div>
 </section>

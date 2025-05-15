@@ -11,7 +11,7 @@
         <Button
             handleClick={() => selectedTag = 'all'}
             active={selectedTag === 'all'}
-            label="Tous les éléments"
+            label="Afficher tous les éléments"
         >
             Tous
         </Button>
@@ -20,7 +20,7 @@
             <Button
                 handleClick={() => selectedTag = tag}
                 active={selectedTag === tag}
-                label="Uniquement les éléments de type {tag}"
+                label="Afficher les éléments de catégorie {tag}"
             >
                 {tag}
             </Button>

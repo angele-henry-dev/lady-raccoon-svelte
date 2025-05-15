@@ -35,7 +35,7 @@
           description={tool.description}
           href={tool.slug.startsWith('http') ? tool.slug : `/tools/${tool.slug}`}
           target={tool.slug.startsWith('http') ? "_blank" : "_self"}
-          label="l'outil"
+          label="Accéder à l'outil"
         />
       {/if}
     {/each}

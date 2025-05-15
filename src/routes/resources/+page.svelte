@@ -30,7 +30,7 @@
             selectedTag === "all" ||
             res.tags.includes(selectedTag)
         )}
-          <Item bind:selectedTag={selectedTag} tags={res.tags} title={res.title} description={res.description} href={res.link} label="la ressource" target="_blank" />
+          <Item bind:selectedTag={selectedTag} tags={res.tags} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" target="_blank" />
         {/if}
       {/each}
     </div>
