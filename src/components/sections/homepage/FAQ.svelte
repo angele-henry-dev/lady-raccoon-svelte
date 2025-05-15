@@ -13,7 +13,7 @@
 	<div class="w-full bg-[var(--background)] grid grid-cols-1 md:grid-cols-2 gap-4 border p-10 py-5">
 		<div>
 			<h2>Trouve les réponses aux questions les plus fréquentes</h2>
-			<img aria-hidden="true" src="/images/raccoon_asking.webp" alt="Raccoon asking questions" width="350" height="350" class="m-auto" />
+			<img aria-hidden="true" loading="lazy" src="/images/raccoon_asking.webp" alt="Raccoon asking questions" width="250" height="250" class="m-auto" />
 		</div>
 		<ul class="pl-0 mt-4">
 			{#each faqs as faq, index}

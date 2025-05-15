@@ -1,5 +1,5 @@
 <section class="w-full max-w-5xl mx-auto px-4 my-10 sm:py-10 grid grid-cols-1 md:grid-cols-2 gap-4">
-	<img aria-hidden="true" src="/images/raccoons.webp" alt="Raccoons working together" width="350" height="350" class="mr-auto" />
+	<img aria-hidden="true" loading="lazy" src="/images/raccoons.webp" alt="Raccoons working together" width="350" height="350" class="mr-auto" />
 	<div>
 		<h2>Une communauté <span class="text-[var(--primary)]">bienveillante</span>.</h2>
 		<p>Un espace calme, drôle, humain, pour se sentir moins seul·e dans la tech.</p>
