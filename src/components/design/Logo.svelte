@@ -29,16 +29,16 @@
   fill: var(--background);
 }
 .secondary {
-  fill: var(--secondary);
+  fill: var(--color-yellow);
 }
 .tertiary, .primary {
   transition: fill 1s;
 }
 .tertiary {
-  fill: var(--tertiary);
+  fill: var(--color-lavanda);
 }
 .primary {
-  fill: var(--primary);
+  fill: var(--color-blue);
 }
 
 .logo .icon:hover .tertiary,

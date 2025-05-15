@@ -31,7 +31,7 @@
             (selectedTag === "new" && res.isNew) ||
             res.tags.includes(selectedTag)
         )}
-          <Item tags={res.tags} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
+          <Item bind:selectedTag={selectedTag} tags={res.tags} title={res.title} description={res.description} href={res.link} label="Accéder à la ressource" isNew={res.isNew} target="_blank" />
         {/if}
       {/each}
     </div>

@@ -3,7 +3,7 @@
 <style>
 .heart::before,
 .heart::after {
-    background-color: var(--tertiary);
+    background-color: var(--secondary);
     border-radius: 50px 50px 0 0;
     content: "";
     height: 25px;

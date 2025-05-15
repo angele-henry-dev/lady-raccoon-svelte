@@ -2,14 +2,19 @@
 	import Ribbon from "$components/design/Ribbon.svelte";
 	import Link from "$components/Link.svelte";
   import { fly, fade } from 'svelte/transition';
+	import Button from "./Button.svelte";
 
-	export let tags: string[];
-	export let title: string;
-	export let description: string;
-	export let href: string = "";
-	export let label: string = "";
-	export let target: "_blank" | "_self" = "_self";
-	export let isNew: boolean = false;
+  let { 
+    selectedTag = $bindable(), 
+    tags = [],
+    title,
+    description,
+    href = "",
+    label = "",
+    isNew = false,
+    target = "_self",
+  } = $props();
+
 </script>
 
 <div
@@ -17,26 +22,29 @@
   in:fly={{ y: 20, duration: 400 }}
   out:fade={{ duration: 200 }}
 >
-  <div class="w-full flex flex-row">
-    <div class="grow flex flex-row ml-5">
-      {#each tags as tag}
-        <Ribbon text={tag} />
-      {/each}
-    </div>
-    <div class="mr-5">
+  <div class="w-full flex flex-row justify-end pt-5 pr-5">
       {#if isNew}
         <Ribbon text="Nouveauté" />
       {/if}
-    </div>
   </div>
   <div class="flex flex-col justify-start items-start px-5 pb-5 z-[1]">
-    <h2>{ title }</h2>
+    <h2 class="mt-0 mb-2">{ title }</h2>
+    <div class="flex flex-row gap-2 mb-10">
+      {#each tags as tag}
+        <Button
+            handleClick={() => selectedTag = tag}
+            label="Uniquement les éléments de type {tag}"
+        >
+          {tag}
+        </Button>
+      {/each}
+    </div>
     <div class="flex-grow">
         {@html description}
     </div>
     {#if label && href}
       <div class="w-full pt-5 my-5">
-        <Link title={title} href={href} target={target} linkType="outline">{label}</Link>
+        <Link title={title} href={href} target={target as "_blank" | "_self"} linkType="outline">{label}</Link>
       </div>
     {/if}
   </div>

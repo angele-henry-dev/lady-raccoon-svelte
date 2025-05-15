@@ -21,9 +21,17 @@
 
   --foreground: var(--color-white);
 
-  --primary: var(--color-blue);
+/*   --primary: var(--color-blue);
+  --secondary: var(--color-lavanda);
+  --tertiary: var(--color-yellow); */
+
+  --primary: var(--color-yellow);
+  --secondary: var(--color-lavanda);
+/*   --tertiary: var(--color-lavanda); */
+
+/*   --primary: var(--color-lavanda);
   --secondary: var(--color-yellow);
-  --tertiary: var(--color-lavanda);
+  --tertiary: var(--color-blue); */
 }
 
 @font-face {
@@ -88,11 +96,14 @@ hr {
 }
 
 a {
+  color: var(--primary);
   text-decoration-line: underline;
-  color: var(--secondary);
+  text-underline-offset: 4px;
 }
 a:hover {
   color: var(--primary);
+  text-decoration-line: none;
+  text-underline-offset: 4px;
 }
 @media (prefers-reduced-motion: no-preference) {
   a {
@@ -110,13 +121,9 @@ ol {
   margin: 1em 0;
 }
 
-strong {
-  color: var(--primary);
-}
-
 pre {
   border-width: 1px;
-  border-left: 10px solid var(--tertiary);
+  border-left: 10px solid var(--secondary);
   white-space: pre-wrap;
   /* overflow-x: auto; */
   max-height: 300px;

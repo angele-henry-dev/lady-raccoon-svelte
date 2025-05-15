@@ -30,6 +30,7 @@
           tool.tags.includes(selectedTag)
       )}
         <Item 
+          bind:selectedTag={selectedTag}
           tags={tool.tags}
           title={tool.title}
           description={tool.description}

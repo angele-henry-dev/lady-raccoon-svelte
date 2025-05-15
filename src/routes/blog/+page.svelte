@@ -20,17 +20,22 @@
 <section class="relative w-full flex flex-col items-center justify-center mb-10">
   <div class="w-full max-w-5xl mx-auto px-4 sm:pb-10">
     <h1 class="text-2xl lg:text-4xl font-bold uppercase mb-5">Blog</h1>
-    <p>Des articles et des réflexions pour progresser et mieux comprendre.</p>
+    <p>Un blog pour partager des articles sur le développement informatique et des réflexions sur le métier de dev et l'accessibilité.</p>
 
-    <Filters bind:selectedTag={selectedTag} allTags={allTags} />
-
-    {#each data.posts as post}
-      {#if post.published && (
-          selectedTag === "all" ||
-          post.tags.includes(selectedTag)
-      )}
-        <Item tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire la suite de l'article" />
-      {/if}
-    {/each}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+      <div class="col-span-2">
+        {#each data.posts as post}
+          {#if post.published && (
+              selectedTag === "all" ||
+              post.tags.includes(selectedTag)
+          )}
+            <Item bind:selectedTag={selectedTag} tags={post.tags} title={post.title} description={post.description} href={`/blog/${post.slug}`} label="Lire l'article" />
+          {/if}
+        {/each}
+      </div>
+      <div>
+        <Filters bind:selectedTag={selectedTag} allTags={allTags} />
+      </div>
+    </div>
   </div>
 </section>
