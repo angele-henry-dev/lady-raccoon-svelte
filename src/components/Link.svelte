@@ -6,8 +6,8 @@
 	export let linkType: "text" | "simple" | "button" | "outline" = "simple";
 
 	const labelText = target === '_blank'
-		? `Ouvre dans une nouvelle fenêtre ${title || href}`
-		: `Ouvre la page ${title || href}`;
+		? `Ouvre ${title || href} dans une nouvelle fenêtre`
+		: `Ouvre ${title || href}`;
 
 	let generatedClass = "";
 	if (linkType === "text") {
@@ -16,11 +16,6 @@
 		generatedClass = "no-underline px-3 py-3 text-[var(--background)] hover:text-[var(--background)] bg-[var(--secondary)] hover:bg-[var(--primary)]";
 	} else if (linkType === "outline") {
 		generatedClass = "no-underline px-3 py-2 text-[var(--secondary)] border border-[var(--secondary)] hover:border-[var(--primary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--primary)]";
-	}
-
-	function extractTitle() {
-		console.log(children);
-		return children;
 	}
 </script>
 
