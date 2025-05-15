@@ -16,14 +16,8 @@
 			href="/resources" 
 			label="Découvrir les ressources" 
 		/>
-		<!-- <Card 
-			title="Formations" 
-			description="Des formations accessibles pour apprendre toujours plus, pas à pas, sans se noyer." 
-			href="/resources" 
-			label="Découvrir les formations" 
-		/> -->
 		<Card 
-			title="Coworking" 
+			title="Discord" 
 			description="Des sessions de coworking en live sur Discord pour se motiver et s'encourager." 
 			href="https://discord.gg/BAZdtgcuNX" 
 			target="_blank"
