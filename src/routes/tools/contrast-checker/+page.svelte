@@ -84,10 +84,16 @@
                         bind:value={bgColor}
                         on:input={(e) => handleHexInput(e, "bg")}
                         pattern="#[0-9A-Fa-f]{6}"
-                        aria-label="code hexadecimal fond"
-                        title="Entre un code hexadécimal valide (ex: #FF5733)"
+                        aria-label="Entre un code hexadecimal valide pour le fond (ex: #FF5733)"
+                        title="Entre un code hexadecimal valide pour le fond (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={bgColor} on:input={updateContrast} aria-label="Choisir couleur de fond" />
+                    <input 
+                        type="color" 
+                        bind:value={bgColor} 
+                        on:input={updateContrast} 
+                        aria-label="Choisir une couleur de fond" 
+                        title="Choisir une couleur de fond"
+                    />
                 </div>
                 <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
             </div>
@@ -100,10 +106,16 @@
                         bind:value={textColor}
                         on:input={(e) => handleHexInput(e, "text")}
                         pattern="#[0-9A-Fa-f]{6}"
-                        aria-label="code hexadecimal texte"
-                        title="Entre un code hexadécimal valide (ex: #FF5733)"
+                        aria-label="Entre un code hexadecimal valide pour le texte (ex: #FF5733)"
+                        title="Entre un code hexadecimal valide pour le texte (ex: #FF5733)"
                     />
-                    <input type="color" bind:value={textColor} on:input={updateContrast} aria-label="Choisir couleur de texte" />
+                    <input 
+                        type="color" 
+                        bind:value={textColor} 
+                        on:input={updateContrast} 
+                        aria-label="Choisir une couleur de texte"
+                        title="Choisir une couleur de texte"
+                    />
                 </div>
                 <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
             </div>
