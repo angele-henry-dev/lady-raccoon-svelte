@@ -13,6 +13,8 @@
     import { FILTERS_DATA } from "$lib/contrast";
     const FILTERS = Object.keys(FILTERS_DATA) as Array<keyof typeof FILTERS_DATA>;
 
+    let isValidHexBg = true;
+    let isValidHexText = true;
     let bgColor = "#f8f8f8";
     let textColor = "#111110";
     let visualContrasts: Record<string, number> = { contrast: 0 };
@@ -42,10 +44,21 @@
 	function handleHexInput(event: Event, colorType: "bg" | "text") {
         const input = event.target as HTMLInputElement;
         const value = input.value.trim();
-        if (!/^#[0-9A-Fa-f]{6}$/.test(value)) return;
-        if (colorType === "bg") bgColor = value;
-        else textColor = value;
-        updateContrast();
+        const isValid = /^#[0-9A-Fa-f]{6}$/.test(value);
+
+        if (colorType === "bg") {
+            isValidHexBg = isValid;
+            if (isValid) {
+                bgColor = value;
+                updateContrast();
+            }
+        } else {
+            isValidHexText = isValid;
+            if (isValid) {
+                textColor = value;
+                updateContrast();
+            }
+        }
     }
 
 	function getAccessibilityLevel(ratio: number) {
@@ -74,9 +87,9 @@
             optimale et un site web inclusif pour tous, y compris les personnes malvoyantes ou daltoniennes.
         </p>
 
-        <div class="w-full flex flex-row gap-5 flex-wrap justify-start items-end">
-            <div class="grow">
-                <label for="hexaBg" class="font-black my-5">Couleur de fond :</label>
+        <div class="w-full flex flex-row  flex-wrap justify-between items-end">
+            <div class="w-full md:w-[45%] min-w-[150px] mb-5">
+                <label for="hexaBg" class="font-black my-5">Couleur de fond&nbsp;:</label>
                 <div class="input-container mb-5">
                     <input
                         id="hexaBg"
@@ -95,10 +108,16 @@
                         title="Choisir une couleur de fond"
                     />
                 </div>
+                {#if !isValidHexBg}
+                    <p class="text-red-500 text-sm px-3 py-1" role="alert">
+                        Le code couleur doit être de la forme <code>#RRGGBB</code>
+                    </p>
+                {:else}
                 <Button handleClick={adjustBgColor} label="Ajuster le fond">Ajuster le fond</Button>
+                {/if}
             </div>
-            <div class="grow">
-                <label for="hexaText" class="font-black my-5">Couleur du texte :</label>
+            <div class="w-full md:w-[45%] min-w-[150px] mb-5">
+                <label for="hexaText" class="font-black my-5">Couleur du texte&nbsp;:</label>
                 <div class="input-container mb-5">
                     <input
                         id="hexaText"
@@ -117,7 +136,13 @@
                         title="Choisir une couleur de texte"
                     />
                 </div>
+                {#if !isValidHexText}
+                    <p class="text-red-500 text-sm px-3 py-1" role="alert">
+                        Le code couleur doit être de la forme <code>#RRGGBB</code>
+                    </p>
+                {:else}
                 <Button handleClick={adjustTextColor} label="Ajuster le texte">Ajuster le texte</Button>
+                {/if}
             </div>
         </div>
 
