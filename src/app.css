@@ -84,6 +84,7 @@ p, pre, ul {
 }
 
 a {
+  text-decoration-line: underline;
   color: var(--secondary);
 }
 a:hover {
