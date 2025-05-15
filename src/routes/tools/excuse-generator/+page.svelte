@@ -84,10 +84,10 @@
           Copie l'excuse
         </Button>
         <Button handleClick={shareOnLinkedIn} label="Partager sur LinkedIn" disabled={!displayed}>
-          <img src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" />&nbsp;Partage sur LinkedIn
+          <img aria-hidden="true" src="/icons/linkedin.svg" alt="LinkedIn" class="rounded-none" />&nbsp;Partage sur LinkedIn
         </Button>
         <Button handleClick={shareOnTwitter} label="Partager sur Twitter" disabled={!displayed}>
-          <img src="/icons/x.svg" alt="Twitter" class="rounded-none" />&nbsp;Partage sur Twitter
+          <img aria-hidden="true" src="/icons/x.svg" alt="Twitter" class="rounded-none" />&nbsp;Partage sur Twitter
         </Button>
       </div>
 

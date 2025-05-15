@@ -44,7 +44,7 @@
 		<Tree class="hidden md:block absolute bottom-[70%] -start-[5%] w-[400px] h-[520px] scale-[70%] md:scale-100" />
 		<Plant class="absolute bottom-[55%] end-[80%] md:end-[40%] w-[60px] scale-[70%] md:scale-100" />
 		{#if full}
-            <img src="/images/raccoon_dreaming.webp" alt="Raccoon working on his computer" width="100" height="150" class="absolute bottom-[50%] end-[5%] md:end-[15%] w-[75px] md:w-[100px] h-auto" />
+            <img aria-hidden="true" src="/images/raccoon_dreaming.webp" alt="Raccoon working on his computer" width="100" height="150" class="absolute bottom-[50%] end-[5%] md:end-[15%] w-[75px] md:w-[100px] h-auto" />
         {/if}
 		<Plant class="hidden md:block absolute bottom-[5%] end-[2%] w-[100px] scale-100" />
 	</div>
