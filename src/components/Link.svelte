@@ -17,6 +17,11 @@
 	} else if (linkType === "outline") {
 		generatedClass = "no-underline px-3 py-2 text-[var(--secondary)] border border-[var(--secondary)] hover:border-[var(--primary)] hover:text-[var(--background)] bg-[var(--background)] hover:bg-[var(--primary)]";
 	}
+
+	function extractTitle() {
+		console.log(children);
+		return children;
+	}
 </script>
 
 <a

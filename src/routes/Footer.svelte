@@ -6,9 +6,9 @@
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between p-5">
 		<div class="flex flex-col mb-3">
 			<b>Pages</b>
-			<Link href="/tools" target="_self">Outils</Link>
-			<Link href="/resources" target="_self">Ressources</Link>
-			<Link href="/blog" target="_self">Blog</Link>
+			<Link href="/tools" target="_self" title="Outils">Outils</Link>
+			<Link href="/resources" target="_self" title="Ressources">Ressources</Link>
+			<Link href="/blog" target="_self" title="Blog">Blog</Link>
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Contact</b>
@@ -18,8 +18,8 @@
 		</div>
 		<div class="flex flex-col mb-3">
 			<b>Confidentialité</b>
-			<Link href="/legal-notice" target="_self">Mentions légales</Link>
-			<Link href="/privacy-policy" target="_self">Politique de confidentialité</Link>
+			<Link href="/legal-notice" target="_self" title="Mentions légales">Mentions légales</Link>
+			<Link href="/privacy-policy" target="_self" title="Politique de confidentialité">Politique de confidentialité</Link>
 		</div>
 	</div>
 	<div class="flex flex-col md:flex-row items-center md:items-start justify-between border-t rounded-none p-5">

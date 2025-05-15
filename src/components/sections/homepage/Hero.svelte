@@ -18,7 +18,7 @@
 			title="Discord"
 			linkType="button"
 		>
-		Découvre le Discord
+			Découvre le Discord
 		</Link>
 	</div>
 </section>
